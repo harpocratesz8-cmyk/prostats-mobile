@@ -1,0 +1,30 @@
+{
+  "name": "ProStats Mobile",
+  "short_name": "ProStats",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A1120",
+  "theme_color": "#0A1120",
+  "lang": "pt-BR",
+  "description": "Carreira do jogador: partidas, scout, títulos e valor de mercado.",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

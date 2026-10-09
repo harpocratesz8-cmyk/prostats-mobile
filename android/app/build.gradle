@@ -1,0 +1,53 @@
+plugins {
+    id "com.android.application"
+}
+
+def buildNumber = Integer.parseInt(System.getenv("GITHUB_RUN_NUMBER") ?: "1")
+
+android {
+    namespace "com.prostats.mobile"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.prostats.mobile"
+        minSdk 24
+        targetSdk 34
+        versionCode buildNumber
+        versionName "2.0." + buildNumber
+    }
+
+    // The web app lives in ../../web/www and is packaged as assets/www
+    sourceSets {
+        main { assets.srcDirs += ["../../web"] }
+    }
+
+    signingConfigs {
+        // Fixed key so every new APK installs as an update over the previous one (your saves are kept).
+        release {
+            storeFile file("prostats-release.keystore")
+            storePassword "prostats2026"
+            keyAlias "prostats"
+            keyPassword "prostats2026"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

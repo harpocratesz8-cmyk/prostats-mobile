@@ -1,0 +1,46 @@
+name: Gerar APK Android
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Compilar APK
+        working-directory: android
+        run: gradle :app:assembleRelease --no-daemon --stacktrace
+
+      - name: Renomear
+        run: cp android/app/build/outputs/apk/release/app-release.apk ProStats.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ProStats-APK
+          path: ProStats.apk
+
+      - name: Publicar na aba Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v2.0.${{ github.run_number }}
+          name: ProStats Mobile 2.0.${{ github.run_number }}
+          body: Baixe o arquivo ProStats.apk abaixo pelo celular e instale.
+          files: ProStats.apk
