@@ -347,9 +347,10 @@ td img.cl{width:18px;height:18px}
 
 /* ---------- tap feedback ---------- */
 .stepper button,.pick button,.btn,.seg button,.toggle,.mrow,.item,.tcase,.news,.menu-grid button,.nt-row,.lg,.cb-opt{transition:background-color .12s,transform .08s,filter .12s}
-.stepper button:active,.stepper button.tapped{background:color-mix(in srgb,var(--accent) 28%,transparent)}
-.stepper button:active{transform:scale(.92)}
-.stepper button.tapped{animation:tapflash .28s ease-out}
+.stepper button{-webkit-tap-highlight-color:transparent}
+.stepper button.press{background:color-mix(in srgb,var(--accent) 30%,transparent);transform:scale(.92)}
+@media (hover:hover){.stepper button:active{background:color-mix(in srgb,var(--accent) 30%,transparent)}}
+.stepper button:focus{outline:none}
 @keyframes tapflash{from{background:color-mix(in srgb,var(--accent) 38%,transparent)}to{background:transparent}}
 .pick button:active,.seg button:active,.btn:active,.toggle:active{filter:brightness(.82);transform:scale(.97)}
 .mrow:active,.item:active,.nt-row:active,.lg:active,.cb-opt:active,.menu-grid button:active{background:var(--surface2)}
@@ -443,6 +444,18 @@ td img.cl{width:18px;height:18px}
 .mv-chip{align-self:flex-start;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:color-mix(in srgb,#000 35%,var(--surface2))}
 .mv-tier{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.05;text-transform:uppercase}
 .pick.rng button{height:28px;padding:0 9px;font-size:11px;font-weight:700;text-transform:uppercase}
+
+/* ---------- v2.0.7 ---------- */
+body.locked{overflow:hidden}
+.sheet-b{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.cb-list{overscroll-behavior:contain;touch-action:pan-y;-webkit-overflow-scrolling:touch}
+.dbox{position:relative;display:flex;align-items:center}
+.dbox .inp{padding-right:46px}
+.dbtn{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:38px;height:38px;display:grid;place-items:center;border-radius:8px;color:var(--accent)}
+.dbtn:active{background:var(--surface2)}
+.dnat{position:absolute;right:4px;bottom:0;width:38px;height:2px;opacity:0;pointer-events:none;border:0;padding:0}
+.pens{font-family:var(--f-body);font-size:12px;font-weight:700;color:var(--muted);text-align:center;margin-top:4px;line-height:1.3}
+.pen-s{font-size:10.5px;color:var(--muted);font-family:var(--f-body);margin-left:3px}
 
 </style>
 </head>
@@ -711,6 +724,11 @@ pt: {
   free_cost:"Custo zero (livre/base)",
   growth_since:"Sua valorização desde a chegada:",
   value_history:"Histórico de valores",
+  pens_field:"Disputa de pênaltis (opcional)",
+  pens_ph:"Ex: 4-3 (casa-fora)",
+  pens:"Pênaltis",
+  pens_won:"Venceu nos pênaltis",
+  pens_lost:"Perdeu nos pênaltis",
   name_col:"Nome", pos_col:"Pos",
 },
 en: {
@@ -961,6 +979,11 @@ en: {
   free_cost:"Free (free agent/academy)",
   growth_since:"Your value growth since arriving:",
   value_history:"Value history",
+  pens_field:"Penalty shootout (optional)",
+  pens_ph:"e.g. 4-3 (home-away)",
+  pens:"Penalties",
+  pens_won:"Won on penalties",
+  pens_lost:"Lost on penalties",
   name_col:"Name", pos_col:"Pos",
 }};
 
@@ -1018,6 +1041,8 @@ const isAbsent = pos => ABSENT_ALL.includes(pos);
 const isHomeCode = l => ["C","H","CASA","HOME"].includes(String(l||"C").toUpperCase());
 function outcome(j){ try{ const [a,b] = String(j.Resultado||"").split(" ")[0].split("-").map(x=>parseInt(x,10)); if(isNaN(a)||isNaN(b)) return null;
   const mine = isHomeCode(j.Local) ? a : b, theirs = isHomeCode(j.Local) ? b : a; return mine>theirs?"W":mine<theirs?"L":"D"; }catch(e){ return null; } }
+/* penalty shootout stored as "4-3" (home-away) in Detalhes.Penaltis */
+function pensSplit(j){ const p = String((j.Detalhes||{}).Penaltis||"").match(/(\d+)\s*[-x×:]\s*(\d+)/i); if(!p) return null; const a = +p[1], b = +p[2]; return isHomeCode(j.Local) ? {mine:a, theirs:b, home:a, away:b} : {mine:b, theirs:a, home:a, away:b}; }
 function scoreSplit(j){ const [a,b] = String(j.Resultado||"").split(" ")[0].split("-").map(x=>parseInt(x,10)); if(isNaN(a)||isNaN(b)) return null; return isHomeCode(j.Local) ? {mine:a,theirs:b} : {mine:b,theirs:a}; }
 
 /* ================= save model (same keys as desktop salvar_dados) ================= */
@@ -1180,7 +1205,7 @@ function saveMatch(F, editIdx){
   const g = int(F.Gols), a = int(F.Ast), ca = int(F.Amarelos), e2 = int(F.V2), ed = int(F.VD);
   let mins = int(F.Minutos); let inc = 1; if(!(mins>0) || isAbsent(pos)){ inc = 0; mins = 0; }
   const det = {};
-  const strKeys = ["Condicao","AssistRecebidaDe","AssistDadaPara","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador"];
+  const strKeys = ["Condicao","AssistRecebidaDe","AssistDadaPara","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador","Penaltis"];
   const fltKeys = ["xG","xA","DistanciaPercorrida"]; const boolKeys = ["Capitao","MOTM","CleanSheet","GolEmpate","GolVirada"];
   for(const k of DETAIL_KEYS){ const v = F.det[k];
     if(boolKeys.includes(k)) det[k] = !!v; else if(strKeys.includes(k)) det[k] = String(v??""); else if(fltKeys.includes(k)) det[k] = flt(v); else det[k] = int(v); }
@@ -1222,7 +1247,7 @@ function saveMatch(F, editIdx){
   while(S.feed_noticias.length>10){ const r = S.feed_noticias.pop(); if(!r.lida) S.noticias_nao_lidas = Math.max(0, S.noticias_nao_lidas-1); }
   return {ok:true, msg: editIdx!=null ? t("updated_match") : t("saved_match")};
 }
-const DETAIL_KEYS = ["Condicao","Capitao","MOTM","ChancesCriadas","DriblesCertos","PassesDecisivos","ChutesNoGol","ChutesNaTrave","ChutesPraFora","ChutesBloqueados","Desarmes","GolsSofridosTime","CleanSheet","PeDireito","PeEsquerdo","Cabeca","FaltasBat","FaltasGol","PenalBat","PenalGol","Gol1T","Gol2T","GolProrr","AssistRecebidaDe","AssistDadaPara","xG","GrandesChancesPerdidas","xA","PreAssistencias","PossesGanhas","PossesPerdidas","DistanciaPercorrida","GolEmpate","GolVirada","PassesCertos","PassesErrados","PassesCurtos","BolasLongas","CruzamentosTentados","CruzamentosCertos","FaltasSofridas","FaltasCometidas","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador"];
+const DETAIL_KEYS = ["Condicao","Capitao","MOTM","ChancesCriadas","DriblesCertos","PassesDecisivos","ChutesNoGol","ChutesNaTrave","ChutesPraFora","ChutesBloqueados","Desarmes","GolsSofridosTime","CleanSheet","PeDireito","PeEsquerdo","Cabeca","FaltasBat","FaltasGol","PenalBat","PenalGol","Gol1T","Gol2T","GolProrr","AssistRecebidaDe","AssistDadaPara","xG","GrandesChancesPerdidas","xA","PreAssistencias","PossesGanhas","PossesPerdidas","DistanciaPercorrida","GolEmpate","GolVirada","PassesCertos","PassesErrados","PassesCurtos","BolasLongas","CruzamentosTentados","CruzamentosCertos","FaltasSofridas","FaltasCometidas","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador","Penaltis"];
 
 function totals(rows){ const r = {j:0,g:0,a:0,ca:0,e2:0,ed:0,mins:0}; for(const x of rows||[]){ r.j+=+x[1]||0; r.g+=+x[2]||0; r.a+=+x[3]||0; r.ca+=+x[4]||0; r.e2+=+x[5]||0; r.ed+=+x[6]||0; r.mins+=+x[7]||0; } return r; }
 function overall(){ const T = totals(S.dados_desempenho); if(!T.j) return 0; const media = (T.g+T.a)/T.j;
@@ -1330,6 +1355,7 @@ const dbLabel = e => (e.t==="n" && LANG==="pt" && e.names[1]) ? e.names[1] : Str
 
 /* ================= icons ================= */
 const I = (p, extra="") => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${p}</svg>`;
+const IC_CAL = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>`;
 const IC = {
   home: I('<path d="M4 20v-8l8-7 8 7v8"/><path d="M9 20v-5h6v5"/>'),
   list: I('<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5l3.2 2.3-1.2 3.8h-4l-1.2-3.8z"/><path d="M12 3.5v4M20.2 9.8l-5 0M17 19l-3-5.4M7 19l3-5.4M3.8 9.8l5 0"/>'),
@@ -1365,11 +1391,11 @@ function commit(){ if(SAMPLE) return; Store.persist(Store.index.active, S); }
 /* ================= sheet ================= */
 function openSheet(title, body, onMount){
   $("#sheetTitle").textContent = title; $("#sheetBody").innerHTML = body;
-  const sh = $("#sheet"), sc = $("#scrim"); sh.hidden = false; sc.hidden = false;
+  const sh = $("#sheet"), sc = $("#scrim"); sh.hidden = false; sc.hidden = false; document.body.classList.add("locked");
   requestAnimationFrame(()=>{ sh.classList.add("on"); sc.classList.add("on"); });
   $("#sheetBody").scrollTop = 0; if(onMount) onMount($("#sheetBody"));
 }
-function closeSheet(){ const sh = $("#sheet"), sc = $("#scrim"); sh.classList.remove("on"); sc.classList.remove("on"); setTimeout(()=>{ sh.hidden = true; sc.hidden = true; $("#sheetBody").innerHTML = ""; }, 230); }
+function closeSheet(){ document.body.classList.remove("locked"); const sh = $("#sheet"), sc = $("#scrim"); sh.classList.remove("on"); sc.classList.remove("on"); setTimeout(()=>{ sh.hidden = true; sc.hidden = true; $("#sheetBody").innerHTML = ""; }, 230); }
 
 /* ================= shared components ================= */
 function matchRow(j, idx){
@@ -1379,7 +1405,7 @@ function matchRow(j, idx){
     <span class="mdate"><span class="num">${d?pad(d.getDate()):"–"}</span><small>${d?MONTHS[LANG][d.getMonth()]+" "+String(d.getFullYear()).slice(-2):""}</small></span>
     <span class="mmid"><span class="mopp">${crest(j["Adversário"],22)}<span class="vs">${isHomeCode(j.Local)?"vs":"@"}</span> ${esc(j["Adversário"])}</span>
       <span class="mcomp">${logoOf(j["Competição"])?`<img class="cl" src="${logoOf(j["Competição"])}" alt="">`:""}${esc(j["Competição"])}${isAbsent(j["Posição"])?" · "+esc(j["Posição"]):""}</span></span>
-    <span class="mright"><span class="score">${o?`<span class="wdl ${o}">${o==="W"?(LANG==="en"?"W":"V"):o==="D"?(LANG==="en"?"D":"E"):(LANG==="en"?"L":"D")}</span>`:""}${sc?`${sc.mine}-${sc.theirs}`:esc(j.Resultado||"")}</span>
+    <span class="mright"><span class="score">${o?`<span class="wdl ${o}">${o==="W"?(LANG==="en"?"W":"V"):o==="D"?(LANG==="en"?"D":"E"):(LANG==="en"?"L":"D")}</span>`:""}${sc?`${sc.mine}-${sc.theirs}`:esc(j.Resultado||"")}${pensSplit(j)?`<small class="pen-s">(${pensSplit(j).mine}-${pensSplit(j).theirs}p)</small>`:""}</span>
       <span class="ga">${ga}${rating(j.Nota)}</span></span></button>`;
 }
 const wdlLetter = o => o==="W"?(LANG==="en"?"W":"V"):o==="D"?(LANG==="en"?"D":"E"):(LANG==="en"?"L":"D");
@@ -1477,7 +1503,7 @@ function vMatches(){
 /* ================= ADD / EDIT MATCH ================= */
 function blankForm(){
   const inf = S.informacoes; const det = {}; for(const k of DETAIL_KEYS) det[k] = ["Capitao","MOTM","CleanSheet","GolEmpate","GolVirada"].includes(k) ? false : ["AssistRecebidaDe","AssistDadaPara","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador"].includes(k) ? "" : ["xG","xA"].includes(k) ? "0.00" : k==="DistanciaPercorrida" ? "0.0" : "0";
-  det.Condicao = "Titular";
+  det.Condicao = "Titular"; det.Penaltis = "";
   const prev = UI.F; // keep context fields between consecutive entries, like the desktop form
   return { Data: prev?prev.Data:todayDMY(), Comp: prev?prev.Comp:"", Tipo: prev?prev.Tipo:"Liga Nacional", Rodada: prev?prev.Rodada:(LANG==="en"?"Round X":"Rodada X"), Local:"C", Clube: prev?prev.Clube:(inf["Clube Atual"]||""),
     Adv:"", Resultado:"0-0", Pos: inf["Posição"] || POSITIONS[LANG][0], Gols:"0", Ast:"0", Nota:"6.0", Amarelos:"0", V2:"0", VD:"0", Minutos:"90", euro: prev?prev.euro:saveUsesEuro(), det, mapa:[] };
@@ -1498,7 +1524,7 @@ function vAdd(){
   let inner = "";
   if(tab==="info"){
     inner = `<div class="fgrid">
-      ${field(t("date"), `<input class="inp" type="date" id="f_Data" data-f="Data" data-kind="date" value="${dmyToIso(F.Data)}">`)}
+      ${field(t("date"), dateBox(`data-f="Data"`, "f_Data", F.Data))}
       ${textIn("Rodada", F.Rodada, t("round"))}
       ${combo("Comp", F.Comp, t("comp"), "comp")}
       ${field(t("type"), `<div class="pick">${TYPES.map(x=>`<button type="button" data-act="setF" data-k="Tipo" data-v="${x}" aria-pressed="${F.Tipo===x}">${TYPE_LBL[LANG][x]}</button>`).join("")}</div>`, "full")}
@@ -1507,6 +1533,7 @@ function vAdd(){
       ${combo("Adv", F.Adv, t("opp"), "opp")}
       ${field(t("venue"), `<div class="pick"><button type="button" data-act="setF" data-k="Local" data-v="C" aria-pressed="${F.Local==="C"}">${t("home_v")}</button><button type="button" data-act="setF" data-k="Local" data-v="F" aria-pressed="${F.Local==="F"}">${t("away_v")}</button></div>`)}
       ${textIn("Resultado", F.Resultado, t("result"), "", 'inputmode="text" placeholder="2-1"')}
+      ${textIn("d.Penaltis", D.Penaltis||"", t("pens_field"), "full", 'inputmode="text" placeholder="'+t("pens_ph")+'"')}
       ${field(t("pos"), `<div class="pick">${POSITIONS[LANG].concat(absentOpts).map(p=>`<button type="button" data-act="setPos" data-v="${esc(p)}" aria-pressed="${F.Pos===p}">${esc(p)}</button>`).join("")}${![...POSITIONS[LANG],...absentOpts].includes(F.Pos)?`<button type="button" aria-pressed="true">${esc(F.Pos)}</button>`:""}</div>`, "full")}
       ${field(t("cond"), `<div class="pick"><button type="button" data-act="setDet" data-k="Condicao" data-v="Titular" aria-pressed="${D.Condicao==="Titular"}">${t("starter")}</button><button type="button" data-act="setDet" data-k="Condicao" data-v="Entrou no 2º Tempo" aria-pressed="${D.Condicao==="Entrou no 2º Tempo"}">${t("sub2")}</button></div>`, "full")}
       ${stepper("Minutos", F.Minutos, t("minutes"))}
@@ -1589,7 +1616,8 @@ function vStats(){
       <div class="legend"><span><i style="background:var(--accent)"></i>${t("goals")}</span><span><i style="background:var(--gold)"></i>${t("assists")}</span></div></div>
       ${[...ks].reverse().map(k=>{ const s = S.dados_jogador[k]; return `<div class="season-h"><span>${esc(k)}</span><span class="num">${s.jogos} J · ${s.gols} G · ${s.assistencias} A</span></div>${S.dados_temporada_Geral[k]&&S.dados_temporada_Geral[k].length?compTable(S.dados_temporada_Geral[k], false, k):""}`; }).join("")}`;
   } else if(tab==="clubs"){
-    const cl = Object.entries(S.dados_desempenho_por_clubes).sort((a,b)=>b[1].jogos-a[1].jogos);
+    const trClubs = new Set((S.historico_transferencias||[]).flatMap(x=>[x.Para, x.De]).filter(c=>c && !/base|free agent/i.test(c)));
+    const cl = Object.entries(S.dados_desempenho_por_clubes).filter(([n,c])=>int(c.jogos)>0 || trClubs.has(n)).sort((a,b)=>b[1].jogos-a[1].jogos);
     body = !cl.length ? noData : `<div class="ilist">${cl.map(([n,c])=>`<div class="item"><button class="crest-btn" data-act="logo" data-v="${esc(n)}" aria-label="${t("club_logo")}">${crest(n,40)}</button><button class="grow" style="text-align:left" data-act="clubReport" data-v="${esc(n)}"><div class="t">${esc(n)} <span class="muted">›</span></div><div class="s num">${c.jogos} J · ${c.gols} G · ${c.assistencias} A${c.jogos?` · ${((c.gols+c.assistencias)/c.jogos).toFixed(2)} G+A/J`:""}</div></button>${c.titulos?`<div style="text-align:center"><div class="qty">${c.titulos}</div><div class="tiny">${t("titles")}</div></div>`:""}</div>`).join("")}</div>`;
   } else if(tab==="nt"){
     body = vNationalTeam();
@@ -1705,7 +1733,8 @@ function sheetForm(title, fields, onSave){
   });
 }
 const sIn = (name, lab, val="", cls="full", attrs="") => field(lab, `<input class="inp" id="s_${name}" name="${name}" value="${esc(val)}" ${attrs}>`, cls);
-const sDate = (name, lab, dmy, cls="") => field(lab, `<input class="inp" type="date" id="s_${name}" name="${name}" value="${dmyToIso(dmy)}">`, cls);
+const dateBox = (attr, id, dmy) => `<div class="dbox"><input class="inp" ${attr} id="${id}" value="${esc(dmy||"")}" inputmode="numeric" placeholder="dd/mm/aaaa" maxlength="10" data-datemask="1" autocomplete="off"><button type="button" class="dbtn" data-act="pickDate" data-for="${id}" aria-label="📅">${IC_CAL}</button><input type="date" class="dnat" tabindex="-1" aria-hidden="true" data-target="${id}" value="${dmyToIso(dmy)}"></div>`;
+const sDate = (name, lab, dmy, cls="") => field(lab, dateBox(`name="${name}"`, "s_"+name, dmy), cls);
 const sSel = (name, lab, opts, val, cls="full") => field(lab, `<select class="inp" id="s_${name}" name="${name}">${opts.map(o=>{const [v,l]=Array.isArray(o)?o:[o,o];return `<option value="${esc(v)}" ${v===val?"selected":""}>${esc(l)}</option>`}).join("")}</select>`, cls);
 const sList = (name, lab, opts, val="", cls="full") => combo(name, val, lab, name==="clube" ? "club" : name==="comp" ? "award" : "trophy", cls, true);
 const clubsKnown = () => [...new Set([S.informacoes["Clube Atual"], ...Object.keys(S.dados_desempenho_por_clubes)])].filter(Boolean);
@@ -1716,7 +1745,7 @@ function careerForm(){
     <div class="fsec full">${t("personal")}</div>${sIn("Nome",t("fullname"))}${sDate("Nascimento",t("birth"),"01/01/2004")}${sIn("Nacionalidade",t("nation"),LANG==="en"?"England":"Brasil","")}
     <div class="fsec full">${t("physical")}</div>${sIn("Altura",t("height"),"180cm","")}${sIn("Peso",t("weight"),"75kg","")}
     ${sSel("Pe",t("foot"),[["Direito",t("right")],["Esquerdo",t("left")],["Ambidestro",t("both")]],"Direito","")}${sSel("Posicao",t("pos"),POSITIONS[LANG],POSITIONS[LANG][0],"")}
-    <div class="fsec full">${t("career")}</div>${sIn("Clube",t("start_club"))}${sDate("Inicio",t("contract_start"),todayDMY())}${sIn("Salario",t("wage"),"1500","",'inputmode="numeric"')}
+    <div class="fsec full">${t("career")}</div>${combo("Clube","",t("start_club"),"club","full",true)}${sDate("Inicio",t("contract_start"),todayDMY())}${sIn("Salario",t("wage"),"1500","",'inputmode="numeric"')}
     ${sSel("Patro",t("sponsor"),SPONSORS.map(s=>[s,s==="Sem Patrocínio"?t("no_sponsor"):s]),"Nike")}
     </div><button class="btn pri block" type="submit">▶ ${t("start_journey")}</button></form>`, root=>{
     $("#ncForm",root).addEventListener("submit", async e=>{ e.preventDefault(); const v = n => (root.querySelector(`[name=${n}]`).type==="date" ? isoToDmy(root.querySelector(`[name=${n}]`).value) : root.querySelector(`[name=${n}]`).value.trim());
@@ -2009,12 +2038,16 @@ function comboSource(src){
 }
 function comboOptions(src, q){
   const {mine, all} = comboSource(src); const k = lkey(q), qt = sigToks(q);
-  if(!k) return mine.slice(0, 40).map(n => ({n, mine:true}));
+  if(!k){ const seen = new Set(); return mine.filter(n => { const e = LogoDB.resolve(n); const id = e ? e.f : lkey(n); if(seen.has(id)) return false; seen.add(id); return true; }).slice(0, 40).map(n => ({n, mine:true})); }
   const score = n => { const nk = lkey(n); if(nk===k) return 100; if(nk.startsWith(k)) return 80; if(nk.includes(k)) return 60;
     const nt = sigToks(n); if(qt.length && qt.every(x => nt.some(c => tokEq(x,c)))) return 50; if(k.length>=4 && lev(k, nk.slice(0,k.length+1), 2)<=2) return 30; return 0; };
   const seen = new Set(), out = [];
-  for(const [list, bonus, isMine] of [[mine, 15, true], [all, 0, false]]) for(const n of list){ const kn = lkey(n); if(seen.has(kn)) continue; const s = score(n); if(s){ seen.add(kn); out.push({n, s:s+bonus, mine:isMine}); } }
-  return out.sort((a,b)=>b.s-a.s || a.n.length-b.n.length).slice(0, 30);
+  // one option per logo: a name already used in the save wins over the database spelling of the same club/competition
+  const ent = n => { const e = LogoDB.resolve(n); return e ? "e:"+e.f : "k:"+lkey(n); };
+  const scoreOf = (n, ali) => Math.max(score(n), ...(ali||[]).map(a => score(a)*0.7));
+  for(const n of mine){ const id = ent(n); if(seen.has(id)) continue; const e = LogoDB.resolve(n); const s = scoreOf(n, e ? e.names : []); if(s){ seen.add(id); out.push({n, s:s+15, mine:true}); } }
+  for(const n of all){ const id = ent(n); if(seen.has(id)) continue; const e = LogoDB.resolve(n); const s = scoreOf(n, e ? e.names : []); if(s){ seen.add(id); out.push({n, s, mine:false}); } }
+  return out.sort((a,b)=>b.s-a.s || a.n.length-b.n.length).slice(0, 40);
 }
 /* key: form field (data-f) or form name; src: which list to suggest */
 function combo(key, val, lab, src, cls="full", asName=false){
@@ -2032,10 +2065,12 @@ document.addEventListener("focusin", e => { const i = e.target; if(i.dataset && 
 document.addEventListener("input", e => { const i = e.target; if(i.dataset && i.dataset.combo) comboOpen(i); });
 document.addEventListener("pointerdown", e => {
   const opt = e.target.closest && e.target.closest(".cb-opt");
-  if(opt){ e.preventDefault(); const inp = opt.closest(".cb").querySelector("input"); inp.value = opt.dataset.cbv; inp.dispatchEvent(new Event("input", {bubbles:true})); comboCloseAll(); inp.blur(); return; }
+  if(opt) return; // selection happens on click so the list can be scrolled with the finger
   if(!(e.target.closest && e.target.closest(".cb"))) comboCloseAll();
 }, true);
-document.addEventListener("focusout", e => { const i = e.target; if(i.dataset && i.dataset.combo) setTimeout(() => { if(document.activeElement !== i) { const l = i.parentElement && i.parentElement.querySelector(".cb-list"); if(l) l.hidden = true; } }, 120); });
+document.addEventListener("click", e => { const opt = e.target.closest && e.target.closest(".cb-opt"); if(!opt) return;
+  const inp = opt.closest(".cb").querySelector("input"); inp.value = opt.dataset.cbv; inp.dispatchEvent(new Event("input", {bubbles:true})); comboCloseAll(); inp.blur(); });
+document.addEventListener("focusout_disabled", e => { const i = e.target; if(i.dataset && i.dataset.combo) setTimeout(() => { if(document.activeElement !== i) { const l = i.parentElement && i.parentElement.querySelector(".cb-list"); if(l) l.hidden = true; } }, 120); });
 
 /* ================= helpers ================= */
 const POS_EN2PT = {ST:"ATA",CF:"SA",LW:"PE",RW:"PD",MID:"MEI",CAM:"MEI",CM:"MC",CDM:"VOL",LB:"LE",RB:"LD",CB:"ZAG",GK:"GOL"};
@@ -2090,7 +2125,7 @@ function matchDetail(i){
   const body = `<div class="stack pm">
     <div class="pm-head">${compLogo?`<img src="${compLogo}" alt="">`:""}<div><div class="pm-comp">${esc(j["Competição"])}</div><div class="small muted">${esc(j.Data)}${sp&&sp.rodada?" • "+esc(sp.rodada):""} • ${t("venue")}: ${home?t("home_v"):t("away_v")}</div></div></div>
     <div class="pm-score"><div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(left)}">${crest(left,44)}</button><b>${esc(abbr(left))}</b><small>${esc(shortName(left))}</small></div>
-      <div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}</div>
+      <div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}${pensSplit(j)?`<div class="pens">${t("pens")}: ${pensSplit(j).home}-${pensSplit(j).away}<br><span style="color:${pensSplit(j).mine>pensSplit(j).theirs?"var(--win)":"var(--loss)"}">${pensSplit(j).mine>pensSplit(j).theirs?t("pens_won"):t("pens_lost")}</span></div>`:""}</div>
       <div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(right)}">${crest(right,44)}</button><b>${esc(abbr(right))}</b><small>${esc(shortName(right))}</small></div></div>
     <div class="pm-trio">
       <div class="pm-box" style="border-color:${cn}"><span class="tiny">${t("evaluation")}</span><span class="pm-rating" style="color:${cn}">${nota?nota.toFixed(1):"–"}</span>
@@ -2295,7 +2330,9 @@ function render(){
   tabbar.innerHTML = [["home",IC.home,t("home")],["matches",IC.list,t("matches")],["add",IC.plus,t("add")],["stats",IC.chart,t("stats")],["more",IC.more,t("more")]].map(([k,ic,l])=>
     k==="add" ? `<button class="fab" data-act="go" data-v="add" ${UI.view===k?'aria-current="page"':""}><span class="circle">${ic}</span>${l}</button>`
     : `<button data-act="go" data-v="${k}" ${UI.view===k?'aria-current="page"':""}>${ic}${l}${k==="more"&&S.noticias_nao_lidas?`<span class="badge">${S.noticias_nao_lidas}</span>`:""}</button>`).join("");
+  const keep = [...v.querySelectorAll(".seg")].map(s=>s.scrollLeft);
   v.innerHTML = ({home:vHome, matches:vMatches, add:vAdd, stats:vStats, more:vMore})[UI.view]();
+  v.querySelectorAll(".seg").forEach((s,k)=>{ if(keep[k]!=null) s.scrollLeft = keep[k]; });
 }
 function go(v){ UI.view = v; if(v!=="more") UI.more = null; render(); window.scrollTo(0,0); }
 function vWelcome(){
@@ -2344,9 +2381,10 @@ async function importText(txt){
   await activate(data, same ? same.id : "c"+Date.now().toString(36)); closeSheetNow(); toast(t("import_ok",{n:S.informacoes["Nome Completo"]})); go("home");
 }
 window.psImportText = txt => { importText(txt); };
-function closeSheetNow(){ const sh = $("#sheet"), sc = $("#scrim"); if(sh.hidden) return; sh.classList.remove("on"); sc.classList.remove("on"); sh.hidden = true; sc.hidden = true; }
+function closeSheetNow(){ document.body.classList.remove("locked"); const sh = $("#sheet"), sc = $("#scrim"); if(sh.hidden) return; sh.classList.remove("on"); sc.classList.remove("on"); sh.hidden = true; sc.hidden = true; }
 document.addEventListener("input", e=>{
   const el = e.target;
+  if(el.dataset && el.dataset.datemask && !(e.inputType||"").startsWith("delete")){ let d = el.value.replace(/\D/g,"").slice(0,8); if(d.length>4) d = d.slice(0,2)+"/"+d.slice(2,4)+"/"+d.slice(4); else if(d.length>2) d = d.slice(0,2)+"/"+d.slice(2); el.value = d; }
   if(el.dataset && el.dataset.live==="logoSearch"){ $("#logoResults").innerHTML = logoResults(el.value, el.dataset.name); return; }
   if(el.dataset && el.dataset.live==="oppQuery"){ UI.oppQuery = el.value; const tmp = document.createElement("div"); tmp.innerHTML = vOpponents(); const nl = tmp.querySelector("#oppList"); if(nl) $("#oppList").innerHTML = nl.innerHTML; return; } const k = el.dataset && el.dataset.f; if(!k || !UI.F) return;
   let v = el.dataset.kind==="date" ? isoToDmy(el.value) : el.value;
@@ -2358,6 +2396,7 @@ document.addEventListener("input", e=>{
 });
 document.addEventListener("change", async e=>{
   const el = e.target;
+  if(el.classList && el.classList.contains("dnat")){ const txt = document.getElementById(el.dataset.target); if(txt && el.value){ txt.value = isoToDmy(el.value); txt.dispatchEvent(new Event("input", {bubbles:true})); } return; }
   if(el.id==="f_Tipo" && UI.F){ UI.F.Tipo = el.value; return; }
   if(el.id==="mComp"){ UI.matchComp = el.value; render(); return; }
   if(el.dataset && el.dataset.change){ const k = el.dataset.change; UI[k] = k==="tmN" ? +el.value : el.value; render(); return; }
@@ -2374,7 +2413,9 @@ document.addEventListener("change", async e=>{
     el.value = "";
   }
 });
-function tapFeedback(b){ try{ if(navigator.vibrate) navigator.vibrate(12); }catch(e){} b.classList.remove("tapped"); void b.offsetWidth; b.classList.add("tapped"); }
+function tapFeedback(b){ try{ if(navigator.vibrate) navigator.vibrate(12); }catch(e){} }
+document.addEventListener("pointerdown", e => { const b = e.target.closest && e.target.closest(".stepper button"); if(b) b.classList.add("press"); }, true);
+["pointerup","pointercancel","pointerleave","touchend","blur"].forEach(ev => document.addEventListener(ev, () => document.querySelectorAll(".stepper button.press").forEach(x=>x.classList.remove("press")), true));
 function stepVal(k, d){ const F = UI.F; const isDet = k.startsWith("d."); const key = isDet ? k.slice(2) : k; const cur = int(isDet ? F.det[key] : F[key]); const nv = Math.max(0, cur + d);
   if(isDet) F.det[key] = String(nv); else F[key] = String(nv); const inp = document.getElementById("f_"+k); if(inp) inp.value = String(nv);
   if(k==="Gols" && UI.formTab==="xray") render(); }
@@ -2382,6 +2423,8 @@ document.addEventListener("click", async e=>{
   const b = e.target.closest("[data-act]"); if(!b) { if(e.target.id==="scrim") closeSheet(); return; }
   const a = b.dataset.act, v = b.dataset.v;
   switch(a){
+    case "pickDate": { const nat = b.parentElement.querySelector(".dnat"); const txt = document.getElementById(b.dataset.for); nat.value = dmyToIso(txt.value) || "";
+      try{ if(nat.showPicker) nat.showPicker(); else { nat.focus(); nat.click(); } }catch(err){ nat.focus(); nat.click(); } return; }
     case "addInjury": injuryForm(); return;
     case "editInjury": injuryForm({ano:b.dataset.ano, i:+b.dataset.i}); return;
     case "addTransfer": transferForm(null); return;
@@ -2432,7 +2475,7 @@ document.addEventListener("click", async e=>{
           const pc = S.dados_desempenho_por_clubes[fd.clube] = S.dados_desempenho_por_clubes[fd.clube] || {titulos:0,jogos:0,gols:0,assistencias:0}; pc.titulos = int(pc.titulos)+q;
           const img = trophyImg(c); c[1] = fd.nome; c[2] = "Temp "+fd.temp; c[3] = fd.clube; c[4] = q; if(img && !trophyImg(c)) Store.setTrophy(`${c[1]}_${c[3]}`, img);
           commit(); toast(t("saved")); render(); }); break; }
-    case "delTrophy": { closeSheetNow(); const c = S.conquistas[+b.dataset.i]; const pc = S.dados_desempenho_por_clubes[c[3]]; if(pc) pc.titulos = Math.max(0,int(pc.titulos)-(int(c[4])||1)); S.conquistas.splice(+b.dataset.i,1); commit(); toast(t("removed")); render(); break; }
+    case "delTrophy": { closeSheetNow(); const c = S.conquistas[+b.dataset.i]; const pc = S.dados_desempenho_por_clubes[c[3]]; if(pc){ pc.titulos = Math.max(0,int(pc.titulos)-(int(c[4])||1)); if(int(pc.jogos)<=0 && int(pc.titulos)<=0 && !int(pc.gols) && !int(pc.assistencias)) delete S.dados_desempenho_por_clubes[c[3]]; }; S.conquistas.splice(+b.dataset.i,1); commit(); toast(t("removed")); render(); break; }
     case "addAward": sheetForm(t("add_award"), sSel("tipo",t("award_type"),AWARD_TYPES[LANG],AWARD_TYPES[LANG][0])+sList("comp",t("comp"),[...new Set([S.informacoes["Clube Atual"],...S.ultimas_performances.map(j=>j["Competição"])])],S.informacoes["Clube Atual"])+sIn("det",t("detail_f"),"","full",'placeholder="'+(LANG==="en"?"e.g. November, 35 goals":"Ex: Novembro, 35 gols")+'"')+sIn("ano",t("year"),String(new Date().getFullYear()),"",'inputmode="numeric"')+sIn("qtd",t("qty"),"1","",'type="number" inputmode="numeric" min="1"'),
         fd=>{ const q = Math.max(1,int(fd.qtd)); const ex = S.premios_individuais.find(p=>p.tipo===fd.tipo && p.comp===fd.comp && String(p.ano)===String(fd.ano));
           if(ex){ ex.quantidade = int(ex.quantidade||1)+q; if(fd.det && !String(ex.detalhe||"").includes(fd.det)) ex.detalhe = ex.detalhe ? ex.detalhe+", "+fd.det : fd.det; }

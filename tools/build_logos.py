@@ -69,6 +69,9 @@ LEAGUE_ALIASES = {
 "South American Recopa":["Recopa Sul-Americana","Recopa Sudamericana","Recopa","Conmebol Recopa"],
 "Super Copa Do Brasil":["Supercopa do Brasil","Supercopa Do Brasil","Super Copa do Brasil"],
 "Copa América":["Copa América","Conmebol Copa América"],
+"Euro":["Eurocopa","UEFA Euro","Euro","Campeonato Europeu","Eurocopa UEFA"],
+"FIFA Intercontinental Cup":["FIFA Intercontinental","Intercontinental","Copa Intercontinental","Intercontinental Cup","Copa Intercontinental da FIFA"],
+"International Friendly Games":["Amistoso","Amistosos","Amistoso Seleção","Amistoso Internacional","Amistosos Internacionais","Friendly","International Friendly","Friendlies"],
 "FIFA Club World Cup":["Mundial de Clubes","Club World Cup","Mundial de Clubes da FIFA","Copa do Mundo de Clubes","FIFA Club World Cup"],
 "Indian Super League (India)":["Indian Super League","ISL"],
 "Isuzu UTE A-League (Australia)":["A-League","A League","Liga Australiana"],
@@ -105,13 +108,13 @@ TEAM_ALIASES = {
 "Sporting Clube de Braga":["Braga","SC Braga"],"Juventus F.C.":["Juventus","Juve"],"S.S.C. Napoli":["Napoli","Nápoles"],"A.S. Roma":["Roma"],"S.S. Lazio":["Lazio"],
 "Borussia Dortmund":["Dortmund","BVB"],"Borussia Mönchengladbach":["Gladbach","Monchengladbach"],"RB Leipzig":["Leipzig"],"RB Salzburg":["Salzburg","Red Bull Salzburg"],
 "Olympique Lyonnais":["Lyon"],"Olympique de Marseille":["Marseille","Olympique Marseille"],"AS Monaco":["Monaco"],"LOSC Lille":["Lille"],"OGC Nice":["Nice"],"Stade Rennais FC":["Rennes"],"RC Lens":["Lens"],
-"Atlético Mineiro":["Atlético-MG","Atletico MG","Atlético MG","Galo"],"América Mineiro":["America-MG","América-MG","America MG"],"Atlético Paranaense":["Athletico-PR","Athletico Paranaense","Atlético-PR","Athletico"],
+"Atlético Mineiro":["Atlético-MG","Atletico MG","Atlético MG","Galo"],"América Mineiro":["America-MG","América-MG","America MG"],"Athletico Paranaense":["Athletico-PR","Atlético Paranaense","Atlético-PR","Athletico","CAP"],
 "Atlético Goianiense":["Atlético-GO","Atletico GO"],"São Paulo":["São Paulo FC","Sao Paulo"],"Vasco da Gama":["Vasco"],"Bragantino":["Red Bull Bragantino","RB Bragantino"],
 "Internacional":["Inter de Porto Alegre","Internacional-RS","Inter-RS"],"Sport":["Sport Recife"],"Ceará":["Ceará SC"],"Avaí FC":["Avaí"],"Bahia":["EC Bahia"],"Vitória":["Vitória BA","EC Vitória"],
 "Club Atlético River Plate":["River Plate","River"],"Club Atlético Boca Juniors":["Boca Juniors","Boca"],"Racing Club de Avellaneda":["Racing","Racing Club"],"Club Atlético Independiente":["Independiente"],
 "Club Atlético Vélez Sarsfield":["Vélez","Velez Sarsfield"],"Al-Nassr Football Club":["Al Nassr","Al-Nassr"],"Al-Hilal Saudi Football Club":["Al Hilal","Al-Hilal"],"Al-Ittihad Club":["Al Ittihad","Al-Ittihad"],
 "Al-Ahli Saudi Football Club":["Al Ahli","Al-Ahli"],"Inter Miami CF":["Inter Miami"],"Los Angeles Galaxy":["LA Galaxy"],"Los Angeles FC":["LAFC"],"PSV":["PSV Eindhoven"],"AZ Alkmaar":["AZ"],
-"Galatasaray A.Ş.":["Galatasaray"],"Fenerbahçe SK":["Fenerbahçe"],"Beşiktaş JK":["Besiktas","Beşiktaş"],"Club de Fútbol América":["Club América","América do México"],
+"Galatasaray A.Ş.":["Galatasaray"],"Fenerbahçe SK":["Fenerbahçe"],"Beşiktaş JK":["Besiktas","Beşiktaş"],"Club de Fútbol América (America do Mexico)":["Club de Fútbol América","Club América","América do México","America do Mexico","CF América"],
 "Club Deportivo Guadalajara":["Chivas","Guadalajara"],"Club Tigres U.A.N.L.":["Tigres"],"Club de Fútbol Monterrey Rayados":["Monterrey"],"Club Deportivo Cruz Azul":["Cruz Azul"],"Pumas":["Pumas UNAM","UNAM"],
 "Football Club København":["Copenhagen","Copenhague","FC Copenhagen","København"],"BSC Young Boys":["Young Boys"],"FC Basel 1893":["Basel","Basileia"],"Sheffield Utd":["Sheffield United"],
 "West Brom":["West Bromwich","West Bromwich Albion"],"Wolverhampton Wanderers":["Wolves","Wolverhampton"],"Brighton & Hove Albion":["Brighton"],"Nottingham Forest":["Forest"],
@@ -184,11 +187,39 @@ for dct in (LEAGUE_ALIASES, CUP_ALIASES):
 def tr_al(n):
     al = ([bare(n)] if bare(n) != n else []) + TROPHY_EXTRA.get(n, []) + ALL_AL.get(bare(n).lower(), [])
     return list(dict.fromkeys(a for a in al if a != n))
-add("c", fold("TIMES"), club_al)
-add("n", fold("SELE"), nat_al)
-add("l", fold("LOGO TODAS AS LIGAS"), lg_al)
-add("k", fold("DENTRO DAS LIGAS"), cup_al)
-add("t", fold("TROFEUS"), tr_al, 256)
+def fold2(prefix):
+    for x in folders:
+        if dec(x).upper().startswith(prefix.upper()): return x
+    return None
+# Brazilian folders: "Name (Estadual-Paulistão)" / "Name (ou Apelido)" -> official name + nickname aliases
+GENERIC = {"estadual", "copa e estadual", "ou", "copa", "e"}
+def paren_split(n):
+    m = re.match(r"^(.*?)\s*\((.*)\)\s*$", n)
+    if not m: return n, []
+    base, inner = m.group(1).strip(), m.group(2)
+    parts = [p.strip() for p in re.split(r"[-,]|\bou\b", inner, flags=re.I)]
+    parts = [re.sub(r"\s*kk\s*$", "", p, flags=re.I).strip() for p in parts]
+    return base, [p for p in parts if p and p.lower() not in GENERIC and len(p) >= 4]
+BR_EXTRA = {"Athletic Club":["Athletic-MG","Athletic Club MG","Athletic Club (MG)"],"UberLÂNDIA":["Uberlândia","Uberlândia EC"],"Gremio Novorizontino":["Novorizontino","Grêmio Novorizontino"],
+ "Botafogo SP":["Botafogo-SP","Botafogo Ribeirão Preto"],"Botafogo PB":["Botafogo-PB"],"Operário":["Operário-PR","Operário Ferroviário"],"Operário-MS":["Operário MS"],
+ "Copa Do Nordeste":["Nordestão","Copa do Nordeste"],"COPA VERDE (Copa e estadual)":["Copa Verde"],"Remo":["Clube do Remo"],"Paysandu":["Paysandu SC"],"CRB":["CRB AL"],"CSA":["CSA AL"],"Vila Nova":["Vila Nova-GO"],"Mirassol":["Mirassol FC"]}
+RENAME = {"UberLÂNDIA":"Uberlândia","Athletic Club":"Athletic Club (MG)"}
+def br_al(n):
+    base, al = paren_split(n); return al + BR_EXTRA.get(n, []) + ([base] if base != n else [])
+add("c", fold2("LOGO TODOS OS TIMES"), club_al)
+add("c", fold2("Novas Logos Times Brasil"), br_al)
+add("n", fold2("LOGO TODAS AS SELE"), nat_al)
+add("l", fold2("LOGO TODAS AS LIGAS"), lg_al)
+add("k", fold2("COMPETI"), cup_al)
+add("k", fold2("NOVAS LOGOS BRASIL"), br_al)
+add("t", fold2("Trofeus das ligas"), tr_al, 256)
+add("t", fold2("TROFEUS ESTADUAIS"), br_al, 256)
+for e in entries:
+    if e["n"] in RENAME and e["f"].startswith("c/") and int(e["f"][2:].split(".")[0]) >= 771: e["a"] = [x for x in e["a"] if x != RENAME[e["n"]]]; e["n"] = RENAME[e["n"]]
+    m = re.match(r"^(.*?)\s*\((.*)\)\s*$", e["n"])
+    if m and any(w in m.group(2).lower() for w in ("ou ","estadual","kk","copa e")):
+        b = m.group(1).strip(); b = "Copa Verde" if b == "COPA VERDE" else b
+        e["a"] = list(dict.fromkeys([e["n"]] + e["a"])); e["n"] = b
 missing = [k for k in LEAGUE_ALIASES if not any(e["n"] == k for e in entries)]
 missing_t = [k for k in list(TEAM_ALIASES)+list(CUP_ALIASES) if not any(e["n"] == k for e in entries)]
 json.dump({"v": 1, "e": [[e["t"], e["n"], e["f"], e["a"]] for e in entries]}, open(os.path.join(OUT, "index.json"), "w"), ensure_ascii=False, separators=(",", ":"))
