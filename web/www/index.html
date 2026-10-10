@@ -457,6 +457,63 @@ body.locked{overflow:hidden}
 .pens{font-family:var(--f-body);font-size:12px;font-weight:700;color:var(--muted);text-align:center;margin-top:4px;line-height:1.3}
 .pen-s{font-size:10.5px;color:var(--muted);font-family:var(--f-body);margin-left:3px}
 
+/* ---------- v2.0.8: scoreboard pens row, tactics, news ---------- */
+.pm-score .pens-row{grid-column:1/-1;margin-top:2px}
+.tc-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tc-kpi{display:flex;flex-direction:column;gap:2px;padding:12px;border-radius:12px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--kc)}
+.tc-kpi b{font-size:30px;font-weight:800;color:var(--kc);line-height:1.05}
+.tc-kpi small{font-size:10.5px;color:var(--muted)}
+.tc-style{border:1.5px solid var(--sc);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.tc-style b{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1;color:var(--sc);text-transform:uppercase}
+.tc-style i{font-size:12.5px}
+.tc-pf{margin-top:10px;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:700}
+.tc-pf.good{background:color-mix(in srgb,#10B981 16%,var(--surface));border:1px solid #10B981}.tc-pf.good>b{color:#10B981;font-size:12px}
+.tc-pf.bad{background:color-mix(in srgb,#EF4444 16%,var(--surface));border:1px solid #EF4444}.tc-pf.bad>b{color:#EF4444;font-size:12px}
+.tc-met{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tc-met>div{display:flex;flex-direction:column;gap:1px;padding:10px 12px;border-radius:10px;background:var(--surface);border:1px solid var(--line)}
+.tc-met b{font-size:22px;font-weight:800}
+.tc-met small{font-size:10px;color:var(--muted)}
+.nw-list{display:flex;flex-direction:column;gap:12px}
+.nw-card{display:flex;flex-direction:column;width:100%;text-align:left;border-radius:14px;overflow:hidden;background:var(--surface);border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.nw-card.unread{border-color:var(--na)}
+.nw-band{display:flex;align-items:center;gap:8px;padding:8px 12px;background:linear-gradient(90deg,var(--nb),color-mix(in srgb,var(--nb) 60%,var(--na)));color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.03em;border-bottom:2px solid var(--na)}
+.nw-band img{width:22px;height:22px;object-fit:contain}
+.nw-band b{text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nw-dot{width:9px;height:9px;border-radius:50%;background:var(--na);box-shadow:0 0 0 3px color-mix(in srgb,var(--na) 30%,transparent)}
+.nw-sb{display:flex;align-items:center;justify-content:center;gap:14px;padding:12px 12px 4px}
+.nw-sb b{font-family:var(--f-display);font-size:28px;font-weight:800;padding:2px 10px;border:2px solid var(--na);border-radius:6px}
+.nw-sb small{font-size:11px;color:var(--muted)}
+.nw-body{display:flex;flex-direction:column;gap:6px;padding:8px 14px 14px}
+.nw-kick{align-self:flex-start;font-size:10px;font-weight:800;letter-spacing:.08em;padding:2px 7px;border-radius:3px;background:var(--na);color:#0B1220}
+.nw-body h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:21px;line-height:1.05;text-transform:uppercase;text-wrap:balance}
+.nw-body p{margin:0;font-size:13px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art{display:flex;flex-direction:column;gap:14px}
+.art-hero{margin:-14px -16px 0;padding:18px 16px 16px;background:linear-gradient(160deg,var(--nb),color-mix(in srgb,var(--nb) 75%,#000));border-bottom:3px solid var(--na);color:#fff}
+.art-tag{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--na)}
+.art-tag img{width:26px;height:26px;object-fit:contain}
+.art-kick{margin-left:auto;padding:2px 7px;border-radius:3px;background:var(--na);color:#0B1220}
+.art-hero h2{margin:10px 0 8px;font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1;text-transform:uppercase;text-wrap:balance}
+.art-by{font-size:11.5px;color:#CBD5E1}
+.art-board{position:relative;margin:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px 8px 16px;border-radius:6px;border:1px solid #1E293B;background:radial-gradient(120% 120% at 50% 0%,#141C2A,#05080F);color:#fff}
+.art-board::before{content:"";position:absolute;left:50%;top:8px;bottom:8px;border-left:1px dashed #2A3550}
+.ab-side{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#94A3B8;text-align:center;min-width:0}
+.ab-mid{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:1}
+.ab-score{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1;padding:4px 12px;border:2px solid var(--na);background:#05080F}
+.ab-pens{font-size:11px;font-weight:700;color:var(--na)}
+.ab-note{font-size:10.5px;font-weight:800;letter-spacing:.06em;color:#94A3B8;text-transform:uppercase;white-space:nowrap}
+.art-cap{margin-top:-8px;font-size:10.5px;font-style:italic;color:var(--muted)}
+.art-text{display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.6}
+.art-text p{margin:0}
+.art-lead{font-weight:600;font-size:16px}
+.art-text blockquote{margin:0;padding:10px 14px;border-left:4px solid var(--na);background:var(--surface);border-radius:0 10px 10px 0;font-style:italic}
+.art-text cite{display:block;margin-top:4px;font-size:12px;font-style:normal;color:var(--muted)}
+.art-box{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.art-box-h{padding:8px 12px;background:var(--nb);color:#fff;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;border-bottom:2px solid var(--na)}
+.art-box-g{display:grid;grid-template-columns:repeat(3,1fr)}
+.art-box-g div{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-top:1px solid var(--line)}
+.art-box-g b{font-size:22px;font-weight:800}
+.art-box-g span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;text-align:center}
+
 </style>
 </head>
 <body>
@@ -729,6 +786,58 @@ pt: {
   pens:"Pênaltis",
   pens_won:"Venceu nos pênaltis",
   pens_lost:"Perdeu nos pênaltis",
+  st_tactics:"Análise tática",
+  tac_atk:"Ataque",
+  tac_fin:"Passe final",
+  tac_cre:"Criação",
+  tac_skl:"Habilidade",
+  tac_def:"Defesa",
+  tac_undef:"Indefinido",
+  tac_undef_d:"Jogue mais partidas nesta temporada.",
+  st_support:"Coadjuvante em evolução",
+  st_support_d:"Discreto em campo. Precisa participar mais ativamente.",
+  st_killer:"Matador implacável",
+  st_killer_d:"Foco total na área e em balançar as redes. Altamente letal.",
+  st_maestro:"Maestro criador",
+  st_maestro_d:"O cérebro do time. Quebra defesas adversárias com passes.",
+  st_dribbler:"Driblador insinuante",
+  st_dribbler_d:"Destrói a marcação no um contra um. Muito liso e rápido.",
+  st_wall:"Muralha defensiva",
+  st_wall_d:"Especialista na contenção. Pesadelo para atacantes.",
+  game_s:"jogo",
+  tc_sofa:"Avaliação Sofascore",
+  tc_motm:"Prêmios MOTM",
+  tc_kill:"Eficiência matadora",
+  tc_waiter:"Serviços do garçom",
+  tac_attrs:"Atributos táticos",
+  scout_report:"Relatório do olheiro",
+  play_style:"Estilo de jogo",
+  strengths:"Pontos fortes",
+  to_improve:"A melhorar",
+  detailed_metrics:"Métricas detalhadas",
+  pass_acc:"Precisão de passe",
+  mt_xg:"Gols esperados",
+  mt_xa:"Assists esperadas",
+  mt_kp:"Passes p/ finalização",
+  mt_cc:"Oportunidades",
+  mt_dist:"Média percorrida",
+  mt_dr:"Quebras de marcação",
+  mt_tk:"Bolas recuperadas",
+  mt_pg:"Recuperações p/ jogo",
+  mt_pl:"Perdas p/ jogo",
+  mt_fs:"Faltas no jogador",
+  mt_fc:"Infrações cometidas",
+  mt_ok:"certos",
+  form_curve:"Curva de forma (últimos 15 jogos)",
+  tac_empty:"Registre partidas com scout para ver sua análise tática.",
+  news_title:"Notícias",
+  pens_short:"pên.",
+  by:"Por",
+  min_read:"min de leitura",
+  sofascore:"Nota Sofascore",
+  photo_credit:"Foto: Reprodução / Agência ProStats",
+  numbers_of:"Os números de {n}",
+  see_match:"Ver detalhes da partida",
   name_col:"Nome", pos_col:"Pos",
 },
 en: {
@@ -984,6 +1093,58 @@ en: {
   pens:"Penalties",
   pens_won:"Won on penalties",
   pens_lost:"Lost on penalties",
+  st_tactics:"Tactical analysis",
+  tac_atk:"Attack",
+  tac_fin:"Final pass",
+  tac_cre:"Creation",
+  tac_skl:"Skill",
+  tac_def:"Defence",
+  tac_undef:"Undefined",
+  tac_undef_d:"Play more matches this season.",
+  st_support:"Developing role player",
+  st_support_d:"Quiet on the pitch. Needs to get more involved.",
+  st_killer:"Ruthless finisher",
+  st_killer_d:"All about the box and scoring. Lethal.",
+  st_maestro:"Creative maestro",
+  st_maestro_d:"The team's brain. Unlocks defences with passing.",
+  st_dribbler:"Slippery dribbler",
+  st_dribbler_d:"Destroys defenders one-on-one. Quick and elusive.",
+  st_wall:"Defensive wall",
+  st_wall_d:"Containment specialist. A forward's nightmare.",
+  game_s:"game",
+  tc_sofa:"Sofascore rating",
+  tc_motm:"MOTM awards",
+  tc_kill:"Finishing efficiency",
+  tc_waiter:"Chance supply",
+  tac_attrs:"Tactical attributes",
+  scout_report:"Scout report",
+  play_style:"Play style",
+  strengths:"Strengths",
+  to_improve:"To improve",
+  detailed_metrics:"Detailed metrics",
+  pass_acc:"Pass accuracy",
+  mt_xg:"Expected goals",
+  mt_xa:"Expected assists",
+  mt_kp:"Passes leading to shots",
+  mt_cc:"Chances",
+  mt_dist:"Average distance",
+  mt_dr:"Defenders beaten",
+  mt_tk:"Balls won",
+  mt_pg:"Recoveries per game",
+  mt_pl:"Losses per game",
+  mt_fs:"Fouls won",
+  mt_fc:"Fouls committed",
+  mt_ok:"accurate",
+  form_curve:"Form curve (last 15 games)",
+  tac_empty:"Log matches with scouting data to see your tactical analysis.",
+  news_title:"News",
+  pens_short:"pens",
+  by:"By",
+  min_read:"min read",
+  sofascore:"Sofascore rating",
+  photo_credit:"Photo: ProStats Agency",
+  numbers_of:"{n}'s numbers",
+  see_match:"See match details",
   name_col:"Name", pos_col:"Pos",
 }};
 
@@ -1239,12 +1400,13 @@ function saveMatch(F, editIdx){
       else if(g>=1) head = LANG==="en" ? `${first.toUpperCase()} SCORES AND DECIDES` : `${first.toUpperCase()} MARCA E DECIDE`;
       else head = LANG==="en" ? `FULL TIME: ${club.toUpperCase()} ${res} ${adv.toUpperCase()}` : `FIM DE JOGO: ${club.toUpperCase()} ${res} ${adv.toUpperCase()}`;
       txt = LANG==="en" ? `All the details from the clash with ${adv}.` : `Confira os detalhes do confronto contra o ${adv}.`; }
+    try{ const nj = S.ultimas_performances.find(x=>x.Data===data && x["Adversário"]===adv); if(nj){ const art = buildArticle(nj); head = art.headline; txt = art.paras[0]; } }catch(e){}
     S.feed_noticias.unshift({tipo:"match", data, titulo:head, texto_curto:txt, tag:LANG==="en"?"MATCH":"JOGO", lida:false,
       stats:{nome:S.informacoes["Nome Completo"], clube:club, adv, placar:res, gols:g, assists:a, nota, comp, local, detalhes:det}});
     S.feed_noticias.sort((x,y)=>dateNum(y.data)-dateNum(x.data));
     S.noticias_nao_lidas = (S.noticias_nao_lidas||0) + 1;
   }
-  while(S.feed_noticias.length>10){ const r = S.feed_noticias.pop(); if(!r.lida) S.noticias_nao_lidas = Math.max(0, S.noticias_nao_lidas-1); }
+  while(S.feed_noticias.length>30){ const r = S.feed_noticias.pop(); if(!r.lida) S.noticias_nao_lidas = Math.max(0, S.noticias_nao_lidas-1); }
   return {ok:true, msg: editIdx!=null ? t("updated_match") : t("saved_match")};
 }
 const DETAIL_KEYS = ["Condicao","Capitao","MOTM","ChancesCriadas","DriblesCertos","PassesDecisivos","ChutesNoGol","ChutesNaTrave","ChutesPraFora","ChutesBloqueados","Desarmes","GolsSofridosTime","CleanSheet","PeDireito","PeEsquerdo","Cabeca","FaltasBat","FaltasGol","PenalBat","PenalGol","Gol1T","Gol2T","GolProrr","AssistRecebidaDe","AssistDadaPara","xG","GrandesChancesPerdidas","xA","PreAssistencias","PossesGanhas","PossesPerdidas","DistanciaPercorrida","GolEmpate","GolVirada","PassesCertos","PassesErrados","PassesCurtos","BolasLongas","CruzamentosTentados","CruzamentosCertos","FaltasSofridas","FaltasCometidas","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador","Penaltis"];
@@ -1601,7 +1763,7 @@ function records(){
     ["📊",t("w_d_l"),`${W}/${D}/${L}`,P.length?Math.round(100*W/P.length)+"% "+(LANG==="en"?"wins":"vitórias"):""]];
 }
 function vStats(){
-  const tabs = [["overall",t("st_overall")],["seasons",t("st_seasons")],["clubs",t("st_clubs")],["nt",t("st_nt")],["goals",t("st_goals")],["minutes",t("st_minutes")],["opp",t("st_opp")],["partners",t("st_partners")],["tm",t("st_tm")],["records",t("st_records")]];
+  const tabs = [["overall",t("st_overall")],["seasons",t("st_seasons")],["clubs",t("st_clubs")],["nt",t("st_nt")],["goals",t("st_goals")],["minutes",t("st_minutes")],["opp",t("st_opp")],["partners",t("st_partners")],["tm",t("st_tm")],["tactics",t("st_tactics")],["records",t("st_records")]];
   const tab = UI.statsTab; let body = "";
   const noData = empty(t("no_data"), t("no_data_s"));
   if(tab==="overall"){
@@ -1636,6 +1798,7 @@ function vStats(){
         <div class="mini"><span class="tiny">${t("pen_g")}</span><span class="num">${int(bp["Penaltis Convertidas"])}/${int(bp["Penaltis batidas"])}</span><span class="small muted">${conv(int(bp["Penaltis Convertidas"]),int(bp["Penaltis batidas"]))} ${t("conv")}</span></div>
         <div class="mini" style="grid-column:1/-1"><span class="tiny">${t("xg_vs")}</span><span class="num">${xg.toFixed(2)} xG · ${gl} ${t("goals_word")}</span><span class="small" style="color:${gl>=xg?"var(--go)":"var(--bad)"}">${gl>=xg?"+":""}${(gl-xg).toFixed(2)}</span></div></div>
       ${allDots.length?`<div class="card"><div class="tiny" style="margin-bottom:8px">${t("all_goals_map")} · ${allDots.length}</div>${goalSVG(allDots,false)}</div>`:""}`;
+  } else if(tab==="tactics"){ body = vTactics();
   } else if(tab==="minutes"){ body = vMinutes();
   } else if(tab==="opp"){ body = vOpponents();
   } else if(tab==="partners"){ body = vPartners();
@@ -1656,6 +1819,7 @@ function vMore(){
 }
 function backBar(title, addAct){ return `<div class="row between"><button class="btn sm" data-act="moreBack">← ${t("more")}</button>${addAct&&!SAMPLE?`<button class="btn sm acc" data-act="${addAct}">+ ${t("add_trophy").split(" ")[0]}</button>`:""}</div><h2 style="font-family:var(--f-display);font-size:26px;text-transform:uppercase;margin-top:4px">${title}</h2>`; }
 function vMoreSub(k){
+  if(k==="news") return vNews();
   if(k==="injuries") return vInjuries(); if(k==="transfers") return vTransfers(); if(k==="market") return vMarket();
   let body = "", add = null, title = t((MORE_ITEMS.find(x=>x[0]===k)||[])[1]);
   if(k==="news"){
@@ -2125,8 +2289,8 @@ function matchDetail(i){
   const body = `<div class="stack pm">
     <div class="pm-head">${compLogo?`<img src="${compLogo}" alt="">`:""}<div><div class="pm-comp">${esc(j["Competição"])}</div><div class="small muted">${esc(j.Data)}${sp&&sp.rodada?" • "+esc(sp.rodada):""} • ${t("venue")}: ${home?t("home_v"):t("away_v")}</div></div></div>
     <div class="pm-score"><div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(left)}">${crest(left,44)}</button><b>${esc(abbr(left))}</b><small>${esc(shortName(left))}</small></div>
-      <div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}${pensSplit(j)?`<div class="pens">${t("pens")}: ${pensSplit(j).home}-${pensSplit(j).away}<br><span style="color:${pensSplit(j).mine>pensSplit(j).theirs?"var(--win)":"var(--loss)"}">${pensSplit(j).mine>pensSplit(j).theirs?t("pens_won"):t("pens_lost")}</span></div>`:""}</div>
-      <div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(right)}">${crest(right,44)}</button><b>${esc(abbr(right))}</b><small>${esc(shortName(right))}</small></div></div>
+      <div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}</div>
+      <div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(right)}">${crest(right,44)}</button><b>${esc(abbr(right))}</b><small>${esc(shortName(right))}</small></div>${pensSplit(j)?`<div class="pens pens-row">${t("pens")}: ${pensSplit(j).home}-${pensSplit(j).away}<br><span style="color:${pensSplit(j).mine>pensSplit(j).theirs?"var(--win)":"var(--loss)"}">${pensSplit(j).mine>pensSplit(j).theirs?t("pens_won"):t("pens_lost")}</span></div>`:""}</div>
     <div class="pm-trio">
       <div class="pm-box" style="border-color:${cn}"><span class="tiny">${t("evaluation")}</span><span class="pm-rating" style="color:${cn}">${nota?nota.toFixed(1):"–"}</span>
         ${d.MOTM||d.Capitao?`<span class="pm-tag">${d.MOTM?"🏅 MOTM ":""}${d.Capitao?"© "+t("captain_b"):""}</span>`:""}<span class="small">${esc(isAbsent(j["Posição"])?j["Posição"]:cond)} • ${mins} min</span></div>
@@ -2319,6 +2483,310 @@ function valueForm(key){
       S.dados_valor_mercado_str[iso] = "€ " + fd.valor.toUpperCase().replace("€","").trim(); commit(); toast(t("saved")); render(); });
 }
 
+/* ================= Tactical analysis (desktop "Análise de Scout") ================= */
+function vTactics(){
+  const f = UI.tacSeason || ""; const G = S.ultimas_performances.filter(j => played(j) && (!f || seasonOf(j)===f));
+  const n = G.length; const sum = fn => G.reduce((s,j)=>s+fn(j, j.Detalhes||{}),0); const avg = fn => n ? sum(fn)/n : 0;
+  const m = { nota: avg(j=>flt(j.Nota)), g: avg(j=>int(j.Gols)), a: avg(j=>int(j["Assistências"])), ch: avg((j,d)=>int(d.ChancesCriadas)), dr: avg((j,d)=>int(d.DriblesCertos)),
+    kp: avg((j,d)=>int(d.PassesDecisivos)), tk: avg((j,d)=>int(d.Desarmes)), xg: avg((j,d)=>flt(d.xG)), xa: avg((j,d)=>flt(d.xA)), dist: avg((j,d)=>flt(d.DistanciaPercorrida)),
+    pg: avg((j,d)=>int(d.PossesGanhas)), pl: avg((j,d)=>int(d.PossesPerdidas)), fs: avg((j,d)=>int(d.FaltasSofridas)), fc: avg((j,d)=>int(d.FaltasCometidas)) };
+  const motm = G.filter(j=>(j.Detalhes||{}).MOTM).length; const pc = sum((j,d)=>int(d.PassesCertos)), pe = sum((j,d)=>int(d.PassesErrados)); const pp = pc+pe ? 100*pc/(pc+pe) : 0;
+  const esc100 = (v, mx) => Math.min(100, Math.max(0, Math.round(v/mx*100)));
+  const radar = [["atk", t("tac_atk"), esc100(m.g,0.8)],["fin", t("tac_fin"), esc100(m.a,0.4)],["cre", t("tac_cre"), esc100(m.ch+m.kp,3.5)],["skl", t("tac_skl"), esc100(m.dr,4)],["def", t("tac_def"), esc100(m.tk,3)]];
+  let style = [t("tac_undef"), t("tac_undef_d"), "var(--muted)"];
+  if(n){ const top = [...radar].sort((a,b)=>b[2]-a[2])[0];
+    if(top[2] < 15) style = [t("st_support"), t("st_support_d"), "#94A3B8"];
+    else if(top[0]==="atk") style = [t("st_killer"), t("st_killer_d"), "#EF4444"];
+    else if(top[0]==="cre" || top[0]==="fin") style = [t("st_maestro"), t("st_maestro_d"), "#0EA5E9"];
+    else if(top[0]==="skl") style = [t("st_dribbler"), t("st_dribbler_d"), "#F59E0B"];
+    else style = [t("st_wall"), t("st_wall_d"), "#10B981"]; }
+  const sorted = [...radar].sort((a,b)=>b[2]-a[2]); const strong = sorted.slice(0,2), weak = sorted.slice(-2);
+  // radar svg (5 axes)
+  const cx = 160, cy = 132, R = 92; const pt = (i, r) => { const ang = -Math.PI/2 + i*2*Math.PI/5; return [cx+Math.cos(ang)*r, cy+Math.sin(ang)*r]; };
+  let rg = ""; for(const k of [.25,.5,.75,1]) rg += `<polygon points="${radar.map((_,i)=>pt(i,R*k).join(",")).join(" ")}" fill="none" class="grid"/>`;
+  radar.forEach((x,i)=>{ const [px,py] = pt(i,R); rg += `<line class="grid" x1="${cx}" y1="${cy}" x2="${px}" y2="${py}"/>`; const [lx,ly] = pt(i,R+24);
+    rg += `<text x="${lx}" y="${ly}" text-anchor="middle" style="fill:var(--fg);font-weight:700;font-size:11px">${esc(x[1])}</text><text x="${lx}" y="${ly+13}" text-anchor="middle" style="font-size:10.5px">${x[2]}</text>`; });
+  rg += `<polygon points="${radar.map((x,i)=>pt(i,R*Math.max(4,x[2])/100).join(",")).join(" ")}" fill="#8B5CF6" fill-opacity=".3" stroke="#8B5CF6" stroke-width="2.5"/>`;
+  // form chart (last 15)
+  const last = [...G].sort((a,b)=>dateNum(a.Data)-dateNum(b.Data)).slice(-15);
+  let form = ""; if(last.length){ const W = 340, H = 160, L = 26, Rr = 330, T = 16, B = 128; const x = k => last.length===1 ? (L+Rr)/2 : L + k*(Rr-L)/(last.length-1); const y = v => B - (Math.max(3,Math.min(10,v))-3)/7*(B-T);
+    let g = ""; [4,6,8,10].forEach(v => g += `<line class="grid" x1="${L}" x2="${Rr}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-6}" y="${y(v)+4}" text-anchor="end">${v}</text>`);
+    g += `<path d="${last.map((j,k)=>`${k?"L":"M"}${x(k)},${y(flt(j.Nota)||6)}`).join("")}" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>`;
+    last.forEach((j,k)=>{ const v = flt(j.Nota)||6; const c = v>=8 ? "#4ADE80" : v>=6.5 ? "#FACC15" : "#EF4444";
+      g += `<circle cx="${x(k)}" cy="${y(v)}" r="5" fill="${c}" stroke="var(--surface)" stroke-width="2"/>`; if(last.length<=10 || k%2===0) g += `<text x="${x(k)}" y="${H-12}" text-anchor="middle" style="font-size:9.5px">${esc(String(j["Adversário"]).trim().slice(0,3).toUpperCase())}</text>`; });
+    form = `<svg class="chart" viewBox="0 0 ${W} ${H}">${g}</svg>`; }
+  const kc = m.nota>=7.5 ? "#4ADE80" : m.nota>=6.5 ? "#FACC15" : "#EF4444";
+  const kpi = (lbl, v, sub, col) => `<div class="tc-kpi" style="--kc:${col}"><span class="tiny">${lbl}</span><b class="num">${v}</b><small>${sub}</small></div>`;
+  const met = [["xG / "+t("game_s"), m.xg.toFixed(2), t("mt_xg"), "#F59E0B"],["xA / "+t("game_s"), m.xa.toFixed(2), t("mt_xa"), "#38BDF8"],[t("key_passes"), m.kp.toFixed(1), t("mt_kp"), "#38BDF8"],[t("chances"), m.ch.toFixed(1), t("mt_cc"), "#34D399"],
+    [t("dist"), m.dist.toFixed(1)+"km", t("mt_dist"), "#4ADE80"],[t("dribbles"), m.dr.toFixed(1), t("mt_dr"), "#F59E0B"],[t("tackles"), m.tk.toFixed(1), t("mt_tk"), "#10B981"],[t("won"), m.pg.toFixed(1), t("mt_pg"), "#10B981"],
+    [t("lost"), m.pl.toFixed(1), t("mt_pl"), "#EF4444"],[t("fouled"), m.fs.toFixed(1), t("mt_fs"), "#FACC15"],[t("fouls"), m.fc.toFixed(1), t("mt_fc"), "#EF4444"],[t("pass_acc"), pp.toFixed(1)+"%", `${pc} ${t("mt_ok")}`, "#0EA5E9"]];
+  return `${seasonPicker(f,"tacSeason")}
+    ${!n ? empty(t("no_data"), t("tac_empty")) : `
+    <div class="tc-kpis">${kpi(t("avg_rating"), m.nota.toFixed(2), t("tc_sofa"), kc)}${kpi(t("motm"), motm, t("tc_motm"), "#FFD700")}${kpi(t("goals")+" / "+t("game_s"), m.g.toFixed(2), t("tc_kill"), "#EF4444")}${kpi(t("assists")+" / "+t("game_s"), m.a.toFixed(2), t("tc_waiter"), "#A855F7")}</div>
+    <div class="card"><div class="fsec" style="margin:0;color:var(--fg);text-align:center">${t("tac_attrs")}</div><svg class="chart" viewBox="0 0 320 270">${rg}</svg></div>
+    <div class="card"><div class="fsec" style="margin:0 0 10px;color:#8B5CF6">📋 ${t("scout_report")}</div>
+      <div class="tc-style" style="--sc:${style[2]}"><span class="tiny">${t("play_style")}</span><b>${style[0]}</b><i>${style[1]}</i></div>
+      <div class="tc-pf good"><b>● ${t("strengths")}</b>${strong.map(x=>`<span>+ ${esc(x[1])}</span>`).join("")}</div>
+      <div class="tc-pf bad"><b>● ${t("to_improve")}</b>${weak.map(x=>`<span>- ${esc(x[1])}</span>`).join("")}</div></div>
+    <div class="sec-h"><h2>${t("detailed_metrics")}</h2></div>
+    <div class="tc-met">${met.map(([l,v,s,c])=>`<div><span class="tiny">${l}</span><b class="num" style="color:${c}">${v}</b><small>${s}</small></div>`).join("")}</div>
+    ${form?`<div class="card"><div class="fsec" style="margin:0 0 4px;color:var(--fg)">📈 ${t("form_curve")}</div>${form}</div>`:""}`}`;
+}
+
+/* ================= News engine =================
+   Every match becomes an article built from large phrase pools. A seed derived from the match (date + opponent + score)
+   drives every choice, so the same match always reads the same, while different matches almost never repeat. */
+function seedOf(str){ let h = 2166136261; for(const c of String(str)) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+function rng(seed){ let a = seed || 1; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const pickR = (r, arr) => arr[Math.floor(r() * arr.length)];
+const fill = (tpl, v) => tpl.replace(/\{(\w+)\}/g, (_, k) => v[k] != null ? v[k] : "");
+const cap1 = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+
+/* ---------- competition look ---------- */
+function compTheme(comp, isSel){
+  const u = lnorm(comp);
+  const T = (bg, ac, tag) => ({bg, ac, tag});
+  if(isSel || /copa do mundo|world cup|elimin|amistoso|friendly|copa america|euro\b|eurocopa|nations/.test(u)) return u.includes("mundo")||u.includes("world") ? T("#4A0D24","#D4AF37","COPA DO MUNDO") : T("#0F2A4A","#FACC15", LANG==="en"?"NATIONAL TEAM":"SELEÇÃO");
+  if(u.includes("champions")) return T("#0A1A4A","#9DB7FF","CHAMPIONS");
+  if(u.includes("europa league")||u.includes("liga europa")) return T("#2B1300","#F97316","EUROPA LEAGUE");
+  if(u.includes("conference")) return T("#06281A","#22C55E","CONFERENCE");
+  if(u.includes("libertadores")) return T("#1A1406","#D4AF37","LIBERTADORES");
+  if(u.includes("sul americana")||u.includes("sudamericana")) return T("#08213D","#38BDF8","SUL-AMERICANA");
+  if(u.includes("club world")||u.includes("mundial de clubes")||u.includes("intercontinental")) return T("#1B1530","#E5C46B","MUNDIAL");
+  if(u.includes("premier")) return T("#2A0B3D","#00FF85","PREMIER LEAGUE");
+  if(u.includes("la liga")||u.includes("laliga")) return T("#2A0A0A","#FF4B44","LALIGA");
+  if(u.includes("bundesliga")) return T("#2A0606","#E3141B","BUNDESLIGA");
+  if(u.includes("serie a")&&!u.includes("seria")&&!u.includes("brasil")) return T("#04213B","#22A3FF","SERIE A");
+  if(u.includes("ligue 1")) return T("#1A1C06","#DAE025","LIGUE 1");
+  if(u.includes("brasileir")||u.includes("seria")) return T("#062A16","#FDD116","BRASILEIRÃO");
+  if(u.includes("copa do brasil")) return T("#06251A","#2EE59D","COPA DO BRASIL");
+  if(/paulista|carioca|mineiro|gaucho|baiano|paranaense|catarinense|goiano|cearense|pernambucano|nordeste|copa verde/.test(u)) return T("#1E1A06","#F5B83D", LANG==="en"?"STATE LEAGUE":"ESTADUAL");
+  if(/super ?c|supercopa|supercup|supertaca|shield|schaal|trophee|recopa/.test(u)) return T("#1C0F2E","#C084FC","SUPERCOPA");
+  if(/cup|copa|pokal|taca|coppa|coupe|beker/.test(u)) return T("#2A1606","#FB923C", LANG==="en"?"CUP":"COPA");
+  return T("#0F1E33","#38BDF8", LANG==="en"?"LEAGUE":"LIGA");
+}
+
+/* ---------- phrase banks (PT) ---------- */
+const NEWS_PT = {
+  head: {
+    hat: ["{S} anota hat-trick e atropela o {O}","Noite mágica: {L} marca três vezes contra o {O}","{L} leva a bola para casa após hat-trick sobre o {O}","Show de {L}! Três gols e o {O} sem resposta","{C} {SC} {O}: {L} faz três e vira dono da partida","Hat-trick de {L} transforma o jogo contra o {O}","{S} decide com três gols e entra para a história do confronto","Três vezes {L}: o {O} não conseguiu pará-lo","Artilheiro em estado de graça: {L} marca três no {O}","{L} assina hat-trick e incendeia a torcida do {C}","Implacável, {L} balança a rede três vezes diante do {O}","O {O} que o diga: {L} brilha com hat-trick"],
+    poker: ["{L} marca {G} gols e faz partida histórica contra o {O}","Atuação de videogame: {L} anota {G} vezes no {O}","{S} faz {G} gols e assombra o {O}","Inacreditável: {G} gols de {L} na vitória do {C}","{L} vira lenda instantânea com {G} gols sobre o {O}"],
+    brace: ["{S} marca duas vezes e garante o {C}","Doblete de {L} empurra o {C} contra o {O}","{L} faz dois e é o nome do jogo diante do {O}","Dois gols de {L} decidem o duelo com o {O}","{C} {SC} {O}: {L} balança a rede duas vezes","Em noite inspirada, {L} anota dois contra o {O}","{S} brilha com dois gols e deixa sua marca","{L} dobra a conta pessoal e lidera o {C}","Faro de gol: {L} marca dois e castiga o {O}","{L} decide com dobradinha diante do {O}"],
+    goalW: ["{S} marca e o {C} vence o {O}","Gol de {L} garante triunfo do {C} sobre o {O}","{L} deixa o seu e ajuda o {C} a bater o {O}","{C} supera o {O} com gol de {L}","Com gol de {L}, {C} faz {SC} no {O}","{L} balança a rede e comemora vitória diante do {O}","{S} aparece na hora certa e o {C} vence","Decisivo, {L} marca na vitória do {C}","{L} volta a marcar e o {C} leva a melhor sobre o {O}","Tem gol de {L}! {C} vence o {O} por {SC}"],
+    goalD: ["{L} marca, mas {C} fica no empate com o {O}","Gol de {L} não basta e {C} empata com o {O}","{S} deixa o seu em empate diante do {O}","Empate com sabor amargo: {L} marca contra o {O}","{C} e {O} empatam; {L} anota o gol do time"],
+    goalL: ["Gol de {L} não evita derrota do {C} para o {O}","{L} marca, mas {C} cai diante do {O}","{S} faz o dele, porém o {O} vence o {C}","Mesmo com gol de {L}, {C} é superado pelo {O}","{L} balança a rede, mas o {O} leva a melhor"],
+    assist: ["{S} dá assistência e o {C} vence o {O}","Garçom! {L} serve companheiro na vitória sobre o {O}","{L} distribui o jogo e participa de gol contra o {O}","Assistência de {L} faz a diferença diante do {O}","Visão de jogo: {L} cria e o {C} comemora","{L} não marca, mas é decisivo com passe para gol"],
+    assistMany: ["{L} distribui {A} assistências e comanda o {C}","Garçom de luxo: {A} assistências de {L} contra o {O}","{S} serve {A} vezes e o {O} não resiste","Maestro: {L} dá {A} assistências na vitória do {C}"],
+    motm: ["{S} é eleito o melhor em campo contra o {O}","Melhor da partida: {L} domina o duelo com o {O}","{L} leva o prêmio de craque do jogo diante do {O}","Atuação de gala rende a {L} o prêmio de melhor em campo","{L} sobra em campo e é o destaque contra o {O}"],
+    great: ["{L} faz grande partida contra o {O}","Atuação segura de {L} no duelo com o {O}","{S} é um dos destaques diante do {O}","{L} recebe nota alta após jogo contra o {O}"],
+    poor: ["Noite para esquecer: {L} passa em branco contra o {O}","{L} tem atuação apagada diante do {O}","{S} não consegue repetir boas atuações contra o {O}","Abaixo do esperado: {L} sofre contra o {O}","{L} encontra dificuldades e o {C} sente diante do {O}","Jogo difícil para {L} contra o {O}"],
+    win: ["{C} vence o {O} por {SC} com {L} em campo","{C} bate o {O} e {L} comemora mais três pontos","Vitória do {C}: {SC} sobre o {O}","{C} supera o {O}; {L} atua por {M} minutos"],
+    draw: ["{C} e {O} ficam no empate","Tudo igual: {C} {SC} {O}","{C} empata com o {O}; {L} esteve em campo","Empate entre {C} e {O} com {L} titular"],
+    loss: ["{C} perde para o {O} por {SC}","Derrota do {C} diante do {O}","{O} vence o {C}; {L} não evita revés","Tropeço: {C} cai frente ao {O}"],
+    bigwin: ["Goleada! {C} atropela o {O} por {SC}","{C} massacra o {O} e {L} participa da festa","Passeio: {C} {SC} {O}","{C} não toma conhecimento do {O}: {SC}"],
+    pensW: ["{C} vence o {O} nos pênaltis ({P})","Nervos de aço: {C} passa pelo {O} nos pênaltis","Decisão na marca da cal: {C} supera o {O}","{L} comemora classificação nos pênaltis contra o {O}"],
+    pensL: ["{C} cai para o {O} nos pênaltis ({P})","Drama: {C} é eliminado pelo {O} nos pênaltis","Pênaltis frustram o {C} diante do {O}","Na loteria das cobranças, o {O} leva a melhor"],
+    out: ["{L} fica fora e {C} {RES} contra o {O}","Sem {L}, o {C} encara o {O}","{L} não joga e acompanha o {C} diante do {O}","Desfalque: {C} enfrenta o {O} sem {L}"]
+  },
+  kicker: { hat:"HAT-TRICK", poker:"HISTÓRICO", brace:"DOBLETE", goalW:"VITÓRIA", goalD:"EMPATE", goalL:"DERROTA", assist:"ASSISTÊNCIA", assistMany:"GARÇOM", motm:"MELHOR EM CAMPO", great:"DESTAQUE", poor:"EM BAIXA", win:"VITÓRIA", draw:"EMPATE", loss:"DERROTA", bigwin:"GOLEADA", pensW:"PÊNALTIS", pensL:"PÊNALTIS", out:"FORA DE CAMPO" },
+  lead: {
+    goal: ["{S} foi o protagonista da partida entre {H} e {A}, válida pela {COMP}. Com {G} {GW}, o {POS} mostrou mais uma vez por que é peça fundamental no {C}.","Em jogo disputado pela {COMP}, {S} fez a diferença ao marcar {G} {GW} no confronto com o {O}, terminado em {SC}.","Quem acompanhou {H} x {A} viu {S} em noite especial: {G} {GW} e uma atuação que vai ficar na memória do torcedor.","O placar de {SC} contra o {O} tem a assinatura de {S}. O {POS} balançou a rede {G} {VZ} e foi o nome do jogo pela {COMP}.","Foi de {S} o brilho no duelo com o {O}. Em partida válida pela {COMP}, o jogador marcou {G} {GW} e terminou com nota {N}.","Decisivo como poucos, {S} deixou {G} {GW} no encontro com o {O} e confirmou a fase iluminada com a camisa do {C}."],
+    assist: ["Mesmo sem marcar, {S} foi decisivo para o {C} diante do {O}. O {POS} deu {A} {AW} e comandou a criação ofensiva da equipe.","{S} mostrou a outra face do seu repertório contra o {O}: a do garçom. Foram {A} {AW} em partida válida pela {COMP}.","A visão de jogo de {S} apareceu no confronto com o {O}. Com {A} {AW}, o jogador foi peça-chave no {SC}."],
+    good: ["{S} teve atuação de destaque no duelo entre {H} e {A} pela {COMP}, terminando a partida com nota {N}.","Com {M} minutos em campo, {S} foi um dos pilares do {C} no confronto com o {O}, que terminou {SC}.","Sem balançar a rede, {S} ainda assim chamou atenção no jogo contra o {O}, recebendo nota {N} da análise da partida."],
+    neutral: ["{H} e {A} se enfrentaram pela {COMP} e o placar final foi {SC}. {S} atuou por {M} minutos e recebeu nota {N}.","O {C} encarou o {O} pela {COMP} e {S} esteve em campo por {M} minutos, num jogo que terminou {SC}.","Pela {COMP}, o {C} mediu forças com o {O}. {S} participou da partida e terminou avaliado com nota {N}."],
+    bad: ["{S} viveu uma noite complicada diante do {O}. O {POS} pouco produziu e saiu de campo com nota {N}.","Não foi o dia de {S}. Contra o {O}, o jogador teve dificuldades e terminou avaliado com {N}.","A partida diante do {O} ficou abaixo das expectativas para {S}, que recebeu nota {N} pela atuação."],
+    out: ["{S} não foi a campo no confronto entre {H} e {A} pela {COMP} ({STATUS}). O jogo terminou {SC}.","Fora da partida ({STATUS}), {S} acompanhou o {C} diante do {O}, em duelo que terminou {SC}."]
+  },
+  context: ["O duelo foi realizado {VENUE} e valeu pela {RODADA} da {COMP}.","A partida, disputada {VENUE}, fazia parte da {RODADA} da {COMP}.","{VENUE_CAP}, o {C} entrou em campo pela {RODADA} da {COMP} precisando de um bom resultado.","Válido pela {RODADA} da {COMP}, o confronto aconteceu {VENUE} e mobilizou a atenção dos torcedores.","Em mais um capítulo da {COMP}, o {C} enfrentou o {O} {VENUE}, pela {RODADA}."],
+  venueH: ["diante da torcida do {C}","em casa","com o apoio da torcida","no estádio do {C}"],
+  venueA: ["fora de casa","no estádio do {O}","longe dos seus domínios","sob pressão da torcida adversária"],
+  goalDetail: { min:["O primeiro gol saiu aos {MIN} minutos.","Ele abriu a conta aos {MIN}'.","A rede balançou pela primeira vez aos {MIN} minutos."], body:{right:["com o pé direito","em finalização de direita"], left:["com a perna esquerda","em chute de canhota"], head:["de cabeça","em cabeceio certeiro"]}, pen:["Um dos gols saiu de pênalti, cobrado com frieza.","Da marca da cal, não desperdiçou."], fk:["Ainda houve tempo para um golaço de falta.","Uma cobrança de falta perfeita entrou no ângulo."], high:["Um dos chutes morreu no ângulo, sem chance para o goleiro.","A bola entrou no alto, onde o goleiro não alcança."], low:["Um dos gols foi rasteiro, no cantinho.","Finalização rasteira, firme, sem defesa."] },
+  stat: {
+    xg:["Os números mostram a presença ofensiva: {V} de xG na partida.","Gerou {V} de gols esperados (xG), sinal de quem esteve sempre perto da área."],
+    sot:["Acertou {V} finalizações no alvo.","Foram {V} chutes na direção do gol."],
+    kp:["Criou {V} passes decisivos para os companheiros.","Distribuiu {V} passes que deixaram colegas em condição de finalizar."],
+    dr:["Venceu {V} dribles, desequilibrando a marcação.","Deixou {V} marcadores para trás em dribles certos."],
+    pa:["Teve {V}% de acerto nos passes.","Errou pouco: {V}% de precisão no passe."],
+    dist:["Percorreu {V} km em campo.","Correu {V} km, mostrando intensidade do início ao fim."],
+    tk:["Ajudou na marcação com {V} desarmes.","Recuperou a bola com {V} desarmes."],
+    cc:["Criou {V} chances claras de gol.","Foram {V} chances claras desenhadas pelos seus pés."],
+    pg:["Recuperou a posse {V} vezes.","Ganhou {V} disputas pela posse de bola."]
+  },
+  season: ["Com o resultado, ele chega a {SG} gols na temporada.","Na temporada, já são {SG} gols e {SA} assistências.","Os números na temporada impressionam: {SG} gols em {SJ} jogos.","É o {SGo} gol dele na temporada."],
+  milestone: ["Marco na carreira: este foi o {CGo} gol da carreira profissional.","Com o gol, alcançou a marca de {CGo} gols como profissional."],
+  quoteP: {
+    happy:["Estou muito feliz pelo gol e principalmente pela vitória. O grupo merecia.","É fruto do trabalho no dia a dia. Quando a bola chega, eu tento estar preparado.","Dedico esse gol à minha família e à torcida, que não para de apoiar.","O mais importante é o time. Se eu puder ajudar com gols, melhor ainda.","Hoje as coisas deram certo. Agora é descansar e pensar no próximo jogo.","A gente sabia que seria difícil, mas fomos superiores e merecemos."],
+    ok:["Foi um jogo duro, mas saímos com coisas positivas.","Precisamos ajustar alguns detalhes, mas o caminho é esse.","Faltou um pouco de capricho no último passe, vamos melhorar.","O importante é seguir somando e evoluindo."],
+    sad:["Não foi o resultado que queríamos. Precisamos levantar a cabeça.","Assumo a minha parte. Posso render muito mais.","É hora de trabalhar ainda mais forte e dar a volta por cima.","Futebol é assim. Agora é corrigir os erros e seguir."],
+    pensW:["Na hora dos pênaltis é cabeça fria. Confiamos no trabalho e deu certo.","Classificar assim é emocionante. O grupo mostrou força mental."],
+    pensL:["Pênalti é loteria, mas dói. Vamos aprender com isso.","Fizemos um grande jogo e não merecíamos cair assim."]
+  },
+  quoteC: {
+    happy:["{F} está em grande momento e hoje fez a diferença.","Quando {F} joga assim, o time inteiro cresce.","Fiquei satisfeito com a entrega de todos, e o {F} foi muito bem."],
+    ok:["Gostei da atitude da equipe. {F} cumpriu o que pedimos.","Temos que melhorar algumas coisas, mas o desempenho foi digno."],
+    sad:["Não fomos bem. Todos precisam render mais, inclusive o {F}.","Vamos conversar e corrigir. O {F} sabe que pode dar mais."]
+  },
+  coachRole: ["afirmou o treinador do {C} após a partida","disse o técnico em entrevista coletiva","avaliou o comandante do {C}","comentou o treinador à beira do gramado"],
+  playerRole: ["disse {F} na saída de campo","afirmou o jogador em entrevista","comentou {F} após o apito final","declarou o {POS} ao fim do jogo"],
+  closing: ["O {C} volta a campo nos próximos dias e espera contar novamente com o bom momento de {F}.","Agora, o foco do elenco se volta para a sequência da {COMP}.","A torcida já aguarda o próximo compromisso, de olho na evolução de {F}.","Com o resultado, o {C} ajusta a rota e mira os próximos desafios da temporada.","Resta ao {C} transformar o desempenho em regularidade nas próximas rodadas."],
+  journalists: ["Rafael Monteiro","Camila Duarte","Bruno Teixeira","Juliana Prado","Thiago Rezende","Larissa Campos","Marcelo Siqueira","Fernanda Lopes","Diego Andrade","Patrícia Nunes","Gustavo Paiva","Renata Moura"],
+  pos: {ATA:"atacante",SA:"segundo atacante",PE:"ponta-esquerda",PD:"ponta-direita",MEI:"meia",MC:"meio-campista",VOL:"volante",LE:"lateral-esquerdo",LD:"lateral-direito",ZAG:"zagueiro",GOL:"goleiro",ST:"atacante",CF:"segundo atacante",LW:"ponta-esquerda",RW:"ponta-direita",MID:"meia",CM:"meio-campista",CDM:"volante",LB:"lateral-esquerdo",RB:"lateral-direito",CB:"zagueiro",GK:"goleiro"},
+  subj: ["{F}","{L}","{FULL}","o {POS} {L}","o camisa do {C}, {L},"]
+};
+const NEWS_EN = {
+  head: {
+    hat:["{S} hits a hat-trick as {C} sink {O}","Perfect night: {L} scores three against {O}","{L} takes the match ball home after treble vs {O}","Three for {L}! {O} have no answer","{C} {SC} {O}: {L} nets three"],
+    poker:["{L} scores {G} in historic display against {O}","Video-game numbers: {L} bags {G} vs {O}"],
+    brace:["{S} scores twice to lift {C}","{L} brace sinks {O}","Double trouble: {L} strikes twice against {O}","{L} at the double as {C} face {O}"],
+    goalW:["{S} on target as {C} beat {O}","{L} goal seals win over {O}","{L} scores in {C}'s {SC} win over {O}","Decisive {L} strikes again"],
+    goalD:["{L} scores but {C} held by {O}","{L} on target in draw with {O}"],
+    goalL:["{L} goal not enough as {C} lose to {O}","{L} scores but {O} take the points"],
+    assist:["{S} turns provider as {C} face {O}","{L} sets up the goal against {O}","Vision: {L} creates for {C}"],
+    assistMany:["{L} serves up {A} assists against {O}","Playmaker {L} provides {A} assists"],
+    motm:["{S} named Man of the Match against {O}","{L} dominates and takes the award vs {O}"],
+    great:["{L} impresses against {O}","Strong showing from {L} vs {O}"],
+    poor:["One to forget for {L} against {O}","{L} struggles against {O}","Quiet night for {L} vs {O}"],
+    win:["{C} beat {O} {SC}","{C} see off {O} with {L} on the pitch"], draw:["{C} and {O} share the spoils","All square: {C} {SC} {O}"], loss:["{C} lose {SC} to {O}","Setback for {C} against {O}"],
+    bigwin:["Rout! {C} thrash {O} {SC}","{C} run riot against {O}"], pensW:["{C} beat {O} on penalties ({P})","Nerves of steel: {C} through on penalties"], pensL:["{C} out on penalties to {O} ({P})","Shootout heartbreak for {C}"],
+    out:["{L} misses out as {C} face {O}","Without {L}, {C} take on {O}"]
+  },
+  kicker:{hat:"HAT-TRICK",poker:"HISTORIC",brace:"BRACE",goalW:"WIN",goalD:"DRAW",goalL:"DEFEAT",assist:"ASSIST",assistMany:"PLAYMAKER",motm:"MAN OF THE MATCH",great:"STANDOUT",poor:"OFF DAY",win:"WIN",draw:"DRAW",loss:"DEFEAT",bigwin:"ROUT",pensW:"PENALTIES",pensL:"PENALTIES",out:"SIDELINED"},
+  lead:{ goal:["{S} was the star of {H} vs {A} in the {COMP}, scoring {G} {GW}.","{S} made the difference against {O}, scoring {G} {GW} in a {SC} result."], assist:["{S} was decisive without scoring, providing {A} {AW} against {O}."], good:["{S} put in a strong display in the {COMP}, finishing with a {N} rating."], neutral:["{H} and {A} met in the {COMP}, finishing {SC}. {S} played {M} minutes."], bad:["{S} endured a difficult night against {O}, rated {N}."], out:["{S} did not feature ({STATUS}) as {H} and {A} finished {SC}."] },
+  context:["The game was played {VENUE} in {RODADA} of the {COMP}.","{VENUE_CAP}, {C} took to the field in {RODADA} of the {COMP}."],
+  venueH:["at home","in front of their own fans"], venueA:["away from home","at {O}'s ground"],
+  goalDetail:{ min:["The first goal came on {MIN} minutes."], body:{right:["with his right foot"],left:["with his left foot"],head:["with a header"]}, pen:["One came from the penalty spot."], fk:["One was a superb free kick."], high:["One flew into the top corner."], low:["One was a low finish into the corner."] },
+  stat:{ xg:["He generated {V} xG."], sot:["{V} shots on target."], kp:["{V} key passes."], dr:["{V} successful dribbles."], pa:["{V}% pass accuracy."], dist:["Covered {V} km."], tk:["{V} tackles won."], cc:["{V} big chances created."], pg:["Won possession {V} times."] },
+  season:["That makes {SG} goals this season.","Season tally: {SG} goals and {SA} assists in {SJ} games."], milestone:["Milestone: goal number {CG} of his career."],
+  quoteP:{ happy:["Delighted with the goal and the win.","Hard work pays off."], ok:["Tough game, but positives to take."], sad:["Not the result we wanted. We go again."], pensW:["Cool heads in the shootout."], pensL:["Penalties are cruel. We'll learn."] },
+  quoteC:{ happy:["{F} is in great form."], ok:["{F} did what we asked."], sad:["{F} knows he can give more."] },
+  coachRole:["said the {C} coach"], playerRole:["said {F} after the match"],
+  closing:["{C} now turn their attention to the next fixture.","The {COMP} continues soon for {C}."],
+  journalists:["Ryan Mitchell","Emma Collins","Daniel Hughes","Sophie Turner","James Carter","Laura Bennett"],
+  pos:{ATA:"striker",SA:"forward",PE:"winger",PD:"winger",MEI:"midfielder",MC:"midfielder",VOL:"defensive midfielder",LE:"left-back",LD:"right-back",ZAG:"centre-back",GOL:"goalkeeper",ST:"striker",CF:"forward",LW:"winger",RW:"winger",MID:"midfielder",CM:"midfielder",CDM:"defensive midfielder",LB:"left-back",RB:"right-back",CB:"centre-back",GK:"goalkeeper"},
+  subj:["{F}","{L}","{FULL}"]
+};
+const ordPT = n => n + "º";
+
+/* build the article for one match */
+function buildArticle(j){
+  const B = LANG==="en" ? NEWS_EN : NEWS_PT;
+  const r = rng(seedOf(j.Data + "|" + j["Adversário"] + "|" + j.Resultado + "|" + j["Competição"]));
+  const inf = S.informacoes; const full = inf["Nome Completo"]||"Jogador"; const parts = full.trim().split(/\s+/);
+  const F = parts[0], L = parts.length>1 ? parts[parts.length-1] : parts[0];
+  const d = j.Detalhes||{}; const sc = scoreSplit(j); const ps = pensSplit(j); const sp = findSpecific(j);
+  const home = isHomeCode(j.Local); const C = j.Time || inf["Clube Atual"]; const O = shortName(j["Adversário"]); const Cn = shortName(C);
+  const g = int(j.Gols), a = int(j["Assistências"]), n = flt(j.Nota), absent = isAbsent(j["Posição"]);
+  const mins = sp ? sp.mins : (j.Minutos!=null ? int(j.Minutos) : 90);
+  const res = outcome(j); const margin = sc ? sc.mine - sc.theirs : 0;
+  const POS = B.pos[j["Posição"]] || (LANG==="en"?"player":"jogador");
+  const SCs = sc ? (home ? `${sc.mine}-${sc.theirs}` : `${sc.theirs}-${sc.mine}`) : (j.Resultado||"");
+  // season & career totals up to (and including) this match
+  const chron = [...S.ultimas_performances].sort((x,y)=>dateNum(x.Data)-dateNum(y.Data)); const upto = chron.slice(0, chron.indexOf(j)+1);
+  const seas = upto.filter(x => seasonOf(x)===seasonOf(j)); const SG = seas.reduce((s,x)=>s+int(x.Gols),0), SA = seas.reduce((s,x)=>s+int(x["Assistências"]),0), SJ = seas.filter(played).length;
+  const CG = upto.reduce((s,x)=>s+int(x.Gols),0);
+  let sc_k;
+  if(absent) sc_k = "out";
+  else if(ps && sc && sc.mine===sc.theirs) sc_k = ps.mine>ps.theirs ? "pensW" : "pensL";
+  else if(g>=4) sc_k = "poker"; else if(g===3) sc_k = "hat"; else if(g===2) sc_k = "brace";
+  else if(g===1) sc_k = res==="W" ? "goalW" : res==="L" ? "goalL" : "goalD";
+  else if(a>=2) sc_k = "assistMany"; else if(a===1) sc_k = "assist";
+  else if(d.MOTM) sc_k = "motm"; else if(n && n<6) sc_k = "poor"; else if(n>=8) sc_k = "great";
+  else if(res==="W" && margin>=4) sc_k = "bigwin"; else sc_k = res==="W" ? "win" : res==="L" ? "loss" : "draw";
+  if(!absent && margin>=4 && g<2 && r()<0.5) sc_k = "bigwin";
+  const subj = fill(pickR(r, B.subj), {F, L, FULL:full, POS, C:Cn}).replace(/,$/,"");
+  const V = {S:subj, L, F, FULL:full, C:Cn, O, SC:SCs, G:g, A:a, M:mins, N:n?n.toFixed(1):"–", P: ps?`${ps.home}-${ps.away}`:"", POS,
+    H: home?Cn:O, A_: home?O:Cn, COMP:j["Competição"], RODADA:(sp&&sp.rodada)||(LANG==="en"?"round":"rodada"), STATUS:j["Posição"],
+    GW: g===1?(LANG==="en"?"goal":"gol"):(LANG==="en"?"goals":"gols"), AW: a===1?(LANG==="en"?"assist":"assistência"):(LANG==="en"?"assists":"assistências"), VZ: g===1?"vez":"vezes",
+    RES: res==="W"?(LANG==="en"?"win":"vence"):res==="L"?(LANG==="en"?"lose":"perde"):(LANG==="en"?"draw":"empata"), SG, SA, SJ, SGo: ordPT(SG), CG, CGo: ordPT(CG), MIN:""};
+  V.A = a; // {A} = assists; {A_} away team (lead templates use {A} for away, so swap there)
+  const headline = cap1(fill(pickR(r, B.head[sc_k]), V));
+  const kicker = B.kicker[sc_k];
+  const leadKey = absent ? "out" : g>0 ? "goal" : a>0 ? "assist" : n>=7.5 ? "good" : n && n<6 ? "bad" : "neutral";
+  const lead = cap1(fill(pickR(r, B.lead[leadKey]).replace(/\{A\}(?! \{AW\})/g, "{A_}"), V));
+  const venue = fill(pickR(r, home ? B.venueH : B.venueA), V);
+  const ctx = fill(pickR(r, B.context), {...V, VENUE:venue, VENUE_CAP:cap1(venue)});
+  const paras = [lead, ctx];
+  // goal details
+  if(g>0 && !absent){
+    const bits = []; const mm = parseMinutes(d.MinutosGolsJogador);
+    if(mm.length) bits.push(fill(pickR(r, B.goalDetail.min), {MIN:mm[0]}));
+    const body = int(d.PeEsquerdo)>=int(d.PeDireito) && int(d.PeEsquerdo)>0 ? "left" : int(d.PeDireito)>0 ? "right" : int(d.Cabeca)>0 ? "head" : null;
+    if(body && bits.length) bits[bits.length-1] = bits[bits.length-1].replace(/\.$/, ", " + pickR(r, B.goalDetail.body[body]) + ".");
+    else if(body) bits.push(cap1(pickR(r, B.goalDetail.body[body])) + ".");
+    if(int(d.PenalGol)) bits.push(pickR(r, B.goalDetail.pen)); if(int(d.FaltasGol)) bits.push(pickR(r, B.goalDetail.fk));
+    const map = d.MapaGols||[]; if(map.some(p=>p[1]<0.35)) bits.push(pickR(r, B.goalDetail.high)); else if(map.some(p=>p[1]>0.65)) bits.push(pickR(r, B.goalDetail.low));
+    if(bits.length) paras.push(bits.join(" "));
+  }
+  // stats paragraph: 2-4 highlights from what was recorded
+  if(!absent){
+    const pc = int(d.PassesCertos), pe = int(d.PassesErrados);
+    const cand = [["xg", flt(d.xG)>0.3 ? flt(d.xG).toFixed(2) : 0],["sot", int(d.ChutesNoGol)],["kp", int(d.PassesDecisivos)],["dr", int(d.DriblesCertos)],["pa", (pc+pe>=10) ? Math.round(100*pc/(pc+pe)) : 0],["dist", flt(d.DistanciaPercorrida)>0 ? flt(d.DistanciaPercorrida).toFixed(1) : 0],["tk", int(d.Desarmes)],["cc", int(d.ChancesCriadas)],["pg", int(d.PossesGanhas)]].filter(x=>+x[1]);
+    for(let k=cand.length-1;k>0;k--){ const m = Math.floor(r()*(k+1)); [cand[k],cand[m]] = [cand[m],cand[k]]; }
+    const chosen = cand.slice(0, 2 + Math.floor(r()*3));
+    if(chosen.length) paras.push(chosen.map(([k,v]) => fill(pickR(r, B.stat[k]), {V:v})).join(" "));
+    if(g>0){ const ss = fill(pickR(r, B.season), V); const mil = [10,25,50,75,100,150,200,250,300,400,500].find(m => CG>=m && CG-g<m);
+      paras.push(mil ? fill(pickR(r, B.milestone), {...V, CGo: ordPT(mil), CG: mil}) + " " + ss : ss); }
+  }
+  // quotes
+  const mood = absent ? "ok" : sc_k==="pensW" ? "pensW" : sc_k==="pensL" ? "pensL" : (g>0||a>0||n>=7.5) && res!=="L" ? "happy" : (res==="L"||(n&&n<6)) ? "sad" : "ok";
+  const quotes = [];
+  if(!absent){ quotes.push({txt: pickR(r, B.quoteP[mood]), who: fill(pickR(r, B.playerRole), {F, POS})}); }
+  const cm = mood==="pensW" ? "happy" : mood==="pensL" ? "sad" : mood;
+  if(r()<0.75) quotes.push({txt: fill(pickR(r, B.quoteC[cm]), {F}), who: fill(pickR(r, B.coachRole), {C:Cn})});
+  const closing = fill(pickR(r, B.closing), {C:Cn, F, COMP:j["Competição"]});
+  const author = pickR(r, B.journalists);
+  const words = (headline + " " + paras.join(" ") + quotes.map(q=>q.txt).join(" ") + closing).split(/\s+/).length;
+  return {headline, kicker, paras, quotes, closing, author, readMin: Math.max(1, Math.round(words/180)), scenario: sc_k, home, C, O: j["Adversário"], sc, ps, nota:n, g, a};
+}
+
+/* ---------- news list ---------- */
+function newsItems(){
+  const P = [...S.ultimas_performances].sort((a,b)=>dateNum(b.Data)-dateNum(a.Data)).slice(0, 40);
+  const feed = S.feed_noticias||[];
+  const unreadFor = j => feed.some(n => n.tipo==="match" && !n.lida && n.data===j.Data && n.stats && n.stats.adv===j["Adversário"]);
+  const items = P.map(j => ({kind:"match", j, date:dateNum(j.Data), unread:unreadFor(j)}));
+  feed.filter(n => n.tipo && n.tipo!=="match").forEach((n,i) => items.push({kind:"other", n, date:dateNum(n.data), unread:!n.lida}));
+  return items.sort((a,b)=>b.date-a.date);
+}
+function vNews(){
+  const items = newsItems();
+  if(!items.length) return `<div class="stack">${back()}${empty(t("no_news"), t("no_news_s"))}</div>`;
+  const cards = items.map((it, k) => {
+    if(it.kind==="other"){ const n = it.n; return `<div class="nw-card ${it.unread?"unread":""}" style="--nb:#0F1E33;--na:#38BDF8"><div class="nw-band"><span>${esc(n.tag||"")}</span><span>${esc(n.data||"")}</span></div><div class="nw-body"><h4>${esc(n.titulo||"")}</h4><p>${esc(n.texto_curto||"")}</p></div></div>`; }
+    const j = it.j; const art = buildArticle(j); const sel = isSelMatch(j); const th = compTheme(j["Competição"], sel); const lg = logoOf(j["Competição"]);
+    const idx = S.ultimas_performances.indexOf(j); const L = art.home ? (j.Time||S.informacoes["Clube Atual"]) : j["Adversário"], R = art.home ? j["Adversário"] : (j.Time||S.informacoes["Clube Atual"]);
+    const sc = art.sc ? (art.home ? `${art.sc.mine}-${art.sc.theirs}` : `${art.sc.theirs}-${art.sc.mine}`) : esc(j.Resultado||"");
+    return `<button class="nw-card ${it.unread?"unread":""}" style="--nb:${th.bg};--na:${th.ac}" data-act="openNews" data-i="${idx}">
+      <span class="nw-band">${lg?`<img src="${lg}" alt="">`:""}<b>${esc(j["Competição"])}</b><span class="grow"></span><span>${esc(j.Data)}</span>${it.unread?`<i class="nw-dot"></i>`:""}</span>
+      <span class="nw-sb">${crest(L,30)}<b class="num">${sc}</b>${crest(R,30)}${art.ps?`<small>(${art.ps.home}-${art.ps.away} ${t("pens_short")})</small>`:""}</span>
+      <span class="nw-body"><span class="nw-kick">${esc(art.kicker)}</span><h4>${esc(art.headline)}</h4><p>${esc(art.paras[0])}</p></span></button>`;
+  }).join("");
+  const unread = items.filter(x=>x.unread).length;
+  return `<div class="stack">${back()}<div class="ph-head"><h1 class="ph-title">${t("news_title")}</h1>${unread?`<button class="btn sm" data-act="readAll">${t("read_all")}</button>`:""}</div><div class="nw-list">${cards}</div></div>`;
+}
+function openNews(i){
+  const j = S.ultimas_performances[i]; if(!j) return; const art = buildArticle(j); const sel = isSelMatch(j); const th = compTheme(j["Competição"], sel);
+  const lg = logoOf(j["Competição"]); const L = art.home ? (j.Time||S.informacoes["Clube Atual"]) : j["Adversário"], R = art.home ? j["Adversário"] : (j.Time||S.informacoes["Clube Atual"]);
+  const sc = art.sc ? (art.home ? `${art.sc.mine}-${art.sc.theirs}` : `${art.sc.theirs}-${art.sc.mine}`) : esc(j.Resultado||"");
+  // mark as read
+  const f = (S.feed_noticias||[]).find(n => n.tipo==="match" && !n.lida && n.data===j.Data && n.stats && n.stats.adv===j["Adversário"]);
+  if(f){ f.lida = true; S.noticias_nao_lidas = Math.max(0,(S.noticias_nao_lidas||0)-1); commit(); }
+  const d = j.Detalhes||{};
+  const box = [[t("goals"), art.g],[t("assists"), art.a],[t("rating").split(" ")[0], art.nota?art.nota.toFixed(1):"–"],["xG", flt(d.xG).toFixed(2)],[t("key_passes"), int(d.PassesDecisivos)],[t("dribbles"), int(d.DriblesCertos)]];
+  const body = `<article class="art" style="--nb:${th.bg};--na:${th.ac}">
+    <div class="art-hero"><div class="art-tag">${lg?`<img src="${lg}" alt="">`:""}<span>${esc(th.tag)}</span><span class="art-kick">${esc(art.kicker)}</span></div>
+      <h2>${esc(art.headline)}</h2><div class="art-by">${t("by")} <b>${esc(art.author)}</b> · ${esc(j.Data)} · ${art.readMin} ${t("min_read")}</div></div>
+    <figure class="art-board"><div class="ab-side">${crest(L,86)}<span>${esc(shortName(L))}</span></div><div class="ab-mid"><div class="ab-score num">${sc}</div>${art.ps?`<div class="ab-pens">${t("pens")}: ${art.ps.home}-${art.ps.away}</div>`:""}<div class="ab-note">${t("sofascore")}: ${art.nota?art.nota.toFixed(1):"–"}</div></div><div class="ab-side">${crest(R,86)}<span>${esc(shortName(R))}</span></div></figure>
+    <figcaption class="art-cap">${t("photo_credit")}</figcaption>
+    <div class="art-text">${art.paras.map((p,k)=>`<p${k===0?' class="art-lead"':""}>${esc(p)}</p>`).join("")}
+      ${art.quotes.map(q=>`<blockquote>“${esc(q.txt)}”<cite>— ${esc(q.who)}</cite></blockquote>`).join("")}
+      <div class="art-box"><div class="art-box-h">${t("numbers_of",{n:esc(S.informacoes["Nome Completo"].split(" ")[0])})}</div><div class="art-box-g">${box.map(([l,v])=>`<div><b class="num">${v}</b><span>${l}</span></div>`).join("")}</div></div>
+      <p>${esc(art.closing)}</p></div>
+    <button class="btn block" data-act="match" data-i="${i}">📊 ${t("see_match")}</button>
+  </article>`;
+  openSheet(t("news"), body); render();
+}
+
 /* ================= render & routing ================= */
 function render(){
   const v = view(); document.documentElement.lang = LANG==="en" ? "en" : "pt-BR";
@@ -2425,6 +2893,7 @@ document.addEventListener("click", async e=>{
   switch(a){
     case "pickDate": { const nat = b.parentElement.querySelector(".dnat"); const txt = document.getElementById(b.dataset.for); nat.value = dmyToIso(txt.value) || "";
       try{ if(nat.showPicker) nat.showPicker(); else { nat.focus(); nat.click(); } }catch(err){ nat.focus(); nat.click(); } return; }
+    case "openNews": openNews(+b.dataset.i); return;
     case "addInjury": injuryForm(); return;
     case "editInjury": injuryForm({ano:b.dataset.ano, i:+b.dataset.i}); return;
     case "addTransfer": transferForm(null); return;
