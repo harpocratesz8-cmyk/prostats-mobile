@@ -58,10 +58,20 @@ LEAGUE_ALIASES = {
 "EFL League Two (Inglaterra)":["League Two","EFL League Two"],
 "Eliteserien (Noruega)":["Eliteserien","Liga Norueguesa"],
 "Eredivisie (Paises Baixos)":["Eredivisie","Liga Holandesa"],
-"FC Red Bull Salzburg (Austria)":["Ö. Bundesliga","Österreichische Bundesliga","Austrian Bundesliga","Bundesliga Austríaca","Admiral Bundesliga","Bundesliga Austria"],
+"Österreichische Fußball-Bundesliga (Austria)":["Ö. Bundesliga","Österreichische Bundesliga","Austrian Bundesliga","Bundesliga Austríaca","Admiral Bundesliga","Bundesliga Austria","O. Bundesliga"],
+"Brasileirão":["Brasileirão Série A","Brasileirão Seria A","Brasileirao Serie A","Brasileiro Série A","Campeonato Brasileiro","Campeonato Brasileiro Série A","Série A Brasil","Brasileirão Betano"],
+"Serie B":["Brasileirão Série B","Brasileirão Seria B","Brasileiro Série B","Série B","Campeonato Brasileiro Série B","Série B Brasil"],
+"Serie C":["Brasileirão Série C","Brasileirão Seria C","Série C","Série C Brasil"],
+"Serie D":["Brasileirão Série D","Brasileirão Seria D","Série D","Série D Brasil"],
+"Copa Do Brasil":["Copa do Brasil","Copa Betano do Brasil"],
+"Copa Libertadores":["Conmebol Libertadores","Libertadores","Libertadores da América","Copa Libertadores da América","Taça Libertadores"],
+"Copa Sudamericana":["Copa Sul-Americana","Sul-Americana","Sudamericana","Conmebol Sudamericana","Conmebol Sul-Americana"],
+"South American Recopa":["Recopa Sul-Americana","Recopa Sudamericana","Recopa","Conmebol Recopa"],
+"Super Copa Do Brasil":["Supercopa do Brasil","Supercopa Do Brasil","Super Copa do Brasil"],
+"Copa América":["Copa América","Conmebol Copa América"],
 "FIFA Club World Cup":["Mundial de Clubes","Club World Cup","Mundial de Clubes da FIFA","Copa do Mundo de Clubes","FIFA Club World Cup"],
 "Indian Super League (India)":["Indian Super League","ISL"],
-"Isuzu UTE A-League (Austalia)":["A-League","A League","Liga Australiana"],
+"Isuzu UTE A-League (Australia)":["A-League","A League","Liga Australiana"],
 "Jupiler Pro League (Belgica)":["Jupiler Pro League","Pro League","Liga Belga"],
 "K League 1 (Coreia do Sul)":["K League 1","K League","K-League"],
 "LALIGA EA SPORTS (Espanha)":["La Liga","LaLiga","Liga Espanhola","LaLiga Santander","LaLiga EA Sports","Primera División"],
@@ -79,7 +89,7 @@ LEAGUE_ALIASES = {
 "SUPERLIGA (Romenia)":["Superliga Romena","Liga 1 Romênia","SuperLiga Romania"],
 "Scottish Premiership (Escocia)":["Scottish Premiership","Premiership","Liga Escocesa"],
 "Serie A Enilive (Italia)":["Serie A","Série A Italiana","Serie A TIM","Serie A Italia","Calcio Serie A","Liga Italiana"],
-"Serie BKT (Italia)":["Serie B Italia","Serie BKT","Série B Italiana"],
+"Serie BKT (Italia)":["Serie B Italia","Serie BKT","Série B Italiana","Serie B Italiana"],
 "Trendyol Süper Lig (Turquia)":["Süper Lig","Super Lig","Liga Turca","Trendyol Super Lig"],
 "UEFA Champions League":["Champions League","Champions","Liga dos Campeões","UCL","Liga dos Campeões da UEFA"],
 "UEFA Conference League":["Conference League","UECL","Liga Conferência","Conference"],
@@ -87,6 +97,7 @@ LEAGUE_ALIASES = {
 "UEFA Super Cup":["Supercopa da UEFA","Supercopa Europeia","Super Cup UEFA","UEFA Supercup"],
 }
 TEAM_ALIASES = {
+"Wattener SG Tirol":["WSG Tirol","WSG Swarovski Tirol","Tirol"],"SK Rapid Wien":["SK Rapid","Rapid Wien","Rapid Viena"],"Lask":["LASK","LASK Linz"],"SK Puntigamer Sturm Graz":["Sturm Graz","SK Sturm Graz"],"FK Austria Wien":["Austria Wien","Austria Viena"],"FC Blau Weiß Linz":["Blau-Weiß Linz","BW Linz"],"RZ Pellets Wolfsberger AC":["Wolfsberger AC","WAC","Wolfsberg"],"TSV Prolactal Hartberg":["TSV Hartberg","Hartberg"],"CASHPOINT SCR Altach":["SCR Altach","Altach"],"SV Guntamatic Ried":["SV Ried","Ried"],"Grazer AK 1902":["Grazer AK","GAK"],"SK Austria Klagenfurt":["Austria Klagenfurt","Klagenfurt"],"Dinamo Zagreb":["GNK Dinamo Zagreb"],"Dynamo Kyiv":["Dínamo de Kiev","Dynamo Kiev"],"Shakhtar Donetsk":["Shakhtar"],"SK Slavia Praha":["Slavia Praga","Slavia Prague"],"Sparta Praha":["Sparta Praga","Sparta Prague"],"Olympiacos":["Olympiakos","Olimpiacos"],
 "F.C. Internazionale Milano":["Inter","Inter de Milão","Inter Milan","Internazionale"],"A.C. Milan":["Milan","AC Milan"],"F.C. Barcelona":["Barcelona","Barça","Barca"],
 "Real Madrid C.F.":["Real Madrid"],"Club Atlético de Madrid":["Atlético de Madrid","Atletico Madrid","Atlético Madrid","Atleti"],"FC Bayern München":["Bayern","Bayern de Munique","Bayern Munich","Bayern Munique"],
 "Bayer 04 Leverkusen":["Leverkusen","Bayer Leverkusen"],"Paris Saint-Germain":["PSG","Paris SG"],"Manchester City":["Man City"],"Manchester United":["Man United","Man Utd","Manchester Utd"],
@@ -111,9 +122,37 @@ TEAM_ALIASES = {
 "1. FC Köln":["Köln","Colônia","Koln"],"VfB Stuttgart":["Stuttgart"],"Eintracht Frankfurt":["Frankfurt"],"West Ham United":["West Ham"],"Celtic":["Celtic Glasgow"],"Rangers":["Glasgow Rangers"],
 }
 
+CUP_ALIASES = {
+"AIFF Super Cup (Copa Principal India)":["AIFF Super Cup","Super Cup India"],"Allianz Cup":["Taça da Liga","Allianz Cup","Taça da Liga Portugal"],
+"Campeones Cup (Campeão da Liga BBVA MX e da MLS Cup)":["Campeones Cup"],"Campeón de Campeones":["Campeon de Campeones"],"Chinese FA Cup":["Copa da China","FA Cup China"],
+"Chinese FA Super Cup":["Supercopa da China"],"Club Orange FAI Cup":["FAI Cup","Copa da Irlanda"],"Community Shield":["FA Community Shield","Supercopa da Inglaterra","Community Shield"],
+"Copa Argentina":["Copa da Argentina"],"Copa del Rey":["Copa do Rei","Copa del Rei","Copa da Espanha"],"Coppa Italia":["Copa da Itália","Copa Itália"],
+"Coupe de France":["Copa da França"],"Croky Cup (Belgica)":["Croky Cup","Copa da Bélgica","Belgian Cup"],"Cupa României Betano":["Copa da Romênia","Cupa Romaniei"],
+"Cupen (Noruega)":["Copa da Noruega","NM Cup","Norwegian Cup"],"DFB-Pokal":["DFB Pokal","Copa da Alemanha","German Cup"],"Danish Cup":["Copa da Dinamarca"],"Durand Cup (india)":["Durand Cup"],
+"EFL Carabao Cup":["Carabao Cup","EFL Cup","League Cup","Copa da Liga Inglesa","Copa da Liga"],"Emirates FA Cup":["FA Cup","Copa da Inglaterra"],
+"Franz Beckenbauer Supercup":["DFL-Supercup","DFL Supercup","Supercopa da Alemanha","German Super Cup","DFL Super Cup"],"Hahn Australia Cup":["Australia Cup","Copa da Austrália"],
+"Johan Cruijff Schaal":["Supercopa da Holanda","Johan Cruyff Shield","Johan Cruijff Shield"],"K League Super Cup":["Supercopa da Coreia"],"KNVB Beker":["Copa da Holanda","KNVB Cup","Dutch Cup"],
+"King's Cup (Arabia Saudita)":["King's Cup","Kings Cup","Copa do Rei Saudita","King Cup"],"Korea Cup":["Copa da Coreia","FA Cup Coreia"],"Leagues Cup (MLS e Liga BBVA MX)":["Leagues Cup"],
+"MLS Cup":["MLS Cup","Final da MLS"],"Premier Sports Cup":["Scottish League Cup","Copa da Liga Escocesa"],"President of Ireland's Cup":["President's Cup Ireland"],
+"Puchar Polski (Polonia)":["Puchar Polski","Copa da Polônia"],"Saudi Super Cup":["Supercopa Saudita"],"Schweizer Cup":["Copa da Suíça","Swiss Cup"],"Scottish Cup":["Copa da Escócia"],
+"Supercopa Argentina":["Supercopa da Argentina"],"Supercopa Internacional (Argentina)":["Supercopa Internacional"],"Supercopa de España":["Supercopa da Espanha","Spanish Super Cup"],
+"Supercoppa Italiana":["Supercopa da Itália","Supercopa Italiana","Italian Super Cup"],"Supercupa României":["Supercopa da Romênia"],"Superpuchar Polski":["Supercopa da Polônia"],
+"Supertaça Cândido de Oliveira":["Supertaça","Supercopa de Portugal","Supertaça de Portugal"],"Svenska Cupen":["Copa da Suécia","Swedish Cup"],"TFF Süper Kupa":["Supercopa da Turquia","Turkish Super Cup","Super Kupa"],
+"Taça de Portugal Placard":["Taça de Portugal","Copa de Portugal"],"Trofeo de Campeones":["Trofeo de Campeones","Trofeo de Campeones Argentina"],"Trophée des Champions":["Supercopa da França","Trophee des Champions"],
+"U.S. Open Cup":["US Open Cup","Copa dos EUA"],"UNIQA ÖFB Cup (Austria)":["ÖFB Cup","OFB Cup","Copa da Áustria"],"Vertu Trophy (League One e League Two)":["Vertu Trophy","EFL Trophy"],
+"Volkswagen Supercup":["Volkswagen Supercup"],"Ziraat Türkiye Kupası":["Copa da Turquia","Turkish Cup","Türkiye Kupası"],
+}
+TROPHY_EXTRA = {"FIFA World Cup":["Copa do Mundo","Copa Do Mundo","World Cup","Copa do Mundo FIFA"],"Brasileirão":["Brasileirão Série A","Brasileirão Seria A","Campeonato Brasileiro"],
+"Serie B":["Brasileirão Série B","Brasileirão Seria B","Série B"],"Serie C":["Brasileirão Série C","Série C"],"Serie D":["Brasileirão Série D","Série D"],
+"Österreichische Fußball-Bundesliga":["Ö. Bundesliga","Austrian Bundesliga","Bundesliga Austríaca"],"Carabao Cup":["EFL Carabao Cup","EFL Cup","League Cup"],
+"MLS Cup (FInal da MLS)":["MLS Cup"],"US Cup":["U.S. Open Cup","US Open Cup"],"Recopa Sulamericana":["Recopa Sul-Americana","South American Recopa","Recopa"],
+"Super Copa Do Brasil":["Supercopa do Brasil"],"Copa Libertadores":["Conmebol Libertadores","Libertadores"],"Copa Sudamericana":["Copa Sul-Americana","Sul-Americana"],
+"Taça de Portugal":["Taça de Portugal Placard"],"Franz Beckenbauer Supercup":["DFL-Supercup","DFL Supercup"],"Serie BKT":["Serie B Italia"],"King's Cup":["Kings Cup"],
+"Trofeo de Campeones (Argentina)":["Trofeo de Campeones"],"LaLiga Hypermotion":["La Liga 2","LaLiga 2"],"Liga BBVA MX":["Liga MX"]}
+
 def slug(i): return f"{i}.webp"
 entries = []
-def add(kind, folder, files_alias):
+def add(kind, folder, files_alias, size=128):
     d = os.path.join(SRC, folder); os.makedirs(os.path.join(OUT, kind), exist_ok=True)
     files = sorted(os.listdir(d))
     for f in files:
@@ -123,28 +162,35 @@ def add(kind, folder, files_alias):
         im = Image.open(os.path.join(d, f)).convert("RGBA")
         bbox = im.getbbox()
         if bbox: im = im.crop(bbox)
-        im.thumbnail((128, 128), Image.LANCZOS)
+        im.thumbnail((size, size), Image.LANCZOS)
         rel = f"{kind}/{slug(idx)}"
         im.save(os.path.join(OUT, rel), "WEBP", quality=82, method=6)
         aliases = files_alias(name)
         entries.append({"t": kind, "n": name, "f": rel, "a": aliases})
 
 folders = os.listdir(SRC)
-fold = lambda key: next(x for x in folders if key in dec(x).upper())
+fold = lambda key: next(x for x in folders if dec(x).upper().startswith(key) or (key not in ("LOGO TODAS AS LIGAS",) and key in dec(x).upper()))
 def club_al(n): return TEAM_ALIASES.get(n, [])
 def nat_al(n): return [PT[n]] + NATION_EXTRA.get(n, []) if n in PT else NATION_EXTRA.get(n, [])
 def lg_al(n):
     base = re.sub(r"\s*\([^)]*\)\s*$", "", n).strip()
     al = LEAGUE_ALIASES.get(n, [])
-    if n == "FC Red Bull Salzburg (Austria)": return al   # this file is the Austrian league logo
     return ([base] if base != n else []) + al
+bare = lambda n: re.sub(r"\s*\([^)]*\)\s*$", "", n).strip()
+def cup_al(n): return ([bare(n)] if bare(n) != n else []) + CUP_ALIASES.get(n, [])
+ALL_AL = {}
+for dct in (LEAGUE_ALIASES, CUP_ALIASES):
+    for k, v in dct.items(): ALL_AL.setdefault(bare(k).lower(), []).extend([k] + v)
+def tr_al(n):
+    al = ([bare(n)] if bare(n) != n else []) + TROPHY_EXTRA.get(n, []) + ALL_AL.get(bare(n).lower(), [])
+    return list(dict.fromkeys(a for a in al if a != n))
 add("c", fold("TIMES"), club_al)
 add("n", fold("SELE"), nat_al)
-add("l", fold("LIGAS"), lg_al)
-for e in entries:
-    if e["t"] == "l" and e["n"] == "FC Red Bull Salzburg (Austria)": e["n"] = "Admiral Bundesliga (Áustria)"
-missing = [k for k in LEAGUE_ALIASES if not any(e["n"] == k or (k.startswith("FC Red Bull") and e["t"] == "l" and "Admiral" in e["n"]) for e in entries)]
-missing_t = [k for k in TEAM_ALIASES if not any(e["n"] == k for e in entries)]
+add("l", fold("LOGO TODAS AS LIGAS"), lg_al)
+add("k", fold("DENTRO DAS LIGAS"), cup_al)
+add("t", fold("TROFEUS"), tr_al, 256)
+missing = [k for k in LEAGUE_ALIASES if not any(e["n"] == k for e in entries)]
+missing_t = [k for k in list(TEAM_ALIASES)+list(CUP_ALIASES) if not any(e["n"] == k for e in entries)]
 json.dump({"v": 1, "e": [[e["t"], e["n"], e["f"], e["a"]] for e in entries]}, open(os.path.join(OUT, "index.json"), "w"), ensure_ascii=False, separators=(",", ":"))
 tot = sum(os.path.getsize(os.path.join(dp, f)) for dp, _, fs in os.walk(OUT) for f in fs)
 print(len(entries), "logos", round(tot / 1e6, 2), "MB", "| unmatched alias keys:", missing, missing_t)

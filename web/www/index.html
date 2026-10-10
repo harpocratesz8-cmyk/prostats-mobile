@@ -282,8 +282,8 @@ select.inp{appearance:none;background-image:linear-gradient(45deg,transparent 50
 @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
 
 /* ---------- v2 additions ---------- */
-.crest.img{clip-path:none;background:none;height:var(--s,34px);text-shadow:none}
-.crest.img img{width:100%;height:100%;object-fit:contain;display:block}
+.crest.img{clip-path:none;background:none;width:var(--s,34px);height:var(--s,34px);overflow:hidden;text-shadow:none;display:block}
+.crest.img img{width:var(--s,34px);height:var(--s,34px);max-width:none;object-fit:contain;display:block}
 .crest-btn{flex:none;display:grid;place-items:center;border-radius:8px}
 tr.tap{cursor:pointer}
 tr.tap:active td{background:var(--surface2)}
@@ -344,6 +344,61 @@ td img.cl{width:18px;height:18px}
 .logo-grid .lg{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 4px;border-radius:10px;background:var(--surface);border:1px solid var(--line);min-width:0}
 .logo-grid .lg img{width:44px;height:44px;object-fit:contain}
 .logo-grid .lg span{font-size:10.5px;line-height:1.15;color:var(--muted);text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-word}
+
+/* ---------- tap feedback ---------- */
+.stepper button,.pick button,.btn,.seg button,.toggle,.mrow,.item,.tcase,.news,.menu-grid button,.nt-row,.lg,.cb-opt{transition:background-color .12s,transform .08s,filter .12s}
+.stepper button:active,.stepper button.tapped{background:color-mix(in srgb,var(--accent) 28%,transparent)}
+.stepper button:active{transform:scale(.92)}
+.stepper button.tapped{animation:tapflash .28s ease-out}
+@keyframes tapflash{from{background:color-mix(in srgb,var(--accent) 38%,transparent)}to{background:transparent}}
+.pick button:active,.seg button:active,.btn:active,.toggle:active{filter:brightness(.82);transform:scale(.97)}
+.mrow:active,.item:active,.nt-row:active,.lg:active,.cb-opt:active,.menu-grid button:active{background:var(--surface2)}
+/* ---------- combobox ---------- */
+.cb{position:relative}
+.cb-list{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:45;max-height:270px;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:4px}
+.cb-opt{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border-radius:8px;text-align:left;font-size:15px}
+.cb-opt img{width:26px;height:26px;object-fit:contain;flex:none}
+.cb-opt .cb-dot{width:26px;height:26px;flex:none;border-radius:50%;background:var(--surface2);border:1px solid var(--line)}
+.cb-opt span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cb-opt small{flex:none;font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+/* ---------- post-match ---------- */
+.pm-head{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center}
+.pm-head img{width:34px;height:34px;object-fit:contain}
+.pm-comp{font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.pm-score{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;padding:14px 6px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line)}
+.pm-score .tm{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.pm-score .tm b{font-size:16px;letter-spacing:.04em}
+.pm-score .tm small{font-size:11px;color:var(--muted);text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.pm-score .sc{font-family:var(--f-display);font-weight:800;font-size:48px;line-height:1}
+.pm-trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pm-box{display:flex;flex-direction:column;gap:3px;padding:10px 8px;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);min-width:0}
+.pm-rating{font-family:var(--f-display);font-weight:800;font-size:40px;line-height:1}
+.pm-tag{font-size:11px;font-weight:700;color:#FFD700}
+.pm-opp{font-weight:800;color:#F59E0B;text-transform:uppercase;font-size:13px;line-height:1.1;margin-bottom:4px;overflow-wrap:anywhere}
+.pitch{width:100%;height:auto;display:block;border-radius:4px}
+/* ---------- national team ---------- */
+.nt-hero{border-radius:var(--r);background:var(--surface);border:1px solid var(--line);border-top:3px solid #F59E0B;padding:14px;display:flex;flex-direction:column;gap:12px}
+.nt-title{font-family:var(--f-display);font-weight:800;font-size:28px;line-height:.95;text-transform:uppercase}
+.nt-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center}
+.nt-kpis small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nt-kpis .num{font-size:28px;font-weight:800;line-height:1.1}
+.donut{width:150px;height:150px;display:block;margin:0 auto}
+.nt-comp{gap:10px}
+.nt-comp img{width:40px;height:40px;object-fit:contain}
+.nt-comp h3{font-family:var(--f-display);font-weight:800;font-size:24px;text-transform:uppercase;line-height:1}
+.nt-list{display:flex;flex-direction:column;gap:6px}
+.nt-row{display:grid;grid-template-columns:62px minmax(0,1fr) 40px;align-items:center;gap:6px;padding:9px 8px 9px 10px;border-radius:10px;background:var(--surface);border-left:4px solid var(--draw);text-align:left;width:100%}
+.nt-row.oW{border-left-color:var(--win)}.nt-row.oL{border-left-color:var(--loss)}
+.nt-info{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.nt-info b{font-size:11.5px}.nt-info small{font-size:9.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nt-match{display:flex;align-items:center;justify-content:center;gap:4px;min-width:0}
+.nt-t{flex:1;min-width:0;font-size:10.5px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nt-t.r{text-align:right}
+.nt-sc{font-family:var(--f-display);font-weight:800;font-size:20px;padding:0 2px}
+.nt-row.oW .nt-sc{color:var(--win)}.nt-row.oL .nt-sc{color:var(--loss)}.nt-row.oD .nt-sc{color:var(--draw)}
+.nt-ga{display:flex;flex-direction:column;align-items:flex-end;font-size:11px;font-weight:700}
+
+.tbl-wrap td:first-child{white-space:nowrap}
 
 </style>
 </head>
@@ -512,6 +567,25 @@ pt: {
   logo_from_gallery:"Usar imagem da galeria",
   logo_back_auto:"Voltar ao escudo automático",
   logo_db_info:"Banco EA FC: {c} times, {n} seleções, {l} ligas",
+  cb_used:"já usado",
+  yes:"Sim",
+  no:"Não",
+  evaluation:"Avaliação",
+  h2h_vs:"Histórico vs",
+  tactical_map:"Mapa tático",
+  timeline:"Timeline da partida",
+  xray_goals:"Raio-X dos gols",
+  goalmap_match:"Mapa dos seus gols na partida",
+  received_from:"Recebeu passe(s) de:",
+  gave_to:"Deu passe(s) para:",
+  nt_empty:"Registre partidas com o tipo Seleção para ver sua carreira internacional.",
+  intl_career:"Carreira internacional",
+  intl_sub:"Estatísticas oficiais defendendo a seleção {n}",
+  caps:"Convocações",
+  goal_avg:"Média de gols",
+  by_tournament:"Desempenho por torneio",
+  off_impact:"Impacto ofensivo",
+  match_history:"Histórico de partidas",
   name_col:"Nome", pos_col:"Pos",
 },
 en: {
@@ -662,6 +736,25 @@ en: {
   logo_from_gallery:"Use an image from the gallery",
   logo_back_auto:"Back to the automatic crest",
   logo_db_info:"EA FC database: {c} clubs, {n} national teams, {l} leagues",
+  cb_used:"used before",
+  yes:"Yes",
+  no:"No",
+  evaluation:"Rating",
+  h2h_vs:"Record vs",
+  tactical_map:"Tactical map",
+  timeline:"Match timeline",
+  xray_goals:"Goal X-ray",
+  goalmap_match:"Your goals in this match",
+  received_from:"Assisted by:",
+  gave_to:"Assisted:",
+  nt_empty:"Log matches with the National Team type to see your international career.",
+  intl_career:"International career",
+  intl_sub:"Official stats representing {n}",
+  caps:"Caps",
+  goal_avg:"Goals per game",
+  by_tournament:"By tournament",
+  off_impact:"Attacking impact",
+  match_history:"Match history",
   name_col:"Name", pos_col:"Pos",
 }};
 
@@ -710,7 +803,7 @@ function hue(name){ let h = 0; for (const c of String(name)) h = (h*31 + c.charC
 function initials(name){ const w = String(name||"?").replace(/[^\p{L}\p{N} -]/gu,"").split(/[\s-]+/).filter(Boolean); if(!w.length) return "?"; return (w.length===1 ? w[0].slice(0,3) : w.slice(0,3).map(x=>x[0]).join("")).toUpperCase(); }
 function customLogo(n){ try{ return Store.logos[n] || Store.lower[String(n||"").trim().toLowerCase()] || null; }catch(e){ return null; } }
 function logoOf(n){ if(!n) return null; const c = customLogo(n); if(c) return c; try{ const e = LogoDB.resolve(n); return e ? e.f : null; }catch(e){ return null; } }
-const crest = (name, s=34) => logoOf(name) ? `<span class="crest img" style="--s:${s}px" aria-hidden="true"><img src="${logoOf(name)}" alt=""></span>` : `<span class="crest" style="--s:${s}px;--c:hsl(${hue(name)} 55% 38%)" aria-hidden="true">${esc(initials(name))}</span>`;
+const crest = (name, s=34) => logoOf(name) ? `<span class="crest img" style="--s:${s}px" aria-hidden="true"><img src="${logoOf(name)}" alt="" width="${s}" height="${s}" loading="lazy"></span>` : `<span class="crest" style="--s:${s}px;--c:hsl(${hue(name)} 55% 38%)" aria-hidden="true">${esc(initials(name))}</span>`;
 function rtClass(n){ n = +n; if(!n) return "na"; return n>=9?"r9":n>=8?"r8":n>=7?"r7":n>=6?"r6":n>=5?"r5":"r0"; }
 const rating = n => `<span class="rt ${rtClass(n)}">${(+n) ? (+n).toFixed(1) : "–"}</span>`;
 function parseMoney(v){ if (typeof v === "number") return v; const s = String(v||"").toUpperCase().replace(/[€$£R\s]/g,"").replace(",", "."); const m = /([\d.]+)\s*([KMB])?/.exec(s); if(!m) return 0; const n = parseFloat(m[1]); return n * ({K:1e3, M:1e6, B:1e9}[m[2]] || 1); }
@@ -949,6 +1042,7 @@ function myBallons(){ return (S.ballondor_custom||[]).filter(b => b.nome === S.i
 const LOGO_STOP = new Set("fc cf sc ac as afc cd c f club clube de do da dos das del la le el the futebol football futbol calcio sport sports sd ud us ss ssc rc rcd cfc fk if bk sk cp ec e y a s and of sa".split(" "));
 const BR_UF = new Set("ac al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rj rn rs ro rr sc sp se to".split(" "));
 const lnorm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ø/g,"o").replace(/ł/g,"l").replace(/ß/g,"ss").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim();
+const stripYears = s => String(s||"").replace(/\b(19|20)\d{2}(\s*[\/-]\s*\d{2,4})?\b/g," ");
 const lkey = s => lnorm(s).replace(/ /g,"");
 const sigToks = s => lnorm(s).split(" ").filter(x => x && !LOGO_STOP.has(x));
 function lev(a, b, max){
@@ -960,18 +1054,18 @@ function lev(a, b, max){
   return prev[b.length];
 }
 const tokEq = (q, c) => q===c || (q.length>=5 && c.length>=4 && lev(q,c,1)<=1) || (q.length>=8 && lev(q,c,2)<=2) || (q.length>=4 && c.startsWith(q) && q.length >= c.length-3);
-const LogoDB = {
-  list:[], exact:new Map(), cache:new Map(), counts:{c:0,n:0,l:0},
-  async load(){
-    try{ const r = await fetch("logos/index.json"); if(!r.ok) return; const j = await r.json();
-      this.list = j.e.map(([t,n,f,a]) => ({t, n, f:"logos/"+f, names:[n, ...(a||[])]}));
+function makeDB(types){ return {
+  types, list:[], exact:new Map(), cache:new Map(), counts:{c:0,n:0,l:0,k:0,t:0},
+  load(j){
+    try{
+      this.list = j.e.filter(x=>this.types.includes(x[0])).map(([t,n,f,a]) => ({t, n, f:"logos/"+f, names:[n, ...(a||[])]}));
       for(const e of this.list){ this.counts[e.t] = (this.counts[e.t]||0)+1; e.keys = e.names.map(lkey); e.toks = e.names.map(sigToks); }
       for(const e of this.list) if(!this.exact.has(e.keys[0])) this.exact.set(e.keys[0], e);          // official names first
       for(const e of this.list) for(const k of e.keys.slice(1)) if(k && !this.exact.has(k)) this.exact.set(k, e); // then aliases
     }catch(err){}
   },
   resolve(q){
-    const k = lkey(q); if(!k || !this.list.length) return null;
+    q = stripYears(q); const k = lkey(q); if(!k || !this.list.length) return null;
     if(this.cache.has(k)) return this.cache.get(k);
     const r = this._resolve(q, k); this.cache.set(k, r); return r;
   },
@@ -981,7 +1075,15 @@ const LogoDB = {
     if(toks.length>1 && BR_UF.has(toks[toks.length-1])){ const k2 = toks.slice(0,-1).join(""); if(this.exact.has(k2)) return this.exact.get(k2); }
     const best = this._subset(sigToks(q).filter(x=>!(BR_UF.has(x) && toks.length>1)));
     if(best) return best;
-    return this._fuzzy(k);
+    return this._fuzzy(k) || this._partial(sigToks(q));
+  },
+  /* last resort: most query words match (e.g. "WSG Tirol" -> "Wattener SG Tirol") and a long word is among them */
+  _partial(qt){
+    if(qt.length < 2) return null; let best = null, bs = 0, tie = false;
+    for(const e of this.list){ for(const ct of e.toks){ const hit = qt.filter(q => ct.some(c => tokEq(q,c)));
+        if(hit.length*2 < qt.length || !hit.some(h => h.length>=5)) continue; const sc = hit.length/qt.length + hit.length/ct.length/10;
+        if(sc > bs){ bs = sc; best = e; tie = false; } else if(sc === bs && best !== e) tie = true; } }
+    return best && !tie ? best : null;
   },
   _subset(qt){
     if(!qt.length || qt.join("").length < 3) return null;
@@ -1014,7 +1116,11 @@ const LogoDB = {
       if(s) out.push([s, e]); }
     return out.sort((a,b)=>b[0]-a[0]).slice(0, limit).map(x=>x[1]);
   }
-};
+}; }
+const LogoDB = makeDB(["c","n","l","k"]), TrophyDB = makeDB(["t"]);
+async function loadLogoDBs(){ try{ const r = await fetch("logos/index.json"); if(!r.ok) return; const j = await r.json(); LogoDB.load(j); TrophyDB.load(j); }catch(e){} }
+/* name to show for a database entry: national teams in Portuguese, leagues without "(country)" */
+const dbLabel = e => (e.t==="n" && LANG==="pt" && e.names[1]) ? e.names[1] : String(e.n).replace(/\s*\([^)]*\)\s*$/,"");
 
 /* ================= icons ================= */
 const I = (p, extra="") => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${p}</svg>`;
@@ -1162,33 +1268,6 @@ function vMatches(){
       <div class="mlist">${groups[s].map(({j,i})=>matchRow(j,i)).join("")}</div>`).join("") || empty(t("no_data"),"")}
   </div>`;
 }
-function matchDetail(i){
-  const j = S.ultimas_performances[i]; if(!j) return; const d = j.Detalhes || {}; const sp = findSpecific(j); const sc = scoreSplit(j);
-  const home = isHomeCode(j.Local); const me = j.Time || S.informacoes["Clube Atual"];
-  const left = home ? me : j["Adversário"], right = home ? j["Adversário"] : me;
-  const lines = [["xG",d.xG,"f2"],["xA",d.xA,"f2"],[t("sot"),d.ChutesNoGol],[t("post"),d.ChutesNaTrave],[t("off"),d.ChutesPraFora],[t("blocked"),d.ChutesBloqueados],[t("bigmiss"),d.GrandesChancesPerdidas],
-    [t("key_passes"),d.PassesDecisivos],[t("pass_ok"),d.PassesCertos],[t("pass_bad"),d.PassesErrados],[t("cross_ok"),d.CruzamentosCertos],[t("chances"),d.ChancesCriadas],[t("dribbles"),d.DriblesCertos],[t("preassist"),d.PreAssistencias],
-    [t("won"),d.PossesGanhas],[t("lost"),d.PossesPerdidas],[t("tackles"),d.Desarmes],[t("fouled"),d.FaltasSofridas],[t("fouls"),d.FaltasCometidas],[t("dist"),d.DistanciaPercorrida,"f1"],
-    [t("rf"),d.PeDireito],[t("lf"),d.PeEsquerdo],[t("head"),d.Cabeca],[t("fk_g"),d.FaltasGol],[t("pen_g"),d.PenalGol]].filter(r=>+r[1]);
-  const passPct = (+d.PassesCertos + +d.PassesErrados) ? Math.round(100*d.PassesCertos/(+d.PassesCertos + +d.PassesErrados)) : null;
-  const tags = [d.Capitao?`<span class="chip" style="color:var(--gold)">© ${t("captain_b")}</span>`:"", d.MOTM?`<span class="chip acc">★ MOTM</span>`:"", d.CleanSheet?`<span class="chip">${t("clean")}</span>`:"", d.GolEmpate?`<span class="chip">${t("eq_goal")}</span>`:"", d.GolVirada?`<span class="chip">${t("win_goal")}</span>`:"", d.Condicao && d.Condicao!=="Titular"?`<span class="chip">${esc(d.Condicao==="Entrou no 2º Tempo"&&LANG==="en"?t("sub2"):d.Condicao)}</span>`:""].join("");
-  const body = `<div class="stack">
-    <div class="tiny" style="text-align:center">${esc(j["Competição"])}${sp&&sp.rodada?" · "+esc(sp.rodada):""} · ${esc(j.Data)}</div>
-    <div class="scoreboard"><div class="tm">${crest(left,40)}${esc(left)}</div><div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}</div><div class="tm">${crest(right,40)}${esc(right)}</div></div>
-    <div class="kv"><div><span class="num">${int(j.Gols)}</span><span>${t("goals")}</span></div><div><span class="num">${int(j["Assistências"])}</span><span>${t("assists")}</span></div><div>${rating(j.Nota)}<br><span>${t("rating").split(" ")[0]}</span></div>
-      <div><span class="num">${sp?sp.mins:(j.Minutos!=null?int(j.Minutos):"–")}</span><span>${t("minutes_short")}</span></div><div><span class="num">${esc(j["Posição"])}</span><span>${t("pos")}</span></div><div><span class="num">${passPct!=null?passPct+"%":"–"}</span><span>${LANG==="en"?"Pass acc.":"Passes"}</span></div></div>
-    ${tags?`<div class="row" style="flex-wrap:wrap;gap:6px">${tags}</div>`:""}
-    ${sp&&(sp.ca||sp.e2||sp.ed)?`<div class="small">🟨 ${sp.ca} · 🟥 ${sp.e2+sp.ed}</div>`:""}
-    ${(d.MapaGols||[]).length?`<div class="sec-h"><h2>${t("goalmap")}</h2></div><div class="card">${goalSVG(d.MapaGols,false)}</div>`:""}
-    ${d.MinutosGolsJogador?`<div class="small"><span class="tiny">${t("minutes_g")}:</span> ⚽ ${esc(d.MinutosGolsJogador)}′</div>`:""}
-    ${d.AssistRecebidaDe||d.AssistDadaPara?`<div class="small">${d.AssistRecebidaDe?`<div><span class="tiny">${t("assist_from")}:</span> ${esc(d.AssistRecebidaDe)}</div>`:""}${d.AssistDadaPara?`<div><span class="tiny">${t("assist_to")}:</span> ${esc(d.AssistDadaPara)}</div>`:""}</div>`:""}
-    <div class="sec-h"><h2>${t("scout")}</h2></div>
-    ${lines.length?`<div class="tbl-wrap"><table><tbody>${lines.map(r=>`<tr><td>${r[0]}</td><td class="num" style="font-size:16px">${r[2]==="f2"?(+r[1]).toFixed(2):r[2]==="f1"?(+r[1]).toFixed(1):r[1]}</td></tr>`).join("")}</tbody></table></div>`:`<div class="muted small">${t("none_scout")}</div>`}
-    ${SAMPLE?"":`<div class="row" id="mdActions"><button class="btn grow" data-act="editMatch" data-i="${i}">${t("edit")}</button><button class="btn dng grow" data-act="askDel" data-i="${i}">${t("delete")}</button></div>`}
-  </div>`;
-  openSheet(t("detail"), body);
-}
-
 /* ================= ADD / EDIT MATCH ================= */
 function blankForm(){
   const inf = S.informacoes; const det = {}; for(const k of DETAIL_KEYS) det[k] = ["Capitao","MOTM","CleanSheet","GolEmpate","GolVirada"].includes(k) ? false : ["AssistRecebidaDe","AssistDadaPara","MinutosGolsPro","MinutosGolsContra","MinutosGolsJogador"].includes(k) ? "" : ["xG","xA"].includes(k) ? "0.00" : k==="DistanciaPercorrida" ? "0.0" : "0";
@@ -1215,11 +1294,11 @@ function vAdd(){
     inner = `<div class="fgrid">
       ${field(t("date"), `<input class="inp" type="date" id="f_Data" data-f="Data" data-kind="date" value="${dmyToIso(F.Data)}">`)}
       ${textIn("Rodada", F.Rodada, t("round"))}
-      ${field(t("comp"), `<input class="inp" id="f_Comp" data-f="Comp" list="compList" value="${esc(F.Comp)}" autocomplete="off"><datalist id="compList">${[...new Set([...S.ultimas_performances.map(j=>j["Competição"]), ...COMP_SUGGEST])].map(c=>`<option value="${esc(c)}">`).join("")}</datalist>`, "full")}
-      ${field(t("type"), `<select class="inp" id="f_Tipo" data-f="Tipo">${TYPES.map(x=>`<option value="${x}" ${F.Tipo===x?"selected":""}>${TYPE_LBL[LANG][x]}</option>`).join("")}</select>`, "full")}
+      ${combo("Comp", F.Comp, t("comp"), "comp")}
+      ${field(t("type"), `<div class="pick">${TYPES.map(x=>`<button type="button" data-act="setF" data-k="Tipo" data-v="${x}" aria-pressed="${F.Tipo===x}">${TYPE_LBL[LANG][x]}</button>`).join("")}</div>`, "full")}
       ${toggle("euro", F.euro, t("euro"), "full")}
-      ${field(t("team"), `<input class="inp" id="f_Clube" data-f="Clube" list="clubList" value="${esc(F.Clube)}"><datalist id="clubList">${[...new Set([S.informacoes["Clube Atual"], nationalTeam(), ...Object.keys(S.dados_desempenho_por_clubes)])].filter(Boolean).map(c=>`<option value="${esc(c)}">`).join("")}</datalist>`, "full")}
-      ${field(t("opp"), `<input class="inp" id="f_Adv" data-f="Adv" list="oppList" value="${esc(F.Adv)}" autocomplete="off"><datalist id="oppList">${[...new Set(S.ultimas_performances.map(j=>j["Adversário"]))].map(c=>`<option value="${esc(c)}">`).join("")}</datalist>`, "full")}
+      ${combo("Clube", F.Clube, t("team"), "club")}
+      ${combo("Adv", F.Adv, t("opp"), "opp")}
       ${field(t("venue"), `<div class="pick"><button type="button" data-act="setF" data-k="Local" data-v="C" aria-pressed="${F.Local==="C"}">${t("home_v")}</button><button type="button" data-act="setF" data-k="Local" data-v="F" aria-pressed="${F.Local==="F"}">${t("away_v")}</button></div>`)}
       ${textIn("Resultado", F.Resultado, t("result"), "", 'inputmode="text" placeholder="2-1"')}
       ${field(t("pos"), `<div class="pick">${POSITIONS[LANG].concat(absentOpts).map(p=>`<button type="button" data-act="setPos" data-v="${esc(p)}" aria-pressed="${F.Pos===p}">${esc(p)}</button>`).join("")}${![...POSITIONS[LANG],...absentOpts].includes(F.Pos)?`<button type="button" aria-pressed="true">${esc(F.Pos)}</button>`:""}</div>`, "full")}
@@ -1307,8 +1386,7 @@ function vStats(){
     const cl = Object.entries(S.dados_desempenho_por_clubes).sort((a,b)=>b[1].jogos-a[1].jogos);
     body = !cl.length ? noData : `<div class="ilist">${cl.map(([n,c])=>`<div class="item"><button class="crest-btn" data-act="logo" data-v="${esc(n)}" aria-label="${t("club_logo")}">${crest(n,40)}</button><button class="grow" style="text-align:left" data-act="clubReport" data-v="${esc(n)}"><div class="t">${esc(n)} <span class="muted">›</span></div><div class="s num">${c.jogos} J · ${c.gols} G · ${c.assistencias} A${c.jogos?` · ${((c.gols+c.assistencias)/c.jogos).toFixed(2)} G+A/J`:""}</div></button>${c.titulos?`<div style="text-align:center"><div class="qty">${c.titulos}</div><div class="tiny">${t("titles")}</div></div>`:""}</div>`).join("")}</div>`;
   } else if(tab==="nt"){
-    const T = totals(S.dados_desempenho_selecao);
-    body = !S.dados_desempenho_selecao.length ? noData : `<div class="card row">${crest(nationalTeam(),44)}<div class="grow"><div class="tiny">${t("nt_title")}</div><div style="font-weight:700;font-size:18px">${esc(nationalTeam())}</div></div><div class="num" style="font-size:22px">${T.j} · ${T.g} · ${T.a}</div></div>${compTable(S.dados_desempenho_selecao)}`;
+    body = vNationalTeam();
   } else if(tab==="goals"){
     const tg = S.tipo_de_Gols, bp = S.Bolas_paradas; const body3 = [["rf","Perna Direita"],["lf","Perna Esquerda"],["head","Cabeça"]].map(([l,k])=>[t(l), int(tg[k])]);
     const place = [["top","Meio Superior"],["midh","Meio"],["low","Meio Inferior"]].map(([l,k])=>[t(l), int(tg[k])]);
@@ -1422,7 +1500,7 @@ function sheetForm(title, fields, onSave){
 const sIn = (name, lab, val="", cls="full", attrs="") => field(lab, `<input class="inp" id="s_${name}" name="${name}" value="${esc(val)}" ${attrs}>`, cls);
 const sDate = (name, lab, dmy, cls="") => field(lab, `<input class="inp" type="date" id="s_${name}" name="${name}" value="${dmyToIso(dmy)}">`, cls);
 const sSel = (name, lab, opts, val, cls="full") => field(lab, `<select class="inp" id="s_${name}" name="${name}">${opts.map(o=>{const [v,l]=Array.isArray(o)?o:[o,o];return `<option value="${esc(v)}" ${v===val?"selected":""}>${esc(l)}</option>`}).join("")}</select>`, cls);
-const sList = (name, lab, opts, val="", cls="full") => field(lab, `<input class="inp" id="s_${name}" name="${name}" list="dl_${name}" value="${esc(val)}" autocomplete="off"><datalist id="dl_${name}">${opts.map(o=>`<option value="${esc(o)}">`).join("")}</datalist>`, cls);
+const sList = (name, lab, opts, val="", cls="full") => combo(name, val, lab, name==="clube" ? "club" : name==="comp" ? "award" : "trophy", cls, true);
 const clubsKnown = () => [...new Set([S.informacoes["Clube Atual"], ...Object.keys(S.dados_desempenho_por_clubes)])].filter(Boolean);
 
 function careerForm(){
@@ -1654,7 +1732,7 @@ function trophyImg(c){
   const T = Store.trophies || {}; const path = String(c[0]||"");
   const base = path.split(/[\\/]/).pop().replace(/\.[^.]+$/,"");
   for(const k of [base, `${c[1]}_${c[3]}`, c[1]]){ const v = T[normKey(k)]; if(v) return v; }
-  return null;
+  const e = TrophyDB.resolve(c[1]); return e ? e.f : null;
 }
 function cupSVG(cor, id){
   return `<svg viewBox="0 0 60 80" class="cup-svg" aria-hidden="true"><defs><linearGradient id="cg${id}" x1="0" x2="1"><stop offset="0" stop-color="${cor}" stop-opacity=".55"/><stop offset=".45" stop-color="#fff" stop-opacity=".9"/><stop offset=".6" stop-color="${cor}"/><stop offset="1" stop-color="${cor}" stop-opacity=".6"/></linearGradient></defs>
@@ -1709,6 +1787,157 @@ function trophySheet(i){
     <button class="btn block" data-act="editTrophy" data-i="${i}">✎ ${t("edit")}</button>
     <div id="trConfirm" style="width:100%"><button class="btn dng block" data-act="askDelTrophy" data-i="${i}">${t("remove")}</button></div>`}
   </div>`);
+}
+
+/* ================= Combobox (replaces native <datalist>, which renders badly on Android) ================= */
+function comboSource(src){
+  const P = S ? S.ultimas_performances : [];
+  const uniq = a => [...new Set(a.filter(Boolean))];
+  const db = types => LogoDB.list.filter(e => types.includes(e.t)).map(dbLabel);
+  if(src==="comp" || src==="trophy") return {mine: uniq([...P.map(j=>j["Competição"]), ...(S?S.conquistas.map(c=>c[1]):[])]), all: uniq([...COMP_SUGGEST, ...db(["l","k"])])};
+  if(src==="opp") return {mine: uniq(P.map(j=>j["Adversário"])), all: uniq(db(["c","n"]))};
+  if(src==="club") return {mine: uniq(S ? [S.informacoes["Clube Atual"], nationalTeam(), ...Object.keys(S.dados_desempenho_por_clubes)] : []), all: uniq(db(["c","n"]))};
+  if(src==="award") return {mine: uniq(S ? [S.informacoes["Clube Atual"], ...P.map(j=>j["Competição"])] : []), all: uniq([...db(["l","k"]), ...db(["c"])])};
+  return {mine:[], all:[]};
+}
+function comboOptions(src, q){
+  const {mine, all} = comboSource(src); const k = lkey(q), qt = sigToks(q);
+  if(!k) return mine.slice(0, 40).map(n => ({n, mine:true}));
+  const score = n => { const nk = lkey(n); if(nk===k) return 100; if(nk.startsWith(k)) return 80; if(nk.includes(k)) return 60;
+    const nt = sigToks(n); if(qt.length && qt.every(x => nt.some(c => tokEq(x,c)))) return 50; if(k.length>=4 && lev(k, nk.slice(0,k.length+1), 2)<=2) return 30; return 0; };
+  const seen = new Set(), out = [];
+  for(const [list, bonus, isMine] of [[mine, 15, true], [all, 0, false]]) for(const n of list){ const kn = lkey(n); if(seen.has(kn)) continue; const s = score(n); if(s){ seen.add(kn); out.push({n, s:s+bonus, mine:isMine}); } }
+  return out.sort((a,b)=>b.s-a.s || a.n.length-b.n.length).slice(0, 30);
+}
+/* key: form field (data-f) or form name; src: which list to suggest */
+function combo(key, val, lab, src, cls="full", asName=false){
+  const attr = asName ? `name="${key}" id="s_${key}"` : `data-f="${key}" id="f_${key}"`;
+  return field(lab, `<div class="cb"><input class="inp" ${attr} data-combo="${src}" value="${esc(val)}" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="done"><div class="cb-list" hidden role="listbox"></div></div>`, cls);
+}
+function comboOpen(inp){
+  const list = inp.parentElement.querySelector(".cb-list"); const opts = comboOptions(inp.dataset.combo, inp.value);
+  if(!opts.length){ list.hidden = true; return; }
+  list.innerHTML = opts.map(o => { const lg = logoOf(o.n); return `<button type="button" class="cb-opt" role="option" data-cbv="${esc(o.n)}">${lg?`<img src="${lg}" alt="" loading="lazy">`:`<span class="cb-dot"></span>`}<span>${esc(o.n)}</span>${o.mine?`<small>${t("cb_used")}</small>`:""}</button>`; }).join("");
+  list.hidden = false;
+}
+function comboCloseAll(except){ document.querySelectorAll(".cb-list").forEach(l => { if(l !== except) l.hidden = true; }); }
+document.addEventListener("focusin", e => { const i = e.target; if(i.dataset && i.dataset.combo){ comboCloseAll(i.parentElement.querySelector(".cb-list")); comboOpen(i); } });
+document.addEventListener("input", e => { const i = e.target; if(i.dataset && i.dataset.combo) comboOpen(i); });
+document.addEventListener("pointerdown", e => {
+  const opt = e.target.closest && e.target.closest(".cb-opt");
+  if(opt){ e.preventDefault(); const inp = opt.closest(".cb").querySelector("input"); inp.value = opt.dataset.cbv; inp.dispatchEvent(new Event("input", {bubbles:true})); comboCloseAll(); inp.blur(); return; }
+  if(!(e.target.closest && e.target.closest(".cb"))) comboCloseAll();
+}, true);
+document.addEventListener("focusout", e => { const i = e.target; if(i.dataset && i.dataset.combo) setTimeout(() => { if(document.activeElement !== i) { const l = i.parentElement && i.parentElement.querySelector(".cb-list"); if(l) l.hidden = true; } }, 120); });
+
+/* ================= helpers ================= */
+const POS_EN2PT = {ST:"ATA",CF:"SA",LW:"PE",RW:"PD",MID:"MEI",CAM:"MEI",CM:"MC",CDM:"VOL",LB:"LE",RB:"LD",CB:"ZAG",GK:"GOL"};
+function abbr(n){ const tk = sigToks(n).filter(x => !/^\d+$/.test(x)); const w = tk.sort((a,b)=>b.length-a.length)[0] || lnorm(n).replace(/ /g,""); return (w||"?").slice(0,3).toUpperCase(); }
+const shortName = n => { const e = LogoDB.resolve(n); return e && e.t==="n" ? dbLabel(e) : n; };
+function parseMinutes(str){ return String(str||"").split(/[,;\s]+/).map(p => { const m = /^(\d{1,3})(?:\+(\d{1,2}))?/.exec(p.trim()); return m ? +m[1] : null; }).filter(x => x!=null && x>0 && x<=130); }
+const yesNo = v => v ? t("yes") : t("no");
+function statBlock(title, color, rows){
+  return `<div class="card"><div class="fsec" style="color:${color};margin:0 0 8px">${title}</div><div class="sgrid">${rows.map(([l,v])=>{ const zero = v===0 || v==="0" || v==="0.00" || v==="0.0" || v===t("no") || v==="0 / 0";
+    return `<div class="srow ${zero?"zero":""}"><span>${l}</span><b class="num">${v}</b></div>`; }).join("")}</div></div>`;
+}
+function pitchSVG(pos){
+  const W = 130, H = 160; const p = POS_EN2PT[pos] || pos;
+  const C = {GOL:[W/2,H-15],ZAG:[W/2,H-45],LD:[W-20,H-50],LE:[20,H-50],VOL:[W/2,H/2+30],MC:[W/2,H/2+10],MEI:[W/2,H/2-30],PE:[20,H/2-40],PD:[W-20,H/2-40],SA:[W/2,H/2-60],ATA:[W/2,25]}[p];
+  const lc = "#34D399";
+  return `<svg viewBox="0 0 ${W} ${H}" class="pitch" role="img" aria-label="${esc(p)}"><rect x="1" y="1" width="${W-2}" height="${H-2}" fill="#14352B" stroke="${lc}" stroke-width="1.5"/>
+    <line x1="1" y1="${H/2}" x2="${W-1}" y2="${H/2}" stroke="${lc}" stroke-width="1.5"/><circle cx="${W/2}" cy="${H/2}" r="16" fill="none" stroke="${lc}" stroke-width="1.5"/>
+    <rect x="${W/2-30}" y="1" width="60" height="22" fill="none" stroke="${lc}" stroke-width="1.5"/><rect x="${W/2-30}" y="${H-23}" width="60" height="22" fill="none" stroke="${lc}" stroke-width="1.5"/>
+    ${C?`<circle cx="${C[0]}" cy="${C[1]}" r="10" fill="#F59E0B" opacity=".45"/><circle cx="${C[0]}" cy="${C[1]}" r="6" fill="#FACC15" stroke="#fff" stroke-width="2"/><text x="${C[0]}" y="${C[1]+19}" text-anchor="middle" fill="#fff" style="font-size:9px;font-weight:700">${esc(pos)}</text>`:""}</svg>`;
+}
+function timelineSVG(pro, jog, con){
+  const ours = [...new Set([...pro, ...jog])].sort((a,b)=>a-b); const all = [...ours, ...con]; if(!all.length) return "";
+  const mx = Math.max(...all, 90); const top = mx<=90 ? 90 : Math.max(120, mx); const marks = top===90 ? [0,45,90] : [0,45,90,120].filter(m=>m<=top);
+  const W = 340, H = 150, P = 18, Y = 78; const x = m => P + (m/top)*(W-2*P);
+  let g = `<line x1="${P}" y1="${Y}" x2="${W-P}" y2="${Y}" stroke="var(--faint)" stroke-width="4" stroke-linecap="round"/>`;
+  marks.forEach(m => g += `<line x1="${x(m)}" y1="${Y-6}" x2="${x(m)}" y2="${Y+6}" stroke="var(--muted)" stroke-width="2"/><text x="${x(m)}" y="${H+8}" text-anchor="middle">${m}'</text>`);
+  /* stagger labels on up to 3 rows so close minutes don't overlap */
+  const placer = () => { const rows = [-99,-99,-99]; return cx => { let r = rows.findIndex(v => cx - v >= 24); if(r<0) r = rows.indexOf(Math.min(...rows)); rows[r] = cx; return r; }; };
+  const up = placer();
+  ours.forEach(m => { const mine = jog.includes(m); const cx = x(m); const lift = up(cx)*13;
+    g += `<line x1="${cx}" y1="${Y-4}" x2="${cx}" y2="${Y-12}" stroke="${mine?"#F59E0B":"#fff"}" stroke-width="2"/><circle cx="${cx}" cy="${Y-19}" r="7" fill="${mine?"#FFD700":"#10B981"}" stroke="${mine?"#F59E0B":"#fff"}" stroke-width="2"/>
+      <text x="${cx}" y="${Y-31-lift}" text-anchor="middle" style="fill:${mine?"#FACC15":"var(--fg)"};font-weight:700">${m}'</text>`; });
+  const dn = placer();
+  con.forEach(m => { const cx = x(m); const lift = dn(cx)*13;
+    g += `<line x1="${cx}" y1="${Y+4}" x2="${cx}" y2="${Y+10}" stroke="#EF4444" stroke-width="2"/><circle cx="${cx}" cy="${Y+17}" r="7" fill="#EF4444" stroke="#fff" stroke-width="2"/><text x="${cx}" y="${Y+38+lift}" text-anchor="middle" style="fill:#F87171;font-weight:700">${m}'</text>`; });
+  return `<svg class="chart" viewBox="0 0 ${W} ${H+12}">${g}</svg>`;
+}
+
+/* ================= Match detail (desktop "Post-Match Analysis", phone layout) ================= */
+function matchDetail(i){
+  const j = S.ultimas_performances[i]; if(!j) return; const d = j.Detalhes || {}; const sp = findSpecific(j); const sc = scoreSplit(j);
+  const home = isHomeCode(j.Local); const me = j.Time || S.informacoes["Clube Atual"];
+  const left = home ? me : j["Adversário"], right = home ? j["Adversário"] : me;
+  const nota = flt(j.Nota); const cn = nota>=7.5 ? "#4ADE80" : nota>=6.5 ? "#FACC15" : "#EF4444";
+  const mins = sp ? sp.mins : (j.Minutos!=null ? int(j.Minutos) : (isAbsent(j["Posição"])?0:90));
+  const adv = String(j["Adversário"]).trim().toLowerCase(); const h2h = S.ultimas_performances.filter(x => played(x) && String(x["Adversário"]).trim().toLowerCase()===adv);
+  const hg = h2h.reduce((s,x)=>s+int(x.Gols),0), ha = h2h.reduce((s,x)=>s+int(x["Assistências"]),0);
+  const pro = parseMinutes(d.MinutosGolsPro || d.MinutosDosGols), jog = parseMinutes(d.MinutosGolsJogador), con = parseMinutes(d.MinutosGolsContra);
+  const tl = timelineSVG(pro, jog, con); const cards = sp ? sp.e2 + sp.ed : 0;
+  const cond = d.Condicao==="Entrou no 2º Tempo" ? t("sub2") : t("starter");
+  const compLogo = logoOf(j["Competição"]);
+  const body = `<div class="stack pm">
+    <div class="pm-head">${compLogo?`<img src="${compLogo}" alt="">`:""}<div><div class="pm-comp">${esc(j["Competição"])}</div><div class="small muted">${esc(j.Data)}${sp&&sp.rodada?" • "+esc(sp.rodada):""} • ${t("venue")}: ${home?t("home_v"):t("away_v")}</div></div></div>
+    <div class="pm-score"><div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(left)}">${crest(left,44)}</button><b>${esc(abbr(left))}</b><small>${esc(shortName(left))}</small></div>
+      <div class="sc">${sc?(home?`${sc.mine}-${sc.theirs}`:`${sc.theirs}-${sc.mine}`):esc(j.Resultado)}</div>
+      <div class="tm"><button class="crest-btn" data-act="logo" data-v="${esc(right)}">${crest(right,44)}</button><b>${esc(abbr(right))}</b><small>${esc(shortName(right))}</small></div></div>
+    <div class="pm-trio">
+      <div class="pm-box" style="border-color:${cn}"><span class="tiny">${t("evaluation")}</span><span class="pm-rating" style="color:${cn}">${nota?nota.toFixed(1):"–"}</span>
+        ${d.MOTM||d.Capitao?`<span class="pm-tag">${d.MOTM?"🏅 MOTM ":""}${d.Capitao?"© "+t("captain_b"):""}</span>`:""}<span class="small">${esc(isAbsent(j["Posição"])?j["Posição"]:cond)} • ${mins} min</span></div>
+      <div class="pm-box" style="border-color:#F59E0B"><span class="tiny">${t("h2h_vs")}</span><span class="pm-opp">${esc(shortName(j["Adversário"]))}</span>
+        <span class="small">⚔️ ${t("apps")}: <b>${h2h.length}</b></span><span class="small" style="color:#4ADE80">⚽ ${t("goals")}: <b>${hg}</b></span><span class="small" style="color:#38BDF8">🅰 ${t("assists")}: <b>${ha}</b></span></div>
+      <div class="pm-box" style="border-color:#10B981"><span class="tiny">${t("tactical_map")}</span>${pitchSVG(j["Posição"])}</div>
+    </div>
+    ${tl?`<div class="card"><div class="fsec" style="color:#4ADE80;margin:0 0 4px">⏱️ ${t("timeline")}</div>${tl}<div class="legend" style="justify-content:center"><span><i style="background:#FFD700"></i>${t("mg_me")}</span><span><i style="background:#10B981"></i>${t("mg_team")}</span><span><i style="background:#EF4444"></i>${t("mg_opp")}</span></div></div>`:""}
+    ${statBlock("⚔️ "+t("rep_att"), "#4ADE80", [[t("goals"),int(j.Gols)],["xG",flt(d.xG).toFixed(2)],[t("sot"),int(d.ChutesNoGol)],[t("post"),int(d.ChutesNaTrave)],[t("off"),int(d.ChutesPraFora)],[t("blocked"),int(d.ChutesBloqueados)],[t("bigmiss"),int(d.GrandesChancesPerdidas)],[t("dist"),flt(d.DistanciaPercorrida).toFixed(1)]])}
+    ${statBlock("🧠 "+t("rep_pass"), "#38BDF8", [[t("assists"),int(j["Assistências"])],["xA",flt(d.xA).toFixed(2)],[t("key_passes"),int(d.PassesDecisivos)],[t("chances"),int(d.ChancesCriadas)],[t("preassist"),int(d.PreAssistencias)],[t("dribbles"),int(d.DriblesCertos)],[t("pass_ok"),int(d.PassesCertos)],[t("pass_bad"),int(d.PassesErrados)],[t("short"),int(d.PassesCurtos)],[t("long"),int(d.BolasLongas)],[t("crosses_ct"),`${int(d.CruzamentosCertos)} / ${int(d.CruzamentosTentados)}`],[t("won"),int(d.PossesGanhas)],[t("lost"),int(d.PossesPerdidas)]])}
+    ${statBlock("🛡️ "+t("rep_def"), "#EF4444", [[t("tackles"),int(d.Desarmes)],[t("clean"),yesNo(d.CleanSheet)],[t("conceded"),int(d.GolsSofridosTime)],[t("fouled"),int(d.FaltasSofridas)],[t("fouls"),int(d.FaltasCometidas)],[t("yellow"),sp?sp.ca:0],[t("red"),cards]])}
+    ${statBlock("🎯 "+t("xray_goals"), "#F59E0B", [[t("rf"),int(d.PeDireito)],[t("lf"),int(d.PeEsquerdo)],[t("head"),int(d.Cabeca)],[t("fk_g"),int(d.FaltasGol)],[t("pen_g"),int(d.PenalGol)],[t("g1"),int(d.Gol1T)],[t("g2"),int(d.Gol2T)],[t("gx"),int(d.GolProrr)],[t("eq_goal"),yesNo(d.GolEmpate)],[t("win_goal"),yesNo(d.GolVirada)]])}
+    ${(d.MapaGols||[]).length?`<div class="card" style="border-color:#F59E0B"><div class="fsec" style="color:#F59E0B;margin:0 0 8px">🥅 ${t("goalmap_match")}</div>${goalSVG(d.MapaGols,false)}</div>`:""}
+    ${d.AssistRecebidaDe||d.AssistDadaPara?`<div class="card" style="border-color:#A855F7"><div class="fsec" style="color:#A855F7;margin:0 0 8px">👥 ${t("chem")}</div>
+      ${d.AssistRecebidaDe?`<div class="small"><span class="muted">${t("received_from")}</span> <b style="color:#4ADE80">${esc(d.AssistRecebidaDe)}</b></div>`:""}
+      ${d.AssistDadaPara?`<div class="small" style="margin-top:6px"><span class="muted">${t("gave_to")}</span> <b style="color:#38BDF8">${esc(d.AssistDadaPara)}</b></div>`:""}</div>`:""}
+    ${SAMPLE?"":`<div class="row" id="mdActions"><button class="btn grow" data-act="editMatch" data-i="${i}">✎ ${t("edit")}</button><button class="btn dng grow" data-act="askDel" data-i="${i}">${t("delete")}</button></div>`}
+  </div>`;
+  openSheet(t("detail"), body);
+}
+
+/* ================= National team (desktop "Carreira Internacional") ================= */
+function donutSVG(g, a){
+  const tot = g + a; const R = 54, C = 2*Math.PI*R; const fg = tot ? g/tot : 0;
+  return `<svg viewBox="0 0 160 160" class="donut"><circle cx="80" cy="80" r="${R}" fill="none" stroke="var(--surface2)" stroke-width="22"/>
+    ${tot?`<circle cx="80" cy="80" r="${R}" fill="none" stroke="#4ADE80" stroke-width="22" stroke-dasharray="${C*fg} ${C}" transform="rotate(-90 80 80)"/>
+    <circle cx="80" cy="80" r="${R}" fill="none" stroke="#38BDF8" stroke-width="22" stroke-dasharray="${C*(1-fg)} ${C}" stroke-dashoffset="${-C*fg}" transform="rotate(-90 80 80)"/>`:""}
+    <text x="80" y="78" text-anchor="middle" style="fill:var(--fg);font-family:var(--f-display);font-weight:800;font-size:24px">${tot}</text><text x="80" y="96" text-anchor="middle" style="fill:var(--muted);font-size:10px;font-weight:700;letter-spacing:.08em">PARTIC.</text></svg>
+    <div class="legend" style="justify-content:center"><span><i style="background:#4ADE80"></i>${t("goals")} ${tot?Math.round(100*fg):0}%</span><span><i style="background:#38BDF8"></i>${t("assists")} ${tot?Math.round(100*(1-fg)):0}%</span></div>`;
+}
+function vNationalTeam(){
+  const nat = nationalTeam(); const rows = S.dados_desempenho_selecao || []; const T = totals(rows);
+  const comps = Object.keys(S["dados_competicoes_por_seleção"]||{});
+  if(!rows.length && !comps.length) return empty(t("no_data"), t("nt_empty"));
+  const f = UI.ntComp && comps.includes(UI.ntComp) ? UI.ntComp : (comps[comps.length-1] || "");
+  const list = [...((S["dados_competicoes_por_seleção"]||{})[f] || [])].sort((a,b)=>dateNum(b[1])-dateNum(a[1]));
+  const natLabel = shortName(nat);
+  const rowsHtml = list.map(r => { const [rod, data, loc, club, adv, res, pos, g, a] = r; const homeV = isHomeCode(loc);
+    const pr = String(res||"").split(" ")[0].split("-").map(x=>parseInt(x,10)); const ok = pr.length===2 && !isNaN(pr[0]) && !isNaN(pr[1]);
+    const mine = ok ? (homeV?pr[0]:pr[1]) : null, theirs = ok ? (homeV?pr[1]:pr[0]) : null; const o = !ok ? "N" : mine>theirs ? "W" : mine<theirs ? "L" : "D";
+    const L = homeV ? natLabel : shortName(adv), R = homeV ? shortName(adv) : natLabel, Lc = homeV ? nat : adv, Rc = homeV ? adv : nat;
+    const idx = S.ultimas_performances.findIndex(j => j.Data===data && j["Adversário"]===adv);
+    return `<button class="nt-row o${o}" ${idx>=0?`data-act="match" data-i="${idx}"`:""}><span class="nt-info"><b>${esc(data)}</b><small>${esc(rod||"")}</small><small>${t("venue")}: ${esc(loc)}</small></span>
+      <span class="nt-match"><span class="nt-t r">${esc(String(L).toUpperCase())}</span>${crest(Lc,24)}<span class="nt-sc">${ok?`${pr[0]}-${pr[1]}`:esc(res||"")}</span>${crest(Rc,24)}<span class="nt-t">${esc(String(R).toUpperCase())}</span></span>
+      <span class="nt-ga">${int(g)?`<span style="color:#4ADE80">⚽ ${int(g)}</span>`:""}${int(a)?`<span style="color:#38BDF8">🅰 ${int(a)}</span>`:""}${!int(g)&&!int(a)?`<span class="muted">–</span>`:""}</span></button>`; }).join("");
+  return `<section class="nt-hero"><div class="row">${crest(nat,58)}<div class="grow"><h2 class="nt-title">${t("intl_career")}</h2><div class="small muted">${t("intl_sub",{n:esc(natLabel)})}</div></div></div>
+      <div class="nt-kpis"><div><small>${t("caps")}</small><span class="num">${T.j}</span></div><div><small>${t("goals")}</small><span class="num" style="color:#4ADE80">${T.g}</span></div><div><small>${t("assists")}</small><span class="num" style="color:#38BDF8">${T.a}</span></div><div><small>${t("goal_avg")}</small><span class="num" style="color:#F59E0B">${T.j?(T.g/T.j).toFixed(2):"0.00"}</span></div></div></section>
+    <div class="sec-h"><h2>🗂 ${t("by_tournament")}</h2></div>${compTable(rows)}
+    <div class="card" style="text-align:center"><div class="fsec" style="margin:0 0 6px">🎯 ${t("off_impact")}</div>${donutSVG(T.g, T.a)}</div>
+    <div class="sec-h"><h2>📜 ${t("match_history")}</h2></div>
+    ${comps.length>1?`<select class="inp" id="sel_ntComp" data-change="ntComp">${comps.map(c=>`<option ${c===f?"selected":""}>${esc(c)}</option>`).join("")}</select>`:""}
+    ${f?`<div class="row nt-comp">${logoOf(f)?`<img src="${logoOf(f)}" alt="">`:""}<h3>${esc(f)}</h3></div>`:""}
+    <div class="nt-list">${rowsHtml || `<div class="muted small">${t("no_data")}</div>`}</div>`;
 }
 
 /* ================= render & routing ================= */
@@ -1801,6 +2030,7 @@ document.addEventListener("change", async e=>{
     el.value = "";
   }
 });
+function tapFeedback(b){ try{ if(navigator.vibrate) navigator.vibrate(12); }catch(e){} b.classList.remove("tapped"); void b.offsetWidth; b.classList.add("tapped"); }
 function stepVal(k, d){ const F = UI.F; const isDet = k.startsWith("d."); const key = isDet ? k.slice(2) : k; const cur = int(isDet ? F.det[key] : F[key]); const nv = Math.max(0, cur + d);
   if(isDet) F.det[key] = String(nv); else F[key] = String(nv); const inp = document.getElementById("f_"+k); if(inp) inp.value = String(nv);
   if(k==="Gols" && UI.formTab==="xray") render(); }
@@ -1816,15 +2046,15 @@ document.addEventListener("click", async e=>{
     case "ftab": UI.formTab = v; render(); break;
     case "more": UI.view = "more"; UI.more = v; render(); window.scrollTo(0,0); break;
     case "moreBack": UI.more = null; render(); break;
-    case "step": e.preventDefault(); stepVal(b.dataset.k, +b.dataset.d); break;
-    case "nota": { e.preventDefault(); const n = Math.min(10, Math.max(0, flt(UI.F.Nota) + +b.dataset.d)); UI.F.Nota = n.toFixed(1); $("#f_Nota").value = UI.F.Nota; break; }
+    case "step": e.preventDefault(); tapFeedback(b); stepVal(b.dataset.k, +b.dataset.d); break;
+    case "nota": { e.preventDefault(); tapFeedback(b); const n = Math.min(10, Math.max(0, flt(UI.F.Nota) + +b.dataset.d)); UI.F.Nota = n.toFixed(1); $("#f_Nota").value = UI.F.Nota; break; }
     case "tog": { const k = b.dataset.k; const on = b.getAttribute("aria-checked")!=="true"; b.setAttribute("aria-checked", String(on)); if(k.startsWith("d.")) UI.F.det[k.slice(2)] = on; else UI.F[k] = on; break; }
     case "setF": UI.F[b.dataset.k] = v; render(); break;
     case "setDet": UI.F.det[b.dataset.k] = v; render(); break;
     case "setPos": UI.F.Pos = v; if(isAbsent(v)){ UI.F.Minutos = "0"; UI.F.Nota = "0.0"; } else if(int(UI.F.Minutos)===0){ UI.F.Minutos = "90"; UI.F.Nota = "6.0"; } render(); break;
     case "clearMap": UI.F.mapa = []; render(); break;
     case "saveMatch": { const r = saveMatch(UI.F, UI.editIdx); if(!r.ok){ toast(r.msg, true); return; } const wasEdit = UI.editIdx!=null; UI.editIdx = null; UI.F = blankForm(); UI.formTab = "info"; commit(); toast(r.msg); go(wasEdit ? "matches" : "home"); break; }
-    case "cancelEdit": UI.editIdx = null; UI.F = null; UI.F = blankForm(); render(); break;
+    case "cancelEdit": UI.editIdx = null; UI.F = null; UI.F = blankForm(); UI.formTab = "info"; go("matches"); break;
     case "editMatch": { const i = +b.dataset.i; UI.F = formFromMatch(i); UI.editIdx = i; UI.formTab = "info"; closeSheet(); go("add"); break; }
     case "askDel": { const i = +b.dataset.i; const j = S.ultimas_performances[i]; $("#mdActions").outerHTML = `<div class="confirm" id="mdActions"><b>${esc(t("delete_q",{adv:j["Adversário"]}))}</b><div class="row"><button class="btn grow" data-act="close">${t("cancel")}</button><button class="btn dng grow" data-act="doDel" data-i="${i}">${t("confirm_del")}</button></div></div>`; break; }
     case "doDel": { removeMatch(+b.dataset.i); commit(); closeSheet(); toast(t("deleted")); render(); break; }
@@ -1895,7 +2125,7 @@ document.addEventListener("pointerdown", e=>{
 
 /* ================= boot ================= */
 (async function boot(){
-  await Promise.all([Store.init(), LogoDB.load()]);
+  await Promise.all([Store.init(), loadLogoDBs()]);
   const id = Store.index.active; const d = id ? await Store.load(id) : null;
   if(d) S = normalize(d);
   render(); setSync("saved");
