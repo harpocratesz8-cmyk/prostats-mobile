@@ -400,6 +400,50 @@ td img.cl{width:18px;height:18px}
 
 .tbl-wrap td:first-child{white-space:nowrap}
 
+/* ---------- desktop-style pages: medical / transfers / market ---------- */
+.ph-head{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.ph-title{font-family:var(--f-display);font-weight:800;font-size:28px;line-height:.95;text-transform:uppercase}
+.ph-btn{flex:none;font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+.icon-btn{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:9px}
+.icon-btn:active{background:var(--surface2)}
+.inj-status{border:2px solid #10B981;background:color-mix(in srgb,#10B981 14%,var(--surface));border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:6px}
+.inj-status.hurt{border-color:#EF4444;background:color-mix(in srgb,#EF4444 14%,var(--surface))}
+.inj-big{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1;color:#10B981}
+.inj-status.hurt .inj-big{color:#EF4444}
+.inj-anat{display:grid;grid-template-columns:140px 1fr;align-items:center;gap:10px}
+.inj-anat .donut{width:140px;height:140px}
+.inj-leg{display:flex;flex-direction:column;gap:8px;font-size:12.5px}
+.inj-leg div{display:flex;align-items:center;gap:6px}
+.inj-leg i{width:12px;height:12px;border-radius:3px;flex:none}
+.inj-leg span{flex:1;color:var(--muted)}
+.inj-list{display:flex;flex-direction:column;gap:6px}
+.inj-row{display:flex;align-items:center;gap:4px;padding:10px 6px 10px 12px;border-radius:10px;background:var(--surface);border-left:4px solid}
+.inj-row b{font-size:13.5px}
+.tr-timeline{position:relative;display:flex;flex-direction:column;gap:12px;padding-left:22px}
+.tr-timeline::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:2px;background:#38BDF8}
+.tr-node{position:relative}
+.tr-dot{position:absolute;left:-19px;top:22px;width:12px;height:12px;border-radius:50%;border:2px solid #38BDF8;background:var(--bg)}
+.tr-node.cur .tr-dot{left:-21px;top:20px;width:16px;height:16px;border-color:#22D47B;background:#22D47B;box-shadow:0 0 0 4px color-mix(in srgb,#22D47B 30%,transparent)}
+.tr-card{display:flex;flex-direction:column;gap:10px;padding:12px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.tr-node.cur .tr-card{border:2px solid #22D47B}
+.tr-badge{font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.03em}
+.tr-move{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;min-width:0}
+.tr-club{display:flex;align-items:center;gap:6px;min-width:0;font-size:13px}
+.tr-club span,.tr-club b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tr-club.to{flex:0 1 auto;font-size:15px}
+.tr-val{flex:none;margin-left:auto;color:#4ADE80;font-family:var(--f-display);font-size:20px}
+.an-row{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;margin-top:6px;border-radius:8px;background:var(--surface2);font-size:13px}
+.an-row span{color:var(--muted)}
+.club-tiles{display:flex;flex-wrap:wrap;gap:8px}
+.club-tile{width:64px;height:64px;display:grid;place-items:center;border-radius:10px;background:var(--surface2);border:1px solid var(--line)}
+.mv-kpis{display:grid;grid-template-columns:1fr;gap:8px}
+@media (min-width:560px){.mv-kpis{grid-template-columns:repeat(3,1fr)}}
+.mv-kpi{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border-radius:12px;background:var(--surface);border:1px solid var(--line);border-left:4px solid}
+.mv-kpi b{font-size:28px;font-weight:800;line-height:1.1}
+.mv-chip{align-self:flex-start;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;background:color-mix(in srgb,#000 35%,var(--surface2))}
+.mv-tier{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1.05;text-transform:uppercase}
+.pick.rng button{height:28px;padding:0 9px;font-size:11px;font-weight:700;text-transform:uppercase}
+
 </style>
 </head>
 <body>
@@ -586,6 +630,87 @@ pt: {
   by_tournament:"Desempenho por torneio",
   off_impact:"Impacto ofensivo",
   match_history:"Histórico de partidas",
+  med_title:"Departamento médico",
+  clinical_status:"Status clínico",
+  resistance:"Nível de resistência",
+  fit_to_play:"APTO PARA JOGAR",
+  in_treatment:"EM TRATAMENTO",
+  available_next:"Disponível para a próxima partida.",
+  return_in:"Retorno estimado em {d} dias ({dt}).",
+  tier_iron:"HOMEM DE FERRO",
+  tier_normal:"RESISTÊNCIA NORMAL",
+  tier_worry:"HISTÓRICO PREOCUPANTE",
+  tier_glass:"PERNAS DE VIDRO",
+  career_impact:"Impacto na carreira",
+  total_inj:"Lesões",
+  days_out:"Dias no DM",
+  med_timeline:"Prontuário (linha do tempo)",
+  sev_light:"Leve",
+  sev_mid:"Média",
+  sev_severe:"Grave",
+  injury_anatomy:"Anatomia da lesão",
+  cat_muscle:"Muscular",
+  cat_joint:"Articular / Ligamentos",
+  cat_bone:"Óssea / Trauma",
+  cat_other:"Outros",
+  full_history:"Histórico completo",
+  until:"até",
+  no_injuries:"Nenhuma lesão registrada",
+  no_injuries_s:"Ótimo sinal. Toque em Registrar lesão quando precisar.",
+  mkt_title:"Mercado & contratos",
+  register_transfer:"Registrar transferência",
+  current_contract:"Contrato vigente",
+  squad_role:"Papel no elenco",
+  expires:"Expira em",
+  weekly_wage:"Salário semanal",
+  total_moved:"Total movimentado",
+  wage_evolution:"Evolução salarial",
+  current_club:"CLUBE ATUAL",
+  badge_start:"Início",
+  badge_record:"Recorde pessoal",
+  at_age:"Aos {n} anos",
+  status_lbl:"Status",
+  per_week:"sem",
+  career_analysis:"Análise de carreira",
+  clubs_repr:"Clubes representados",
+  biggest_fee:"Maior transferência",
+  perm_moves:"Transferências definitivas",
+  free_moves:"Movimentações livres",
+  loans:"Empréstimos",
+  del_transfer_q:"Excluir a transferência para {c}?",
+  mv_sub:"Histórico de valorização e curva de evolução da carreira",
+  mv_empty:"Toque em Atualizar valor para registrar o primeiro valor.",
+  vs_prev:"(vs anterior)",
+  career_peak:"Pico de carreira",
+  phase:"Fase",
+  biggest_jump:"Maior valorização",
+  biggest_jump_s:"Maior salto em uma atualização",
+  ph_veteran:"Lenda Veterana",
+  ph_prime:"Auge Técnico",
+  ph_young:"Jovem Promessa",
+  value_curve:"Curva de valorização",
+  yr:"ano",
+  yrs:"anos",
+  all_caps:"Tudo",
+  global_status:"Status global",
+  same_band:"Jogadores nesta mesma faixa:",
+  tier_gen:"TALENTO GERACIONAL",
+  tier_world:"CLASSE MUNDIAL",
+  tier_star:"ESTRELA GLOBAL",
+  tier_intl:"DESTAQUE INTERNACIONAL",
+  tier_prom:"GRANDE PROMESSA / TITULAR",
+  tier_rise:"EM ASCENSÃO",
+  comp_gen:"Kylian Mbappé, Erling Haaland, Vini Jr, Jude Bellingham",
+  comp_world:"Phil Foden, Bukayo Saka, Jamal Musiala, Rodri",
+  comp_star:"Bruno Guimarães, Martin Ødegaard, Pedri, Valverde",
+  comp_intl:"Gabriel Martinelli, Lucas Paquetá, Xavi Simons, Bastoni",
+  comp_prom:"Endrick, Savinho, João Neves, Garnacho",
+  comp_rise:"Jovens da base e apostas de mercado de baixo custo.",
+  club_roi:"Impacto no clube (ROI)",
+  paid_by:"Valor pago pelo {c}:",
+  free_cost:"Custo zero (livre/base)",
+  growth_since:"Sua valorização desde a chegada:",
+  value_history:"Histórico de valores",
   name_col:"Nome", pos_col:"Pos",
 },
 en: {
@@ -755,6 +880,87 @@ en: {
   by_tournament:"By tournament",
   off_impact:"Attacking impact",
   match_history:"Match history",
+  med_title:"Medical department",
+  clinical_status:"Clinical status",
+  resistance:"Durability",
+  fit_to_play:"FIT TO PLAY",
+  in_treatment:"IN TREATMENT",
+  available_next:"Available for the next match.",
+  return_in:"Expected back in {d} days ({dt}).",
+  tier_iron:"IRON MAN",
+  tier_normal:"NORMAL DURABILITY",
+  tier_worry:"WORRYING RECORD",
+  tier_glass:"GLASS LEGS",
+  career_impact:"Career impact",
+  total_inj:"Injuries",
+  days_out:"Days out",
+  med_timeline:"Medical timeline",
+  sev_light:"Minor",
+  sev_mid:"Moderate",
+  sev_severe:"Severe",
+  injury_anatomy:"Injury anatomy",
+  cat_muscle:"Muscle",
+  cat_joint:"Joint / Ligaments",
+  cat_bone:"Bone / Trauma",
+  cat_other:"Other",
+  full_history:"Full history",
+  until:"to",
+  no_injuries:"No injuries logged",
+  no_injuries_s:"Good sign. Tap Log injury when you need it.",
+  mkt_title:"Market & contracts",
+  register_transfer:"Register transfer",
+  current_contract:"Current contract",
+  squad_role:"Squad role",
+  expires:"Expires",
+  weekly_wage:"Weekly wage",
+  total_moved:"Total fees",
+  wage_evolution:"Wage evolution",
+  current_club:"CURRENT CLUB",
+  badge_start:"Start",
+  badge_record:"Personal record",
+  at_age:"Aged {n}",
+  status_lbl:"Status",
+  per_week:"wk",
+  career_analysis:"Career analysis",
+  clubs_repr:"Clubs represented",
+  biggest_fee:"Biggest fee",
+  perm_moves:"Permanent transfers",
+  free_moves:"Free moves",
+  loans:"Loans",
+  del_transfer_q:"Delete the transfer to {c}?",
+  mv_sub:"Value history and career growth curve",
+  mv_empty:"Tap Update value to log the first value.",
+  vs_prev:"(vs previous)",
+  career_peak:"Career peak",
+  phase:"Phase",
+  biggest_jump:"Biggest rise",
+  biggest_jump_s:"Biggest jump in one update",
+  ph_veteran:"Veteran Legend",
+  ph_prime:"Technical Prime",
+  ph_young:"Young Prospect",
+  value_curve:"Value curve",
+  yr:"year",
+  yrs:"years",
+  all_caps:"All",
+  global_status:"Global status",
+  same_band:"Players in the same band:",
+  tier_gen:"GENERATIONAL TALENT",
+  tier_world:"WORLD CLASS",
+  tier_star:"GLOBAL STAR",
+  tier_intl:"INTERNATIONAL STANDOUT",
+  tier_prom:"TOP PROSPECT / STARTER",
+  tier_rise:"ON THE RISE",
+  comp_gen:"Kylian Mbappé, Erling Haaland, Vini Jr, Jude Bellingham",
+  comp_world:"Phil Foden, Bukayo Saka, Jamal Musiala, Rodri",
+  comp_star:"Bruno Guimarães, Martin Ødegaard, Pedri, Valverde",
+  comp_intl:"Gabriel Martinelli, Lucas Paquetá, Xavi Simons, Bastoni",
+  comp_prom:"Endrick, Savinho, João Neves, Garnacho",
+  comp_rise:"Academy talents and low-cost market bets.",
+  club_roi:"Club impact (ROI)",
+  paid_by:"Fee paid by {c}:",
+  free_cost:"Free (free agent/academy)",
+  growth_since:"Your value growth since arriving:",
+  value_history:"Value history",
   name_col:"Name", pos_col:"Pos",
 }};
 
@@ -1422,6 +1628,7 @@ function vMore(){
 }
 function backBar(title, addAct){ return `<div class="row between"><button class="btn sm" data-act="moreBack">← ${t("more")}</button>${addAct&&!SAMPLE?`<button class="btn sm acc" data-act="${addAct}">+ ${t("add_trophy").split(" ")[0]}</button>`:""}</div><h2 style="font-family:var(--f-display);font-size:26px;text-transform:uppercase;margin-top:4px">${title}</h2>`; }
 function vMoreSub(k){
+  if(k==="injuries") return vInjuries(); if(k==="transfers") return vTransfers(); if(k==="market") return vMarket();
   let body = "", add = null, title = t((MORE_ITEMS.find(x=>x[0]===k)||[])[1]);
   if(k==="news"){
     const N = S.feed_noticias||[];
@@ -1940,6 +2147,143 @@ function vNationalTeam(){
     <div class="nt-list">${rowsHtml || `<div class="muted small">${t("no_data")}</div>`}</div>`;
 }
 
+/* ================= Medical / Transfers / Market value — desktop layouts adapted to phone ================= */
+const fmtEurPT = n => !n ? "€ 0" : n>=1e6 ? "€ "+(n/1e6).toFixed(1).replace(".",",")+"M" : n>=1e3 ? "€ "+Math.round(n/1e3)+"K" : "€ "+Math.round(n);
+const fmtWage = v => { const n = parseMoney(v); return n ? "€ "+Math.round(n).toLocaleString("pt-BR") : "–"; };
+const IC_EDIT = IC.edit.replace('<svg','<svg width="17" height="17"'), IC_DEL = IC.trash.replace('<svg','<svg width="17" height="17"');
+const pageHead = (title, sub, act, label, color) => `<div class="ph-head"><div class="grow"><h1 class="ph-title">${title}</h1>${sub?`<div class="small muted">${sub}</div>`:""}</div>${act&&!SAMPLE?`<button class="btn sm ph-btn" style="background:${color};color:${color==="#EF4444"?"#fff":"#04301A"}" data-act="${act}">${label}</button>`:""}</div>`;
+const back = () => `<button class="btn sm" data-act="moreBack" style="align-self:flex-start">← ${t("more")}</button>`;
+
+/* ---------------- Medical department ---------------- */
+function injSeverity(d){ return d < 15 ? {k:"sev_light", c:"#F59E0B"} : d < 60 ? {k:"sev_mid", c:"#F97316"} : {k:"sev_severe", c:"#EF4444"}; }
+function injCategory(name){ const n = String(name||"").toLowerCase();
+  if(['coxa','panturrilha','muscul','virilha','adutor','estiramento','fadiga','posterior','hamstring','thigh','calf','groin','muscle','strain'].some(x=>n.includes(x))) return 0;
+  if(['joelho','tornozelo','ligamento','menisco','torção','torcao','entorse','cruzado','knee','ankle','ligament','acl','sprain'].some(x=>n.includes(x))) return 1;
+  if(['fratura','osso','quebra','pé','pe ','mão','mao','braço','braco','ombro','costela','fracture','bone','foot','hand','arm','shoulder','rib','pancada'].some(x=>n.includes(x))) return 2;
+  return 3; }
+function allInjuries(){ return Object.entries(S.dados_lesoes||{}).flatMap(([ano,l])=>(l||[]).map((x,i)=>({x,ano,i,ini:parseDMY(x.de),fim:parseDMY(x.ate)}))).filter(r=>r.ini).sort((a,b)=>a.ini-b.ini); }
+function vInjuries(){
+  const L = allInjuries(); const now = new Date();
+  const days = L.reduce((s,r)=>s+int(r.x.dias),0), games = L.reduce((s,r)=>s+int(r.x.jogos_perdidos),0);
+  const cur = L.find(r => r.fim && r.ini <= now && now <= r.fim);
+  const tier = days<=15 ? [t("tier_iron"),"#10B981","🛡️"] : days<=90 ? [t("tier_normal"),"#38BDF8","🏃"] : days<=200 ? [t("tier_worry"),"#F59E0B","⚠️"] : [t("tier_glass"),"#EF4444","🤕"];
+  const cats = [0,0,0,0]; L.forEach(r => cats[injCategory(r.x.lesao)]++);
+  // gantt
+  let gantt = "";
+  if(L.length){ const rows = L.slice(-8); const t0 = Math.min(...rows.map(r=>r.ini.getTime())), t1 = Math.max(...rows.map(r=>(r.fim||r.ini).getTime()));
+    const span = Math.max(t1-t0, 864e5*10); const W = 340, LX = 104, RX = 296, rowH = 30, H = rows.length*rowH + 26; const x = tm => LX + (tm-t0)/span*(RX-LX);
+    let g = `<rect x="${LX}" y="0" width="${RX-LX}" height="${rows.length*rowH}" fill="color-mix(in srgb,var(--accent) 12%,transparent)"/>`;
+    for(let k=0;k<=4;k++){ const tm = t0 + span*k/4, d = new Date(tm); g += `<line x1="${x(tm)}" y1="0" x2="${x(tm)}" y2="${rows.length*rowH}" class="grid" stroke-dasharray="2 3"/><text x="${x(tm)}" y="${rows.length*rowH+16}" text-anchor="middle">${MONTHS[LANG][d.getMonth()]}/${String(d.getFullYear()).slice(-2)}</text>`; }
+    rows.forEach((r,k) => { const sv = injSeverity(int(r.x.dias)); const y = k*rowH + 6; const xa = x(r.ini.getTime()), xb = Math.max(xa+5, x((r.fim||r.ini).getTime()));
+      const nm = String(r.x.lesao); g += `<text x="${LX-5}" y="${y+13}" text-anchor="end" style="fill:var(--fg);font-size:9.5px">${esc(nm.length>16?nm.slice(0,15)+"…":nm)}</text>
+        <rect x="${xa}" y="${y}" width="${xb-xa}" height="${rowH-12}" rx="3" fill="${sv.c}" opacity=".9"/><text x="${Math.min(xb+4, RX+2)}" y="${y+13}" style="fill:${sv.c};font-weight:700;font-size:10px">${int(r.x.dias)}d (${int(r.x.jogos_perdidos)}j)</text>`; });
+    gantt = `<svg class="chart" viewBox="0 0 ${W} ${H}">${g}</svg>`; }
+  const catLbl = [t("cat_muscle"), t("cat_joint"), t("cat_bone"), t("cat_other")], catCol = ["#38BDF8","#F59E0B","#EF4444","#94A3B8"];
+  const pie = (() => { const tot = cats.reduce((a,b)=>a+b,0); if(!tot) return ""; const R = 54, C = 2*Math.PI*R; let off = 0, g = "";
+    cats.forEach((v,k)=>{ if(!v) return; const len = C*v/tot; g += `<circle cx="80" cy="80" r="${R}" fill="none" stroke="${catCol[k]}" stroke-width="24" stroke-dasharray="${len} ${C}" stroke-dashoffset="${-off}" transform="rotate(-90 80 80)"/>`; off += len; });
+    return `<div class="inj-anat"><svg viewBox="0 0 160 160" class="donut">${g}<text x="80" y="86" text-anchor="middle" style="fill:var(--fg);font-family:var(--f-display);font-weight:800;font-size:22px">${tot}</text></svg>
+      <div class="inj-leg">${cats.map((v,k)=>v?`<div><i style="background:${catCol[k]}"></i><span>${catLbl[k]}</span><b>${Math.round(100*v/tot)}%</b></div>`:"").join("")}</div></div>`; })();
+  return `<div class="stack">${back()}${pageHead(t("med_title"), "", "addInjury", "🚑 "+t("add_injury"), "#EF4444")}
+    <div class="inj-status ${cur?"hurt":""}"><div class="row between" style="align-items:flex-start"><span class="tiny">${t("clinical_status")}</span><span class="tiny" style="text-align:right">${t("resistance")}</span></div>
+      <div class="row between" style="align-items:flex-end;gap:8px"><b class="inj-big">${cur?t("in_treatment"):t("fit_to_play")}</b><b style="color:${tier[1]};font-size:13px;text-align:right">${tier[0]} ${tier[2]}</b></div>
+      <div class="small">${cur?t("return_in",{d:Math.max(0,Math.ceil((cur.fim-now)/864e5)),dt:esc(cur.x.ate)}):t("available_next")}</div></div>
+    <div class="card"><div class="fsec" style="margin:0 0 8px;color:var(--fg)">${t("career_impact")}</div>
+      <div class="kpis three"><div class="kpi"><span class="num">${L.length}</span><span>${t("total_inj")}</span></div><div class="kpi"><span class="num" style="color:#F59E0B">${days}</span><span>${t("days_out")}</span></div><div class="kpi"><span class="num" style="color:#EF4444">${games}</span><span>${t("missed")}</span></div></div></div>
+    ${L.length?`<div class="card"><div class="row between"><div class="fsec" style="margin:0;color:var(--fg)">${t("med_timeline")}</div><div class="legend" style="margin:0">${["sev_light","sev_mid","sev_severe"].map((k,n)=>`<span><i style="background:${["#F59E0B","#F97316","#EF4444"][n]}"></i>${t(k)}</span>`).join("")}</div></div>${gantt}</div>
+    <div class="card"><div class="fsec" style="margin:0 0 6px;color:var(--fg)">${t("injury_anatomy")}</div>${pie}</div>
+    <div class="sec-h"><h2>📋 ${t("full_history")}</h2></div>
+    <div class="inj-list">${[...L].reverse().map(r=>{ const sv = injSeverity(int(r.x.dias)); return `<div class="inj-row" style="border-left-color:${sv.c}"><div class="grow"><b>${esc(String(r.x.lesao).toUpperCase())}</b><div class="small muted">${esc(r.x.de)} ${t("until")} ${esc(r.x.ate)}</div><div class="small" style="color:${sv.c};font-weight:700">${int(r.x.dias)} ${t("days")} (${int(r.x.jogos_perdidos)} ${t("games_word")})</div></div>
+      ${SAMPLE?"":`<button class="icon-btn" style="color:#F59E0B" data-act="editInjury" data-ano="${esc(r.ano)}" data-i="${r.i}" aria-label="${t("edit")}">${IC_EDIT}</button><button class="icon-btn" style="color:#EF4444" data-act="delInjury" data-ano="${esc(r.ano)}" data-i="${r.i}" aria-label="${t("remove")}">${IC_DEL}</button>`}</div>`; }).join("")}</div>`
+    : empty(t("no_injuries"), t("no_injuries_s"))}
+  </div>`;
+}
+function injuryForm(edit){
+  const x = edit ? S.dados_lesoes[edit.ano][edit.i] : null;
+  sheetForm(edit?t("edit"):t("add_injury"), sIn("nome",t("injury"),x?x.lesao:"")+sDate("de",t("start"),x?x.de:todayDMY())+sDate("ate",t("end"),x?x.ate:todayDMY())+sIn("jogos",t("missed"),x?String(int(x.jogos_perdidos)):"0","",'type="number" inputmode="numeric" min="0"'),
+    fd=>{ const a = parseDMY(fd.de), z = parseDMY(fd.ate); if(!fd.nome || !a || !z) return false; if(z<a){ toast(t("bad_dates"), true); return false; }
+      if(edit){ const l = S.dados_lesoes[edit.ano]; l.splice(edit.i,1); if(!l.length) delete S.dados_lesoes[edit.ano]; }
+      const ano = String(a.getFullYear()); (S.dados_lesoes[ano] = S.dados_lesoes[ano]||[]).push({lesao:fd.nome, de:fd.de, ate:fd.ate, dias:Math.round((z-a)/864e5), jogos_perdidos:int(fd.jogos)}); commit(); toast(t("saved")); render(); });
+}
+
+/* ---------------- Market & contracts ---------------- */
+function vTransfers(){
+  const H = (S.historico_transferencias||[]).map((x,i)=>({x,i,d:parseDMY(x.Data),v:parseMoney(x.Valor)})).sort((a,b)=>(a.d||0)-(b.d||0));
+  const inf = S.informacoes; const club = inf["Clube Atual"]||"–"; const cur = S.historico_transferencias[0] || {};
+  const total = H.reduce((s,r)=>s+(r.v||0),0), maxV = H.reduce((m,r)=>Math.max(m,r.v||0),0);
+  const birth = parseDMY(inf["Data de Nascimento"]);
+  const ageAt = d => { if(!birth || !d) return ""; let a = d.getFullYear()-birth.getFullYear(); if(d.getMonth()<birth.getMonth() || (d.getMonth()===birth.getMonth() && d.getDate()<birth.getDate())) a--; return t("at_age",{n:a}); };
+  // badges like the PC: first = start, value records
+  let mx = 0; const seen = new Set(); const badges = new Map();
+  H.forEach(r => { const b = []; if(!seen.size) b.push(["start","#38BDF8"]); if(r.v > mx && r.v > 0){ b.push(["record","#FFD700"]); mx = r.v; } seen.add(r.x.Para); badges.set(r.i, b); });
+  // salary chart
+  const pts = H.filter(r => parseMoney(r.x.Salario)).map(r => ({label: String(r.x.Para||"").slice(0,3).toUpperCase().trim(), v: parseMoney(r.x.Salario)}));
+  let sal = ""; if(pts.length){ const W = 340, Hh = 130, L = 26, R = 314, T = 24, B = 104; const mxs = Math.max(...pts.map(p=>p.v)); const xs = k => pts.length===1 ? (L+R)/2 : L + k*(R-L)/(pts.length-1); const ys = v => B - (v/mxs)*(B-T);
+    const path = pts.map((p,k)=>`${k?"L":"M"}${xs(k)},${ys(p.v)}`).join("");
+    sal = `<svg class="chart" viewBox="0 0 ${W} ${Hh}"><line x1="${L}" x2="${R}" y1="${B}" y2="${B}" class="grid"/><path d="${path} L${xs(pts.length-1)},${B} L${xs(0)},${B}Z" fill="#10B981" opacity=".18"/><path d="${path}" fill="none" stroke="#10B981" stroke-width="2.5"/>
+      ${pts.map((p,k)=>`<circle cx="${xs(k)}" cy="${ys(p.v)}" r="4" fill="var(--surface)" stroke="#10B981" stroke-width="2"/><text x="${xs(k)}" y="${ys(p.v)-9}" text-anchor="middle" style="fill:var(--fg);font-weight:700">${fmtEurPT(p.v).replace("€ ","€")}</text><text x="${xs(k)}" y="${B+16}" text-anchor="middle">${esc(p.label)}</text>`).join("")}</svg>`; }
+  const types = {def:0, free:0, loan:0}; H.forEach(r => { const tp = String(r.x.Tipo||""); if(/empr|loan/i.test(tp) && !/retorno|return/i.test(tp)) types.loan++; else if(/livre|free|custo zero/i.test(tp)) types.free++; else types.def++; });
+  const clubs = [...new Set(H.map(r=>r.x.Para).filter(Boolean))];
+  const cards = [...H].reverse().map(r => { const isCur = r.i===0; const b = badges.get(r.i)||[];
+    return `<div class="tr-node ${isCur?"cur":""}"><span class="tr-dot"></span><div class="tr-card">
+      <div class="row" style="gap:6px;flex-wrap:wrap">${isCur?`<span class="tr-badge" style="background:#00E676;color:#064E3B">${t("current_club")}</span>`:""}${b.map(([k,c])=>`<span class="tr-badge" style="background:${c};color:${k==="record"?"#1E2732":"#fff"}">${t("badge_"+k)}${k==="record"?" 💰":""}</span>`).join("")}<i class="small muted">(${esc(r.x.Tipo||"")})</i>
+        <span class="grow"></span><span class="small" style="font-weight:700">${esc(r.x.Data)}</span>${SAMPLE?"":`<button class="icon-btn" style="color:#F59E0B" data-act="editTransfer" data-i="${r.i}" aria-label="${t("edit")}">${IC_EDIT}</button><button class="icon-btn" style="color:#EF4444" data-act="askDelTransfer" data-i="${r.i}" aria-label="${t("remove")}">${IC_DEL}</button>`}</div>
+      <div class="tr-move"><span class="tr-club">${crest(r.x.De,26)}<span>${esc(r.x.De||"")}</span></span><span class="muted">→</span><span class="tr-club to">${crest(r.x.Para,32)}<b>${esc(r.x.Para||"")}</b></span><b class="tr-val">${r.v?fmtEurPT(r.v).replace(",0M","M"):"–"}</b></div>
+      <div class="row small" style="gap:12px"><span class="muted">${ageAt(r.d)}</span>${r.x.Papel?`<span style="color:#F59E0B;font-weight:700">${t("status_lbl")}: ${esc(r.x.Papel)}</span>`:""}<span class="grow"></span>${r.x.Salario?`<span style="color:#38BDF8;font-weight:700">${esc(String(r.x.Salario))}/${t("per_week")}</span>`:""}</div>
+      <div id="trConfirm_${r.i}"></div></div></div>`; }).join("");
+  return `<div class="stack">${back()}${pageHead(t("mkt_title"), "", "addTransfer", "✈️ "+t("register_transfer"), "#22D47B")}
+    <div class="card"><div class="fsec" style="margin:0 0 8px">${t("current_contract")}</div>
+      <div class="row">${crest(club,40)}<div class="grow"><div style="font-weight:800;font-size:19px;text-transform:uppercase">${esc(club)}</div><div class="small muted">${t("squad_role")}: ${esc(cur.Papel||"–")} • ${t("expires")}: ${esc(inf["Contrato Até"]||"–")}</div></div></div>
+      <div class="mini-grid" style="margin-top:12px"><div><span class="tiny">${t("weekly_wage")}</span><div class="num" style="font-size:24px;font-weight:800;color:#4ADE80">${fmtWage(inf["Salario Semanal"]||cur.Salario)}</div></div><div><span class="tiny">${t("total_moved")}</span><div class="num" style="font-size:24px;font-weight:800;color:#F59E0B">${fmtEurPT(total)}</div></div></div></div>
+    ${sal?`<div class="card"><div class="fsec" style="margin:0 0 4px;color:#F59E0B">📈 ${t("wage_evolution")}</div>${sal}</div>`:""}
+    <div class="tr-timeline">${cards || empty(t("no_data"),"")}</div>
+    <div class="card"><div class="fsec" style="margin:0 0 6px;color:var(--fg)">${t("career_analysis")}</div>
+      ${[[t("clubs_repr"),clubs.length,"var(--fg)"],[t("biggest_fee"),fmtEurPT(maxV),"#4ADE80"],[t("perm_moves"),types.def,"#38BDF8"],[t("free_moves"),types.free,"#FACC15"],[t("loans"),types.loan,"#EF4444"]].map(([l,v,c])=>`<div class="an-row"><span>${l}</span><b style="color:${c}">${v}</b></div>`).join("")}
+      <div class="fsec" style="margin:14px 0 8px;color:var(--fg)">${t("clubs_repr")}</div><div class="club-tiles">${clubs.map(c=>`<button class="club-tile" data-act="clubReport" data-v="${esc(c)}" title="${esc(c)}">${crest(c,40)}</button>`).join("")}</div></div>
+  </div>`;
+}
+function transferForm(i){
+  const x = i!=null ? S.historico_transferencias[i] : null; const inf = S.informacoes;
+  sheetForm(x?t("edit"):t("add_transfer"), sDate("data",t("date"),x?x.Data:todayDMY())+combo("de", x?x.De:inf["Clube Atual"]||"", t("from"), "club", "", true)+combo("para", x?x.Para:"", t("to"), "club", "full", true)+sSel("tipo",t("ttype"),[...new Set([...(x?[x.Tipo]:[]),...TRANSFER_TYPES[LANG]])],x?x.Tipo:TRANSFER_TYPES[LANG][0],"")+sIn("valor",t("fee"),x?x.Valor:"€ 0M","")+sIn("sal",t("wage"),x?x.Salario:(inf["Salario Semanal"]||"1500"),"",'inputmode="numeric"')+sSel("papel",t("role"),[...new Set([...(x&&x.Papel?[x.Papel]:[]),...ROLES[LANG]])],x?x.Papel:ROLES[LANG][1],""),
+    fd=>{ if(!fd.para || !parseDMY(fd.data)) return false; const rec = {Data:fd.data, De:fd.de, Para:fd.para, Tipo:fd.tipo, Valor:fd.valor, Salario:fd.sal, Papel:fd.papel};
+      if(x){ Object.assign(x, rec); if(i===0) Object.assign(inf,{"Clube Atual":fd.para,"No Time Desde":fd.data,"Salario Semanal":fd.sal}); toast(t("saved")); }
+      else { S.historico_transferencias.unshift(rec); S.historico_transferencias.sort((a,b)=>dateNum(b.Data)-dateNum(a.Data));
+        if(S.historico_transferencias[0]===rec) Object.assign(inf,{"Clube Atual":fd.para,"No Time Desde":fd.data,"Salario Semanal":fd.sal}); toast(t("signed",{c:fd.para})); }
+      UI.F = null; commit(); render(); });
+}
+
+/* ---------------- Market value ---------------- */
+function vMarket(){
+  const all = Object.entries(S.dados_valor_mercado_str||{}).map(([d,v])=>({d, dt:new Date(d+"T12:00:00"), v:parseMoney(v), raw:v})).filter(p=>!isNaN(p.dt)).sort((a,b)=>a.dt-b.dt);
+  const head = pageHead(t("marketv"), t("mv_sub"), "addValue", "📈 "+t("add_value"), "#10B981");
+  if(!all.length) return `<div class="stack">${back()}${head}${empty(t("no_data"), t("mv_empty"))}</div>`;
+  const last = all[all.length-1], prev = all[all.length-2]; const peak = Math.max(...all.map(p=>p.v));
+  let jump = 0; for(let k=1;k<all.length;k++) jump = Math.max(jump, all[k].v-all[k-1].v);
+  const pct = prev && prev.v ? (last.v-prev.v)/prev.v*100 : 0;
+  const age = ageOf(S.informacoes["Data de Nascimento"]) ?? 20; const phase = age>=30 ? [t("ph_veteran"),"#94A3B8"] : age>=24 ? [t("ph_prime"),"#F59E0B"] : [t("ph_young"),"#38BDF8"];
+  const f = UI.mvRange || "all"; const cut = f==="1y" ? new Date(last.dt.getTime()-365*864e5) : f==="5y" ? new Date(last.dt.getTime()-5*365*864e5) : null;
+  const pts = all.filter(p=>!cut || p.dt>=cut).map(p=>({label:`${pad(p.dt.getMonth()+1)}/${String(p.dt.getFullYear()).slice(-2)}`, v:p.v}));
+  const cv = last.v; const tiers = [[150e6,"tier_gen","#F59E0B","comp_gen"],[100e6,"tier_world","#A855F7","comp_world"],[70e6,"tier_star","#4ADE80","comp_star"],[40e6,"tier_intl","#38BDF8","comp_intl"],[15e6,"tier_prom","#10B981","comp_prom"],[0,"tier_rise","#94A3B8","comp_rise"]];
+  const tr = tiers.find(x=>cv>=x[0]);
+  const paid = parseMoney((S.historico_transferencias[0]||{}).Valor); const roi = cv - paid; const club = S.informacoes["Clube Atual"]||"–";
+  const kpi = (lbl, val, col, chip, chipCol) => `<div class="mv-kpi" style="border-left-color:${col}"><span class="tiny">${lbl}</span><b class="num" style="color:${col}">${val}</b><span class="mv-chip" style="color:${chipCol||col}">${chip}</span></div>`;
+  return `<div class="stack">${back()}${head}
+    <div class="mv-kpis">${kpi(t("current_value"), fmtEurPT(cv), "#10B981", prev?`${pct>=0?"▲":"▼"} ${Math.abs(pct).toFixed(1)}% ${t("vs_prev")}`:"–", pct>=0?"#10B981":"#EF4444")}
+      ${kpi(t("career_peak"), fmtEurPT(peak), "#38BDF8", `${t("phase")}: ${phase[0]}`, phase[1])}${kpi(t("biggest_jump"), "+ "+fmtEurPT(jump), "#38BDF8", t("biggest_jump_s"))}</div>
+    <div class="card"><div class="fsec" style="margin:0 0 8px;color:var(--fg)">${t("value_curve")}</div><div class="pick rng" style="margin-bottom:6px">${[["1y","1 "+t("yr")],["5y","5 "+t("yrs")],["all",t("all_caps")]].map(([k,l])=>`<button data-act="mvRange" data-v="${k}" aria-pressed="${f===k}">${l}</button>`).join("")}</div>${pts.length?lineChart(pts):`<div class="small muted">${t("no_data")}</div>`}</div>
+    <div class="card"><div class="fsec" style="margin:0 0 4px;color:#38BDF8">🌍 ${t("global_status")}</div><div class="mv-tier" style="color:${tr[2]}">${t(tr[1])}</div><div class="small muted"><i>${t("same_band")}<br>${t(tr[3])}</i></div></div>
+    <div class="card"><div class="fsec" style="margin:0 0 4px;color:#10B981">📈 ${t("club_roi")}</div><div class="small muted">${t("paid_by",{c:esc(club)})}</div><div style="font-weight:600">${paid?fmtEurPT(paid):t("free_cost")}</div>
+      <div class="small muted" style="margin-top:8px">${t("growth_since")}</div><div class="mv-tier" style="color:${roi>=0?"#10B981":"#EF4444"}">${roi>=0?"+":"−"} ${fmtEurPT(Math.abs(roi))}</div></div>
+    <div class="sec-h"><h2>${t("value_history")}</h2></div>
+    <div class="ilist">${[...all].reverse().map(p=>`<div class="item"><div class="grow"><div class="small muted">${pad(p.dt.getDate())}/${pad(p.dt.getMonth()+1)}/${p.dt.getFullYear()}</div><div class="t num" style="font-size:17px">${fmtEurPT(p.v)}</div></div>${SAMPLE?"":`<button class="icon-btn" style="color:#F59E0B" data-act="editValue" data-k="${esc(p.d)}" aria-label="${t("edit")}">${IC_EDIT}</button><button class="icon-btn" style="color:#EF4444" data-act="delValue" data-k="${esc(p.d)}" aria-label="${t("remove")}">${IC_DEL}</button>`}</div>`).join("")}</div>
+  </div>`;
+}
+function valueForm(key){
+  const raw = key ? S.dados_valor_mercado_str[key] : null;
+  sheetForm(key?t("edit"):t("add_value"), sDate("data",t("date"),key?isoToDmy(key):todayDMY())+sIn("valor",t("value"),raw?String(raw).replace("€","").trim():(latestMarket()?fmtMoney(latestMarket()).replace("€ ",""):"1M"),""),
+    fd=>{ const iso = dmyToIso(fd.data); if(!iso || !parseMoney(fd.valor)) return false; if(key && key!==iso) delete S.dados_valor_mercado_str[key];
+      S.dados_valor_mercado_str[iso] = "€ " + fd.valor.toUpperCase().replace("€","").trim(); commit(); toast(t("saved")); render(); });
+}
+
 /* ================= render & routing ================= */
 function render(){
   const v = view(); document.documentElement.lang = LANG==="en" ? "en" : "pt-BR";
@@ -2038,6 +2382,18 @@ document.addEventListener("click", async e=>{
   const b = e.target.closest("[data-act]"); if(!b) { if(e.target.id==="scrim") closeSheet(); return; }
   const a = b.dataset.act, v = b.dataset.v;
   switch(a){
+    case "addInjury": injuryForm(); return;
+    case "editInjury": injuryForm({ano:b.dataset.ano, i:+b.dataset.i}); return;
+    case "addTransfer": transferForm(null); return;
+    case "editTransfer": transferForm(+b.dataset.i); return;
+    case "askDelTransfer": { const i = +b.dataset.i; const x = S.historico_transferencias[i]; $("#trConfirm_"+i).innerHTML = `<div class="confirm" style="margin-top:8px"><b>${esc(t("del_transfer_q",{c:x.Para}))}</b><div class="row"><button class="btn grow sm" data-act="noDelTransfer" data-i="${i}">${t("cancel")}</button><button class="btn dng grow sm" data-act="delTransfer" data-i="${i}">${t("confirm_del")}</button></div></div>`; return; }
+    case "noDelTransfer": $("#trConfirm_"+b.dataset.i).innerHTML = ""; return;
+    case "delTransfer": { const i = +b.dataset.i; const H = S.historico_transferencias; const x = H[i]; H.splice(i,1);
+      if(i===0 && H.length){ Object.assign(S.informacoes, {"Clube Atual": H[0].Para || x.De, "No Time Desde": H[0].Data, "Salario Semanal": H[0].Salario || S.informacoes["Salario Semanal"]}); }
+      commit(); toast(t("removed")); render(); return; }
+    case "addValue": valueForm(null); return;
+    case "editValue": valueForm(b.dataset.k); return;
+    case "mvRange": UI.mvRange = v; render(); return;
     case "go": if(v==="add" && UI.view==="add") return; go(v); break;
     case "close": closeSheet(); break;
     case "match": closeSheetNow(); matchDetail(+b.dataset.i); break;
