@@ -513,6 +513,27 @@ body.locked{overflow:hidden}
 .art-box-g div{display:flex;flex-direction:column;align-items:center;padding:10px 4px;border-top:1px solid var(--line)}
 .art-box-g b{font-size:22px;font-weight:800}
 .art-box-g span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;text-align:center}
+/* ---- v2.0.9: crest stars + champions gallery ---- */
+.crest-st{flex:none;display:inline-flex;flex-direction:column;align-items:center;justify-content:flex-end;width:var(--s);height:var(--s);gap:0;vertical-align:middle}
+.crest-st .cst{display:block;height:calc(var(--s)*.2);width:100%;line-height:0;text-align:center;margin:0!important}
+.crest-st .cst svg{height:100%;max-width:100%;width:auto;display:inline-block;filter:drop-shadow(0 1px 1px rgba(0,0,0,.45))}
+.crest-st .crest{margin:0!important}
+.hc-group{display:flex;flex-direction:column;gap:6px}
+.hc-group .lbl{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:4px 2px 0}
+.hc-item .ico{width:34px;height:34px;display:grid;place-items:center;color:var(--gold)}
+.hc-last{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:44px}
+.hc-last small{font-size:10px;color:var(--muted);white-space:nowrap}
+.hc-hero{display:flex;align-items:center;gap:14px;padding:6px 2px}
+.hc-hero img{width:64px;height:64px;object-fit:contain;flex:none}
+.hc-hero h2{font-family:var(--f-display);font-size:26px;line-height:1.05;text-transform:uppercase;margin:0}
+.kpi .crest,.kpi .crest-st{margin:0 auto 6px!important}
+.kpi .crest-st .cst{margin:0!important}
+.hc-rank .pos{width:22px;text-align:right;font-weight:800;color:var(--muted);flex:none}
+.hc-rank .big-n{font-family:var(--f-display);font-size:24px;font-weight:800;min-width:30px;text-align:right}
+.hc-rank .item:nth-child(-n+3) .pos{color:var(--gold)}
+.hc-rank .item.me,.hc-seasons .item.me{background:color-mix(in srgb,var(--gold) 12%,transparent)}
+.hc-seasons .ss{width:62px;flex:none;font-size:12.5px;font-weight:700;color:var(--muted)}
+.hc-plaque{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;padding:12px;border:1px solid color-mix(in srgb,var(--gold) 40%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--gold) 7%,var(--surface))}
 
 </style>
 </head>
@@ -524,7 +545,7 @@ body.locked{overflow:hidden}
 <section class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="sheet-h"><h3 id="sheetTitle"></h3><button class="x" data-act="close" aria-label="Fechar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div class="sheet-b" id="sheetBody"></div></section>
 <div class="toast" id="toast" role="status"></div>
 <script>
-const APP_VERSION = "2.0.0";
+const APP_VERSION = "2.0.9";
 const DEFAULT_LANG = (navigator.language || "pt").toLowerCase().startsWith("pt") ? "pt" : "en";
 const I18N = {
 pt: {
@@ -838,6 +859,11 @@ pt: {
   photo_credit:"Foto: Reprodução / Agência ProStats",
   numbers_of:"Os números de {n}",
   see_match:"Ver detalhes da partida",
+  history:"Campeões", history_s:"Todos os campeões da história", hist_search:"Buscar competição ou país", hist_yours:"Suas competições", hist_intl:"Internacionais",
+  hist_editions:"edições", hist_since:"desde", hist_last:"Atual campeão", hist_top:"Maior campeão", hist_rank:"Ranking", hist_seasons:"Temporadas",
+  hist_runner:"Vices", hist_last_t:"último em", hist_you:"SUA CARREIRA", hist_your_titles:"Seus títulos", vs_short:"vs",
+  hist_nth:"título do {club} na história da competição", hist_leader:"{club} é o maior campeão da competição", hist_pos:"{n}º no ranking histórico · líder: {lead} ({t})",
+  hist_open:"Ver galeria de campeões", hist_base_note:"Inclui títulos anteriores ao início da lista.", stars_lbl:"estrelas no escudo",
   name_col:"Nome", pos_col:"Pos",
 },
 en: {
@@ -1145,6 +1171,11 @@ en: {
   photo_credit:"Photo: ProStats Agency",
   numbers_of:"{n}'s numbers",
   see_match:"See match details",
+  history:"Champions", history_s:"Every champion in history", hist_search:"Search competition or country", hist_yours:"Your competitions", hist_intl:"International",
+  hist_editions:"editions", hist_since:"since", hist_last:"Holder", hist_top:"Most titles", hist_rank:"Ranking", hist_seasons:"Seasons",
+  hist_runner:"Runners-up", hist_last_t:"last in", hist_you:"YOUR CAREER", hist_your_titles:"Your titles", vs_short:"vs",
+  hist_nth:"title in {club}'s history in this competition", hist_leader:"{club} hold the record in this competition", hist_pos:"No. {n} all-time · leader: {lead} ({t})",
+  hist_open:"See champions gallery", hist_base_note:"Includes titles won before the list starts.", stars_lbl:"stars on the crest",
   name_col:"Name", pos_col:"Pos",
 }};
 
@@ -1193,7 +1224,13 @@ function hue(name){ let h = 0; for (const c of String(name)) h = (h*31 + c.charC
 function initials(name){ const w = String(name||"?").replace(/[^\p{L}\p{N} -]/gu,"").split(/[\s-]+/).filter(Boolean); if(!w.length) return "?"; return (w.length===1 ? w[0].slice(0,3) : w.slice(0,3).map(x=>x[0]).join("")).toUpperCase(); }
 function customLogo(n){ try{ return Store.logos[n] || Store.lower[String(n||"").trim().toLowerCase()] || null; }catch(e){ return null; } }
 function logoOf(n){ if(!n) return null; const c = customLogo(n); if(c) return c; try{ const e = LogoDB.resolve(n); return e ? e.f : null; }catch(e){ return null; } }
-const crest = (name, s=34) => logoOf(name) ? `<span class="crest img" style="--s:${s}px" aria-hidden="true"><img src="${logoOf(name)}" alt="" width="${s}" height="${s}" loading="lazy"></span>` : `<span class="crest" style="--s:${s}px;--c:hsl(${hue(name)} 55% 38%)" aria-hidden="true">${esc(initials(name))}</span>`;
+/* crest image (or initials shield); stars earned by titles sit in a band above it */
+function crestBox(src, label, s, stars){
+  const box = z => src ? `<span class="crest img" style="--s:${z}px" aria-hidden="true"><img src="${src}" alt="" width="${z}" height="${z}" loading="lazy"></span>` : `<span class="crest" style="--s:${z}px;--c:hsl(${hue(label)} 55% 38%)" aria-hidden="true">${esc(initials(label))}</span>`;
+  if(!stars || s < 22) return box(s);
+  return `<span class="crest-st" style="--s:${s}px" aria-hidden="true"><span class="cst">${starsSVG(stars)}</span>${box(Math.round(s*0.78))}</span>`;
+}
+const crest = (name, s=34) => crestBox(logoOf(name), name, s, s >= 22 ? crestStars(name) : 0);
 function rtClass(n){ n = +n; if(!n) return "na"; return n>=9?"r9":n>=8?"r8":n>=7?"r7":n>=6?"r6":n>=5?"r5":"r0"; }
 const rating = n => `<span class="rt ${rtClass(n)}">${(+n) ? (+n).toFixed(1) : "–"}</span>`;
 function parseMoney(v){ if (typeof v === "number") return v; const s = String(v||"").toUpperCase().replace(/[€$£R\s]/g,"").replace(",", "."); const m = /([\d.]+)\s*([KMB])?/.exec(s); if(!m) return 0; const n = parseFloat(m[1]); return n * ({K:1e3, M:1e6, B:1e9}[m[2]] || 1); }
@@ -1447,6 +1484,8 @@ function lev(a, b, max){
   return prev[b.length];
 }
 const tokEq = (q, c) => q===c || (q.length>=5 && c.length>=4 && lev(q,c,1)<=1) || (q.length>=8 && lev(q,c,2)<=2) || (q.length>=4 && c.startsWith(q) && q.length >= c.length-3);
+const tokStrict = (q, c) => q===c || (Math.min(q.length,c.length)>=5 && Math.abs(q.length-c.length)<=1 && (q.startsWith(c) || c.startsWith(q)));
+const STRICT_FILL = new Set("esporte regatas sociedade esportiva associacao atletica association sportive recreativo agremiacao".split(" "));
 function makeDB(types){ return {
   types, list:[], exact:new Map(), cache:new Map(), counts:{c:0,n:0,l:0,k:0,t:0},
   load(j){
@@ -1461,6 +1500,28 @@ function makeDB(types){ return {
     q = stripYears(q); const k = lkey(q); if(!k || !this.list.length) return null;
     if(this.cache.has(k)) return this.cache.get(k);
     const r = this._resolve(q, k); this.cache.set(k, r); return r;
+  },
+  /* conservative lookup for the bundled history lists (thousands of old club names): exact names, or all
+     significant words of one name inside the other ("SL Benfica" ~ "Benfica", "Esporte Clube Bahia" ~ "Bahia") */
+  strict(q){
+    q = stripYears(String(q||"").replace(/\s*\([^)]*\)\s*$/,"")); const k = lkey(q); if(!k || !this.list.length) return null;
+    const ck = "!"+k; if(this.cache.has(ck)) return this.cache.get(ck);
+    let r = this.exact.get(k) || null;
+    const toks = lnorm(q).split(" ");
+    if(!r && toks.length>1 && BR_UF.has(toks[toks.length-1])) r = this.exact.get(toks.slice(0,-1).join("")) || null;
+    if(!r){
+      const long = a => a.filter(x=>x.length>2 && !STRICT_FILL.has(x) && !(BR_UF.has(x) && a.length>1));
+      const qt = long(sigToks(q));
+      if(qt.length && qt.join("").length >= 4){
+        let best = null, bs = 0, tie = false;
+        for(const e of this.list) for(const t0 of e.toks){ const ct = long(t0); if(!ct.length) continue; let sc = 0;
+          if(qt.every(x => ct.some(c => tokStrict(x,c)))) sc = qt.length/ct.length;
+          else if(ct.join("").length >= 5 && ct.every(c => qt.some(x => tokStrict(x,c)))) sc = 0.9*ct.length/qt.length;
+          if(sc > bs){ bs = sc; best = e; tie = false; } else if(sc && sc === bs && best !== e && best.n !== e.n) tie = true; }
+        if(best && !tie && bs >= 0.5) r = best;
+      }
+    }
+    this.cache.set(ck, r); return r;
   },
   _resolve(q, k){
     if(this.exact.has(k)) return this.exact.get(k);
@@ -1478,16 +1539,17 @@ function makeDB(types){ return {
         if(sc > bs){ bs = sc; best = e; tie = false; } else if(sc === bs && best !== e) tie = true; } }
     return best && !tie ? best : null;
   },
-  _subset(qt){
+  _subset(qt, strict){
     if(!qt.length || qt.join("").length < 3) return null;
     const hits = [];
     for(const e of this.list){ let sc = 0;
-      for(const ct of e.toks){ if(!ct.length) continue; if(qt.every(q => ct.some(c => tokEq(q,c)))) sc = Math.max(sc, qt.length/ct.length); }
+      for(const ct of e.toks){ if(!ct.length) continue; if(qt.every(q => ct.some(c => strict ? tokStrict(q,c) : tokEq(q,c)))) sc = Math.max(sc, qt.length/ct.length); }
       if(sc) hits.push([sc, e]); }
     if(!hits.length) return null;
     hits.sort((a,b)=> b[0]-a[0] || a[1].n.length-b[1].n.length);
     const [s1, e1] = hits[0], s2 = hits[1] ? hits[1][0] : 0;
     if(s1 >= 0.5 && s1 > s2) return e1;
+    if(strict) return null;
     if(s1 >= 0.5 && hits.length <= 2) return e1;
     if(hits.length === 1 || (hits.length <= 3 && s1 > s2)) return e1;
     return null;
@@ -1510,8 +1572,8 @@ function makeDB(types){ return {
     return out.sort((a,b)=>b[0]-a[0]).slice(0, limit).map(x=>x[1]);
   }
 }; }
-const LogoDB = makeDB(["c","n","l","k"]), TrophyDB = makeDB(["t"]);
-async function loadLogoDBs(){ try{ const r = await fetch("logos/index.json"); if(!r.ok) return; const j = await r.json(); LogoDB.load(j); TrophyDB.load(j); }catch(e){} }
+const LogoDB = makeDB(["c","n","l","k"]), TrophyDB = makeDB(["t"]), ClubDB = makeDB(["c"]), NatDB = makeDB(["n"]);
+async function loadLogoDBs(){ try{ const r = await fetch("logos/index.json"); if(!r.ok) return; const j = await r.json(); LogoDB.load(j); TrophyDB.load(j); ClubDB.load(j); NatDB.load(j); }catch(e){} }
 /* name to show for a database entry: national teams in Portuguese, leagues without "(country)" */
 const dbLabel = e => (e.t==="n" && LANG==="pt" && e.names[1]) ? e.names[1] : String(e.n).replace(/\s*\([^)]*\)\s*$/,"");
 
@@ -1527,6 +1589,7 @@ const IC = {
   news: I('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/>'),
   trophy: I('<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H4a3 3 0 0 0 4 4M16 6h4a3 3 0 0 1-4 4M12 13v4M8 20h8M9 17h6"/>'),
   medal: I('<circle cx="12" cy="15" r="5"/><path d="M8.5 11 6 3h4l2 5 2-5h4l-2.5 8"/>'),
+  hall: I('<path d="M3 10 12 4l9 6M5 10v8M9.7 10v8M14.3 10v8M19 10v8M3 20h18"/>'),
   star: I('<path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'),
   plane: I('<path d="M3 13l18-8-6 16-3-7z"/><path d="M12 14l9-9"/>'),
   cross: I('<path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6z"/>'),
@@ -1811,7 +1874,7 @@ function vStats(){
 }
 
 /* ================= MORE ================= */
-const MORE_ITEMS = [["news","news",IC.news],["trophies","trophies",IC.trophy],["awards","awards",IC.medal],["ballon","ballon_t",IC.star],["transfers","transfers",IC.plane],["injuries","injuries",IC.cross],["market","marketv",IC.coin],["comps","comps",IC.cup],["squad","squad",IC.users],["data","data",IC.db]];
+const MORE_ITEMS = [["news","news",IC.news],["trophies","trophies",IC.trophy],["history","history",IC.hall],["awards","awards",IC.medal],["ballon","ballon_t",IC.star],["transfers","transfers",IC.plane],["injuries","injuries",IC.cross],["market","marketv",IC.coin],["comps","comps",IC.cup],["squad","squad",IC.users],["data","data",IC.db]];
 function vMore(){
   if(UI.more) return vMoreSub(UI.more);
   return `<div class="menu-grid">${MORE_ITEMS.map(([k,l,ic])=>`<button data-act="more" data-v="${k}"><span class="ico">${ic}</span><b>${t(l)}</b><small>${t(l==="ballon_t"?"ballon_s":l==="marketv"?"market_s":k+"_s")}</small>${k==="news"&&S.noticias_nao_lidas?`<span class="badge">${S.noticias_nao_lidas}</span>`:""}</button>`).join("")}</div>
@@ -1820,6 +1883,7 @@ function vMore(){
 function backBar(title, addAct){ return `<div class="row between"><button class="btn sm" data-act="moreBack">← ${t("more")}</button>${addAct&&!SAMPLE?`<button class="btn sm acc" data-act="${addAct}">+ ${t("add_trophy").split(" ")[0]}</button>`:""}</div><h2 style="font-family:var(--f-display);font-size:26px;text-transform:uppercase;margin-top:4px">${title}</h2>`; }
 function vMoreSub(k){
   if(k==="news") return vNews();
+  if(k==="history") return vHistory();
   if(k==="injuries") return vInjuries(); if(k==="transfers") return vTransfers(); if(k==="market") return vMarket();
   let body = "", add = null, title = t((MORE_ITEMS.find(x=>x[0]===k)||[])[1]);
   if(k==="news"){
@@ -2183,6 +2247,7 @@ function trophySheet(i){
     <div style="font-family:var(--f-display);font-weight:800;font-size:28px;line-height:1;text-transform:uppercase">${esc(c[1])}</div>
     <div class="row" style="justify-content:center">${crest(c[3],24)}<b>${esc(c[3])}</b></div>
     <div class="muted"><i>${esc(seasonsTxt(c[2]))}</i> · <b class="num" style="color:var(--gold);font-size:18px">${int(c[4])||1}×</b></div>
+    ${histPlaque(c)}
     ${SAMPLE?"":`<label class="btn acc block" for="trophyImgFile" style="cursor:pointer">🖼 ${img?t("change_trophy_img"):t("add_trophy_img")}</label><input type="file" id="trophyImgFile" accept="image/*" data-i="${i}" hidden>
     <button class="btn block" data-act="editTrophy" data-i="${i}">✎ ${t("edit")}</button>
     <div id="trConfirm" style="width:100%"><button class="btn dng block" data-act="askDelTrophy" data-i="${i}">${t("remove")}</button></div>`}
@@ -2752,7 +2817,8 @@ function vNews(){
   const items = newsItems();
   if(!items.length) return `<div class="stack">${back()}${empty(t("no_news"), t("no_news_s"))}</div>`;
   const cards = items.map((it, k) => {
-    if(it.kind==="other"){ const n = it.n; return `<div class="nw-card ${it.unread?"unread":""}" style="--nb:#0F1E33;--na:#38BDF8"><div class="nw-band"><span>${esc(n.tag||"")}</span><span>${esc(n.data||"")}</span></div><div class="nw-body"><h4>${esc(n.titulo||"")}</h4><p>${esc(n.texto_curto||"")}</p></div></div>`; }
+    if(it.kind==="other"){ const n = it.n; const ttl = n.tipo==="titulo"; const lg = ttl ? logoOf(n.comp) : null; const hc = ttl ? histCompOf(n.comp) : null;
+      return `<${hc?`button data-act="histOpen" data-k="${esc(hc.key)}"`:"div"} class="nw-card ${it.unread?"unread":""}" style="--nb:${ttl?"#2A1F05":"#0F1E33"};--na:${ttl?"#FBBF24":"#38BDF8"}"><span class="nw-band">${lg?`<img src="${lg}" alt="">`:""}<b>${esc(n.tag||"")}</b><span class="grow"></span><span>${esc(n.data||"")}</span>${it.unread?`<i class="nw-dot"></i>`:""}</span>${ttl&&n.clube?`<span class="nw-sb">${crest(n.clube,44)}</span>`:""}<span class="nw-body"><h4>${esc(n.titulo||"")}</h4><p>${esc(n.texto_curto||"")}</p></span></${hc?"button":"div"}>`; }
     const j = it.j; const art = buildArticle(j); const sel = isSelMatch(j); const th = compTheme(j["Competição"], sel); const lg = logoOf(j["Competição"]);
     const idx = S.ultimas_performances.indexOf(j); const L = art.home ? (j.Time||S.informacoes["Clube Atual"]) : j["Adversário"], R = art.home ? j["Adversário"] : (j.Time||S.informacoes["Clube Atual"]);
     const sc = art.sc ? (art.home ? `${art.sc.mine}-${art.sc.theirs}` : `${art.sc.theirs}-${art.sc.mine}`) : esc(j.Resultado||"");
@@ -2787,9 +2853,231 @@ function openNews(i){
   openSheet(t("news"), body); render();
 }
 
+/* ================= Historical champions (bundled logos/history.json) + crest stars =================
+   The lists come from the user's TXT files (tools/build_history.py). Real history stops where the career
+   starts: seasons that end after the first match in the save are replaced by what happens in the game,
+   so the user's own titles continue each list. */
+const HIST_ALIAS = {
+  ambrosianainter:"Inter", sampdoriauc:"Sampdoria", steauabucuresti:"FCSB", steaubucuresti:"FCSB", atleticoaviacion:"Atlético de Madrid",
+  thewednesday:"Sheffield Wednesday", prestonne:"Preston North End", tottenhamhostpur:"Tottenham Hotspur", wolverhamptonwand:"Wolverhampton Wanderers",
+  borussiamg:"Borussia Mönchengladbach", bormonchengladbach:"Borussia Mönchengladbach", eintrachtfrankft:"Eintracht Frankfurt",
+  fcnuremberg:"1. FC Nürnberg", "1fcnuremberg":"1. FC Nürnberg", "1860munich":"TSV 1860 München", rapidvienna:"SK Rapid",
+  parisstgermain:"Paris Saint-Germain", psg:"Paris Saint-Germain", olympiquelyon:"Olympique Lyonnais", girondinsbordeaux:"Girondins de Bordeaux",
+  valerengen:"Vålerenga", machestercity:"Manchester City", feijenoord:"Feyenoord", "feĳenoord":"Feyenoord",
+  espanol:"RCD Espanyol", rcdespanol:"RCD Espanyol", estudiantesdelp:"Estudiantes de La Plata",
+  botafogodefuteboleregatas:"Botafogo", clubenauticocapibaribe:"Náutico", gremiofootballportoalegrense:"Grêmio", clubeatleticobragantino:"Bragantino",
+  esporteclubevitoria:"Vitória", associacaoportuguesadedesportos:"Portuguesa", associacaoatleticapontepreta:"Ponte Preta",
+  westgermany:"Germany", czechoslovakia:"Czech Republic", sovietunion:"Russia",
+  stbernards:"", tigre:"", associacaoatleticainternacional:"", espanoldemadrid:"", velocitasgroningenfeijenoord:""
+};
+/* stars already drawn on the bundled crest (so the badge only shows the extra ones) */
+const DRAWN_STARS = {"Brazil":5, "Germany":4, "Italy":4, "Argentina":3, "France":2, "Spain":2, "Uruguay":4, "England":1,
+  "Olympique de Marseille":1, "AS Saint-Étienne":1, "PSV":2};
+const NAT_COMPS = new Set(["Copa do Mundo", "UEFA Euro"]);
+const CompDB = makeDB(["l","k"]);
+const Hist = {comps:[], byKey:new Map(), byName:new Map(), drawn:new Map(), ready:false, memo:null, tcache:new Map()};
+
+async function loadHistory(){
+  try{
+    const ri = await fetch("logos/index.json"); if(ri.ok) CompDB.load(await ri.json());
+    const r = await fetch("logos/history.json"); if(!r.ok) return; const j = await r.json();
+    Hist.comps = j.c.map(c => { const e = CompDB.resolve(c.n); return {n:c.n, g:c.g||"", r:c.r, b:c.b||{}, e, key: e ? e.f : "h:"+lkey(c.n), nat:NAT_COMPS.has(c.n)}; });
+    for(const c of Hist.comps){ if(!Hist.byKey.has(c.key)) Hist.byKey.set(c.key, c); Hist.byName.set(lkey(c.n), c); }
+    for(const [n, k] of Object.entries(DRAWN_STARS)){ const e = NatDB.strict(n) || ClubDB.strict(n); if(e) Hist.drawn.set(e.f, k); }
+    Hist.ready = true;
+  }catch(e){}
+}
+const histReset = () => { Hist.memo = null; };
+
+/* team identity: a bundled logo file when we can be sure, otherwise the normalised name */
+function histTeam(name, nat){
+  const ck = (nat?"n|":"c|")+name; if(Hist.tcache.has(ck)) return Hist.tcache.get(ck);
+  const raw = String(name||"").trim(), base = raw.replace(/\s*\([^)]*\)\s*$/,"") || raw;
+  const a = HIST_ALIAS[lkey(base)]; let e = null;
+  if(a !== "") e = nat ? (NatDB.strict(a||base) || ClubDB.strict(a||base)) : ClubDB.strict(a||base);
+  const r = {k: e ? e.f : "h:"+lkey(a||base), e, label: e ? dbLabel(e) : base};
+  Hist.tcache.set(ck, r); return r;
+}
+/* names the user typed (clubs in the save): the normal tolerant lookup, limited to clubs / national teams */
+function userTeam(name){
+  const ck = "u|"+name; if(Hist.tcache.has(ck)) return Hist.tcache.get(ck);
+  let e = null; try{ e = LogoDB.resolve(name); }catch(x){} if(e && e.t!=="c" && e.t!=="n") e = null;
+  const r = {k: e ? e.f : "h:"+lkey(name), e, label: name}; Hist.tcache.set(ck, r); return r;
+}
+function histCompOf(name){
+  if(!Hist.ready || !name) return null;
+  const byN = Hist.byName.get(lkey(name)); if(byN) return byN;
+  const e = CompDB.resolve(name); return e ? (Hist.byKey.get(e.f) || null) : null;
+}
+const rowEndTs = (s, y, nat) => nat ? new Date(y, 5, 1).getTime() : /\d{4}\/\d{2}/.test(s) ? new Date(y, 5, 30).getTime() : new Date(y, 11, 31).getTime();
+function careerCut(){
+  let m = 0; for(const j of (S && S.ultimas_performances) || []){ const d = dateNum(j.Data); if(d && (!m || d < m)) m = d; } return m || 0;
+}
+/* seasons written in a trophy entry ("Temp 2025/26, 2026/27") -> [{s, y}] padded to the trophy count */
+function trophySeasons(c){
+  const out = []; const re = /(\d{4})(?:\s*[\/-]\s*(\d{2,4}))?/g; let m;
+  while((m = re.exec(String(c[2]||"")))){ const y = +m[1]; out.push(m[2] ? {s:`${y}/${String(m[2]).slice(-2)}`, y:y+1} : {s:String(y), y}); }
+  const q = Math.max(1, int(c[4])||1); while(out.length < q) out.push({s:"?", y:9999});
+  return out;
+}
+function careerRows(comp){
+  const rows = [];
+  for(const c of (S && S.conquistas) || []){ const hc = histCompOf(c[1]); if(hc !== comp) continue; const u = userTeam(c[3]);
+    for(const ss of trophySeasons(c)) rows.push({s:ss.s, y:ss.y, champ:c[3], ru:"", sc:"", me:true, k:u.k, e:u.e, label:c[3]}); }
+  return rows;
+}
+function histTimeline(comp){
+  const memo = histMemo(); if(memo.tl.has(comp)) return memo.tl.get(comp);
+  const cut = memo.cut, mine = careerRows(comp), mineY = new Set(mine.map(r=>r.y));
+  const rows = comp.r.filter(r => !(cut && rowEndTs(r[0], r[1], comp.nat) > cut) && !mineY.has(r[1])).map(r => { const t0 = histTeam(r[2], comp.nat);
+    return {s:r[0], y:r[1], champ:r[2], ru:r[3], sc:r[4], k:t0.k, e:t0.e, label:t0.label}; });
+  const tl = [...rows, ...mine].sort((a,b)=> a.y-b.y || String(a.s).localeCompare(String(b.s)));
+  memo.tl.set(comp, tl); return tl;
+}
+function histMemo(){
+  if(Hist.memo) return Hist.memo;
+  Hist.memo = {cut:careerCut(), tl:new Map(), rank:new Map(), stars:null}; return Hist.memo;
+}
+/* all-time table: titles (incl. titles before the list) and runner-up finishes */
+function histRanking(comp){
+  const memo = histMemo(); if(memo.rank.has(comp)) return memo.rank.get(comp);
+  const T = new Map(); const get = (k, e, label) => { if(!T.has(k)) T.set(k, {k, e, label, t:0, v:0, last:0, first:0, me:0}); return T.get(k); };
+  for(const [n, q] of Object.entries(comp.b||{})){ const t0 = histTeam(n, comp.nat); get(t0.k, t0.e, t0.label).t += q; }
+  for(const r of histTimeline(comp)){ const x = get(r.k, r.e, r.label); x.t++; if(r.y<9999){ x.last = Math.max(x.last, r.y); if(!x.first) x.first = r.y; } if(r.me) x.me++;
+    if(r.ru){ const t1 = histTeam(r.ru, comp.nat); get(t1.k, t1.e, t1.label).v++; } }
+  const list = [...T.values()].filter(x=>x.t||x.v).sort((a,b)=> b.t-a.t || b.v-a.v || a.first-b.first);
+  memo.rank.set(comp, list); return list;
+}
+function histTitles(comp, key, from=0){
+  let n = 0; for(const r of histTimeline(comp)) if(r.k===key && r.y>=from) n++;
+  if(!from) for(const [nm, q] of Object.entries(comp.b||{})) if(histTeam(nm, comp.nat).k===key) n += q;
+  return n;
+}
+
+/* ---------- stars ---------- */
+const STAR_RULES = [
+  {comp:"Serie A", fn:n=>Math.floor(n/10)},
+  {comp:"Eredivisie", fn:n=>Math.floor(n/10)},
+  {comp:"Bundesliga", from:1964, fn:n=>[3,5,10,20,30].filter(x=>n>=x).length},
+  {comp:"Copa do Mundo", fn:n=>n},
+];
+function starMap(){
+  const memo = histMemo(); if(memo.stars) return memo.stars;
+  const M = new Map(); const add = (k, n) => { if(n>0) M.set(k, (M.get(k)||0)+n); };
+  const byName = n => Hist.byName.get(lkey(n));
+  for(const rule of STAR_RULES){ const c = byName(rule.comp); if(!c) continue; const cnt = new Map();
+    for(const r of histTimeline(c)) if(r.y >= (rule.from||0)) cnt.set(r.k, (cnt.get(r.k)||0)+1);
+    if(!rule.from) for(const [nm, q] of Object.entries(c.b||{})){ const k = histTeam(nm, c.nat).k; cnt.set(k, (cnt.get(k)||0)+q); }
+    for(const [k, n] of cnt) add(k, rule.fn(n)); }
+  // Uruguay: the two Olympic titles (1924, 1928) are counted as world titles -> 4 stars
+  const uy = NatDB.strict("Uruguay"); if(uy) add(uy.f, 2);
+  // France has no league rule: clubs wear one star per Champions League (Marseille 1993, PSG); Saint-Étienne one per 10 league titles
+  const fr = new Set(); for(const n of ["Ligue 1","Ligue 2 BKT","Coupe de France","Trophée des Champions"]){ const c = byName(n); if(c) for(const r of c.r){ fr.add(histTeam(r[2]).k); if(r[3]) fr.add(histTeam(r[3]).k); } }
+  const ucl = byName("UEFA Champions League"); if(ucl){ const cnt = new Map(); for(const r of histTimeline(ucl)) if(fr.has(r.k)) cnt.set(r.k, (cnt.get(r.k)||0)+1); for(const [k,n] of cnt) add(k, n); }
+  const l1 = byName("Ligue 1"), asse = ClubDB.strict("AS Saint-Étienne"); if(l1 && asse) add(asse.f, Math.floor(histTitles(l1, asse.f)/10));
+  memo.stars = M; return M;
+}
+/* stars to draw over a crest: total minus those already printed on the bundled logo */
+function crestStars(name){
+  if(!Hist.ready || !name) return 0;
+  const u = userTeam(name); const total = starMap().get(u.k) || 0; if(!total) return 0;
+  const drawn = customLogo(name) ? 0 : (Hist.drawn.get(u.k) || 0);
+  return Math.max(0, total - drawn);
+}
+function starsSVG(n){
+  const P = "M5 .6l1.3 2.8 3 .4-2.2 2.1.6 3L5 7.4 2.3 8.9l.6-3L.7 3.8l3-.4z";
+  if(n > 5) return `<svg viewBox="0 0 24 10" aria-hidden="true"><path d="${P}" fill="#FBBF24" stroke="#6B4E00" stroke-width=".5"/><text x="11" y="8.4" font-size="9" font-weight="800" fill="#FBBF24" font-family="Barlow Condensed,sans-serif">${n}</text></svg>`;
+  return `<svg viewBox="0 0 ${n*10} 10" aria-hidden="true">${Array.from({length:n},(_,i)=>`<path transform="translate(${i*10} 0)" d="${P}" fill="#FBBF24" stroke="#6B4E00" stroke-width=".5"/>`).join("")}</svg>`;
+}
+/* crest for a history entry (resolved logo or initials) with its stars */
+function histCrest(x, s){
+  const src = x.e ? x.e.f : null; const n = Hist.ready ? Math.max(0, (starMap().get(x.k)||0) - (Hist.drawn.get(x.k)||0)) : 0;
+  return crestBox(src, x.label, s, n);
+}
+
+/* ---------- title news with historical context ---------- */
+const ORD_PT = ["","Bi","Tri","Tetra","Penta","Hexa","Hepta","Octa","Enea","Deca"];
+function histTitleNews(compName, club, seasonTxt, starsBefore){
+  const comp = histCompOf(compName); const me = S.informacoes["Nome Completo"]; const F = String(me||"").split(" ")[0] || me;
+  const en = LANG==="en"; let head = "", txt = "";
+  const starsAfter = crestStars(club);
+  if(comp){
+    const u = userTeam(club); const tl = histTimeline(comp); const mine = tl.filter(r=>r.k===u.k);
+    const n = histTitles(comp, u.k); const cur = mine[mine.length-1]; const prev = mine[mine.length-2];
+    // consecutive titles ending with this one
+    let streak = 1; if(cur && cur.y<9999){ let y = cur.y; while(true){ const step = tl.some(r=>r.y===y-1) ? 1 : 0; if(!step) break; const p = tl.filter(r=>r.y===y-1); if(p.some(r=>r.k===u.k)){ streak++; y--; } else break; } }
+    const rank = histRanking(comp); const lead = rank[0]; const second = rank.find(x=>x.k!==u.k);
+    const gap = prev && cur && prev.y<9999 && cur.y<9999 ? cur.y - prev.y : 0;
+    const cn = comp.n;
+    if(n === 1){ head = en ? `${club} win the ${cn} for the first time in their history` : `${club} conquista ${cn} pela primeira vez na história`;
+      txt = en ? `A historic first: with ${F} in the side, ${club} finally lift the trophy.` : `Feito inédito: com ${F} em campo, o ${club} finalmente levanta a taça.`; }
+    else if(streak >= 2){ const w = en ? (streak===2?"Back-to-back":streak===3?"Three in a row":`${streak} in a row`) : `${ORD_PT[streak-1]||streak+"x "}campeão`;
+      head = en ? `${w}: ${club} win the ${cn} again` : `${w}! ${club} conquista ${cn} mais uma vez`;
+      txt = en ? `${club} reach ${n} ${cn} titles, ${F} at the heart of the run.` : `${club} chega a ${n} títulos de ${cn}, com ${F} como peça-chave da sequência.`; }
+    else if(gap >= 10){ head = en ? `${gap} years later, ${club} are ${cn} champions again` : `Fim do jejum: ${club} volta a vencer ${cn} após ${gap} anos`;
+      txt = en ? `The wait since ${prev.s} is over. Title number ${n} for the club.` : `A espera desde ${prev.s} acabou. É o ${n}º título do clube na competição.`; }
+    else if(lead && lead.k===u.k && (!second || n > second.t)){ head = en ? `${club} now stand alone as the ${cn}'s most successful club` : `${club} se isola como maior campeão de ${cn}`;
+      txt = en ? `${n} titles, ${n-(second?second.t:0)} clear of ${second?second.label:"the rest"}.` : `São ${n} títulos, ${n-(second?second.t:0)} a mais que ${second?second.label:"o segundo colocado"}.`; }
+    else { head = en ? `${club} win the ${cn} — title number ${n}` : `${club} conquista ${cn} e chega ao ${n}º título`;
+      txt = en ? `${F} adds another trophy; ${lead && lead.k!==u.k ? `${lead.label} still lead the all-time list with ${lead.t}.` : "the club keep climbing the all-time list."}` : `${F} soma mais uma taça; ${lead && lead.k!==u.k ? `${lead.label} segue como maior campeão, com ${lead.t}.` : "o clube segue subindo no ranking histórico."}`; }
+  } else { head = en ? `${club} win the ${compName}` : `${club} conquista ${compName}`; txt = en ? `${F} lifts another trophy (${seasonTxt}).` : `${F} levanta mais uma taça (${seasonTxt}).`; }
+  if(starsAfter > starsBefore) txt += en ? (starsAfter===1 ? ` ${club} earn their first star above the crest.` : ` A new star goes above the ${club} crest — ${starsAfter} in total.`) : (starsAfter===1 ? ` O escudo do ${club} ganha sua primeira estrela.` : ` O escudo do ${club} ganha mais uma estrela — agora são ${starsAfter}.`);
+  let last = 0, ld = ""; for(const j of S.ultimas_performances||[]){ const d = dateNum(j.Data); if(d > last){ last = d; ld = j.Data; } }
+  return {tipo:"titulo", data:ld||todayDMY(), titulo:head, texto_curto:txt, tag:en?"TITLE":"TÍTULO", comp:compName, clube:club, lida:false};
+}
+
+/* ---------- views ---------- */
+function vHistory(){
+  if(!Hist.ready) return `${backBar(t("history"))}${empty(t("no_data"), "")}`;
+  if(UI.histComp){ const c = Hist.comps.find(x=>x.key===UI.histComp) || Hist.byName.get(UI.histComp); if(c) return vHistComp(c); UI.histComp = null; }
+  const used = new Set([...(S.conquistas||[]).map(c=>histCompOf(c[1])), ...S.ultimas_performances.map(j=>histCompOf(j["Competição"]))].filter(Boolean));
+  const item = c => { const tl = histTimeline(c); const last = tl[tl.length-1]; const first = tl[0];
+    return `<button class="item hc-item" data-act="histOpen" data-k="${esc(c.key)}" data-n="${esc(lnorm(c.n+" "+c.g))}">${c.e?`<span class="crest img" style="--s:34px"><img src="${c.e.f}" alt="" width="34" height="34" loading="lazy"></span>`:`<span class="ico">${IC.cup}</span>`}
+      <div class="grow"><div class="t">${esc(c.n)}</div><div class="s">${tl.length} ${t("hist_editions")}${first?` · ${t("hist_since")} ${esc(first.s)}`:""}</div></div>
+      ${last?`<span class="hc-last">${histCrest(last, 26)}<small>${esc(String(last.s).slice(-7))}</small></span>`:""}</button>`; };
+  const groups = new Map(); for(const c of Hist.comps){ const g = c.g || t("hist_intl"); if(!groups.has(g)) groups.set(g, []); groups.get(g).push(c); }
+  const order = [...groups.keys()].sort((a,b)=> (a===t("hist_intl")?-1:b===t("hist_intl")?1:0) || (a==="Brasil"?-1:b==="Brasil"?1:0) || a.localeCompare(b));
+  return `<div class="stack">${backBar(t("history"))}
+    <input class="inp" id="histQ" type="search" placeholder="${t("hist_search")}" autocomplete="off">
+    ${used.size?`<div class="hc-group" data-g="1"><div class="lbl">${t("hist_yours")}</div><div class="ilist">${[...used].map(item).join("")}</div></div>`:""}
+    ${order.map(g=>`<div class="hc-group"><div class="lbl">${esc(g)}</div><div class="ilist">${groups.get(g).map(item).join("")}</div></div>`).join("")}
+  </div>`;
+}
+function vHistComp(c){
+  const tl = histTimeline(c), rank = histRanking(c); const last = tl[tl.length-1]; const top = rank[0];
+  const mine = new Set([...Object.keys(S.dados_desempenho_por_clubes||{}), S.informacoes["Clube Atual"], S.informacoes["Nacionalidade"], ...(S.conquistas||[]).map(x=>x[3])].filter(Boolean).map(n=>userTeam(n).k));
+  const myTitles = tl.filter(r=>r.me).length; const tab = UI.histTab || "rank";
+  const head = `<div class="row between"><button class="btn sm" data-act="histBack">← ${t("history")}</button></div>
+    <div class="hc-hero">${c.e?`<img src="${c.e.f}" alt="">`:`<span class="ico">${IC.cup}</span>`}<div><h2>${esc(c.n)}</h2><div class="small muted">${c.g?esc(c.g)+" · ":""}${tl.length} ${t("hist_editions")}${tl[0]?` · ${t("hist_since")} ${esc(tl[0].s)}`:""}</div></div></div>
+    <div class="kpis three">
+      <div class="kpi">${top?histCrest(top,30):""}<span class="num" style="font-size:20px">${top?top.t:"–"}</span><span>${t("hist_top")}</span></div>
+      <div class="kpi">${last?histCrest(last,30):""}<span class="num" style="font-size:16px">${last?esc(last.s):"–"}</span><span>${t("hist_last")}</span></div>
+      <div class="kpi"><span class="num" style="color:var(--gold)">${myTitles}</span><span>${t("hist_your_titles")}</span></div></div>
+    <div class="seg" role="group"><button aria-pressed="${tab==="rank"}" data-act="histTab" data-v="rank">${t("hist_rank")}</button><button aria-pressed="${tab==="seasons"}" data-act="histTab" data-v="seasons">${t("hist_seasons")}</button></div>`;
+  let body;
+  if(tab==="rank"){
+    body = `<div class="ilist hc-rank">${rank.slice(0,80).map((x,i)=>`<div class="item ${mine.has(x.k)?"me":""}"><span class="pos num">${i+1}</span>${histCrest(x,32)}<div class="grow"><div class="t">${esc(x.label)}${x.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">★ ${x.me}</span>`:""}</div><div class="s">${x.v?`${x.v} ${t("hist_runner").toLowerCase()}`:""}${x.last?`${x.v?" · ":""}${t("hist_last_t")} ${x.last}`:""}</div></div><span class="num big-n">${x.t}</span></div>`).join("")}</div>
+      ${Object.keys(c.b||{}).length?`<div class="small muted">${t("hist_base_note")}</div>`:""}`;
+  } else {
+    body = `<div class="ilist hc-seasons">${[...tl].reverse().slice(0,220).map(r=>`<div class="item ${r.me?"me":""}"><span class="ss num">${esc(r.s==="?"?"–":r.s)}</span>${histCrest(r,30)}<div class="grow"><div class="t">${esc(r.label)}${r.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">${t("hist_you")}</span>`:""}</div>${r.ru?`<div class="s">${r.sc?`<b class="num">${esc(r.sc)}</b> `:""}${t("vs_short")} ${esc(histTeam(r.ru, c.nat).label)}</div>`:""}</div></div>`).join("")}</div>`;
+  }
+  return `<div class="stack">${head}${body}</div>`;
+}
+/* lines for the trophy sheet: "3rd title in the club's history", leader of the competition */
+function histPlaque(c){
+  const comp = histCompOf(c[1]); if(!comp) return "";
+  const u = userTeam(c[3]); const n = histTitles(comp, u.k); const rank = histRanking(comp); const pos = rank.findIndex(x=>x.k===u.k)+1; const lead = rank[0];
+  const st = crestStars(c[3]);
+  return `<div class="hc-plaque">
+    <div><b class="num" style="color:var(--gold);font-size:22px">${n}º</b> ${t("hist_nth",{club:esc(c[3])})}</div>
+    ${pos?`<div class="small muted">${pos===1?t("hist_leader",{club:esc(c[3])}):t("hist_pos",{n:pos, lead:esc(lead.label), t:lead.t})}</div>`:""}
+    ${st?`<div class="small">${starsSVG(Math.min(st,5)).replace("<svg",'<svg style="height:12px;vertical-align:-1px"')} ${st} ${t("stars_lbl")}</div>`:""}
+    <button class="btn sm" data-act="histOpen" data-k="${esc(comp.key)}">🏛 ${t("hist_open")}</button></div>`;
+}
+
 /* ================= render & routing ================= */
 function render(){
-  const v = view(); document.documentElement.lang = LANG==="en" ? "en" : "pt-BR";
+  histReset(); const v = view(); document.documentElement.lang = LANG==="en" ? "en" : "pt-BR";
   const tabbar = $("#tabbar");
   if(!S){ tabbar.hidden = true; $("#ttl").textContent = ""; v.innerHTML = vWelcome(); return; }
   tabbar.hidden = false;
@@ -2853,6 +3141,7 @@ function closeSheetNow(){ document.body.classList.remove("locked"); const sh = $
 document.addEventListener("input", e=>{
   const el = e.target;
   if(el.dataset && el.dataset.datemask && !(e.inputType||"").startsWith("delete")){ let d = el.value.replace(/\D/g,"").slice(0,8); if(d.length>4) d = d.slice(0,2)+"/"+d.slice(2,4)+"/"+d.slice(4); else if(d.length>2) d = d.slice(0,2)+"/"+d.slice(2); el.value = d; }
+  if(el.id==="histQ"){ const q = lnorm(el.value); document.querySelectorAll(".hc-item").forEach(x=>{ x.hidden = !!q && !x.dataset.n.includes(q); }); document.querySelectorAll(".hc-group").forEach(g=>{ g.hidden = !g.querySelector(".hc-item:not([hidden])"); }); return; }
   if(el.dataset && el.dataset.live==="logoSearch"){ $("#logoResults").innerHTML = logoResults(el.value, el.dataset.name); return; }
   if(el.dataset && el.dataset.live==="oppQuery"){ UI.oppQuery = el.value; const tmp = document.createElement("div"); tmp.innerHTML = vOpponents(); const nl = tmp.querySelector("#oppList"); if(nl) $("#oppList").innerHTML = nl.innerHTML; return; } const k = el.dataset && el.dataset.f; if(!k || !UI.F) return;
   let v = el.dataset.kind==="date" ? isoToDmy(el.value) : el.value;
@@ -2913,7 +3202,10 @@ document.addEventListener("click", async e=>{
     case "stab": UI.statsTab = v; render(); break;
     case "ftab": UI.formTab = v; render(); break;
     case "more": UI.view = "more"; UI.more = v; render(); window.scrollTo(0,0); break;
-    case "moreBack": UI.more = null; render(); break;
+    case "moreBack": UI.more = null; UI.histComp = null; render(); break;
+    case "histOpen": closeSheetNow(); UI.view = "more"; UI.more = "history"; UI.histComp = b.dataset.k; UI.histTab = "rank"; render(); window.scrollTo(0,0); break;
+    case "histBack": UI.histComp = null; render(); window.scrollTo(0,0); break;
+    case "histTab": UI.histTab = v; render(); break;
     case "step": e.preventDefault(); tapFeedback(b); stepVal(b.dataset.k, +b.dataset.d); break;
     case "nota": { e.preventDefault(); tapFeedback(b); const n = Math.min(10, Math.max(0, flt(UI.F.Nota) + +b.dataset.d)); UI.F.Nota = n.toFixed(1); $("#f_Nota").value = UI.F.Nota; break; }
     case "tog": { const k = b.dataset.k; const on = b.getAttribute("aria-checked")!=="true"; b.setAttribute("aria-checked", String(on)); if(k.startsWith("d.")) UI.F.det[k.slice(2)] = on; else UI.F[k] = on; break; }
@@ -2933,7 +3225,9 @@ document.addEventListener("click", async e=>{
     case "editAttrs": { const A = S.atributos_jogador; sheetForm(t("attributes"), Object.keys(ATTR_LBL.pt).map(k=>sIn(k,ATTR_LBL[LANG][k],A[k]??50,"",'type="number" inputmode="numeric" min="1" max="99"')).join(""), fd=>{ for(const k in fd) A[k] = Math.max(1,Math.min(99,int(fd[k]))); commit(); render(); }); break; }
     case "addTrophy": sheetForm(t("add_trophy"), sList("nome",t("trophy_name"),[...new Set([...S.ultimas_performances.map(j=>j["Competição"]),...COMP_SUGGEST])])+sIn("temp",t("season"),String(new Date().getFullYear()),"")+sIn("qtd",t("qty"),"1","",'type="number" inputmode="numeric" min="1"')+sList("clube",t("club"),clubsKnown(),S.informacoes["Clube Atual"]),
         fd=>{ if(!fd.nome) return false; const q = Math.max(1,int(fd.qtd)); const tp = /temp/i.test(fd.temp) ? fd.temp : "Temp "+fd.temp; const ex = S.conquistas.find(c=>String(c[1]).toLowerCase()===fd.nome.toLowerCase() && c[3]===fd.clube);
+          histReset(); const st0 = crestStars(fd.clube);
           if(ex){ ex[2] += ", "+fd.temp; ex[4] = int(ex[4])+q; } else S.conquistas.push(["", fd.nome, tp, fd.clube, q]);
+          histReset(); try{ const nw = histTitleNews(fd.nome, fd.clube, fd.temp, st0); S.feed_noticias = S.feed_noticias||[]; S.feed_noticias.unshift(nw); S.noticias_nao_lidas = (S.noticias_nao_lidas||0)+1; }catch(err){}
           const pc = S.dados_desempenho_por_clubes[fd.clube] = S.dados_desempenho_por_clubes[fd.clube] || {titulos:0,jogos:0,gols:0,assistencias:0}; pc.titulos = int(pc.titulos)+q; commit(); toast(t("saved")); render(); }); break;
     case "trophyClub": UI.trophyClub = v; render(); break;
     case "trophy": trophySheet(+b.dataset.i); break;
@@ -2994,13 +3288,14 @@ document.addEventListener("pointerdown", e=>{
 /* ================= boot ================= */
 (async function boot(){
   await Promise.all([Store.init(), loadLogoDBs()]);
+  await loadHistory();
   const id = Store.index.active; const d = id ? await Store.load(id) : null;
   if(d) S = normalize(d);
   render(); setSync("saved");
   if(window.ProStatsNative && window.ProStatsNative.ready) { try{ window.ProStatsNative.ready(); }catch(e){} }
 })();
 /* Android back button: close sheet, then sub-screen, then go home */
-window.psBack = () => { if(!$("#sheet").hidden){ closeSheet(); return true; } if(UI.view==="more" && UI.more){ UI.more = null; render(); return true; } if(S && UI.view!=="home"){ go("home"); return true; } return false; };
+window.psBack = () => { if(!$("#sheet").hidden){ closeSheet(); return true; } if(UI.view==="more" && UI.more==="history" && UI.histComp){ UI.histComp = null; render(); return true; } if(UI.view==="more" && UI.more){ UI.more = null; render(); return true; } if(S && UI.view!=="home"){ go("home"); return true; } return false; };
 
 if ("serviceWorker" in navigator && location.protocol === "https:" && location.hostname !== "app.prostats.local") {
   navigator.serviceWorker.register("sw.js").catch(() => {});
