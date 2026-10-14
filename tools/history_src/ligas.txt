@@ -1,0 +1,3085 @@
+Ligas:
+A-League:
+2005/06  Sydney FC                     1-0 Central Coast Mariners 
+2006/07  Melbourne Victory             6-0 Adelaide United
+2007/08  Newcastle United Jets         1-0 Central Coast Mariners 
+2008/09  Melbourne Victory             1-0 Adelaide United
+2009/10  Sydney FC                     1-1 Melbourne Victory             [aet, 4-2 pen]
+2010/11  Brisbane Roar                 2-2 Central Coast Mariners        [aet, 4-2 pen]
+2011/12  Brisbane Roar                 2-1 Perth Glory
+2012/13  Central Coast Mariners        2-0 Western Sydney Wanderers 
+2013/14  Brisbane Roar                 2-1 Western Sydney Wanderers      [aet]
+2014/15  Melbourne Victory             3-0 Sydney FC    
+2015/16  Adelaide United               3-1 Western Sydney Wanderers      
+2016/17  Sydney FC                     1-1 Melbourne Victory             [aet, 4-2 pen]
+2017/18  Melbourne Victory             1-0 Newcastle Jets
+2018/19  Sydney FC                     0-0 Perth Glory                   [aet, 4-1 pen]
+2019/20  Sydney FC                     1-0 Melbourne City                [aet]
+2020/21  Melbourne City                3-1 Sydney FC                     
+2021/22  Western United                2-0 Melbourne City   
+2022/23  Central Coast Mariners        6-1 Melbourne City 
+2023/24  Central Coast Mariners        3-1 Melbourne Victory             [aet]
+2024/25  Melbourne City                1-0 Melbourne Victory             
+2025/26  Auckland FC                   1-0 Sydney FC
+-------------------------------------------------------
+Arabia Saudita:
+Roshn Saudi League:
+1976/77 Al-Hilal
+1977/78 Al-Ahli
+1978/79 Al-Hilal
+1979/80 Al-Nasr
+1980/81 Al-Nasr
+1981/82 Al-Ittihad
+1982/83 Al-Ittifaq
+1983/84 Al-Ahli
+1984/85 Al-Hilal
+1985/86 Al-Hilal
+1986/87 Al-Ittifaq
+1987/88 Al-Hilal
+1988/89 Al-Nasr
+1989/90 Al-Hilal
+1990/91 Al-Shabab
+1991/92 Al-Shabab
+1992/93 Al-Shabab
+1993/94 Al-Nasr
+1994/95 Al-Nasr
+1995/96 Al-Hilal
+1996/97 Al-Ittihad
+1997/98 Al-Hilal
+1998/99 Al-Ittihad
+1999/00 Al-Ittihad
+2000/01 Al-Ittihad
+2001/02 Al-Hilal
+2002/03 Al-Ittihad
+2003/04 Al-Shabab
+2004/05 Al-Hilal
+2005/06 Al-Shabab
+2006/07 Al-Ittihad
+2007/08 Al-Hilal
+2008/09 Al-Ittihad
+2009/10 Al-Hilal
+2010/11 Al-Hilal
+2011/12 Al-Shabab
+2012/13 Al-Fat'h
+2013/14 Al-Nasr
+2014/15 Al-Nasr
+2015/16 Al-Ahli
+2016/17 Al-Hilal
+2017/18 Al-Hilal
+2018/19 Al-Nasr
+2019/20 Al-Hilal
+2020/21 Al-Hilal
+2021/22 Al-Hilal  
+2022/23 Al-Ittihad
+2023/24 Al-Hilal  
+2024/25 Al-Ittihad
+2025/26 Al-Nasr
+-------------------------------------------------------
+China:
+Chinese Super League:
+2004    Shenzhen Jianlibao
+2005    Dalian Shide
+2006    Shandong Luneng Taishan    
+2007    Changchun Yatai  
+2008    Shandong Luneng
+2009    Beijing Guoan
+2010    Shandong Luneng
+2011    Guangzhou Evergrande
+2012    Guangzhou Evergrande  
+2013    Guangzhou Evergrande  
+2014    Guangzhou Evergrande  
+2015    Guangzhou Evergrande  
+2016    Guangzhou Evergrande  
+2017    Guangzhou Evergrande  
+2018    Shanghai SIPG
+2019    Guangzhou Evergrande  
+2020    Jiangsu Suning
+2021/22 Shandong Taishan
+2022    Wuhan Three Towns
+2023    Shanghai Port
+2024    Shanghai Port
+2025    Shanghai Port
+-------------------------------------------------------
+Coreia Do Sul:
+K League 1:
+1983 Hallelujah
+1984 Daewoo Royals                    (Busan I'Park)
+1985 Lucky-Goldstar Hwangso           (FC Seoul)
+1986 POSCO Atoms                      (Pohang Steelers)
+1987 Daewoo Royals                    (Busan I'Park)
+1988 POSCO Atoms                      (Pohang Steelers)
+1989 Yukong Elephants                 (Jeju United)
+1990 Lucky-Goldstar Hwangso           (FC Seoul)
+1991 Daewoo Royals                    (Busan I'Park)
+1992 POSCO Atoms                      (Pohang Steelers)
+1993 Ilhwa Chunma                     (Seongnam FC)
+1994 Ilhwa Chunma                     (Seongnam FC)
+1995 Ilhwa Chunma                     (Seongnam FC)
+1996 Ulsan Hyundai Horang-i           (Ulsan HD)
+1997 Pusan Daewoo Royals              (Busan I'Park)
+1998 Suwon Samsung Bluewings
+1999 Suwon Samsung Bluewings
+2000 Anyang LG Cheetahs               (FC Seoul)
+2001 Songnam Ilhwa Chunma             (Seongnam FC)
+2002 Seongnam Ilhwa Chunma            (Seongnam FC)
+2003 Seongnam Ilhwa Chunma            (Seongnam FC)
+2004 Suwon Samsung Bluewings
+2005 Ulsan Hyundai Horang-i           (Ulsan HD)
+2006 Seongnam Ilhwa Chunma            (Seongnam FC)
+2007 Pohang Steelers
+2008 Suwon Samsung Bluewings
+2009 Jeonbuk Hyundai Motors    
+2010 FC Seoul            
+2011 Jeonbuk Hyundai Motors    
+2012 FC Seoul     
+2013 Pohang Steelers
+2014 Jeonbuk Hyundai Motors    
+2015 Jeonbuk Hyundai Motors    
+2016 FC Seoul     
+2017 Jeonbuk Hyundai Motors   
+2018 Jeonbuk Hyundai Motors   
+2019 Jeonbuk Hyundai Motors   
+2020 Jeonbuk Hyundai Motors   
+2021 Jeonbuk Hyundai Motors   
+2022 Ulsan Hyundai Horang-i           (Ulsan HD)
+2023 Ulsan Hyundai Horang-i           (Ulsan HD)
+2024 Ulsan HD
+2025 Jeonbuk Hyundai Motors
+-------------------------------------------------------
+India:
+Indian Super League:
+2014    Atlético de Kolkata 
+2015    Chennaiyin FC      
+2016    Atlético de Kolkata 
+2017/18 Chennaiyin FC       
+2018/19 Bengaluru FC
+2019/20 Atlético de Kolkata 
+2020/21 Mumbai City FC
+2021/22 Hyderabad FC
+2022/23 ATK Mohun Bagan 
+2023/24 Mumbai City FC
+2024/25 Mohun Bagan SG
+2025/26 East Bengal FC
+-------------------------------------------------------
+Alemanha:
+Bundesliga:
+1902/03   VfB Leipzig                     7-2 Deutscher FC Prag
+1903/04     not played [1]
+1904/05   Union 92 Berlin                 2-0 Karlsruher FV
+1905/06   VfB Leipzig                     2-1 1.FC Pforzheim
+1906/07   Freiburger FC                   3-1 Viktoria 89 Berlin  
+1907/08   Viktoria 89 Berlin              3-1 Stuttgarter FC Kickers
+1908/09   Phönix Karlsruhe                4-2 Viktoria 89 Berlin  
+1909/10   Karlsruher FV                   1-0 FV Holstein Kiel             [aet]
+1910/11   Viktoria 89 Berlin              3-1 VfB Leipzig
+1911/12   FV Holstein Kiel                1-0 Karlsruher FV
+1912/13   VfB Leipzig                     3-1 Duisburger SpV
+1913/14   SpVgg Fürth                     3-2 VfB Leipzig                  [aet]
+1914/15     not played due to World War I
+1915/16     not played due to World War I
+1916/17     not played due to World War I
+1917/18     not played due to World War I
+1918/19     not played due to World War I
+1919/20   1.FC Nürnberg                   2-0 SpVgg Fürth
+1920/21   1.FC Nürnberg                   5-0 Vorwärts Berlin  
+1921/22     not awarded [2]
+1922/23   Hamburger SV                    3-0 Union Oberschöneweide
+1923/24   1.FC Nürnberg                   2-0 Hamburger SV   
+1924/25   1.FC Nürnberg                   1-0 FSV Frankfurt                [aet]
+1925/26   SpVgg Fürth                     4-1 Hertha BSC Berlin
+1926/27   1.FC Nürnberg                   2-0 Hertha BSC Berlin
+1927/28   Hamburger SV                    5-2 Hertha BSC Berlin
+1928/29   SpVgg Fürth                     3-2 Hertha BSC Berlin
+1929/30   Hertha BSC Berlin               5-4 Kieler SV Holstein 
+1930/31   Hertha BSC Berlin               3-2 TSV 1860 München
+1931/32   FC Bayern München               2-0 Eintracht Frankfurt   
+1932/33   Fortuna Düsseldorf              3-0 FC Schalke 04
+1933/34   FC Schalke 04                   2-1 1.FC Nürnberg
+1934/35   FC Schalke 04                   6-4 VfB Stuttgart 
+1935/36   1.FC Nürnberg                   2-1 Fortuna Düsseldorf           [aet]
+1936/37   FC Schalke 04                   2-0 1.FC Nürnberg
+1937/38   Hannoverscher SV 96         3-3 4-3 FC Schalke 04                [both aet]
+1938/39   FC Schalke 04                   9-0 Admira Wien
+1939/40   FC Schalke 04                   1-0 Dresdner SC
+1940/41   SK Rapid Wien                   4-3 FC Schalke 04   
+1941/42   FC Schalke 04                   2-0 First Vienna FC
+1942/43   Dresdner SC                     3-0 FV Saarbrücken
+1943/44   Dresdner SC                     4-0 Luftwaffen SV Hamburg
+1944/45     not held due to World War II
+1945-47     not held due to aftermath of World War II
+1947/48   1.FC Nürnberg                   2-1 1.FC Kaiserslautern 
+1948/49   VfR Mannheim                    3-2 BV Borussia Dortmund         [aet]
+1949/50   VfB Stuttgart                   2-1 Offenbacher FC Kickers
+1950/51   1.FC Kaiserslautern             2-1 SC Preußen Münster     
+1951/52   VfB Stuttgart                   3-2 1.FC Saarbrücken
+1952/53   1.FC Kaiserslautern             4-1 VfB Stuttgart 
+1953/54   Hannoverscher SV 96             5-1 1.FC Kaiserslautern     
+1954/55   SC Rot-Weiß Essen               4-3 1.FC Kaiserslautern     
+1955/56   BV Borussia Dortmund            4-2 Karlsruher SC
+1956/57   BV Borussia Dortmund            4-1 Hamburger SV   
+1957/58   FC Schalke 04                   3-0 Hamburger SV   
+1958/59   Eintracht Frankfurt             5-3 Offenbacher FC Kickers       [aet]
+1959/60   Hamburger SV                    3-2 1.FC Köln
+1960/61   1.FC Nürnberg                   3-0 BV Borussia Dortmund
+1961/62   1.FC Köln                       4-0 1.FC Nürnberg    
+1962/63   BV Borussia Dortmund            3-1 1.FC Köln
+1963/64   1.FC Köln
+1964/65   SV Werder Bremen
+1965/66   TSV 1860 München
+1966/67   Braunschweiger TSV Eintracht
+1967/68   1.FC Nürnberg
+1968/69   FC Bayern München
+1969/70   VfL Borussia Mönchengladbach
+1970/71   VfL Borussia Mönchengladbach
+1971/72   FC Bayern München
+1972/73   FC Bayern München
+1973/74   FC Bayern München
+1974/75   VfL Borussia Mönchengladbach
+1975/76   VfL Borussia Mönchengladbach
+1976/77   VfL Borussia Mönchengladbach
+1977/78   1.FC Köln
+1978/79   Hamburger SV
+1979/80   FC Bayern München
+1980/81   FC Bayern München
+1981/82   Hamburger SV
+1982/83   Hamburger SV
+1983/84   VfB Stuttgart
+1984/85   FC Bayern München
+1985/86   FC Bayern München
+1986/87   FC Bayern München
+1987/88   SV Werder Bremen
+1988/89   FC Bayern München
+1989/90   FC Bayern München
+1990/91   1.FC Kaiserslautern
+1991/92   VfB Stuttgart
+1992/93   SV Werder Bremen
+1993/94   FC Bayern München
+1994/95   BV Borussia Dortmund
+1995/96   BV Borussia Dortmund
+1996/97   FC Bayern München
+1997/98   1.FC Kaiserslautern
+1998/99   FC Bayern München
+1999/00   FC Bayern München
+2000/01   FC Bayern München
+2001/02   BV Borussia Dortmund
+2002/03   FC Bayern München
+2003/04   SV Werder Bremen
+2004/05   FC Bayern München
+2005/06   FC Bayern München
+2006/07   VfB Stuttgart
+2007/08   FC Bayern München
+2008/09   VfL Wolfsburg
+2009/10   FC Bayern München
+2010/11   BV Borussia Dortmund
+2011/12   BV Borussia Dortmund
+2012/13   FC Bayern München
+2013/14   FC Bayern München
+2014/15   FC Bayern München
+2015/16   FC Bayern München
+2016/17   FC Bayern München
+2017/18   FC Bayern München
+2018/19   FC Bayern München
+2019/20   FC Bayern München
+2020/21   FC Bayern München
+2021/22   FC Bayern München
+2022/23   FC Bayern München
+2023/24   Bayer 04 Leverkusen
+2024/25   FC Bayern München
+2025/26   FC Bayern München
+
+Budesliga:
+          Nord                          Süd                          
+1974/75   Hannoverscher SV 96           Karlsruher SC  
+1975/76   Tennis Borussia Berlin        1.FC Saarbrücken
+1976/77   FC Sankt Pauli                VfB Stuttgart
+1977/78   DSC Arminia Bielefeld         SV Darmstadt 98    
+1978/79   TSV Bayer 04 Leverkusen       TSV 1860 München
+1979/80   DSC Arminia Bielefeld         1.FC Nürnberg
+1980/81   SV Werder Bremen              SV Darmstadt 98
+
+NB: both group winners were promoted; in addition the two runners-up played
+    off for a third promotion place.  The third promoted team 1974-81:
+
+          Nord                          Süd
+1974/75   FC Bayer 05 Uerdingen
+1975/76   BV 09 Borussia Dortmund
+1976/77                                 TSV 1860 München
+1977/78                                 1.FC Nürnberg
+1978/79   FC Bayer 05 Uerdingen
+1979/80                                 Karlsruher SC
+1980/81   Braunschweiger TSV Eintracht
+2. Bundesliga champions 1981-1991
+1981/82   FC Schalke 04
+1982/83   SV Waldhof Mannheim
+1983/84   Karlsruher SC
+1984/85   1.FC Nürnberg
+1985/86   FC Homburg/Saar
+1986/87   Hannoverscher SV 96          
+1987/88   Stuttgarter Kickers
+1988/89   Fortuna Düsseldorf
+1989/90   Hertha BSC 
+1990/91   FC Schalke 04
+
+NB: the runners-up were promoted automatically as well, the third-placed team
+    played off against the 16th team in the top division.  The following teams
+    also earned promotion in addition to the champions 1981-1991:
+
+          runners-up                    promoted after playoff
+1981/82   Hertha BSC
+1982/83   Offenbacher FC Kickers        FC Bayer 05 Uerdingen
+1983/84   FC Schalke 04
+1984/85   Hannoverscher SV 96           1.FC Saarbrücken
+1985/86   Blau-Weiß 90 Berlin
+1986/87   Karslruher SC
+1987/88   FC Sankt Pauli
+1988/89   FC Homburg/Saar
+1989/90   Wattenscheid 09
+1990/91   MSV Duisburg                  Stuttgarter Kickers
+2. Bundesliga champions (2 groups) 1991-1992
+          Nord                          Süd
+1991/92   FC Bayer 05 Uerdingen         1.FC Saarbrücken
+2. Bundesliga champions 1992-
+1992/93   SC Freiburg
+1993/94   VfL Bochum
+1994/95   FC Hansa Rostock
+1995/96   VfL Bochum
+1996/97   1.FC Kaiserslautern
+1997/98   Eintracht Frankfurt
+1998/99   DSC Arminia Bielefeld   
+1999/00   1.FC Köln
+2000/01   1.FC Nürnberg
+2001/02   Hannoverscher SV 96
+2002/03   SC Freiburg
+2003/04   1.FC Nürnberg
+2004/05   1.FC Köln    
+2005/06   VfL Bochum
+2006/07   Karlsruher SC
+2007/08   Borussia Mönchengladbach 
+2008/09   SC Freiburg
+2009/10   1.FC Kaiserslautern
+2010/11   Hertha BSC
+2011/12   SpVgg Greuther Fürth 
+2012/13   Hertha BSC
+2013/14   1.FC Köln    
+2014/15   FC Ingolstadt 04
+2015/16   SC Freiburg    
+2016/17   VfB Stuttgart   
+2017/18   Fortuna Düsseldorf
+2018/19   1.FC Köln    
+2019/20   DSC Arminia Bielefeld
+2020/21   VfL Bochum
+2021/22   FC Schalke 04 
+2022/23   1.FC Heidenheim  
+2023/24   FC Sankt Pauli
+2024/25   1.FC Köln 
+2025/26   FC Schalke 04 
+
+NB: the runners-up and third placed teams were promoted automatically 
+    as well up to and including 2007/08; since 2008/09, the runners-up 
+    were promoted automatically as well, the third-placed team played
+    off against the 16th team in the top division.
+    The following teams also earned promotion in addition to the champions:
+
+          runners-up                    third
+1992/93   MSV Duisburg                  VfB Leipzig
+1993/94   FC Bayer 05 Uerdingen         TSV 1860 München
+1994/95   FC Sankt Pauli                Fortuna Düsseldorf
+1995/96   DSC Arminia Bielefeld         MSV Duisburg
+1996/97   VfL Wolfsburg                 Hertha BSC
+1997/98   SC Freiburg                   1.FC Nürnberg
+1998/99   SpVgg. Unterhaching           SSV Ulm 1846
+1999/00   VfL Bochum                    FC Energie Cottbus
+2000/01   Borussia Mönchengladbach      FC Sankt Pauli
+2001/02   DSC Arminia Bielefeld         VfL Bochum
+2002/03   1.FC Köln                     Eintracht Frankfurt
+2003/04   DSC Arminia Bielefeld         FSV Mainz 05
+2004/05   MSV Duisburg                  Eintracht Frankfurt
+2005/06   TSV Alemannia Aachen          FC Energie Cottbus
+2006/07   FC Hansa Rostock              MSV Duisburg
+2007/08   TSG Hoffenheim                1.FC Köln
+2008/09   SC Freiburg                   FSV Mainz 05 (after playoff)
+2009/10   FC Sankt Pauli     
+2010/11   FC Augsburg
+2011/12   Eintracht Frankfurt           Fortuna Düsseldorf (after playoff)
+2012/13   Braunschweiger TSV Eintracht
+2013/14   SC Paderborn 07
+2014/15   SV Darmstadt 98
+2015/16   RB Leipzig   
+2016/17   Hannoverscher SV 96
+2017/18   1.FC Nürnberg
+2018/19   SC Paderborn 07               1.FC Union Berlin (after playoff)
+2019/20   VfB Stuttgart
+2020/21   SpVgg Greuther Fürth 
+2021/22   SV Werder Bremen 
+2022/23   SV Darmstadt 98
+2023/24   Holstein Kiel
+2024/25   Hamburger SV
+2025/26   SV Elversberg                 SC Paderborn 07 (after playoff)
+
+3. Liga:
+2008/09 - 1. FC Union Berlin
+2009/10 - VfL Osnabrück
+2010/11 - Eintracht Braunschweig
+2011/12 - SV Sandhausen
+2012/13 - Karlsruher SC
+2013/14 - 1. FC Heidenheim
+2014/15 - Arminia Bielefeld
+2015/16 - Dynamo Dresden
+2016/17 - MSV Duisburg
+2017/18 - 1. FC Magdeburg
+2018/19 - VfL Osnabrück
+2019/20 - FC Bayern München II [*]
+2020/21 - Dynamo Dresden
+2021/22 - 1. FC Magdeburg
+2022/23 - SV Elversberg
+2023/24 - SSV Ulm 1846
+2024/25 - Dynamo Dresden
+2025/26 - SV Sandhausen
+-------------------------------------------------------
+Austria:
+Österreichische Fußball-Bundesliga:
+1911/12  Rapid
+1912/13  Rapid
+1913/14  WAF 
+1914/15  WAC 
+1915/16  Rapid
+1916/17  Rapid
+1917/18  Floridsdorfer AC 
+1918/19  Rapid
+1919/20  Rapid
+1920/21  Rapid
+1921/22  Wiener Sport-Club
+1922/23  Rapid
+1923/24  Amateure
+1924/25  Hakoah 
+1925/26  Amateure 
+1926/27  Admira      
+1927/28  Admira                     
+1928/29  Rapid               
+1929/30  Rapid                
+1930/31  First Vienna          
+1931/32  Admira                  
+1932/33  First Vienna              
+1933/34  Admira               
+1934/35  Rapid                  
+1935/36  Admira                  
+1936/37  Admira                    
+1937/38  Rapid                      
+1938/39  Admira 
+1939/40  Rapid
+1940/41  Rapid
+1941/42  First Vienna
+1942/43  First Vienna
+1943/44  First Vienna
+1944/45    not awarded
+1945/46  Rapid
+1946/47  Wacker 
+1947/48  Rapid
+1948/49  Austria 
+1949/50  Austria 
+1950/51  Rapid
+1951/52  Rapid
+1952/53  Austria 
+1953/54  Rapid
+1954/55  First Vienna
+1955/56  Rapid
+1956/57  Rapid
+1957/58  Wiener Sport-Club
+1958/59  Wiener Sport-Club
+1959/60  Rapid
+1960/61  Austria
+1961/62  Austria 
+1962/63  Austria 
+1963/64  Rapid
+1964/65  LASK
+1965/66  Admira 
+1966/67  Rapid
+1967/68  Rapid 
+1968/69  Austria 
+1969/70  Austria 
+1970/71  Wacker Innsbruck
+1971/72  Wacker Innsbruck
+1972/73  Wacker Innsbruck
+1973/74  VÖEST Linz
+1974/75  Wacker Innsbruck
+1975/76  Austria 
+1976/77  Wacker Innsbruck
+1977/78  Austria 
+1978/79  Austria 
+1979/80  Austria 
+1980/81  Austria 
+1981/82  Rapid
+1982/83  Rapid
+1983/84  Austria 
+1984/85  Austria 
+1985/86  Austria 
+1986/87  Rapid
+1987/88  Rapid
+1988/89  FC Tirol Innsbruck
+1989/90  FC Tirol Innsbruck
+1990/91  Austria 
+1991/92  Austria 
+1992/93  Austria 
+1993/94  Austria Salzburg
+1994/95  Austria Salzburg
+1995/96  Rapid
+1996/97  Austria Salzburg
+1997/98  Sturm Graz
+1998/99  Sturm Graz
+1999/00  FC Tirol Innsbruck
+2000/01  FC Tirol Innsbruck
+2001/02  FC Tirol Innsbruck
+2002/03  Austria 
+2003/04  GAK
+2004/05  Rapid
+2005/06  Austria
+2006/07  RB Salzburg
+2007/08  Rapid
+2008/09  RB Salzburg  
+2009/10  RB Salzburg  
+2010/11  Sturm Graz
+2011/12  RB Salzburg
+2012/13  Austria
+2013/14  RB Salzburg 
+2014/15  RB Salzburg
+2015/16  RB Salzburg
+2016/17  RB Salzburg
+2017/18  RB Salzburg
+2018/19  RB Salzburg
+2019/20  RB Salzburg
+2020/21  RB Salzburg
+2021/22  RB Salzburg
+2022/23  RB Salzburg
+2023/24  Sturm Graz
+2024/25  Sturm Graz
+2025/26  LASK Linz
+-------------------------------------------------------
+Bélgica:
+Jupiler Pro League:
+1896 FC Liége
+1897 Racing Brussel
+1898 FC Liége
+1899 FC Liége
+1900 Racing Brussel
+1901 Racing Brussel
+1902 Racing Brussel
+1903 Racing Brussel
+1904 Union
+1905 Union
+1906 Union
+1907 Union
+1908 Racing Brussel
+1909 Union
+1910 Union
+1911 Cercle Brugge
+1912 Daring CB
+1913 Union
+1914 Daring CB
+1915-19 not held
+1920 Club Brugge
+1921 Daring CB
+1922 Beerschot
+1923 Union
+1924 Beerschot
+1925 Beerschot
+1926 Beerschot
+1927 Cercle Brugge
+1928 Beerschot
+1929 Antwerp
+1930 Cercle Brugge
+1931 Antwerp
+1932 Lierse SK
+1933 Union
+1934 Union
+1935 Union
+1936 Daring CB
+1937 Daring CB
+1938 Beerschot
+1939 Beerschot
+1940-41 not held
+1942 Lierse SK
+1943 FC Mechelen
+1944 Antwerp
+1945    not held
+1946 FC Mechelen
+1947 Anderlecht
+1948 FC Mechelen
+1949 Anderlecht
+1950 Anderlecht
+1951 Anderlecht
+1952 FC Liège
+1953 FC Liège
+1954 Anderlecht
+1955 Anderlecht
+1956 Anderlecht
+1957 Antwerp
+1958 Standard
+1959 Anderlecht
+1960 Lierse SK
+1961 Standard
+1962 Anderlecht
+1963 Standard
+1964 Anderlecht
+1965 Anderlecht
+1966 Anderlecht
+1967 Anderlecht
+1968 Anderlecht
+1969 Standard
+1970 Standard
+1971 Standard
+1972 Anderlecht
+1973 Club Brugge
+1974 Anderlecht
+1975 RWDM
+1976 Club Brugge
+1977 Club Brugge
+1978 Club Brugge
+1979 SK Beveren
+1980 Club Brugge
+1981 Anderlecht
+1982 Standard
+1983 Standard        [*] 
+1984 SK Beveren
+1985 Anderlecht
+1986 Anderlecht
+1987 Anderlecht
+1988 Club Brugge
+1989 KV Mechelen
+1990 Club Brugge
+1991 Anderlecht
+1992 Club Brugge
+1993 Anderlecht
+1994 Anderlecht
+1995 Anderlecht
+1996 Club Brugge
+1997 Lierse SK
+1998 Club Brugge
+1999 Racing Genk
+2000 Anderlecht
+2001 Anderlecht
+2002 Racing Genk
+2003 Club Brugge
+2004 Anderlecht
+2005 Club Brugge
+2006 Anderlecht
+2007 Anderlecht
+2008 Standard
+2009 Standard
+2010 Anderlecht
+2011 Racing Genk
+2012 Anderlecht
+2013 Anderlecht
+2014 Anderlecht
+2015 AA Gent
+2016 Club Brugge
+2017 Anderlecht
+2018 Club Brugge
+2019 Racing Genk
+2020 Club Brugge
+2021 Club Brugge
+2022 Club Brugge
+2023 Antwerp
+2024 Club Brugge
+2025 Union
+2026 Club Brugge
+-------------------------------------------------------
+Dinamarca:
+3F Superliga:
+1927/28   no winners
+1928/29 B 93
+1929/30 B 93
+1930/31 BK Frem
+1931/32 KB
+1932/33 BK Frem
+1933/34 B 93
+1934/35 B 93
+1935/36 BK Frem
+1936/37 AB
+1937/38 B 1903
+1938/39 B 93
+1939/40 KB
+1940/41 BK Frem
+1941/42 B 93
+1942/43 AB
+1943/44 BK Frem
+1944/45 AB
+1945/46 B 93
+1946/47 AB
+1947/48 KB
+1948/49 KB
+1949/50 KB
+1950/51 AB
+1951/52 AB
+1952/53 KB
+1953/54 Køge BK 
+1954/55 AGF
+1955/56 AGF
+1956/57 AGF
+1958    Vejle BK
+1959    B 1909
+1960    AGF
+1961    Esbjerg fB
+1962    Esbjerg fB
+1963    Esbjerg fB
+1964    B 1909
+1965    Esbjerg fB
+1966    Hvidovre IF
+1967    AB
+1968    KB
+1969    B 1903
+1970    B 1903
+1971    Vejle BK
+1972    Vejle BK
+1973    Hvidovre IF
+1974    KB
+1975    Køge BK
+1976    B 1903
+1977    OB
+1978    Vejle BK
+1979    Esbjerg fB
+1980    KB
+1981    Hvidovre IF
+1982    OB
+1983    Lyngby BK
+1984    Vejle BK
+1985    Brøndby IF 
+1986    AGF
+1987    Brøndby IF 
+1988    Brøndby IF 
+1989    OB
+1990    Brøndby IF 
+1991    Brøndby IF 
+1991/92 Lyngby BK
+1992/93 FC København
+1993/94 Silkeborg IF
+1994/95 AaB
+1995/96 Brøndby IF 
+1996/97 Brøndby IF 
+1997/98 Brøndby IF 
+1998/99 AaB
+1999/00 Herfølge BK  
+2000/01 FC København
+2001/02 Brøndby IF 
+2002/03 FC København
+2003/04 FC København
+-------------------------------------------------------
+Escócia:
+Scottish Premiership:
+1891  *Dumbarton & *Rangers (shared)
+1892  -Dumbarton
+1893  *Celtic
+1894   Celtic
+1895  *Heart Of Midlothian
+1896   Celtic
+1897   Heart Of Midlothian
+1898   Celtic
+1899   Rangers
+1900   Rangers
+1901   Rangers
+1902   Rangers
+1903  *Hibernian
+1904 *-Third Lanark
+1905   Celtic (after play-off)
+1906   Celtic
+1907   Celtic
+1908   Celtic
+1909   Celtic
+1910   Celtic
+1911   Rangers
+1912   Rangers
+1913   Rangers
+1914   Celtic
+1915   Celtic
+1916   Celtic 
+1917   Celtic
+1918   Rangers
+1919   Celtic
+1920   Rangers
+1921   Rangers
+1922   Celtic
+1923   Rangers
+1924   Rangers
+1925   Rangers
+1926   Celtic
+1927   Rangers
+1928   Rangers
+1929   Rangers
+1930   Rangers
+1931   Rangers
+1932 *-Motherwell
+1933   Rangers
+1934   Rangers
+1935   Rangers
+1936   Celtic
+1937   Rangers
+1938   Celtic
+1939   Rangers
+1947   Rangers
+1948   Hibernian
+1949   Rangers
+1950   Rangers
+1951   Hibernian
+1952  -Hibernian
+1953   Rangers
+1954   Celtic
+1955  *Aberdeen
+1956   Rangers
+1957   Rangers
+1958   Heart Of Midlothian
+1959   Rangers
+1960  -Heart Of Midlothian
+1961   Rangers
+1962 *-Dundee
+1963   Rangers
+1964   Rangers
+1965 *-Kilmarnock
+1966   Celtic
+1967   Celtic
+1968   Celtic
+1969   Celtic
+1970   Celtic
+1971   Celtic
+1972   Celtic
+1973   Celtic
+1974   Celtic
+1975   Rangers
+1976   Rangers
+1977   Celtic
+1978   Rangers
+1979   Celtic
+1980   Aberdeen
+1981   Celtic
+1982   Celtic
+1983 *-Dundee United
+1984   Aberdeen
+1985  -Aberdeen
+1986   Celtic
+1987   Rangers
+1988   Celtic
+1989   Rangers
+1990   Rangers
+1991   Rangers
+1992   Rangers
+1993   Rangers
+1994   Rangers
+1995   Rangers
+1996   Rangers
+1997   Rangers
+1998   Celtic
+1999   Rangers
+2000   Rangers
+2001   Celtic
+2002   Celtic
+2003   Rangers
+2004   Celtic
+2005   Rangers
+2006   Celtic
+2007   Celtic
+2008   Celtic  
+2009   Rangers
+2010   Rangers
+2011   Rangers
+2012   Celtic
+2013   Celtic
+2014   Celtic
+2015   Celtic
+2016   Celtic
+2017   Celtic
+2018   Celtic
+2019   Celtic
+2020   Celtic
+2021  -Rangers
+2022   Celtic
+2023   Celtic
+2024   Celtic
+2025   Celtic 
+2026  -Celtic
+2004/05 Brøndby IF 
+2005/06 FC København
+2006/07 FC København
+2007/08 AaB
+2008/09 FC København
+2009/10 FC København 
+2010/11 FC København 
+2011/12 FC Nordsjælland
+2012/13 FC København 
+2013/14 AaB
+2014/15 FC Midtjylland
+2015/16 FC København
+2016/17 FC København
+2017/18 FC Midtjylland
+2018/19 FC København 
+2019/20 FC Midtjylland
+2020/21 Brøndby IF 
+2021/22 FC København 
+2022/23 FC København 
+2023/24 FC Midtjylland
+2024/25 FC København 
+2025/26 AGF
+-------------------------------------------------------
+Espanha:
+LaLiga EA Sports:
+1928/29  FC Barcelona                      [league had 10 clubs]
+1929/30  Athletic de Bilbao
+1930/31  Athletic de Bilbao
+1931/32  Real Madrid CF
+1932/33  Real Madrid CF
+1933/34  Athletic de Bilbao                [league was extended to 12 clubs]
+1934/35  Real Betis 
+1935/36  Athletic de Bilbao
+1936/37     cancelled due to civil war
+1937/38     cancelled due to civil war
+1938/39     cancelled due to civil war
+1939/40  Atlético Aviación 
+1940/41  Atlético Aviación
+1941/42  Valencia CF                       [league was extended to 14 clubs]
+1942/43  Athletic de Bilbao
+1943/44  Valencia CF
+1944/45  FC Barcelona
+1945/46  Sevilla FC
+1946/47  Valencia CF
+1947/48  FC Barcelona
+1948/49  FC Barcelona
+1949/50  Atlético de Madrid
+1950/51  Atlético de Madrid                [league was extended to 16 clubs]
+1951/52  FC Barcelona
+1952/53  FC Barcelona
+1953/54  Real Madrid CF
+1954/55  Real Madrid CF
+1955/56  Athletic de Bilbao
+1956/57  Real Madrid CF
+1957/58  Real Madrid CF
+1958/59  FC Barcelona
+1959/60  FC Barcelona
+1960/61  Real Madrid CF
+1961/62  Real Madrid CF
+1962/63  Real Madrid CF
+1963/64  Real Madrid CF
+1964/65  Real Madrid CF
+1965/66  Atlético de Madrid
+1966/67  Real Madrid CF
+1967/68  Real Madrid CF
+1968/69  Real Madrid CF 
+1969/70  Atlético de Madrid
+1970/71  Valencia CF 
+1971/72  Real Madrid CF                    [league was extended to 18 clubs]
+1972/73  Atlético de Madrid
+1973/74  FC Barcelona
+1974/75  Real Madrid CF
+1975/76  Real Madrid CF
+1976/77  Atlético de Madrid
+1977/78  Real Madrid CF
+1978/79  Real Madrid CF
+1979/80  Real Madrid CF
+1980/81  Real Sociedad 
+1981/82  Real Sociedad 
+1982/83  Athletic de Bilbao
+1983/84  Athletic de Bilbao
+1984/85  FC Barcelona
+1985/86  Real Madrid CF
+1986/87  Real Madrid CF                    [league had final playoffs]
+1987/88  Real Madrid CF                    [league was extended to 20 clubs]
+1988/89  Real Madrid CF
+1989/90  Real Madrid CF
+1990/91  FC Barcelona
+1991/92  FC Barcelona
+1992/93  FC Barcelona
+1993/94  FC Barcelona
+1994/95  Real Madrid CF
+1995/96  Atlético de Madrid                [league was extended to 22 clubs]
+1996/97  Real Madrid CF
+1997/98  FC Barcelona                      [league was reduced to 20 clubs]
+1998/99  FC Barcelona
+1999/00  RC Deportivo de La Coruña
+2000/01  Real Madrid CF
+2001/02  Valencia CF 
+2002/03  Real Madrid CF
+2003/04  Valencia CF 
+2004/05  FC Barcelona
+2005/06  FC Barcelona
+2006/07  Real Madrid CF
+2007/08  Real Madrid CF
+2008/09  FC Barcelona 
+2009/10  FC Barcelona 
+2010/11  FC Barcelona 
+2011/12  Real Madrid CF
+2012/13  FC Barcelona 
+2013/14  Atlético de Madrid   
+2014/15  FC Barcelona 
+2015/16  FC Barcelona 
+2016/17  Real Madrid CF
+2017/18  FC Barcelona  
+2018/19  FC Barcelona  
+2019/20  Real Madrid CF
+2020/21  Atlético de Madrid  
+2021/22  Real Madrid CF 
+2022/23  FC Barcelona  
+2023/24  Real Madrid CF 
+2024/25  FC Barcelona  
+2025/26  FC Barcelona  
+
+LaLiga Hypermotion:
+1928/1929  Sevilla FC
+1929/1930  CD Alavés (Vitoria)
+1930/1931  Valencia FC
+1931/1932  Betis Balompié (Sevilla)
+1932/1933  Oviedo FC
+1933/1934  Sevilla FC
+1934/1935  Hércules FC (Alicante)
+1935/1936  Club Celta de Vigo
+1939/1940  Real Murcia FC
+1940/1941  Granada CF
+1941/1942  Real Betis Balompié (Sevilla)
+1942/1943  Centro de Deportes Sabadell (Barcelona)
+1943/1944  Real Gijón
+1944/1945  CD Alcoyano (Alcoy, Alicante)
+1945/1946  Centro de Deportes Sabadell (Barcelona)
+1946/1947  CD Alcoyano (Alcoy, Alicante)
+1947/1948  Real Valladolid Deportivo
+1948/1949  Real Sociedad de Fútbol (San Sebastián)
+
+           Northern Group                          	Southern Group
+1949/1950  Real Racing Club de Santander        	CD Alcoyano (Alcoy, Alicante)
+1950/1951  Real Gijón                              	Club Atlético Tetuán
+1951/1952  Real Oviedo                             	CD Málaga
+1952/1953  Club Atlético Osasuna (Pamplona)        	Real Jaén CF
+1953/1954  CD Alavés (Vitoria)                     	UD Las Palmas
+1954/1955  Cultural y Deportiva Leonesa (León)     	Real Murcia CF
+1955/1956  Club Atlético Osasuna  (Pamplona)      	Real Jaén CF
+1956/1957  Real Gijón                             	Granada CF
+1957/1958  Real Oviedo                             	Real Betis Balompié (Sevilla)
+1958/1959  Real Valladolid Deportivo               	Elche CF (Alicante)
+1959/1960  Real Racing Club de Santander          	RCD Mallorca
+1960/1961  Club Atlético Osasuna                   	CD Tenerife
+1961/1962  RC Deportivo de La Coruña              	Córdoba CF
+1962/1963  Pontevedra CF                           	Real Murcia CF
+1963/1964  RC Deportivo de La Coruña               	UD Las Palmas
+1964/1965  Pontevedra CF                           	RCD Mallorca
+1965/1966  RC Deportivo de La Coruña               	Hércules CF (Alicante)
+1966/1967  Real Sociedad de Fútbol (San Sebastián) 	CD Málaga
+1967/1968  RC Deportivo de La Coruña               	Granada CF
+1968/1969  Sevilla CF
+1969/1970  Real Gijón
+1970/1971  Real Betis Balompié (Sevilla)
+1971/1972  Real Oviedo
+1972/1973  Real Murcia CF
+1973/1974  Real Betis Balompié(Sevilla)
+1974/1975  Real Oviedo
+1975/1976  Burgos CF
+1976/1977  Real Sporting de Gijón
+1977/1978  Real Zaragoza CD
+1978/1979  AD Almería
+1979/1980  Real Murcia CF
+1980/1981  CD Castellón
+1981/1982  Real Club Celta de Vigo
+1982/1983  Real Murcia CF
+1983/1984  Castilla CF (Madrid)
+1984/1985  UD Las Palmas
+1985/1986  Real Murcia CF
+1986/1987  Valencia CF
+1987/1988  CD Málaga
+1988/1989  CD Castellón
+1989/1990  Real Burgos CF
+1990/1991  Albacete Balompié
+1991/1992  Real Club Celta de Vigo
+1992/1993  UE Lleida
+1993/1994  RCD Español (Barcelona)
+1994/1995  Mérida CP (Badajoz)
+1995/1996  Hércules CF (Alicante)
+1996/1997  Mérida CP (Badajoz)
+1997/1998  CD Alavés (Vitoria)
+1998/1999  Málaga CF
+1999/2000  UD Las Palmas
+2000/2001  Sevilla FC
+2001/2002  Club Atlético de Madrid
+2002/2003  Real Murcia CF
+2003/2004  Levante UD (Calencia)
+2004/2005  Cádiz CF
+2005/2006  RC Recreativo de Huelva
+2006/2007  Real Valladolid CF
+2007/2008  CD Numancia (Soria)
+2008/2009  Xerez CD (Cádiz)
+2009/2010  Real Sociedad de Fútbol (San Sebastián)
+2010/2011  Real Betis Balompié (Sevilla)
+2011/2012  RC Deportivo de La Coruña    
+2012/2013  Elche CF (Alicante)
+2013/2014  SD Eibar
+2014/2015  Real Betis Balompié (Sevilla)
+2015/2016  CD Alavés (Vitoria)
+2016/2017  Levante UD (Valencia)
+2017/2018  Rayo Vallecano (Madrid)
+2018/2019  Club Atlético Osasuna (Pamplona)
+2019/2020  SD Huesca
+2020/2021  RCD Espanyol (Barcelona)
+2021/2022  UD Almería 
+2022/2023  Granada CF
+2023/2024  CD Leganés (Madrid)
+2024/2025  Levante UD (Valencia)
+2025/2026  Real Racing Club de Santander
+-------------------------------------------------------
+Turquia:
+Trendyol Süper Lig:
+ 1956/57   Besiktaş
+ 1957/58   Besiktaş
+ 1959      Fenerbahçe
+ 1959/60   Beşiktaş
+ 1960/61   Fenerbahçe
+ 1961/62   Galatasaray
+ 1962/63   Galatasaray
+ 1963/64   Fenerbahçe
+ 1964/65   Fenerbahçe
+ 1965/66   Beşiktaş
+ 1966/67   Beşiktaş
+ 1967/68   Fenerbahçe
+ 1968/69   Galatasaray
+ 1969/70   Fenerbahçe
+ 1970/71   Galatasaray
+ 1971/72   Galatasaray
+ 1972/73   Galatasaray
+ 1973/74   Fenerbahçe
+ 1974/75   Fenerbahçe
+ 1975/76   Trabzonspor
+ 1976/77   Trabzonspor
+ 1977/78   Fenerbahçe
+ 1978/79   Trabzonspor
+ 1979/80   Trabzonspor
+ 1980/81   Trabzonspor
+ 1981/82   Beşiktaş
+ 1982/83   Fenerbahçe
+ 1983/84   Trabzonspor
+ 1984/85   Fenerbahçe
+ 1985/86   Beşiktaş
+ 1986/87   Galatasaray
+ 1987/88   Galatasaray
+ 1988/89   Fenerbahçe
+ 1989/90   Beşiktaş
+ 1990/91   Beşiktaş
+ 1991/92   Beşiktaş
+ 1992/93   Galatasaray
+ 1993/94   Galatasaray
+ 1994/95   Beşiktaş
+ 1995/96   Fenerbahçe
+ 1996/97   Galatasaray
+ 1997/98   Galatasaray
+ 1998/99   Galatasaray
+ 1999/00   Galatasaray
+ 2000/01   Fenerbahçe  
+ 2001/02   Galatasaray
+ 2002/03   Beşiktaş
+ 2003/04   Fenerbahçe  
+ 2004/05   Fenerbahçe
+ 2005/06   Galatasaray
+ 2006/07   Fenerbahçe
+ 2007/08   Galatasaray 
+ 2008/09   Beşiktaş
+ 2009/10   Bursaspor
+ 2010/11   Fenerbahçe
+ 2011/12   Galatasaray 
+ 2012/13   Galatasaray 
+ 2013/14   Fenerbahce
+ 2014/15   Galatasaray 
+ 2015/16   Beşiktaş
+ 2016/17   Beşiktaş
+ 2017/18   Galatasaray 
+ 2018/19   Galatasaray 
+ 2019/20   Başakşehir
+ 2020/21   Beşiktaş
+ 2021/22   Trabzonspor
+ 2022/23  Galatasaray 
+ 2023/24   Galatasaray 
+ 2024/25   Galatasaray 
+ 2025/26   Galatasaray
+
+Nota: A Federação Turca de Futebol (TFF) atualmente não contabiliza os títulos de campeonatos de 1924 a
+    1951 (vencido no Millî Küme e no Türkiye Futbol Şampyonası), embora os campeonatos nesses
+    Os anos foram oficialmente organizados pela própria TFF.
+-------------------------------------------------------
+Suíça:
+Brack Super League:
+1897/98   Grasshopper Club               2-0 La Châtelaine (Genève) [1]
+1898/99   Anglo-American Club            7-0 Old Boys (Basel)
+1899/00   Grasshopper Club               2-0 FC Bern
+1900/01   Grasshopper Club               2-0 FC Bern
+1901/02   FC Zürich
+1902/03   BSC Young Boys
+1903/04   FC Sankt Gallen
+1904/05   Grasshopper Club
+1905/06   FC Winterthur
+1906/07   Servette FC
+1907/08   FC Winterthur                  4-1 BSC Young Boys
+1908/09   BSC Young Boys                 1-0 FC Winterthur
+1909/10   BSC Young Boys
+1910/11   BSC Young Boys
+1911/12   FC Aarau
+1912/13   Montriond Lausanne
+1913/14   FC Aarau
+1914/15   Brühl Sankt Gallen           
+1915/16   FC Cantonal Neuchâtel
+1916/17   FC Winterthur
+1917/18   Servette FC
+1918/19   Etoile La Chaux-de-Fonds
+1919/20   BSC Young Boys
+1920/21   Grasshopper Club
+1921/22   Servette FC
+1922/23     not awarded                                             [2]
+1923/24   FC Zürich
+1924/25   Servette FC
+1925/26   Servette FC
+1926/27   Grasshopper Club
+1927/28   Grasshopper Club
+1928/29   BSC Young Boys
+1929/30   Servette FC
+1930/31   Grasshopper Club
+1931/32   Lausanne-Sports
+1932/33   Servette FC
+1933/34   Servette FC
+1934/35   Lausanne-Sports
+1935/36   Lausanne-Sports
+1936/37   Grasshopper Club
+1937/38   FC Lugano
+1938/39   Grasshopper Club
+1939/40   Servette FC
+1940/41   FC Lugano
+1941/42   Grasshopper Club
+1942/43   Grasshopper Club
+1943/44   Lausanne-Sports
+1944/45   Grasshopper Club
+1945/46   Servette FC
+1946/47   FC Biel-Bienne
+1947/48   AC Bellinzona
+1948/49   FC Lugano
+1949/50   Servette FC
+1950/51   Lausanne-Sports
+1951/52   Grasshopper Club
+1952/53   FC Basel
+1953/54   FC La Chaux-de-Fonds
+1954/55   FC La Chaux-de-Fonds
+1955/56   Grasshopper Club
+1956/57   BSC Young Boys
+1957/58   BSC Young Boys
+1958/59   BSC Young Boys
+1959/60   BSC Young Boys
+1960/61   Servette FC
+1961/62   Servette FC
+1962/63   FC Zürich
+1963/64   FC La Chaux-de-Fonds
+1964/65   Lausanne-Sports
+1965/66   FC Zürich
+1966/67   FC Basel
+1967/68   FC Zürich
+1968/69   FC Basel
+1969/70   FC Basel
+1970/71   Grasshopper Club
+1971/72   FC Basel
+1972/73   FC Basel
+1973/74   FC Zürich
+1974/75   FC Zürich
+1975/76   FC Zürich
+1976/77   FC Basel
+1977/78   Grasshopper Club
+1978/79   Servette FC
+1979/80   FC Basel
+1980/81   FC Zürich
+1981/82   Grasshopper Club
+1982/83   Grasshopper Club
+1983/84   Grasshopper Club
+1984/85   Servette FC
+1985/86   BSC Young Boys
+1986/87   Neuchâtel-Xamax FC
+1987/88   Neuchâtel-Xamax FC
+1988/89   FC Luzern
+1989/90   Grasshopper Club
+1990/91   Grasshopper Club
+1991/92   FC Sion
+1992/93   FC Aarau
+1993/94   Servette FC
+1994/95   Grasshopper Club
+1995/96   Grasshopper Club
+1996/97   FC Sion
+1997/98   Grasshopper Club
+1998/99   Servette FC
+1999/00   FC Sankt Gallen
+2000/01   Grasshopper Club
+2001/02   FC Basel
+2002/03   Grasshopper Club
+2003/04   FC Basel
+2004/05   FC Basel
+2005/06   FC Zürich
+2006/07   FC Zürich
+2007/08   FC Basel
+2008/09   FC Zürich
+2009/10   FC Basel
+2010/11   FC Basel
+2011/12   FC Basel
+2012/13   FC Basel
+2013/14   FC Basel
+2014/15   FC Basel
+2015/16   FC Basel
+2016/17   FC Basel
+2017/18   BSC Young Boys
+2018/19   BSC Young Boys
+2019/20   BSC Young Boys
+2020/21   BSC Young Boys
+2021/22   FC Zürich
+2022/23   BSC Young Boys  
+2023/24   BSC Young Boys  
+2024/25   FC Basel
+2025/26   FC Thun
+-------------------------------------------------------
+Suécia:
+Allsvenskan:
+1924/25 GAIS
+1925/26 Örgryte IS
+1926/27 GAIS
+1927/28 Örgryte IS
+1928/29 Hälsingborgs IF
+1929/30 Hälsingborgs IF
+1930/31 GAIS
+1931/32 AIK
+1932/33 Hälsingborgs IF
+1933/34 Hälsingborgs IF
+1934/35 IFK Göteborg
+1935/36 IF Elfsborg
+1936/37 AIK
+1937/38 IF Sleipner
+1938/39 IF Elfsborg
+1939/40 IF Elfsborg
+1940/41 Hälsingborgs IF
+1941/42 IFK Göteborg
+1942/43 IFK Norrköping
+1943/44 Malmö FF
+1944/45 IFK Norrköping
+1945/46 IFK Norrköping
+1946/47 IFK Norrköping
+1947/48 IFK Norrköping
+1948/49 Malmö FF
+1949/50 Malmö FF
+1950/51 Malmö FF
+1951/52 IFK Norrköping
+1952/53 Malmö FF
+1953/54 GAIS
+1954/55 Djurgårdens IF
+1955/56 IFK Norrköping
+1956/57 IFK Norrköping
+1957/58 IFK Göteborg
+1959    Djurgårdens IF
+1960    IFK Norrköping
+1961    IF Elfsborg
+1962    IFK Norrköping
+1963    IFK Norrköping
+1964    Djurgårdens IF
+1965    Malmö FF
+1966    Djurgårdens IF
+1967    Malmö FF
+1968    Östers IF
+1969    IFK Göteborg
+1970    Malmö FF
+1971    Malmö FF
+1972    Åtvidabergs FF
+1973    Åtvidabergs FF
+1974    Malmö FF
+1975    Malmö FF
+1976    Halmstads BK
+1977    Malmö FF
+1978    Östers IF
+1979    Halmstads BK
+1980    Östers IF
+1981    Östers IF
+1982    IFK Göteborg        [regular season: IFK Göteborg]
+1983    IFK Göteborg        [regular season: AIK]
+1984    IFK Göteborg        [regular season: IFK Göteborg]
+1985    Örgryte IS          [regular season: Malmö FF]
+1986    Malmö FF            [regular season: Malmö FF]
+1987    IFK Göteborg        [regular season: Malmö FF]
+1988    Malmö FF            [regular season: Malmö FF]
+1989    IFK Norrköping      [regular season: Malmö FF]
+1990    IFK Göteborg        [regular season: IFK Göteborg]
+1991    IFK Göteborg
+1992    AIK
+1993    IFK Göteborg
+1994    IFK Göteborg
+1995    IFK Göteborg
+1996    IFK Göteborg
+1997    Halmstads BK
+1998    AIK
+1999    Helsingborgs IF
+2000    Halmstads BK
+2001    Hammarby IF
+2002    Djurgårdens IF
+2003    Djurgårdens IF
+2004    Malmö FF
+2005    Djurgårdens IF
+2006    IF Elfsborg
+2007    IFK Göteborg 
+2008    Kalmar FF
+2009    AIK
+2010    Malmö FF 
+2011    Helsingborgs IF
+2012    IF Elfsborg
+2013    Malmö FF 
+2014    Malmö FF 
+2015    IFK Norrköping
+2016    Malmö FF 
+2017    Malmö FF 
+2018    AIK
+2019    Djurgårdens IF
+2020    Malmö FF 
+2021    Malmö FF 
+2022    BK Häcken
+2023    Malmö FF 
+2024    Malmö FF 
+2025    Mjällby AIF
+-------------------------------------------------------
+Roménia:
+SUPERLIGA:
+1909/10 Olympia București       
+1910/11 Olympia București
+1911/12 United A.C. Ploiești
+1912/13 Colentina București
+1913/14 Colentina București
+1914/15 Româno-Americană București
+1915/16 Prahova Ploiești
+1916-19   no championship due to war
+1919/20 Venus București
+1920/21 Venus București
+NB: the validity of the 1919/20 and 1920/21 "national" championships of Venus București
+    is doubtful; they only played competitions with clubs from the capital (and Ploiești)
+    and not with any clubs from Transylvania, and it is not entirely clear they actually
+    won those.
+Campionatul Național
+1921/22 Chinezul Timișoara              5-1 Victoria Cluj
+1922/23 Chinezul Timișoara              2-0 Victoria Cluj
+1923/24 Chinezul Timișoara              4-1 C.A. Oradea
+1924/25 Chinezul Timișoara              5-1 U.C.A.S. Petroșani
+1925/26 Chinezul Timișoara              3-0 Juventus București
+1926/27 Chinezul Timișoara          2-2 4-3 Colțea Brașov
+1927/28 Colțea Brașov                   3-2 Jiul Lupeni
+1928/29 Venus București                 3-2 România Cluj
+1929/30 Juventus București              3-0 Gloria C.F.R. Arad
+1930/31 U.D. Reșița                     2-0 S.G. Sibiu
+1931/32 Venus București                 3-0 U.D. Reșița
+1932/33 Ripensia Timișoara          5-3 0-0 Universitatea Cluj
+1933/34 Venus București             3-2 5-3 Ripensia Timișoara
+1934/35 Ripensia Timișoara
+1935/36 Ripensia Timișoara
+1936/37 Venus București
+1937/38 Ripensia Timișoara          2-0 2-0 Rapid București
+1938/39 Venus București
+1939/40 Venus București
+1940/41 Unirea Tricolor București
+
+1941/42   no league championship due to war
+1942/43   unofficial war championship; winners: F.C. Craiova
+1943/44   championship abandoned due to war
+1944/45   no league championship due to war
+1945/46   no league championship due to war
+
+1946/47 I.T. Arad
+1947/48 I.T. Arad
+1948/49 I.C.O. Oradea
+1950    Flamura roșie Arad
+1951    C.C.A. București
+1952    C.C.A. București
+1953    C.C.A. București
+1954    Flamura roșie Arad
+1955    Dinamo București
+1956    C.C.A. București
+1957/58 Petrolul Ploiești
+1958/59 Petrolul Ploiești
+1959/60 C.C.A. București
+1960/61 C.C.A. București
+1961/62 Dinamo București
+1962/63 Dinamo București
+1963/64 Dinamo București
+1964/65 Dinamo București
+1965/66 Petrolul Ploiești
+1966/67 Rapid București
+1967/68 Steaua București
+1968/69 U.T. Arad
+1969/70 U.T. Arad
+1970/71 Dinamo București
+1971/72 F.C. Argeș Pitești
+1972/73 Dinamo București
+1973/74 Universitatea Craiova
+1974/75 Dinamo București
+1975/76 Steaua București
+1976/77 Dinamo București
+1977/78 Steaua București
+1978/79 F.C. Argeș Pitești
+1979/80 Universitatea Craiova
+1980/81 Universitatea Craiova
+1981/82 Dinamo București
+1982/83 Dinamo București
+1983/84 Dinamo București
+1984/85 Steaua București
+1985/86 Steaua București
+1986/87 Steaua București
+1987/88 Steaua București
+1988/89 Steaua București
+1989/90 Dinamo București
+1990/91 Universitatea Craiova
+1991/92 Dinamo București
+1992/93 Steaua București
+1993/94 Steaua București
+1994/95 Steaua București
+1995/96 Steaua București
+1996/97 Steaua București
+1997/98 Steaua București
+1998/99 Rapid București
+1999/00 Dinamo București
+2000/01 Steaua București
+2001/02 Dinamo București
+2002/03 Rapid București
+2003/04 Dinamo București
+2004/05 Steaua București
+2005/06 Steaua București
+2006/07 Dinamo București
+2007/08 C.F.R. Cluj
+2008/09 Unirea Urziceni
+2009/10 C.F.R. Cluj
+2010/11 Oțelul Galați  
+2011/12 C.F.R. Cluj
+2012/13 Steaua București
+2013/14 Steaua București
+2014/15 Steaua București
+2015/16 F.C. Astra Giurgiu
+2016/17 F.C. Viitorul Constanța  
+2017/18 C.F.R. Cluj
+2018/19 C.F.R. Cluj
+2019/20 C.F.R. Cluj 
+2020/21 C.F.R. Cluj 
+2021/22 C.F.R. Cluj  
+2022/23 Farul Constanța  
+2023/24 F.C.S.B.
+2024/25 F.C.S.B.
+2025/26 Universitatea Craiova
+-------------------------------------------------------
+Portugal:
+Liga Portugal (Portugal):
+1934/35   FC Porto   
+1935/36   SL Benfica
+1936/37   SL Benfica
+1937/38   SL Benfica
+1938/39  FC Porto             (runners-up: Sporting CP         1 point  behind) 
+1939/40  FC Porto             (runners-up: Sporting CP         2 points behind) 
+1940/41  Sporting CP          (runners-up: FC Porto            3 points behind)
+1941/42  SL Benfica           (runners-up: Sporting CP         4 points behind)
+1942/43  SL Benfica           (runners-up: Sporting CP         1 point  behind)
+1943/44  Sporting CP          (runners-up: SL Benfica          5 points behind)
+1944/45  SL Benfica           (runners-up: Sporting CP         3 points behind)
+1945/46  CF "Os Belenenses"   (runners-up: SL Benfica          1 point  behind)
+1946/47  Sporting CP          (runners-up: SL Benfica          6 points behind)
+1947/48  Sporting CP          (runners-up: SL Benfica          equal on points)
+1948/49  Sporting CP          (runners-up: SL Benfica          5 points behind)
+1949/50  SL Benfica           (runners-up: Sporting CP         6 points behind)
+1950/51  Sporting CP          (runners-up: FC Porto           11 points behind)
+1951/52  Sporting CP          (runners-up: SL Benfica          1 point  behind)
+1952/53  Sporting CP          (runners-up: SL Benfica          4 points behind)
+1953/54  Sporting CP          (runners-up: FC Porto            7 points behind)
+1954/55  SL Benfica           (runners-up: CF "Os Belenenses"  equal on points)
+1955/56  FC Porto             (runners-up: SL Benfica          equal on points)
+1956/57  SL Benfica           (runners-up: FC Porto            1 point  behind)
+1957/58  Sporting CP          (runners-up: FC Porto            equal on points)
+1958/59  FC Porto             (runners-up: SL Benfica          equal on points)
+1959/60  SL Benfica           (runners-up: Sporting CP         2 points behind)
+1960/61  SL Benfica           (runners-up: Sporting CP         4 points behind)
+1961/62  Sporting CP          (runners-up: FC Porto            2 points behind)
+1962/63  SL Benfica           (runners-up: FC Porto            6 points behind)
+1963/64  SL Benfica           (runners-up: FC Porto            6 points behind)
+1964/65  SL Benfica           (runners-up: FC Porto            6 points behind)
+1965/66  Sporting CP          (runners-up: SL Benfica          1 point  behind)
+1966/67  SL Benfica           (runners-up: Académica           3 points behind)
+1967/68  SL Benfica           (runners-up: Sporting CP         4 points behind) 
+1968/69  SL Benfica           (runners-up: FC Porto            2 points behind)
+1969/70  Sporting CP          (runners-up: SL Benfica          8 points behind)
+1970/71  SL Benfica           (runners-up: Sporting CP         3 points behind)
+1971/72  SL Benfica           (runners-up: Vitória FC Setúbal 10 points behind)
+1972/73  SL Benfica           (runners-up: CF "Os Belenenses" 18 points behind)
+1973/74  Sporting CP          (runners-up: SL Benfica          2 points behind)
+1974/75  SL Benfica           (runners-up: FC Porto            5 points behind)
+1975/76  SL Benfica           (runners-up: Boavista FC         2 points behind)
+1976/77  SL Benfica           (runners-up: Sporting CP         9 points behind)
+1977/78  FC Porto             (runners-up: SL Benfica          equal on points)
+1978/79  FC Porto             (runners-up: SL Benfica          1 point  behind)
+1979/80  Sporting CP          (runners-up: FC Porto            2 points behind)
+1980/81  SL Benfica           (runners-up: FC Porto            2 points behind)
+1981/82  Sporting CP          (runners-up: SL Benfica          2 points behind)
+1982/83  SL Benfica           (runners-up: FC Porto            4 points behind)
+1983/84  SL Benfica           (runners-up: FC Porto            3 points behind)
+1984/85  FC Porto             (runners-up: Sporting CP         8 points behind)
+1985/86  FC Porto             (runners-up: SL Benfica          2 points behind)
+1986/87  SL Benfica           (runners-up: FC Porto            2 points behind)
+1987/88  FC Porto             (runners-up: SL Benfica         15 points behind)
+1988/89  SL Benfica           (runners-up: FC Porto            7 points behind)
+1989/90  FC Porto             (runners-up: SL Benfica          4 points behind)
+1990/91  SL Benfica           (runners-up: FC Porto            2 points behind)
+1991/92  FC Porto             (runners-up: SL Benfica         10 points behind)
+1992/93  FC Porto             (runners-up: SL Benfica          2 points behind)
+1993/94  SL Benfica           (runners-up: FC Porto            2 points behind)
+1994/95  FC Porto             (runners-up: Sporting CP         9 points behind)
+1995/96  FC Porto             (runners-up: SL Benfica      *  11 points behind)
+1996/97  FC Porto             (runners-up: Sporting CP     *  13 points behind)
+1997/98  FC Porto             (runners-up: SL Benfica      *   9 points behind)
+1998/99  FC Porto             (runners-up: Boavista FC     *   8 points behind)
+1999/00  Sporting CP          (runners-up: FC Porto        *   4 points behind)
+2000/01  Boavista FC          (runners-up: FC Porto        *   1 point  behind)
+2001/02  Sporting CP          (runners-up: Boavista FC     *   5 points behind)
+2002/03  FC Porto             (runners-up: SL Benfica      *  11 points behind)
+2003/04  FC Porto             (runners-up: SL Benfica      *   8 points behind)
+2004/05  SL Benfica           (runners-up: FC Porto        *   3 points behind)
+2005/06  FC Porto             (runners-up: Sporting CP     *   7 points behind)
+2006/07  FC Porto             (runners-up: Sporting CP     *   1 point  behind)
+2007/08  FC Porto             (runners-up: Sporting CP     *  14 points behind)
+2008/09  FC Porto             (runners-up: Sporting CP     *   4 points behind)
+2009/10  SL Benfica           (runners-up: SC Braga        *   5 points behind)
+2010/11  FC Porto             (runners-up: SL Benfica      *  21 points behind)
+2011/12  FC Porto             (runners-up: SL Benfica      *   6 points behind)
+2012/13  FC Porto             (runners-up: SL Benfica      *   1 point  behind)
+2013/14  SL Benfica           (runners-up: Sporting CP     *   7 points behind)
+2014/15  SL Benfica           (runners-up: FC Porto        *   3 points behind)
+2015/16  SL Benfica           (runners-up: Sporting CP     *   2 points behind)
+2016/17  SL Benfica           (runners-up: FC Porto        *   6 points behind)
+2017/18  FC Porto             (runners-up: SL Benfica      *   7 points behind)
+2018/19  SL Benfica           (runners-up: FC Porto        *   2 points behind)
+2019/20  FC Porto             (runners-up: SL Benfica      *   5 points behind)
+2020/21  Sporting CP          (runners-up: FC Porto        *   5 points behind)
+2021/22  FC Porto             (runners-up: Sporting CP     *   6 points behind)
+2022/23  SL Benfica           (runners-up: FC Porto        *   2 points behind)
+2023/24  Sporting CP          (runners-up: SL Benfica      *  10 points behind)
+2024/25  Sporting CP          (runners-up: SL Benfica      *   2 points behind)
+2025/26  FC Porto             (runners-up: Sporting CP     *   6 points behind)
+-------------------------------------------------------
+Polonia:
+PKO Bank Polski Ekstraklasa:
+1920      abandoned
+1921    Cracovia Kraków
+1922    Pogoń Lwów
+1923    Pogoń Lwów
+1924      not played
+1925    Pogoń Lwów
+1926    Pogoń Lwów
+1927    Wisła Kraków
+1928    Wisła Kraków
+1929    Warta Poznań
+1930    Cracovia Kraków
+1931    Garbarnia Kraków
+1932    Cracovia Kraków
+1933    Ruch Chorzów
+1934    Ruch Chorzów
+1935    Ruch Chorzów
+1936    Ruch Chorzów
+1937    Cracovia Kraków
+1938    Ruch Chorzów
+1939      not finished (due to war)
+1940-45   not played (there were war-time city leagues)
+1946    Polonia Warszawa
+1947    Warta Poznań
+1948    Cracovia Kraków
+1949    Wisła Kraków
+1950    Wisła Kraków
+1951    Ruch Chorzów       [1]
+1952    Ruch Chorzów
+1953    Ruch Chorzów
+1954    Polonia Bytom
+1955    Legia Warszawa
+1956    Legia Warszawa
+1957    Górnik Zabrze
+1958    ŁKS Łódź
+1959    Górnik Zabrze
+1960    Ruch Chorzów
+1961    Górnik Zabrze
+1962    Polonia Bytom
+1962/63 Górnik Zabrze
+1963/64 Górnik Zabrze
+1964/65 Górnik Zabrze
+1965/66 Górnik Zabrze
+1966/67 Górnik Zabrze
+1967/68 Ruch Chorzów
+1968/69 Legia Warszawa
+1969/70 Legia Warszawa
+1970/71 Górnik Zabrze
+1971/72 Górnik Zabrze
+1972/73 Stal Mielec
+1973/74 Ruch Chorzów
+1974/75 Ruch Chorzów
+1975/76 Stal Mielec
+1976/77 Śląsk Wrocław
+1977/78 Wisła Kraków
+1978/79 Ruch Chorzów
+1979/80 Szombierki Bytom
+1980/81 Widzew Łódź
+1981/82 Widzew Łódź
+1982/83 Lech Poznań
+1983/84 Lech Poznań
+1984/85 Górnik Zabrze
+1985/86 Górnik Zabrze
+1986/87 Górnik Zabrze
+1987/88 Górnik Zabrze
+1988/89 Ruch Chorzów
+1989/90 Lech Poznań
+1990/91 Zagłębie Lubin
+1991/92 Lech Poznań
+1992/93 Lech Poznań        [2]
+1993/94 Legia Warszawa
+1994/95 Legia Warszawa
+1995/96 Widzew Łódź
+1996/97 Widzew Łódź
+1997/98 ŁKS-Ptak Łódź      
+1998/99 Wisła Kraków
+1999/00 Polonia Warszawa
+2000/01 Wisła Kraków
+2001/02 Legia Warszawa
+2002/03 Wisła Kraków
+2003/04 Wisła Kraków
+2004/05 Wisła Kraków
+2005/06 Legia Warszawa
+2006/07 Zagłębie Lubin
+2007/08 Wisła Kraków
+2008/09 Wisła Kraków
+2009/10 Lech Poznań
+2010/11 Wisła Kraków
+2011/12 Śląsk Wrocław 
+2012/13 Legia Warszawa
+2013/14 Legia Warszawa
+2014/15 Lech Poznań
+2015/16 Legia Warszawa
+2016/17 Legia Warszawa
+2017/18 Legia Warszawa
+2018/19 Piast Gliwice 
+2019/20 Legia Warszawa
+2020/21 Legia Warszawa
+2021/22 Lech Poznań
+2022/23 Raków Częstochowa  
+2023/24 Jagiellonia Białystok   
+2024/25 Lech Poznań
+2025/26 Lech Poznań
+-------------------------------------------------------
+Noruega:
+Eliteserien:
+1937/38 Fredrikstad FK 
+1938/39 Fredrikstad FK 
+1940-47   [no competition]
+1947/48 Freidig FK (Trondheim)
+1948/49 Fredrikstad FK 
+1949/50 Fram IF (Larvik)
+1950/51 Fredrikstad FK 
+1951/52 Fredrikstad FK 
+1952/53 Larvik Turn IF 
+1953/54 Fredrikstad FK 
+1954/55 Larvik Turn IF
+1955/56 Larvik Turn IF
+1956/57 Fredrikstad FK  
+1957/58 Viking FK (Stavanger)
+1958/59 Lillestrøm SK
+1959/60 Fredrikstad FK  
+1960/61 Fredrikstad FK 
+1961/62 SK Brann (Bergen)
+1963    SK Brann (Bergen)
+1964    SOFK Lyn (Oslo)
+1965    Vålerengens IF (Oslo)
+1966    FK Skeid (Oslo)
+1967    Rosenborg BK (Trondheim)
+1968    SOFK Lyn (Oslo)
+1969    Rosenborg BK (Trondheim)
+1970    Strømsgodset IF (Drammen)
+1971    Rosenborg BK (Trondheim)
+1972    Viking FK (Stavanger)
+1973    Viking FK (Stavanger)
+1974    Viking FK (Stavanger)
+1975    Viking FK (Stavanger)
+1976    Lillestrøm SK
+1977    Lillestrøm SK
+1978    IK Start (Kristiansand)
+1979    Viking FK (Stavanger)
+1980    IK Start (Kristiansand)
+1981    Vålerengens IF (Oslo) 
+1982    Viking FK (Stavanger)
+1983    Vålerengens IF (Oslo)  
+1984    Vålerengens IF (Oslo) 
+1985    Rosenborg BK (Trondheim)
+1986    Lillestrøm SK
+1987    Moss FK
+1988    Rosenborg BK (Trondheim)
+1989    Lillestrøm SK
+1990    Rosenborg BK (Trondheim)
+1991    Viking FK (Stavanger)
+1992    Rosenborg BK (Trondheim)
+1993    Rosenborg BK (Trondheim)
+1994    Rosenborg BK (Trondheim)
+1995    Rosenborg BK (Trondheim)
+1996    Rosenborg BK (Trondheim)
+1997    Rosenborg BK (Trondheim)
+1998    Rosenborg BK (Trondheim)
+1999    Rosenborg BK (Trondheim) 
+2000    Rosenborg BK (Trondheim)   
+2001    Rosenborg BK (Trondheim)   
+2002    Rosenborg BK (Trondheim)   
+2003    Rosenborg BK (Trondheim)   
+2004    Rosenborg BK (Trondheim)   
+2005    Vålerenga IF (Oslo) 
+2006    Rosenborg BK (Trondheim) 
+2007    SK Brann (Bergen) 
+2008    Stabæk Fotball     
+2009    Rosenborg BK (Trondheim) 
+2010    Rosenborg BK (Trondheim) 
+2011    Molde FK
+2012    Molde FK
+2013    Strømsgodset IF (Drammen)
+2014    Molde FK
+2015    Rosenborg BK (Trondheim) 
+2016    Rosenborg BK (Trondheim) 
+2017    Rosenborg BK (Trondheim) 
+2018    Rosenborg BK (Trondheim)
+2019    Molde FK
+2020    FK Bodø/Glimt
+2021    FK Bodø/Glimt
+2022    Molde FK
+2023    FK Bodø/Glimt
+2024    FK Bodø/Glimt
+2025    Viking FK (Stavanger):
+-------------------------------------------------------
+Itália:
+Serie A:
+1929/30  Ambrosiana-Inter
+1930/31  Juventus FC
+1931/32  Juventus FC
+1932/33  Juventus FC
+1933/34  Juventus FC
+1934/35  Juventus FC
+1935/36  Bologna
+1936/37  Bologna
+1937/38  Ambrosiana-Inter
+1938/39  Bologna
+1939/40  Ambrosiana-Inter
+1940/41  Bologna
+1941/42  AS Roma
+1942/43  Torino
+1943/44     different local leagues because of the war
+1944/45     different local leagues because of the war, e.g. in Sicily
+1945/46  Torino
+1946/47  Torino
+1947/48  Torino
+1948/49  Torino
+1949/50  Juventus FC
+1950/51  Milan AC
+1951/52  Juventus FC
+1952/53  FC Internazionale
+1953/54  FC Internazionale
+1954/55  Milan AC
+1955/56  AC Fiorentina
+1956/57  Milan AC
+1957/58  Juventus FC
+1958/59  Milan AC
+1959/60  Juventus FC
+1960/61  Juventus FC
+1961/62  Milan AC
+1962/63  FC Internazionale
+1963/64  Bologna
+1964/65  FC Internazionale
+1965/66  FC Internazionale
+1966/67  Juventus FC
+1967/68  Milan AC
+1968/69  AC Fiorentina
+1969/70  Cagliari
+1970/71  FC Internazionale
+1971/72  Juventus FC
+1972/73  Juventus FC
+1973/74  SS Lazio
+1974/75  Juventus FC
+1975/76  Torino
+1976/77  Juventus FC
+1977/78  Juventus FC
+1978/79  Milan AC
+1979/80  FC Internazionale
+1980/81  Juventus FC
+1981/82  Juventus FC
+1982/83  AS Roma
+1983/84  Juventus FC
+1984/85  Hellas Verona
+1985/86  Juventus FC
+1986/87  SSC Napoli
+1987/88  Milan AC
+1988/89  FC Internazionale
+1989/90  SSC Napoli
+1990/91  Sampdoria UC
+1991/92  Milan AC
+1992/93  Milan AC
+1993/94  Milan AC
+1994/95  Juventus FC
+1995/96  Milan AC
+1996/97  Juventus FC
+1997/98  Juventus FC
+1998/99  Milan AC
+1999/00  SS Lazio
+2000/01  AS Roma
+2001/02  Juventus FC
+2002/03  Juventus FC
+2003/04  Milan AC
+2004/05    not awarded     [Juventus had title revoked]
+2005/06  FC Internazionale [Juventus had title revoked]
+2006/07  FC Internazionale
+2007/08  FC Internazionale
+2008/09  FC Internazionale
+2009/10  FC Internazionale
+2010/11  Milan AC
+2011/12  Juventus FC
+2012/13  Juventus FC
+2013/14  Juventus FC
+2014/15  Juventus FC
+2015/16  Juventus FC
+2016/17  Juventus FC
+2017/18  Juventus FC
+2018/19  Juventus FC
+2019/20  Juventus FC
+2020/21  FC Internazionale
+2021/22  Milan AC
+2022/23  SSC Napoli
+2023/24  FC Internazionale
+2024/25  SSC Napoli
+2025/26  FC Internazionale
+
+Serie BKT:
+1929/30  Casale
+1930/31  Fiorentina
+1931/32  Palermo
+1932/33  Livorno
+1933/34  Sampierdarenese
+1934/35  Genoa        [Genoa won championship playoff against Bari]
+1935/36  Lucchese
+1936/37  Livorno
+1937/38  Novara
+1938/39  Fiorentina
+1939/40  Atalanta
+1940/41  Sampiedarenese
+1941/42  Bari
+1942/43  Modena
+1943/44  -
+1944/45  -
+1945/46  -
+1946/47  Pro Patria (Group A), Lucchese (Group B), Salernitana (Group C)
+1947/48  Novara (Group A), Padova (Group B), Palermo (Group C)
+1948/49  Como
+1949/50  Napoli
+1950/51  Spal
+1951/52  Roma
+1952/53  Genoa
+1953/54  Catania
+1954/55  Lanerossi Vicenza
+1955/56  Udinese
+1956/57  Verona
+1957/58  Triestina
+1958/59  Atalanta
+1959/60  Torino
+1960/61  Venezia
+1961/62  Genoa
+1962/63  Messina
+1963/64  Varese
+1964/65  Brescia
+1965/66  Venezia
+1966/67  Sampdoria
+1967/68  Palermo
+1968/69  Lazio
+1969/70  Varese
+1970/71  Mantova
+1971/72  Ternana
+1972/73  Genoa
+1973/74  Varese
+1974/75  Perugia
+1975/76  Genoa
+1976/77  Lanerossi Vicenza
+1977/78  Ascoli
+1978/79  Udinese
+1979/80  Como
+1980/81  Milan
+1981/82  Verona
+1982/83  Milan
+1983/84  Atalanta
+1984/85  Pisa
+1985/86  Ascoli
+1986/87  Pescara
+1987/88  Bologna
+1988/89  Genoa
+1989/90  Torino
+1990/91  Foggia
+1991/92  Brescia
+1992/93  Reggiana
+1993/94  Fiorentina
+1994/95  Piacenza
+1995/96  Bologna
+1996/97  Brescia
+1997/98  Salernitana
+1998/99  Verona
+1999/00  Vicenza
+2000/01  Torino
+2001/02  Como
+2002/03  Siena
+2003/04  Palermo 
+2004/05  Empoli       [Genoa had title revoked] 
+2005/06  Atalanta
+2006/07  Juventus
+2007/08  Chievo Verona
+2008/09  Bari
+2009/10  Lecce
+2010/11  Atalanta
+2011/12  Pescara
+2012/13  Sassuolo
+2013/14  Palermo
+2014/15  Carpi
+2015/16  Cagliari
+2016/17  Spal
+2017/18  Empoli
+2018/19  Brescia
+2019/20  Benevento
+2020/21  Empoli
+2021/22  Lecce
+2022/23  Frosinone
+2023/24  Parma
+2024/25  Sassuolo
+2025/26  Venezia
+-------------------------------------------------------
+Irlanda:
+SSE Airtricity Men's Premier Division:
+1921/22 St. James' Gate
+1922/23 Shamrock Rovers
+1923/24 Bohemians
+1924/25 Shamrock Rovers
+1925/26 Shelbourne
+1926/27 Shamrock Rovers
+1927/28 Bohemians
+1928/29 Shelbourne
+1929/30 Bohemians
+1930/31 Shelbourne
+1931/32 Shamrock Rovers
+1932/33 Dundalk
+1933/34 Bohemians
+1934/35 Dolphin
+1935/36 Bohemians
+1936/37 Sligo Rovers
+1937/38 Shamrock Rovers
+1938/39 Shamrock Rovers
+1939/40 St. James' Gate
+1940/41 Cork United
+1941/42 Cork United
+1942/43 Cork United
+1943/44 Shelbourne
+1944/45 Cork United
+1945/46 Cork United
+1946/47 Shelbourne
+1947/48 Drumcondra
+1948/49 Drumcondra
+1949/50 Cork Athletic
+1950/51 Cork Athletic
+1951/52 St. Patrick's Athletic
+1952/53 Shelbourne
+1953/54 Shamrock Rovers
+1954/55 St. Patrick's Athletic
+1955/56 St. Patrick's Athletic
+1956/57 Shamrock Rovers
+1957/58 Drumcondra
+1958/59 Shamrock Rovers
+1959/60 Limerick 
+1960/61 Drumcondra
+1961/62 Shelbourne 
+1962/63 Dundalk
+1963/64 Shamrock Rovers
+1964/65 Drumcondra
+1965/66 Waterford
+1966/67 Dundalk
+1967/68 Waterford
+1968/69 Waterford
+1969/70 Waterford
+1970/71 Cork Hibernians
+1971/72 Waterford
+1972/73 Waterford
+1973/74 Cork Celtic
+1974/75 Bohemians
+1975/76 Dundalk
+1976/77 Sligo Rovers
+1977/78 Bohemians
+1978/79 Dundalk
+1979/80 Limerick United
+1980/81 Athlone Town
+1981/82 Dundalk
+1982/83 Athlone Town
+1983/84 Shamrock Rovers
+1984/85 Shamrock Rovers
+1985/86 Shamrock Rovers
+1986/87 Shamrock Rovers
+1987/88 Dundalk
+1988/89 Derry City
+1989/90 St. Patrick's Athletic
+1990/91 Dundalk
+1991/92 Shelbourne
+1992/93 Cork City
+1993/94 Shamrock Rovers
+1994/95 Dundalk
+1995/96 St. Patrick's Athletic
+1996/97 Derry City
+1997/98 St. Patrick's Athletic
+1998/99 St. Patrick's Athletic
+1999/00 Shelbourne
+2000/01 Bohemians
+2001/02 Shelbourne
+2002/03 Bohemians
+2003    Shelbourne
+2004    Shelbourne  
+2005    Cork City
+2006    Shelbourne  
+2007    Drogheda United
+2008    Bohemians 
+2009    Bohemians 
+2010    Shamrock Rovers
+2011    Shamrock Rovers
+2012    Sligo Rovers
+2013    St. Patrick's Athletic
+2014    Dundalk
+2015    Dundalk
+2016    Dundalk
+2017    Cork City
+2018    Dundalk
+2019    Dundalk
+2020    Shamrock Rovers
+2021    Shamrock Rovers
+2022    Shamrock Rovers  
+2023    Shamrock Rovers 
+2024    Shelbourne  
+2025    Shamrock Rovers 
+-------------------------------------------------------
+Inglaterra:
+Premier League:
+1889  *Preston NE
+1890  -Preston NE
+1891  *Everton
+1892  *Sunderland
+1893   Sunderland
+1894   Aston Villa
+1895   Sunderland
+1896   Aston Villa
+1897   Aston Villa
+1898 *-Sheffield United
+1899   Aston Villa
+1900   Aston Villa
+1901  *Liverpool
+1902   Sunderland
+1903  *The Wednesday
+1904   The Wednesday
+1905  *Newcastle United
+1906   Liverpool
+1907   Newcastle United
+1908  *Manchester United
+1909   Newcastle United
+1910   Aston Villa
+1911   Manchester United
+1912  *Blackburn Rovers
+1913   Sunderland
+1914   Blackburn Rovers
+1915   Everton
+1920 *-West Bromwich Albion
+1921  *Burnley
+1922   Liverpool
+1923   Liverpool
+1924  *Huddersfield Town
+1925   Huddersfield Town
+1926  -Huddersfield Town
+1927  -Newcastle United
+1928   Everton
+1929   The Wednesday
+1930  -Sheffield Wednesday
+1931  *Arsenal
+1932   Everton
+1933   Arsenal
+1934   Arsenal
+1935   Arsenal
+1936  -Sunderland
+1937  *Manchester City
+1938   Arsenal
+1939   Everton
+1947   Liverpool
+1948   Arsenal
+1949  *Portsmouth
+1950  -Portsmouth
+1951  *Tottenham Hostpur
+1952   Manchester United
+1953   Arsenal
+1954  *Wolverhampton Wanderers
+1955  *Chelsea
+1956   Manchester United
+1957   Manchester United
+1958   Wolverhampton Wanderers
+1959  -Wolverhampton Wanderers
+1960  -Burnley
+1961  -Tottenham Hotspur
+1962 *-Ipswich Town
+1963   Everton
+1964   Liverpool
+1965   Manchester United
+1966   Liverpool
+1967   Manchester United
+1968   Manchester City
+1969  *Leeds United
+1970   Everton
+1971   Arsenal
+1972  *Derby County
+1973   Liverpool
+1974   Leeds United
+1975  -Derby County
+1976   Liverpool
+1977   Liverpool
+1978 *-Nottingham Forest
+1979   Liverpool
+1980   Liverpool
+1981  -Aston Villa
+1982   Liverpool
+1983   Liverpool
+1984   Liverpool
+1985   Everton
+1986   Liverpool
+1987  -Everton
+1988   Liverpool
+1989   Arsenal
+1990   Liverpool
+1991   Arsenal
+1992  -Leeds United
+1993   Manchester United
+1994   Manchester United
+1995  -Blackburn Rovers
+1996   Manchester United
+1997   Manchester United
+1998   Arsenal
+1999   Manchester United
+2000   Manchester United
+2001   Manchester United
+2002   Arsenal
+2003   Manchester United 
+2004   Arsenal
+2005   Chelsea
+2006   Chelsea
+2007   Manchester United 
+2008   Manchester United  
+2009   Manchester United  
+2010   Chelsea
+2011   Manchester United  
+2012   Manchester City
+2013  -Manchester United  
+2014   Manchester City
+2015   Chelsea
+2016 *-Leicester City
+2017  -Chelsea
+2018   Manchester City
+2019   Manchester City
+2020   Liverpool
+2021   Manchester City
+2022   Manchester City
+2023   Manchester City 
+2024  -Manchester City 
+2025  -Liverpool
+2026  -Arsenal
+* indicates club's first title
+- indicates club's last title
+
+EFL Championship:
+1893   Small Heath (now Birmingham City)
+1894   Liverpool
+1895   Bury
+1896   Liverpool
+1897   Notts County
+1898   Burnley
+1899   Manchester City
+1900   The Wednesday (now Sheffield Wednesday)
+1901   Grimsby Town
+1902   West Bromwich Albion
+1903   Manchester City
+1904   Preston North End
+1905   Liverpool
+1906   Bristol City
+1907   Nottingham Forest
+1908   Bradford City
+1909   Bolton Wanderers
+1910   Manchester City
+1911   West Bromwich Albion
+1912   Derby County
+1913   Preston North End
+1914   Notts County
+1915   Derby County
+1920   Tottenham Hotspur
+1921   Birmingham (now Birmingham City)
+1922   Nottingham Forest
+1923   Notts County
+1924   Leeds United
+1925   Leicester City
+1926   The Wednesday (now Sheffield Wednesday)
+1927   Middlesbrough
+1928   Manchester City
+1929   Middlesbrough
+1930   Blackpool
+1931   Everton
+1932   Wolverhampton Wanderers
+1933   Stoke City
+1934   Grimsby Town
+1935   Brentford
+1936   Manchester United
+1937   Leicester City
+1938   Aston Villa
+1939   Blackburn Rovers
+1947   Manchester City
+1948   Birmingham City
+1949   Fulham
+1950   Tottenham Hotspur
+1951   Preston North End
+1952   Sheffield Wednesday
+1953   Sheffield United
+1954   Leicester City
+1955   Birmingham City
+1956   Sheffield Wednesday
+1957   Leicester City
+1958   West Ham United
+1959   Sheffield Wednesday
+1960   Aston Villa
+1961   Ipswich Town
+1962   Liverpool
+1963   Stoke City
+1964   Leeds United
+1965   Newcastle United
+1966   Manchester City
+1967   Coventry City
+1968   Ipswich Town
+1969   Derby County
+1970   Huddersfield Town
+1971   Leicester City
+1972   Norwich City
+1973   Burnley
+1974   Middlesbrough
+1975   Manchester United
+1976   Sunderland
+1977   Wolverhampton Wanderers
+1978   Bolton Wanderers
+1979   Crystal Palace
+1980   Leicester City
+1981   West Ham United
+1982   Luton Town
+1983   Queen's Park Rangers
+1984   Chelsea
+1985   Oxford United
+1986   Norwich City
+1987   Derby County
+1988   Millwall
+1989   Chelsea
+1990   Leeds United
+1991   Oldham Athletic
+1992   Ipswich Town
+1993   Newcastle United
+1994   Crystal Palace
+1995   Middlesbrough
+1996   Sunderland
+1997   Bolton Wanderers
+1998   Nottingham Forest
+1999   Sunderland
+2000   Charlton Athletic
+2001   Fulham
+2002   Manchester City
+2003   Portsmouth
+2004   Norwich City
+2005   Sunderland
+2006   Reading
+2007   Sunderland
+2008   West Bromwich Albion
+2009   Wolverhampton Wanderers
+2010   Newcastle United
+2011   Queen's Park Rangers
+2012   Reading
+2013   Cardiff City
+2014   Leicester City
+2015   Bournemouth
+2016   Burnley
+2017   Newcastle United
+2018   Wolverhampton Wanderers
+2019   Norwich City
+2020   Leeds United
+2021   Norwich City
+2022   Fulham
+2023   Burnley
+2024   Leicester City
+2025   Leeds United
+2026   Coventry City
+
+EFL League One:
+1921–22 | North Winner: Stockport County #1 | North Runner-up: Darlington | South Winner: Southampton #1 | South Runner-up: Plymouth Argyle
+1922–23 | North Winner: Nelson #1 | North Runner-up: Bradford Park Avenue | South Winner: Bristol City #1 | South Runner-up: Plymouth Argyle
+1923–24 | North Winner: Wolverhampton Wanderers #1 | North Runner-up: Rochdale | South Winner: Portsmouth #1 | South Runner-up: Plymouth Argyle
+1924–25 | North Winner: Darlington #1 | North Runner-up: Nelson | South Winner: Swansea City #1 | South Runner-up: Plymouth Argyle
+1925–26 | North Winner: Grimsby Town #1 | North Runner-up: Bradford Park Avenue | South Winner: Reading #1 | South Runner-up: Plymouth Argyle
+1926–27 | North Winner: Stoke City #1 | North Runner-up: Rochdale | South Winner: Bristol City #2 | South Runner-up: Plymouth Argyle
+1927–28 | North Winner: Bradford Park Avenue #1 | North Runner-up: Lincoln City | South Winner: Millwall #1 | South Runner-up: Northampton Town
+1928–29 | North Winner: Bradford City #1 | North Runner-up: Stockport County | South Winner: Charlton Athletic #1 | South Runner-up: Crystal Palace
+1929–30 | North Winner: Port Vale #1 | North Runner-up: Stockport County | South Winner: Plymouth Argyle #1 | South Runner-up: Brentford
+1930–31 | North Winner: Chesterfield #1 | North Runner-up: Lincoln City | South Winner: Notts County #1 | South Runner-up: Crystal Palace
+1931–32 | North Winner: Lincoln City #1 | North Runner-up: Gateshead | South Winner: Fulham #1 | South Runner-up: Reading
+1932–33 | North Winner: Hull City #1 | North Runner-up: Wrexham | South Winner: Brentford #1 | South Runner-up: Exeter City
+1933–34 | North Winner: Barnsley #1 | North Runner-up: Chesterfield | South Winner: Norwich City #1 | South Runner-up: Coventry City
+1934–35 | North Winner: Doncaster Rovers #1 | North Runner-up: Halifax Town | South Winner: Charlton Athletic #2 | South Runner-up: Reading
+1935–36 | North Winner: Chesterfield #2 | North Runner-up: Chester City | South Winner: Coventry City #1 | South Runner-up: Luton Town
+1936–37 | North Winner: Stockport County #2 | North Runner-up: Lincoln City | South Winner: Luton Town #1 | South Runner-up: Notts County
+1937–38 | North Winner: Tranmere Rovers #1 | North Runner-up: Doncaster Rovers | South Winner: Millwall #2 | South Runner-up: Bristol City
+1938–39 | North Winner: Barnsley #2 | North Runner-up: Doncaster Rovers | South Winner: Newport County #1 | South Runner-up: Crystal Palace
+1939–40 a 1945–46 | Liga suspensa devido à Segunda Guerra Mundial
+1946–47 | North Winner: Doncaster Rovers #2 | North Runner-up: Rotherham United | South Winner: Cardiff City #1 | South Runner-up: Queens Park Rangers
+1947–48 | North Winner: Lincoln City #2 | North Runner-up: Rotherham United | South Winner: Queens Park Rangers #1 | South Runner-up: Bournemouth & Boscombe Athletic
+1948–49 | North Winner: Hull City #2 | North Runner-up: Rotherham United | South Winner: Swansea City #2 | South Runner-up: Reading
+1949–50 | North Winner: Doncaster Rovers #3 | North Runner-up: Gateshead | South Winner: Notts County #2 | South Runner-up: Northampton Town
+1950–51 | North Winner: Rotherham United #1 | North Runner-up: Mansfield Town | South Winner: Nottingham Forest #1 | South Runner-up: Norwich City
+1951–52 | North Winner: Lincoln City #3 | North Runner-up: Grimsby Town | South Winner: Plymouth Argyle #2 | South Runner-up: Reading
+{Observação: nesse período, os campeões das divisões regionais conquistavam a promoção. Os vices listados eram os segundos colocados e não eram promovidos automaticamente.}
+1958–59 | Champion: Plymouth Argyle #3 | Runner-up: Hull City | Also promoted: — | Playoff Winner: —
+1959–60 | Champion: Southampton #2 | Runner-up: Norwich City | Also promoted: — | Playoff Winner: —
+1960–61 | Champion: Bury #1 | Runner-up: Walsall | Also promoted: — | Playoff Winner: —
+1961–62 | Champion: Portsmouth #2 | Runner-up: Grimsby Town | Also promoted: — | Playoff Winner: —
+1962–63 | Champion: Northampton Town #1 | Runner-up: Swindon Town | Also promoted: — | Playoff Winner: —
+1963–64 | Champion: Coventry City #2 | Runner-up: Crystal Palace | Also promoted: — | Playoff Winner: —
+1964–65 | Champion: Carlisle United #1 | Runner-up: Bristol City | Also promoted: — | Playoff Winner: —
+1965–66 | Champion: Hull City #3 | Runner-up: Millwall | Also promoted: — | Playoff Winner: —
+1966–67 | Champion: Queens Park Rangers #2 | Runner-up: Middlesbrough | Also promoted: — | Playoff Winner: —
+1967–68 | Champion: Oxford United #1 | Runner-up: Bury | Also promoted: — | Playoff Winner: —
+1968–69 | Champion: Watford #1 | Runner-up: Swindon Town | Also promoted: — | Playoff Winner: —
+1969–70 | Champion: Leyton Orient #2 | Runner-up: Luton Town | Also promoted: — | Playoff Winner: —
+1970–71 | Champion: Preston North End #1 | Runner-up: Fulham | Also promoted: — | Playoff Winner: —
+1971–72 | Champion: Aston Villa #1 | Runner-up: Brighton and Hove Albion | Also promoted: — | Playoff Winner: —
+1972–73 | Champion: Bolton Wanderers #1 | Runner-up: Notts County | Also promoted: — | Playoff Winner: —
+1973–74 | Champion: Oldham Athletic #2 | Runner-up: Bristol Rovers | Also promoted: York City | Playoff Winner: —
+1974–75 | Champion: Blackburn Rovers #1 | Runner-up: Plymouth Argyle | Also promoted: Charlton Athletic | Playoff Winner: —
+1975–76 | Champion: Hereford United #1 | Runner-up: Cardiff City | Also promoted: Millwall | Playoff Winner: —
+1976–77 | Champion: Mansfield Town #1 | Runner-up: Brighton and Hove Albion | Also promoted: Crystal Palace | Playoff Winner: —
+1977–78 | Champion: Wrexham #1 | Runner-up: Cambridge United | Also promoted: Preston North End | Playoff Winner: —
+1978–79 | Champion: Shrewsbury Town #1 | Runner-up: Watford | Also promoted: Swansea City | Playoff Winner: —
+1979–80 | Champion: Grimsby Town #3 | Runner-up: Blackburn Rovers | Also promoted: Sheffield Wednesday | Playoff Winner: —
+1980–81 | Champion: Rotherham United #2 | Runner-up: Barnsley | Also promoted: Charlton Athletic | Playoff Winner: —
+1981–82 | Champion: Burnley #1 | Runner-up: Carlisle United | Also promoted: Fulham | Playoff Winner: —
+1982–83 | Champion: Portsmouth #3 | Runner-up: Cardiff City | Also promoted: Huddersfield Town | Playoff Winner: —
+1983–84 | Champion: Oxford United #2 | Runner-up: Wimbledon | Also promoted: Sheffield United | Playoff Winner: —
+1984–85 | Champion: Bradford City #2 | Runner-up: Millwall | Also promoted: Hull City | Playoff Winner: —
+1985–86 | Champion: Reading #2 | Runner-up: Plymouth Argyle | Also promoted: Derby County | Playoff Winner: —
+1986–87 | Champion: AFC Bournemouth #1 | Runner-up: Middlesbrough | Also promoted: — | Playoff Winner: Swindon Town
+1987–88 | Champion: Sunderland #1 | Runner-up: Brighton and Hove Albion | Also promoted: — | Playoff Winner: Walsall
+1988–89 | Champion: Wolverhampton Wanderers #2 | Runner-up: Sheffield United | Also promoted: — | Playoff Winner: Port Vale
+1989–90 | Champion: Bristol Rovers #2 | Runner-up: Bristol City | Also promoted: — | Playoff Winner: Notts County
+1990–91 | Champion: Cambridge United #1 | Runner-up: Southend United | Also promoted: Grimsby Town | Playoff Winner: Tranmere Rovers
+1991–92 | Champion: Brentford #2 | Runner-up: Birmingham City | Also promoted: — | Playoff Winner: Peterborough United
+{Nesta fase, a competição passou a ter uma classificação nacional. A coluna Also promoted identifica os outros promovidos automaticamente quando aplicável.}
+1992–93 | Champion: Stoke City #2 | Runner-up: Bolton Wanderers | Playoff Winner: West Bromwich Albion
+1993–94 | Champion: Reading #3 | Runner-up: Port Vale | Playoff Winner: Burnley
+1994–95 | Champion: Birmingham City #1 | Runner-up: Brentford (not promoted) | Playoff Winner: Huddersfield Town
+1995–96 | Champion: Swindon Town #1 | Runner-up: Oxford United | Playoff Winner: Bradford City
+1996–97 | Champion: Bury #2 | Runner-up: Stockport County | Playoff Winner: Crewe Alexandra
+1997–98 | Champion: Watford #2 | Runner-up: Bristol City | Playoff Winner: Grimsby Town
+1998–99 | Champion: Fulham #2 | Runner-up: Walsall | Playoff Winner: Manchester City
+1999–2000 | Champion: Preston North End #2 | Runner-up: Burnley | Playoff Winner: Gillingham
+2000–01 | Champion: Millwall #3 | Runner-up: Rotherham United | Playoff Winner: Walsall
+2001–02 | Champion: Brighton & Hove Albion #2 | Runner-up: Reading | Playoff Winner: Stoke City
+2002–03 | Champion: Wigan Athletic #1 | Runner-up: Crewe Alexandra | Playoff Winner: Cardiff City
+2003–04 | Champion: Plymouth Argyle #4 | Runner-up: Queens Park Rangers | Playoff Winner: Brighton & Hove Albion
+2004–05 | Champion: Luton Town #2 | Runner-up: Hull City | Playoff Winner: Sheffield Wednesday
+2005–06 | Champion: Southend United #1 | Runner-up: Colchester United | Playoff Winner: Barnsley
+2006–07 | Champion: Scunthorpe United #2 | Runner-up: Bristol City | Playoff Winner: Blackpool
+2007–08 | Champion: Swansea City #3 | Runner-up: Nottingham Forest | Playoff Winner: Doncaster Rovers
+2008–09 | Champion: Leicester City #1 | Runner-up: Peterborough United | Playoff Winner: Scunthorpe United
+2009–10 | Champion: Norwich City #2 | Runner-up: Leeds United | Playoff Winner: Millwall
+2010–11 | Champion: Brighton & Hove Albion #3 | Runner-up: Southampton | Playoff Winner: Peterborough United
+2011–12 | Champion: Charlton Athletic #3 | Runner-up: Sheffield Wednesday | Playoff Winner: Huddersfield Town
+2012–13 | Champion: Doncaster Rovers #4 | Runner-up: Bournemouth | Playoff Winner: Yeovil Town
+2013–14 | Champion: Wolverhampton Wanderers #3 | Runner-up: Brentford | Playoff Winner: Rotherham United
+2014–15 | Champion: Bristol City #4 | Runner-up: Milton Keynes Dons | Playoff Winner: Preston North End
+2015–16 | Champion: Wigan Athletic #2 | Runner-up: Burton Albion | Playoff Winner: Barnsley
+2016–17 | Champion: Sheffield United #1 | Runner-up: Bolton Wanderers | Playoff Winner: Millwall
+2017–18 | Champion: Wigan Athletic #3 | Runner-up: Blackburn Rovers | Playoff Winner: Rotherham United
+2018–19 | Champion: Luton Town #3 | Runner-up: Barnsley | Playoff Winner: Charlton Athletic
+2019–20 | Champion: Coventry City #3 | Runner-up: Rotherham United | Playoff Winner: Wycombe Wanderers
+2020–21 | Champion: Hull City #4 | Runner-up: Peterborough United | Playoff Winner: Blackpool
+2021–22 | Champion: Wigan Athletic #4 | Runner-up: Rotherham United | Playoff Winner: Sunderland
+2022–23 | Champion: Plymouth Argyle #5 | Runner-up: Ipswich Town | Playoff Winner: Sheffield Wednesday
+2023–24 | Champion: Portsmouth #4 | Runner-up: Derby County | Playoff Winner: Oxford United
+2024–25 | Champion: Birmingham City #2 | Runner-up: Wrexham | Playoff Winner: Charlton Athletic
+2025–26 | Champion: Lincoln City #4 | Runner-up: Cardiff City | Playoff Winner: Bolton Wanderers
+1952–53 | North Winner: Oldham Athletic #1 | North Runner-up: Port Vale | South Winner: Bristol Rovers #1 | South Runner-up: Millwall
+1953–54 | North Winner: Port Vale #2 | North Runner-up: Barnsley | South Winner: Ipswich Town #1 | South Runner-up: Brighton & Hove Albion
+1954–55 | North Winner: Barnsley #3 | North Runner-up: Accrington Stanley | South Winner: Bristol City #3 | South Runner-up: Leyton Orient
+1955–56 | North Winner: Grimsby Town #2 | North Runner-up: Derby County | South Winner: Leyton Orient #1 | South Runner-up: Brighton & Hove Albion
+1956–57 | North Winner: Derby County #1 | North Runner-up: Hartlepool United | South Winner: Ipswich Town #2 | South Runner-up: Torquay United
+1957–58 | North Winner: Scunthorpe United #1 | North Runner-up: Accrington Stanley | South Winner: Brighton & Hove Albion #1 | South Runner-up: Brentford
+
+EFL League Two:
+2025–26 | Champion: Bromley #1 | Runner-up: Milton Keynes Dons | Also promoted: Cambridge United | Play-off winner: Notts County
+2024–25 | Champion: Doncaster Rovers #4 | Runner-up: Port Vale | Also promoted: Bradford City | Play-off winner: AFC Wimbledon
+2023–24 | Champion: Stockport County #2 | Runner-up: Wrexham | Also promoted: Mansfield Town | Play-off winner: Crawley Town
+2022–23 | Champion: Leyton Orient #1 | Runner-up: Stevenage | Also promoted: Northampton Town | Play-off winner: Carlisle United
+2021–22 | Champion: Forest Green Rovers #1 | Runner-up: Exeter City | Also promoted: Bristol Rovers | Play-off winner: Port Vale
+2020–21 | Champion: Cheltenham Town #1 | Runner-up: Cambridge United | Also promoted: Bolton Wanderers | Play-off winner: Morecambe
+2019–20 | Champion: Swindon Town #3 | Runner-up: Crewe Alexandra | Also promoted: Plymouth Argyle | Play-off winner: Northampton Town
+2018–19 | Champion: Lincoln City #2 | Runner-up: Bury | Also promoted: Milton Keynes Dons | Play-off winner: Tranmere Rovers
+2017–18 | Champion: Accrington Stanley #1 | Runner-up: Luton Town | Also promoted: Wycombe Wanderers | Play-off winner: Coventry City
+2016–17 | Champion: Portsmouth #1 | Runner-up: Plymouth Argyle | Also promoted: Doncaster Rovers | Play-off winner: Blackpool
+2015–16 | Champion: Northampton Town #2 | Runner-up: Oxford United | Also promoted: Bristol Rovers | Play-off winner: AFC Wimbledon
+2014–15 | Champion: Burton Albion #1 | Runner-up: Shrewsbury Town | Also promoted: Bury | Play-off winner: Southend United
+2013–14 | Champion: Chesterfield #4 | Runner-up: Scunthorpe United | Also promoted: Rochdale | Play-off winner: Fleetwood Town
+2012–13 | Champion: Gillingham #2 | Runner-up: Rotherham United | Also promoted: Port Vale | Play-off winner: Bradford City
+2011–12 | Champion: Swindon Town #2 | Runner-up: Shrewsbury Town | Also promoted: Crawley Town | Play-off winner: Crewe Alexandra
+2010–11 | Champion: Chesterfield #3 | Runner-up: Bury | Also promoted: Wycombe Wanderers | Play-off winner: Stevenage
+2009–10 | Champion: Notts County #3 | Runner-up: Bournemouth | Also promoted: Rochdale | Play-off winner: Dagenham & Redbridge
+2008–09 | Champion: Brentford #3 | Runner-up: Exeter City | Also promoted: Wycombe Wanderers | Play-off winner: Gillingham
+2007–08 | Champion: Milton Keynes Dons #1 | Runner-up: Peterborough United | Also promoted: Hereford United | Play-off winner: Stockport County
+2006–07 | Champion: Walsall #2 | Runner-up: Hartlepool United | Also promoted: Swindon Town | Play-off winner: Bristol Rovers
+2005–06 | Champion: Carlisle United #2 | Runner-up: Northampton Town | Also promoted: Leyton Orient | Play-off winner: Cheltenham Town
+2004–05 | Champion: Yeovil Town #1 | Runner-up: Scunthorpe United | Also promoted: Swansea City | Play-off winner: Southend United
+2003–04 | Champion: Doncaster Rovers #3 | Runner-up: Hull City | Also promoted: Torquay United | Play-off winner: Huddersfield Town
+2002–03 | Champion: Rushden & Diamonds #1 | Runner-up: Hartlepool United | Also promoted: Wrexham | Play-off winner: AFC Bournemouth
+2001–02 | Champion: Plymouth Argyle #1 | Runner-up: Luton Town | Also promoted: Mansfield Town | Play-off winner: Cheltenham Town
+2000–01 | Champion: Brighton & Hove Albion #2 | Runner-up: Cardiff City | Also promoted: Chesterfield | Play-off winner: Blackpool
+1999–2000 | Champion: Swansea City #1 | Runner-up: Rotherham United | Also promoted: Northampton Town | Play-off winner: Peterborough United
+1998–99 | Champion: Brentford #2 | Runner-up: Cambridge United | Also promoted: Cardiff City | Play-off winner: Scunthorpe United
+1997–98 | Champion: Notts County #2 | Runner-up: Macclesfield Town | Also promoted: Lincoln City | Play-off winner: Colchester United
+1996–97 | Champion: Wigan Athletic #1 | Runner-up: Fulham | Also promoted: Carlisle United | Play-off winner: Northampton Town
+1995–96 | Champion: Preston North End #1 | Runner-up: Gillingham | Also promoted: Bury | Play-off winner: Plymouth Argyle
+1994–95 | Champion: Carlisle United #1 | Runner-up: Walsall | Also promoted: — | Play-off winner: Chesterfield
+1993–94 | Champion: Shrewsbury Town #1 | Runner-up: Chester City | Also promoted: Crewe Alexandra | Play-off winner: Wycombe Wanderers
+1992–93 | Champion: Cardiff City #1 | Runner-up: Wrexham | Also promoted: Barnet | Play-off winner: York City
+1991–92 | Champion: Burnley #1 | Runner-up: Rotherham United | Also promoted: Mansfield Town | Play-off winner: Blackpool
+1990–91 | Champion: Darlington #1 | Runner-up: Stockport County | Also promoted: Hartlepool United, Peterborough United | Play-off winner: Torquay United
+1989–90 | Champion: Exeter City #1 | Runner-up: Grimsby Town | Also promoted: Southend United | Play-off winner: Cambridge United
+1988–89 | Champion: Rotherham United #1 | Runner-up: Tranmere Rovers | Also promoted: Crewe Alexandra | Play-off winner: Leyton Orient
+1987–88 | Champion: Wolverhampton Wanderers #1 | Runner-up: Cardiff City | Also promoted: Bolton Wanderers | Play-off winner: Swansea City
+1986–87 | Champion: Northampton Town #1 | Runner-up: Preston North End | Also promoted: Southend United | Play-off winner: Aldershot
+1985–86 | Champion: Swindon Town #1 | Runner-up: Chester City | Also promoted: Mansfield Town, Port Vale | Play-off winner: —
+1984–85 | Champion: Chesterfield #2 | Runner-up: Blackpool | Also promoted: Darlington, Bury | Play-off winner: —
+1983–84 | Champion: York City #1 | Runner-up: Doncaster Rovers | Also promoted: Reading, Bristol City | Play-off winner: —
+1982–83 | Champion: Wimbledon #1 | Runner-up: Hull City | Also promoted: Port Vale, Scunthorpe United | Play-off winner: —
+1981–82 | Champion: Sheffield United #1 | Runner-up: Bradford City | Also promoted: Wigan Athletic, AFC Bournemouth | Play-off winner: —
+1980–81 | Champion: Southend United #1 | Runner-up: Lincoln City | Also promoted: Doncaster Rovers, Wimbledon | Play-off winner: —
+1979–80 | Champion: Huddersfield Town #1 | Runner-up: Walsall | Also promoted: Newport County, Portsmouth | Play-off winner: —
+1978–79 | Champion: Reading #1 | Runner-up: Grimsby Town | Also promoted: Wimbledon, Barnsley | Play-off winner: —
+1977–78 | Champion: Watford #1 | Runner-up: Southend United | Also promoted: Swansea City, Brentford | Play-off winner: —
+1976–77 | Champion: Cambridge United #1 | Runner-up: Exeter City | Also promoted: Colchester United, Bradford City | Play-off winner: —
+1975–76 | Champion: Lincoln City #1 | Runner-up: Northampton Town | Also promoted: Reading, Tranmere Rovers | Play-off winner: —
+1974–75 | Champion: Mansfield Town #1 | Runner-up: Shrewsbury Town | Also promoted: Rotherham United, Chester City | Play-off winner: —
+1973–74 | Champion: Peterborough United #2 | Runner-up: Gillingham | Also promoted: Colchester United, Bury | Play-off winner: —
+1972–73 | Champion: Southport #1 | Runner-up: Hereford United | Also promoted: Cambridge United, Aldershot | Play-off winner: —
+1971–72 | Champion: Grimsby Town #1 | Runner-up: Southend United | Also promoted: Brentford, Scunthorpe United | Play-off winner: —
+1970–71 | Champion: Notts County #1 | Runner-up: Bournemouth & Boscombe Athletic | Also promoted: Oldham Athletic, York City | Play-off winner: —
+1969–70 | Champion: Chesterfield #1 | Runner-up: Wrexham | Also promoted: Swansea City, Port Vale | Play-off winner: —
+1968–69 | Champion: Doncaster Rovers #2 | Runner-up: Halifax Town | Also promoted: Rochdale, Bradford City | Play-off winner: —
+1967–68 | Champion: Luton Town #1 | Runner-up: Barnsley | Also promoted: Hartlepools United, Crewe Alexandra | Play-off winner: —
+1966–67 | Champion: Stockport County #1 | Runner-up: Southport | Also promoted: Barrow, Tranmere Rovers | Play-off winner: —
+1965–66 | Champion: Doncaster Rovers #1 | Runner-up: Darlington | Also promoted: Torquay United, Colchester United | Play-off winner: —
+1964–65 | Champion: Brighton & Hove Albion #1 | Runner-up: Millwall | Also promoted: York City, Oxford United | Play-off winner: —
+1963–64 | Champion: Gillingham #1 | Runner-up: Carlisle United | Also promoted: Workington, Exeter City | Play-off winner: —
+1962–63 | Champion: Brentford #1 | Runner-up: Oldham Athletic | Also promoted: Crewe Alexandra, Mansfield Town | Play-off winner: —
+1961–62 | Champion: Millwall #1 | Runner-up: Colchester United | Also promoted: Wrexham, Carlisle United | Play-off winner: —
+1960–61 | Champion: Peterborough United #1 | Runner-up: Crystal Palace | Also promoted: Northampton Town, Bradford | Play-off winner: —
+1959–60 | Champion: Walsall #1 | Runner-up: Notts County | Also promoted: Torquay United, Watford | Play-off winner: —
+1958–59 | Champion: Port Vale #1 | Runner-up: Coventry City | Also promoted: York City, Shrewsbury Town | Play-off winner: —
+-------------------------------------------------------
+França:
+League 1:
+1932/33 # Olympique Lillois                      18  14   0   4   41-23  28  
+1933/34 D Football Club de Sète                  26  14   6   6   69-52  34
+1934/35   Football Club de Sochaux-Montbéliard   30  22   4   4   94-36  48
+1935/36 D Racing Club de Paris                   30  20   4   6   81-45  44
+1936/37   Olympique de Marseille                 30  17   4   9   69-39  38
+1937/38   Football Club de Sochaux-Montbéliard   30  18   8   4   69-26  44
+1938/39   Football Club de Sète                  30  19   4   7   65-36  42
+1939/40 * Football Club Rouen (North), Girondins A.S.P. (South)
+1940/41   Red Star Olympique Audonien (North), Olympique de Marseille (South)
+1941/42   Stade de Reims (North), Football Club de Sète (South)
+1942/43   Racing Club de Lens (North), Toulouse Football Club (South)
+1943/44   Lens-Artois (Federal teams Championship partly unfinished)
+1944/45** Football Club de Rouen 
+
+1944-45   Rouen (North), Lyon (South); Final: Rouen 4-0 Lyon (June 17, 1945)
+1945/46 D Lille Olympique Sporting Club          34  19   7   8   89-44  45  
+1946/47   Club Olympique de Roubaix-Tourcoing    38  24   5   9   71-47  53
+1947/48   Olympique de Marseille                 34  20   8   6   83-43  48
+1948/49   Stade de Reims                         34  22   4   8   90-54  48
+1949/50   Girondins A.S.P. de Bordeaux           34  21   9   4   88-40  51
+1950/51   Olympique Gymnaste Club de Nice        34  18   5  11   73-46  41
+1951/52 D Olympique Gymnaste Club de Nice        34  21   4   9   65-42  46
+1952/53   Stade de Reims                         34  22   4   8   86-36  48
+1953/54   Lille Olympique Sporting Club          34  17  13   4   49-22  47  
+1954/55   Stade de Reims                         34  19   6   9   78-53  44
+1955/56   Olympique Gymnaste Club de Nice        34  18   7   9   60-43  43
+1956/57   Association Sportive de Saint-Étienne  34  20   9   5   88-45  49
+1957/58 D Stade de Reims                         34  22   4   8   89-42  48
+1958/59   Olympique Gymnaste Club de Nice        38  24   8   6   80-38  56
+1959/60   Stade de Reims                         38  26   8   4  109-46  60
+1960/61   Association Sportive de Monaco         38  26   5   7   77-42  57
+1961/62   Stade de Reims                         38  21   6  11   83-60  48
+1962/63 D Association Sportive de Monaco         38  20  10   8   77-44  50
+1963/64   Association Sportive de Saint-Étienne  34  18   8   8   71-47  44
+1964/65   Football Club de Nantes                34  16  11   7   66-45  43
+1965/66   Football Club de Nantes                38  26   8   4   84-36  60
+1966/67   Association Sportive de Saint-Étienne  38  24   6   8   82-37  54
+1967/68 T Association Sportive de Saint-Étienne  38  24   9   5   78-30  57
+1968/69   Association Sportive de Saint-Étienne  34  24   5   5   70-26  53
+1969/70 T Association Sportive de Saint-Étienne  34  25   6   3   88-30  56
+1970/71   Olympique de Marseille                 38  23   9   6   94-48  55
+1971/72 T Olympique de Marseille                 38  24   8   6   78-37  56
+1972/73   Football Club de Nantes                38  23   9   6   67-31  55
+1973/74 D Association Sportive de Saint-Étienne  38  23   9   6   74-40  66 (11 bonus points) 
+1974/75 D Association Sportive de Saint-Étienne  38  23   6   9   70-30  58  (6 bonus points)
+1975/76   Association Sportive de Saint-Étienne  38  18  15   5   68-39  57  (6 bonus points)
+1976/77   Football Club de Nantes                38  25   8   5   80-40  58
+1977/78   Association Sportive de Monaco         38  22   9   7   79-46  53
+1978/79   Racing Club de Strasbourg              38  22  12   4   68-28  56
+1979/80   Football Club de Nantes                38  26   5   7   76-30  57
+1980/81   Association Sportive de Saint-Étienne  38  23  11   4   68-26  57
+1981/82   Association Sportive de Monaco         38  24   7   7   70-29  55
+1982/83   Football Club de Nantes                38  24  10   4   77-29  58
+1983/84   Girondins de Bordeaux F.C.             38  23   8   7   72-33  54
+1984/85   Girondins de Bordeaux F.C.             38  25   9   4   70-27  59
+1985/86   Paris Saint-Germain Football Club      38  23  10   5   66-33  56
+1986/87 T Girondins de Bordeaux F.C.             38  20  13   5   57-27  53
+1987/88   Association Sportive de Monaco         38  20  12   6   53-29  52
+1988/89 D Olympique de Marseille                 38  20  13   5   56-35  73
+1989/90   Olympique de Marseille                 38  22   9   7   75-34  53
+1990/91   Olympique de Marseille                 38  22  11   5   67-28  55
+1991/92   Olympique de Marseille                 38  23  12   3   67-21  58
+1992/93     title not awarded (see below)
+1993/94   Paris Saint-Germain Football Club      38  24  11   3   54-22  59
+1994/95   Football Club de Nantes                38  21  16   1   71-34  79
+1995/96 D Association de la Jeunesse Auxerroise  38  22   6  10   66-30  72
+1996/97   Association Sportive de Monaco         38  23  10   5   69-30  79
+1997/98   Racing Club de Lens                    34  21   5   8   55-30  58
+1998/99   Girondins de Bordeaux F.C.             34  22   6   6   66-29  72
+1999/00   Association Sportive de Monaco         34  20   5   9   69-38  65 
+2000/01   Football Club de Nantes                34  21   5   8   58-36  68
+2001/02   Olympique de Lyon                      34  20   6   8   62-32  66
+2002/03   Olympique de Lyon                      38  19  11   8   63-41  68
+2003/04   Olympique de Lyon                      38  24   7   7   64-26  79 
+2004/05   Olympique de Lyon                      38  22  13   3   56-22  79    
+2005/06   Olympique de Lyon                      38  25   9   4   73-31  84
+2006/07   Olympique de Lyon                      38  24   9   5   64-27  81
+2007/08 D Olympique de Lyon                      38  24   7   7   74-37  79
+2008/09   Girondins de Bordeaux F.C.             38  24   8   6   64-34  80
+2009/10   Olympique de Marseille                 38  23   9   6   69-36  78 
+2010/11 D Lille Olympique Sporting Club          38  21  13   4   68-36  76
+2011/12   Montpellier H.S.C.                     38  25   7   6   68-34  82
+2012/13   Paris Saint-Germain Football Club      38  25   8   5   69-23  83
+2013/14   Paris Saint-Germain Football Club      38  27   8   3   84-23  89
+2014/15 Q Paris Saint-Germain Football Club      38  24  11   3   83-36  83
+2015/16 Q Paris Saint-Germain Football Club      38  30   6   2  102-19  96
+2016/17   Association Sportive de Monaco         38  30   5   3  107-31  95
+2017/18 Q Paris Saint-Germain Football Club      38  29   6   3  108-29  93
+2018/19   Paris Saint-Germain Football Club      38  29   4   5  105-35  91
+2019/20 T Paris Saint-Germain Football Club      27  22   2   3   75-24  68
+2020/21   Lille Olympique Sporting Club          38  24  11   3   64-23  83
+2021/22   Paris Saint-Germain Football Club      38  26   8   4   90-36  86 
+2022/23   Paris Saint-Germain Football Club      38  27   4   7   89-40  85
+2023/24 D Paris Saint-Germain Football Club      34  22  10   2   81-33  76
+2024/25 D Paris Saint-Germain Football Club      34  26   6   2   92-35  84
+2025/26   Paris Saint-Germain Football Club      34  24   4   6   74-29  76
+ 
+Ligue 2 BKT:
+1933/34 (Nord)     Red Star Olympique       
+        (Sud)      Olympique Alésien 
+1934/35 CS Metz
+1935/36 Football Club Rouennais
+1936/37 Racing Club Lensois
+1937/38 Le Havre Athletic Club
+1939-45   not disputed
+1945/46 (Nord)     Association Sportive Lorraine  
+        (Sud)      Stade Olympique Montpelliérain 
+1946/47 Football Club Sochaux-Montbéliard
+1947/48 Olympique Gymnaste Club de Nice
+1948/49 Racing Club Lensois 
+1949/50 Nīmes Olympique
+1950/51 Olympique Lyonnais
+1951/52 Stade Franēais
+1952/53 Toulouse Football Club
+1953/54 Olympique Lyonnais
+1954/55 Union Athlétique Sedan-Torcy
+1955/56 Stade Rennais Université Club
+1956/57 Olympique Alésien
+1957/58 Stade Universitaire Lorrain
+1958/59 Le Havre Athletic Club
+1959/60 Football Club de Grenoble
+1960/61 Stade Olympique Montpelliérain
+1961/62 Football Club de Grenoble
+1962/63 Association Sportive de Saint-Étienne Loire
+1963/64 Lille Olympique Sporting Club 
+1964/65 Olympique Gymnaste Club de Nice
+1965/66 Stade de Reims
+1966/67 Gazélec Football Club Ajaccio 
+1967/68 Sporting Étoile Club Bastia
+1968/69 Angers Sporting Club de l'Ouest
+1969/70 Olympique Gymnaste Club de Nice
+1970/71 (Centre)   Paris Saint-Germain Football Club 
+        (Sud)      Association Sportive de Monaco Football
+        (Nord)     Lille Olympique Sporting Club 
+1971/72 (Groupe A) Racing Club Paris-Sedan  
+        (Groupe B) Union Sportive Valenciennes-Anzin 
+        (Groupe C) Racing Pierrots Strasbourg-Meinau  
+1972/73 (Groupe A) Racing Club de Lens  
+        (Groupe B) Troyes Aube Football 
+1973/74 (Groupe A) Lille Olympique Sporting Club
+        (Groupe B) Red Star Football Club 
+1974/75 (Groupe A) Union Sportive Valenciennes-Anzin
+        (Groupe B) Association Sportive Nancy Lorraine
+1975/76 (Groupe A) Stade Rennais Football Club
+        (Groupe B) Angers Sporting Club de l'Ouest
+1976/77 (Groupe A) Association Sportive de Monaco Football
+        (Groupe B) Racing Club de Strasbourg 
+1977/78 (Groupe A) Angers Sporting Club de l'Ouest
+        (Groupe B) Lille Olympique Sporting Club 
+1978/79 (Groupe A) Football Club de Gueugnon
+        (Groupe B) Stade Brestois
+1979/80 (Groupe A) Football Club Tours
+        (Groupe B) Association de la Jeunesse Auxerroise 
+1980/81 (Groupe A) Montpellier Paillade Sport Club
+        (Groupe B) Stade Brestois
+1981/82 (Groupe A) Toulouse Football Club
+        (Groupe B) Football Club Rouen
+1982/83 (Groupe A) Stade Rennais Football Club
+        (Groupe B) Sporting Club de Toulon
+1983/84 (Groupe A) Olympique de Marseille
+        (Groupe B) Football Club Tours
+1984/85 (Groupe A) Le Havre Athletic Club 
+        (Groupe B) Olympique Gymnaste Club de Nice
+1985/86 (Groupe A) Association Sportive de Saint-Étienne Loire
+        (Groupe B) Racing Club de Paris
+1986/87 (Groupe A) Chamois Niortais Football Club
+        (Groupe B) Montpellier Paillade Sport Club
+1987/88 (Groupe A) Football Club Sochaux-Montbéliard
+        (Groupe B) Racing Club de Strasbourg
+1988/89 (Groupe A) Football Club de Mulhouse 1893
+        (Groupe B) Olympique Lyonnais
+1989/90 (Groupe A) Association Sportive Nancy Lorraine
+        (Groupe B) Stade Rennais Football Club 
+1990/91 (Groupe A) Nīmes Olympique
+        (Groupe B) Le Havre Athletic Club
+1991/92 (Groupe A) Union Sportive Valenciennes-Anzin Arrondissement
+        (Groupe B) Football Club des Girondins de Bordeaux
+1992/93 (Groupe A) Football Club de Martigues
+        (Groupe B) Angers Sporting club de l'Ouest
+1993/94 Olympique Gymnaste Club de Nice
+1994/95 Olympique de Marseille
+1995/96 Stade Malherbe Caen Calvados Basse-Normandie
+1996/97 La Berrichonne de Chāteauroux
+1997/98 Association Sportive Nancy Lorraine
+1998/99 Association Sportive de Saint-Étienne de Loire
+1999/00 LOSC Lille Métropole
+2000/01 Football Club Sochaux-Montbéliard
+2001/02 AC Ajaccio
+2002/03 Toulouse Football Club
+2003/04 Association Sportive de Saint-Étienne de Loire
+2004/05 Association Sportive Nancy Lorraine
+2005/06 Valenciennes Football Club
+2006/07 Football Club de Metz
+2007/08 Le Havre Athletic Club
+2008/09 Racing Club de Lens
+2009/10 Stade Malherbe Caen Calvados Basse-Normandie
+2010/11 Évian Thonon Gaillard Football Club
+2011/12 Sporting Club de Bastia
+2012/13 Association Sportive de Monaco Football Club 
+2013/14 Football Club de Metz
+2014/15 Espérance Sportive Troyes Aube Champagne
+2015/16 Association Sportive Nancy Lorraine
+2016/17 Racing Club de Strasbourg Alsace
+2017/18 Stade de Reims
+2018/19 Football Club de Metz
+2019/20 Football Club Lorient  
+2020/21 Espérance Sportive Troyes Aube Champagne
+2021/22 Toulouse Football Club
+2022/23 Le Havre Athletic Club
+2023/24 Association de la Jeunesse Auxerroise
+2024/25 Football Club Lorient  
+2025/26 Espérance Sportive Troyes Aube Champagne
+-------------------------------------------------------
+México:
+Liga MX Clausura e Liga MX Apertura:
+1943-44  Asturias (1)       España             4-1                                  Ernest Pauler(Aut)
+1944-45  España             Puebla                                                  Rodolfo Muñoz "Bush"(CR)
+1945-46  Veracruz           Atlante                                                 Enrique Palomini(Arg)
+1946-47  Atlante            León                                                    Luis Grocz(Hun)
+1947-48  León (1)           Oro                0-0 (aet in México City, 2-0 Replay) Jose Maria Casullo(Arg)
+1948-49  León               Atlas                                                   Jose Maria Casullo(Arg)
+1949-50  Veracruz           Atlante                                                 Juan Luque de Serrallonga(Esp)
+1950-51  Atlas              Atlante                                                 Eduardo Valdatti(Arg)
+1951-52  León               Guadalajara                                             Antonio Lopez Herranz(Esp)
+1952-53  Tampico            Zacatepec                                               Joaquín "Chavo" Urquiaga
+1953-54  Marte              Oro                                                     Ignacio Trellez
+1954-55  Zacatepec          Guadalajara                                             Ignacio Trellez
+1955-56  León (1)           Oro                4-2 (In México City)                 Antonio Lopez Herranz(Esp)
+1956-57  Guadalajara        Toluca                                                  Donald Ross(Uru)
+1957-58  Zacatepec          Toluca                                                  Ignacio Trellez
+1958-59  Guadalajara        León                                                    Arpad Fekete(Hun)
+1959-60  Guadalajara        América                                                 Arpad Fekete(Hun)
+1960-61  Guadalajara        Oro                                                     Javier de la Torre
+1961-62  Guadalajara        América                                                 Javier de la Torre
+1962-63  Oro                Guadalajara                                             Arpad Fekete(Hun)
+1963-64  Guadalajara        América                                                 Javier de la Torre
+1964-65  Guadalajara        Oro                                                     Javier de la Torre
+1965-66  América            Atlas                                                   Roberto Scarone(Arg)
+1966-67  Toluca             América                                                 Ignacio Trellez
+1967-68  Toluca             U.N.A.M.                                                Ignacio Trellez
+1968-69  Cruz Azul          Guadalajara                                             Raul Cardenas
+1969-70  Guadalajara        Cruz Azul                                               Javier de la Torre
+México 70  Cruz Azul (2)    Guadalajara                                             Raul Cardenas
+1970-71  América            Toluca             0-0 2-0  2-0 agg                     José Antonio Roca
+1971-72  Cruz Azul          América            4-1                                  Raúl Cárdenas
+1972-73  Cruz Azul          León               1-1 0-0  1-1 agg (2-1 aet in Puebla) Raúl Cárdenas
+1973-74  Cruz Azul          Atlético Español   1-2 3-0  4-2 agg                     Raúl Cárdenas
+1974-75  Toluca             León               Final Group (3)                      Ricardo de León(Uru)
+1975-76  América            U. de Guadalajara  3-0 1-0  4-0 agg                     Raúl Cárdenas
+1976-77  U.N.A.M.           U. de Guadalajara  0-0 1-0  1-0 agg                     Jorge Marik(Hun)
+1977-78  U.A.N.L.           U.N.A.M.           2-0 1-1  3-1 agg                     Carlos Miloc(Uru)
+1978-79  Cruz Azul          U.N.A.M.           0-0 2-0  2-0 agg                     Ignacio Trelles
+1979-80  Cruz Azul          U.A.N.L.           1-0 3-3  4-3 agg                     Ignacio Trelles
+1980-81  U.N.A.M.           Cruz Azul          0-1 4-1  4-2 agg                     Velibor "Bora" Milutinovic(Yug)
+1981-82  U.A.N.L.           Atlante            2-1 0-1  2-2 agg (aet, 3-1 on pks)   Carlos Miloc(Uru)
+1982-83  Puebla             Guadalajara        1-2 1-0  2-2 agg (aet, 7-6 on pks)   Manuel Lapuente
+1983-84  América            Guadalajara        2-2 3-1  5-3 agg                     Carlos Reinoso(Chi)
+1984-85  América            U.N.A.M.           1-1 0-0  1-1 agg (3-1 in Queretaro)  Miguel Ángel López(Arg)
+Prode 85  América (2)       Tampico-Madero     1-4 4-0  5-4 agg (aet)               Miguel Ángel López(Arg)
+México 86 Monterrey (2)     Tampico-Madero     1-2 2-0  3-2 agg (aet)               Francisco Avilán
+1986-87  Guadalajara        Cruz Azul          1-2 3-0  4-2 agg                     Alberto Guerra
+1987-88  América            U.N.A.M.           0-1 4-1  4-2 agg                     Jorge Vieira(Bra)
+1988-89  América            Cruz Azul          3-2 2-2  5-4 agg                     Jorge Vieira(Bra)
+1989-90  Puebla             U. de Guadalajara  2-1 4-3  6-4 agg                     Manuel Lapuente
+1990-91  U.N.A.M.           América            2-3 1-0  3-3 agg (on away goals)     Miguel Mejía Barón
+1991-92  León               Puebla             0-0 2-0  2-0 agg (aet)               Víctor Manuel Vucetich
+1992-93  Atlante            Monterrey          1-0 3-0  4-0 agg                     Ricardo Lavolpe(Arg)
+1993-94  U.A.G.             Santos Laguna      0-1 2-0  2-1 agg (aet)               Víctor Manuel Vucetich
+1994-95  Necaxa             Cruz Azul          1-1 2-0  3-1 agg                     Manuel Lapuente
+1995-96  Necaxa             Atlético Celaya    1-1 0-0  1-1 agg (on away goals)     Manuel Lapuente
+1996-97
+ Winter  Santos Laguna      Necaxa             0-1 4-2  4-3 agg                     Alfredo Tena
+ Summer  Guadalajara        Toros Neza         1-1 6-1  7-2 agg                     Ricardo Ferreti(Bra)
+1997-98
+ Winter  Cruz Azul          León               1-0 1-1* 2-1 agg *(aet golden goal)  Luis Fernando Tena
+ Summer  Toluca             Necaxa             1-2 5-2  6-4 agg                     Enrique Meza
+1998-99
+ Winter  Necaxa             Guadalajara        0-0 2-0  2-0 agg                     Raúl Arias
+ Summer  Toluca             Atlas              3-3 2-2  5-5 agg (aet, 5-4 pen)      Enrique Meza
+1999-00
+ Winter  Pachuca            Cruz Azul          2-2 1-0* 3-2 agg *(aet golden goal)  Javier Aguirre 
+ Summer  Toluca             Santos Laguna      2-0 5-1  7-1 agg                     Enrique Meza
+2000-01
+ Winter  Morelia            Toluca             3-1 0-2  3-3 agg (aet, 5-4 pen)      Luis Fernando Tena 
+ Summer  Santos Laguna      Pachuca            1-2 3-1  4-3 agg                     Fernando Quirarte
+2001-02
+ Winter  Pachuca            Tigres             2-0 1-1  3-1 agg                     Alfredo Tena 
+ Summer  América            Necaxa             0-2 3-0* 3-2 agg *(aet golden goal)  Manuel Lapuente
+2002-03
+ Apert.  Toluca             Morelia            0-1 4-1  4-2 agg                     Alberto Jorge (Arg)
+ Claus.  Monterrey          Morelia            3-1 0-0  3-1 agg                     Daniel Passarella (Arg)
+2003-04
+ Apert.  Pachuca            Tigres             3-1 0-1  3-2 agg                     Víctor Manuel Vucetich
+ Claus.  Pumas              Guadalajara        1-1 0-0  1-1 agg (aet, 5-4 pen)      Hugo Sánchez
+2004-05
+ Apert.  Pumas              Monterrey          2-1 1-0  3-1 agg                     Hugo Sánchez
+ Claus.  América            Tecos UAG          1-1 6-3  7-4 agg                     Mario Carrillo  
+2005-06
+ Apert.  Toluca             Monterrey          3-3 3-0  6-3 agg                     Américo Gallego (Arg)
+ Claus.  Pachuca            San Luis           0-0 1-0  1-0 agg                     José Luis Trejo
+2006-07
+ Apert.  Guadalajara        Toluca             1-1 2-1  3-2 agg                     José Manuel de la Torre
+ Claus.  Pachuca            América            2-1 1-1  3-2 agg                     Enrique Meza
+2007-08
+ Apert.  Atlante            Pumas              0-0 2-1  2-1 agg                     José Guadalupe Cruz 
+ Claus.  Santos Laguna      Cruz Azul          2-1 1-1  3-2 agg                     Daniel Guzmán
+2008-09
+ Apert.  Toluca             Cruz Azul          2-0 0-2  2-2 agg (aet, 7-6 pen)      José Manuel de la Torre
+ Claus.  Pumas              Pachuca            1-0 2-2  3-2 agg (aet)               Ricardo Ferreti (Bra)    
+2009-10
+ Apert.  Monterrey          Cruz Azul          4-3 2-1  6-4 agg                     Víctor Manuel Vucetich
+ Claus.  Toluca             Santos Laguna      2-2 0-0  2-2 agg (aet, 4-3 pen)      José Manuel de la Torre 
+2010-11
+ Apert.  Monterrey          Santos Laguna      2-3 3-0  5-3 agg                     Víctor Manuel Vucetich
+ Claus.  Pumas              Morelia            1-1 2-1  3-2 agg                     Guillermo Vázquez
+2011-12
+ Apert.  Tigres             Santos Laguna      1-0 3-1  4-1 agg                     Ricardo Ferreti
+ Claus.  Santos Laguna      Monterrey          1-1 2-1  3-2 agg                     Benjamín Galindo
+2012-13
+ Apert.  Tijuana            Toluca             2-1 2-0  4-1 agg                     Antonio Mohamed     
+ Claus.  América            Cruz Azul          0-1 2-1  2-2 agg (aet, 4-2 pen)      Miguel Herrera
+2013-14
+ Apert.  León               América            2-0 3-1  5-1 agg                     Gustavo Matosas
+ Claus.  León               Pachuca            2-3 2-0  4-3 agg (aet)               Gustavo Matosas
+2014-15
+ Apert.  América            Tigres             0-1 3-0  3-1 agg                     Antonio Mohamed
+ Claus.  Santos Laguna      Querétaro          5-0 0-3  5-3 agg                     Pedro Caixinha
+2015-16
+ Apert.  Tigres             Pumas              3-0 1-4  4-4 agg (aet, 4-2 pen)      Ricardo Ferreti
+ Claus.  Pachuca            Monterrey          1-0 1-1  2-1 agg                     Diego Alonso
+2016-17
+ Apert.  Tigres             América            1-1 1-1  2-2 agg (aet, 3-0 pen)      Ricardo Ferreti
+ Claus.  Guadalajara        Tigres             2-2 2-1  4-3 agg                     Matías Almeyda
+2017-18
+ Apert.  Tigres             Monterrey          1-1 2-1  3-2 agg                     Ricardo Ferreti
+ Claus.  Santos Laguna      Toluca             2-1 1-1  3-2 agg                     Robert Dante Siboldi (Uru)
+2018-19
+ Apert.  América            Cruz Azul          0-0 2-0  2-0 agg                     Miguel Herrera
+ Claus.  Tigres             León               1-0 0-0  1-0 agg                     Ricardo Ferreti
+2019-20
+ Apert.  Monterrey          América            2-1 1-2  3-3 agg (aet, 4-2 pen)      Antonio Mohamed
+ Claus.    abandoned
+2020-21
+ Apert.  León               Pumas              1-1 2-0  3-1 agg                     Ignacio Ambriz 
+ Claus.  Cruz Azul          Santos Laguna      1-0 1-1  2-1 agg                     Juan Reynoso
+2021-22
+ Apert.  Atlas              León               2-3 1-0  3-3 agg (aet, 4-3 pen)      Diego Martín Cocca
+ Claus.  Atlas              Pachuca            2-0 1-2  3-2 agg                     Diego Martín Cocca
+2022-23
+ Apert.  Pachuca            Toluca             5-1 3-1  8-2 agg                     Guillermo Almada (Uru)
+ Claus.  Tigres             Guadalajara        0-0 3-2  3-2 agg (aet)               Robert Dante Siboldi (Uru)
+2023-24
+ Apert.  América            Tigres             1-1 3-0  4-1 agg (aet)               André Jardine (Bra)
+ Claus.  América            Cruz Azul          1-1 1-0  2-1 agg                     André Jardine (Bra)
+2024-25
+ Apert.  América            Monterrey          2-1 1-1  3-2 agg                     Andre Jardine (Bra)
+ Claus.  Toluca             América            0-0 2-0  2-0 agg                     Antonio Mohamed (Arg)
+2025-26
+ Apert.  Toluca             Tigres             0-1 2-1  2-2 agg (aet, 9-8 pen)      Antonio Mohamed (Arg)
+ Claus.  Cruz Azul          Pumas              0-0 2-1  2-1 agg                     Joel Huiqui 
+-------------------------------------------------------
+Argentina:
+Liga Profesional de Fútbol (Segundo a Propia afa.com.ar {https://www.afa.com.ar/es/pages/campeones-de-primera-division}):
+1931 (Liga Argentina de Football)	Boca Juniors
+1932 (Liga Argentina de Football)	River Plate
+1933 (Liga Argentina de Football)	San Lorenzo de Almagro
+1934 (Liga Argentina de Football)	Boca Juniors
+1935	Boca Juniors
+1936 (Copa de Honor)	San Lorenzo de Almagro
+1936 (Copa Campeonato)	River Plate
+1936 (Copa de Oro)	River Plate
+1937	River Plate
+1938	Independiente
+1939	Independiente
+1940	Boca Juniors
+1941	River Plate
+1942	River Plate
+1943	Boca Juniors
+1944	Boca Juniors
+1945	River Plate
+1946	San Lorenzo de Almagro
+1947	River Plate
+1948	Independiente
+1949	Racing Club
+1950	Racing Club
+1951	Racing Club
+1952	River Plate
+1953	River Plate
+1954	Boca Juniors
+1955	River Plate
+1956	River Plate
+1957	River Plate
+1958	Racing Club
+1959	San Lorenzo de Almagro
+1960	Independiente
+1961	Racing Club
+1962	Boca Juniors
+1963	Independiente
+1964	Boca Juniors
+1965	Boca Juniors
+1966	Racing Club
+1967 (Metropolitano)	Estudiantes de La Plata
+1967 (Nacional)	Independiente
+1968 (Metropolitano)	San Lorenzo de Almagro
+1968 (Nacional)	Vélez Sarsfield
+1969 (Metropolitano)	Chacarita Juniors
+1969 (Nacional)	Boca Juniors
+1970 (Metropolitano)	Independiente
+1970 (Nacional)	Boca Juniors
+1971 (Metropolitano)	Independiente
+1971 (Nacional)	Rosario Central
+1972 (Metropolitano)	San Lorenzo de Almagro
+1972 (Nacional)	San Lorenzo de Almagro
+1973 (Metropolitano)	Huracán
+1973 (Nacional)	Rosario Central
+1974 (Metropolitano)	Newell´s Old Boys
+1974 (Nacional)	San Lorenzo de Almagro
+1975 (Metropolitano)	River Plate
+1975 (Nacional)	River  Plate
+1976 (Metropolitano)	Boca Juniors
+1976 (Nacional)	Boca Juniors
+1977 (Metropolitano)	River Plate
+1977 (Nacional)	Independiente
+1978 (Metropolitano)	Quilmes
+1978 (Nacional)	Independiente
+1979 (Metropolitano)	River Plate
+1979 (Nacional)	River Plate
+1980 (Metropolitano)	River Plate
+1980 (Nacional)	Rosario Central
+1981 (Metropolitano)	Boca Juniors
+1981 (Nacional)	River Plate
+1982 (Metropolitano)	Estudiantes de La Plata
+1982 (Nacional)	Ferro Carril Oeste
+1983 (Metropolitano)	Independiente
+1983 (Nacional)	Estudiantes de La Plata
+1984 (Metropolitano)	Argentinos Juniors
+1984 (Nacional)	Ferro Carril Oeste
+1985 (Nacional)	Argentinos Juniors
+1985/86	River Plate
+1986/87	Rosario Central
+1987/88	Newell´s Old Boys
+1988/89	Independiente
+1989/90	River Plate
+1990/91	Newell´s Old Boys
+1991 (Apertura)	River Plate
+1992 (Clausura)	Newell´s Old Boys
+1992 (Apertura)	Boca Juniors
+1993 (Clausura)	Vélez Sarsfield
+1993 (Apertura)	River Plate
+1994 (Clausura)	Independiente
+1994 (Apertura)	River Plate
+1995 (Clausura)	San Lorenzo de Almagro
+1995 (Apertura)	Vélez Sarsfield
+1996 (Clausura)	Vélez Sarsfield
+1996 (Apertura)	River Plate
+1997 (Clausura)	River Plate
+1997 (Apertura)	River Plate
+1998 (Clausura)	Vélez Sarsfield
+1998 (Apertura)	Boca Juniors
+1999 (Clausura)	Boca Juniors
+1999 (Apertura)	River Plate
+2000 (Clausura)	River Plate
+2000 (Apertura)	Boca Juniors
+2001 (Clausura)	San Lorenzo de Almagro
+2001 (Apertura)	Racing Club
+2002 (Clausura)	River Plate
+2002 (Apertura)	Independiente
+2003 (Clausura)	River Plate
+2003 (Apertura)	Boca Juniors
+2004 (Clausura)	River Plate
+2004 (Apertura)	Newell´s Old Boys
+2005 (Clausura)	Vélez Sarsfield
+2005 (Apertura)	Boca Juniors
+2006 (Clausura)	Boca Juniors
+2006 (Apertura)	Estudiantes de La Plata
+2007 (Clausura)	San Lorenzo de Almagro
+2007 (Apertura)	Lanús
+2008 (Clausura)	River Plate
+2008 (Apertura)	Boca Juniors
+2009 (Clausura)	Vélez Sársfield
+2009 (Apertura)	Bánfield
+2010 (Clausura)	Argentinos Juniors
+2010 (Apertura)	Estudiantes de La Plata
+2011 (Clausura)	Vélez Sársfield
+2011 (Apertura)	Boca Juniors
+2012 (Clausura)	Arsenal F.C.
+2012 (Torneo Inicial)	Vélez Sarsfield
+2013 (Torneo Final)	Newells Old Boys
+2013 (Campeón de Primera División 2012/13)	Vélez Sarsfield
+2013 (Torno Inicial)	San Lorenzo de Almagro
+2014 (Torneo Final)	River Plate
+2014 (Torneo Inicial)	Racing Club
+2015 (Campeonato de Primera División)	Boca Juniors
+2016 (Campeonato de Primera División)	Lanús 
+2017 (Campeón de Primera División 2016/17 )	Boca Juniors
+Superliga 2018	Boca Juniors
+Superliga 2019   	Racing Club
+Superliga 2019/2020 	Boca Juniors
+Torneo Socios de la Liga Profesional 2021	River Plate
+Torneo Binance 2022	Boca Juniors
+Liga Profesional 2023	River Plate
+Torneo Betano 2024	Vélez Sarsfield
+Torneo Betano Apertura 2025	Platense
+Liga Profesional Campeón Tabla Anual 2025 	Rosario Central
+Torneo Betano Clausura 2025 	Estudiantes
+Torneo MercadoLibre Apertura 2026	Belgrano (Córdoba)

@@ -861,7 +861,7 @@ pt: {
   see_match:"Ver detalhes da partida",
   history:"Campeões", history_s:"Todos os campeões da história", hist_search:"Buscar competição ou país", hist_yours:"Suas competições", hist_intl:"Internacionais",
   hist_editions:"edições", hist_since:"desde", hist_last:"Atual campeão", hist_top:"Maior campeão", hist_rank:"Ranking", hist_seasons:"Temporadas",
-  hist_runner:"Vices", hist_last_t:"último em", hist_you:"SUA CARREIRA", hist_your_titles:"Seus títulos", vs_short:"vs",
+  hist_runner:"Vices", hist_runner1:"vice", hist_last_t:"último em", hist_you:"SUA CARREIRA", hist_your_titles:"Seus títulos", vs_short:"vs",
   hist_nth:"título do {club} na história da competição", hist_leader:"{club} é o maior campeão da competição", hist_pos:"{n}º no ranking histórico · líder: {lead} ({t})",
   hist_open:"Ver galeria de campeões", hist_base_note:"Inclui títulos anteriores ao início da lista.", stars_lbl:"estrelas no escudo",
   name_col:"Nome", pos_col:"Pos",
@@ -1173,7 +1173,7 @@ en: {
   see_match:"See match details",
   history:"Champions", history_s:"Every champion in history", hist_search:"Search competition or country", hist_yours:"Your competitions", hist_intl:"International",
   hist_editions:"editions", hist_since:"since", hist_last:"Holder", hist_top:"Most titles", hist_rank:"Ranking", hist_seasons:"Seasons",
-  hist_runner:"Runners-up", hist_last_t:"last in", hist_you:"YOUR CAREER", hist_your_titles:"Your titles", vs_short:"vs",
+  hist_runner:"Runners-up", hist_runner1:"runner-up", hist_last_t:"last in", hist_you:"YOUR CAREER", hist_your_titles:"Your titles", vs_short:"vs",
   hist_nth:"title in {club}'s history in this competition", hist_leader:"{club} hold the record in this competition", hist_pos:"No. {n} all-time · leader: {lead} ({t})",
   hist_open:"See champions gallery", hist_base_note:"Includes titles won before the list starts.", stars_lbl:"stars on the crest",
   name_col:"Name", pos_col:"Pos",
@@ -1504,6 +1504,7 @@ function makeDB(types){ return {
   /* conservative lookup for the bundled history lists (thousands of old club names): exact names, or all
      significant words of one name inside the other ("SL Benfica" ~ "Benfica", "Esporte Clube Bahia" ~ "Bahia") */
   strict(q){
+    const kf = lkey(stripYears(q)); if(kf && this.exact.has(kf)) return this.exact.get(kf);
     q = stripYears(String(q||"").replace(/\s*\([^)]*\)\s*$/,"")); const k = lkey(q); if(!k || !this.list.length) return null;
     const ck = "!"+k; if(this.cache.has(ck)) return this.cache.get(ck);
     let r = this.exact.get(k) || null;
@@ -1511,14 +1512,16 @@ function makeDB(types){ return {
     if(!r && toks.length>1 && BR_UF.has(toks[toks.length-1])) r = this.exact.get(toks.slice(0,-1).join("")) || null;
     if(!r){
       const long = a => a.filter(x=>x.length>2 && !STRICT_FILL.has(x) && !(BR_UF.has(x) && a.length>1));
-      const qt = long(sigToks(q));
+      // "C.F.R. Cluj" -> "cfr cluj" (initials are one word, not three ignorable letters)
+      const joinInit = a => { const o = []; let run = ""; for(const x of a){ if(x.length===1){ run += x; continue; } if(run){ o.push(run); run = ""; } o.push(x); } if(run) o.push(run); return o.map(x => x.length===2 && LOGO_STOP.has(x) ? x : x); };
+      const qt = long(joinInit(lnorm(q).split(" ").filter(Boolean)).filter(x => !LOGO_STOP.has(x)));
       if(qt.length && qt.join("").length >= 4){
         let best = null, bs = 0, tie = false;
         for(const e of this.list) for(const t0 of e.toks){ const ct = long(t0); if(!ct.length) continue; let sc = 0;
           if(qt.every(x => ct.some(c => tokStrict(x,c)))) sc = qt.length/ct.length;
           else if(ct.join("").length >= 5 && ct.every(c => qt.some(x => tokStrict(x,c)))) sc = 0.9*ct.length/qt.length;
-          if(sc > bs){ bs = sc; best = e; tie = false; } else if(sc && sc === bs && best !== e && best.n !== e.n) tie = true; }
-        if(best && !tie && bs >= 0.5) r = best;
+          if(sc > bs){ bs = sc; best = e; tie = false; } }
+        if(best && bs >= 0.5) r = best;   // equal scores: the first entry wins (EA logos come before the extra folders)
       }
     }
     this.cache.set(ck, r); return r;
@@ -2868,21 +2871,26 @@ const HIST_ALIAS = {
   botafogodefuteboleregatas:"Botafogo", clubenauticocapibaribe:"Náutico", gremiofootballportoalegrense:"Grêmio", clubeatleticobragantino:"Bragantino",
   esporteclubevitoria:"Vitória", associacaoportuguesadedesportos:"Portuguesa", associacaoatleticapontepreta:"Ponte Preta",
   westgermany:"Germany", czechoslovakia:"Czech Republic", sovietunion:"Russia",
-  stbernards:"", tigre:"", associacaoatleticainternacional:"", espanoldemadrid:"", velocitasgroningenfeijenoord:""
+  stbernards:"", espanoldemadrid:"", velocitasgroningenfeijenoord:""
 };
 /* stars already drawn on the bundled crest (so the badge only shows the extra ones) */
 const DRAWN_STARS = {"Brazil":5, "Germany":4, "Italy":4, "Argentina":3, "France":2, "Spain":2, "Uruguay":4, "England":1,
   "Olympique de Marseille":1, "AS Saint-Étienne":1, "PSV":2};
 const NAT_COMPS = new Set(["Copa do Mundo", "UEFA Euro"]);
 const CompDB = makeDB(["l","k"]);
-const Hist = {comps:[], byKey:new Map(), byName:new Map(), drawn:new Map(), ready:false, memo:null, tcache:new Map()};
+const Hist = {comps:[], byKey:new Map(), byName:new Map(), drawn:new Map(), ready:false, memo:null, tcache:new Map(), eq:new Map(), nl:new Set()};
+/* the same club stored twice in the logo database -> one identity (one crest, titles add up) */
+const canonE = e => e ? (Hist.eq.get(e.f) || e) : e;
 
 async function loadHistory(){
   try{
     const ri = await fetch("logos/index.json"); if(ri.ok) CompDB.load(await ri.json());
     const r = await fetch("logos/history.json"); if(!r.ok) return; const j = await r.json();
-    Hist.comps = j.c.map(c => { const e = CompDB.resolve(c.n); return {n:c.n, g:c.g||"", r:c.r, b:c.b||{}, e, key: e ? e.f : "h:"+lkey(c.n), nat:NAT_COMPS.has(c.n)}; });
+    Hist.comps = j.c.map(c => { const e = CompDB.resolve(c.n); return {n:c.n, g:c.g||"", r:c.r, b:c.b||{}, em:c.em||0, e, key: e ? e.f : "h:"+lkey(c.n), nat:NAT_COMPS.has(c.n)}; });
     for(const c of Hist.comps){ if(!Hist.byKey.has(c.key)) Hist.byKey.set(c.key, c); Hist.byName.set(lkey(c.n), c); }
+    for(const n of j.nl||[]) Hist.nl.add(lkey(n));
+    const seen = new Map(); for(const e of ClubDB.list){ const k0 = lkey(e.n); if(seen.has(k0)) Hist.eq.set(e.f, seen.get(k0)); else seen.set(k0, e); }
+    for(const g of j.eq||[]){ const es = g.map(n=>ClubDB.strict(n)).filter(Boolean); for(const e of es.slice(1)) if(e.f!==es[0].f) Hist.eq.set(e.f, canonE(es[0])); }
     for(const [n, k] of Object.entries(DRAWN_STARS)){ const e = NatDB.strict(n) || ClubDB.strict(n); if(e) Hist.drawn.set(e.f, k); }
     Hist.ready = true;
   }catch(e){}
@@ -2894,14 +2902,14 @@ function histTeam(name, nat){
   const ck = (nat?"n|":"c|")+name; if(Hist.tcache.has(ck)) return Hist.tcache.get(ck);
   const raw = String(name||"").trim(), base = raw.replace(/\s*\([^)]*\)\s*$/,"") || raw;
   const a = HIST_ALIAS[lkey(base)]; let e = null;
-  if(a !== "") e = nat ? (NatDB.strict(a||base) || ClubDB.strict(a||base)) : ClubDB.strict(a||base);
+  if(a !== "" && !Hist.nl.has(lkey(raw)) && !Hist.nl.has(lkey(base))) e = canonE(nat ? (NatDB.strict(raw) || NatDB.strict(a||base) || ClubDB.strict(raw) || ClubDB.strict(a||base)) : (ClubDB.strict(raw) || ClubDB.strict(a||base)));
   const r = {k: e ? e.f : "h:"+lkey(a||base), e, label: e ? dbLabel(e) : base};
   Hist.tcache.set(ck, r); return r;
 }
 /* names the user typed (clubs in the save): the normal tolerant lookup, limited to clubs / national teams */
 function userTeam(name){
   const ck = "u|"+name; if(Hist.tcache.has(ck)) return Hist.tcache.get(ck);
-  let e = null; try{ e = LogoDB.resolve(name); }catch(x){} if(e && e.t!=="c" && e.t!=="n") e = null;
+  let e = null; try{ e = LogoDB.resolve(name); }catch(x){} if(e && e.t!=="c" && e.t!=="n") e = null; e = canonE(e);
   const r = {k: e ? e.f : "h:"+lkey(name), e, label: name}; Hist.tcache.set(ck, r); return r;
 }
 function histCompOf(name){
@@ -2909,7 +2917,7 @@ function histCompOf(name){
   const byN = Hist.byName.get(lkey(name)); if(byN) return byN;
   const e = CompDB.resolve(name); return e ? (Hist.byKey.get(e.f) || null) : null;
 }
-const rowEndTs = (s, y, nat) => nat ? new Date(y, 5, 1).getTime() : /\d{4}\/\d{2}/.test(s) ? new Date(y, 5, 30).getTime() : new Date(y, 11, 31).getTime();
+const rowEndTs = (s, y, nat, em) => nat ? new Date(y, 5, 1).getTime() : /\d{4}\/\d{2}/.test(s) ? new Date(y, 5, 30).getTime() : new Date(y, (em||12)-1, 28).getTime();
 function careerCut(){
   let m = 0; for(const j of (S && S.ultimas_performances) || []){ const d = dateNum(j.Data); if(d && (!m || d < m)) m = d; } return m || 0;
 }
@@ -2929,7 +2937,7 @@ function careerRows(comp){
 function histTimeline(comp){
   const memo = histMemo(); if(memo.tl.has(comp)) return memo.tl.get(comp);
   const cut = memo.cut, mine = careerRows(comp), mineY = new Set(mine.map(r=>r.y));
-  const rows = comp.r.filter(r => !(cut && rowEndTs(r[0], r[1], comp.nat) > cut) && !mineY.has(r[1])).map(r => { const t0 = histTeam(r[2], comp.nat);
+  const rows = comp.r.filter(r => !(cut && rowEndTs(r[0], r[1], comp.nat, comp.em) > cut) && !mineY.has(r[1])).map(r => { const t0 = histTeam(r[2], comp.nat);
     return {s:r[0], y:r[1], champ:r[2], ru:r[3], sc:r[4], k:t0.k, e:t0.e, label:t0.label}; });
   const tl = [...rows, ...mine].sort((a,b)=> a.y-b.y || String(a.s).localeCompare(String(b.s)));
   memo.tl.set(comp, tl); return tl;
@@ -3056,7 +3064,7 @@ function vHistComp(c){
     <div class="seg" role="group"><button aria-pressed="${tab==="rank"}" data-act="histTab" data-v="rank">${t("hist_rank")}</button><button aria-pressed="${tab==="seasons"}" data-act="histTab" data-v="seasons">${t("hist_seasons")}</button></div>`;
   let body;
   if(tab==="rank"){
-    body = `<div class="ilist hc-rank">${rank.slice(0,80).map((x,i)=>`<div class="item ${mine.has(x.k)?"me":""}"><span class="pos num">${i+1}</span>${histCrest(x,32)}<div class="grow"><div class="t">${esc(x.label)}${x.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">★ ${x.me}</span>`:""}</div><div class="s">${x.v?`${x.v} ${t("hist_runner").toLowerCase()}`:""}${x.last?`${x.v?" · ":""}${t("hist_last_t")} ${x.last}`:""}</div></div><span class="num big-n">${x.t}</span></div>`).join("")}</div>
+    body = `<div class="ilist hc-rank">${rank.slice(0,80).map((x,i)=>`<div class="item ${mine.has(x.k)?"me":""}"><span class="pos num">${i+1}</span>${histCrest(x,32)}<div class="grow"><div class="t">${esc(x.label)}${x.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">★ ${x.me}</span>`:""}</div><div class="s">${x.v?`${x.v} ${x.v===1?t("hist_runner1"):t("hist_runner").toLowerCase()}`:""}${x.last?`${x.v?" · ":""}${t("hist_last_t")} ${x.last}`:""}</div></div><span class="num big-n">${x.t}</span></div>`).join("")}</div>
       ${Object.keys(c.b||{}).length?`<div class="small muted">${t("hist_base_note")}</div>`:""}`;
   } else {
     body = `<div class="ilist hc-seasons">${[...tl].reverse().slice(0,220).map(r=>`<div class="item ${r.me?"me":""}"><span class="ss num">${esc(r.s==="?"?"–":r.s)}</span>${histCrest(r,30)}<div class="grow"><div class="t">${esc(r.label)}${r.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">${t("hist_you")}</span>`:""}</div>${r.ru?`<div class="s">${r.sc?`<b class="num">${esc(r.sc)}</b> `:""}${t("vs_short")} ${esc(histTeam(r.ru, c.nat).label)}</div>`:""}</div></div>`).join("")}</div>`;

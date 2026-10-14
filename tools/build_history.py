@@ -1,7 +1,10 @@
 """Parse the user's hand-made champions lists (leagues + cups TXT) into logos/history.json.
 Output: {"v":1, "c":[{"n": name, "g": country, "r": [[season, endYear, champion, runnerUp, score], ...]}]}
-Usage: python3 tools/build_history.py LIGAS.txt COPAS.txt OUT.json"""
-import re, sys, json, unicodedata
+Usage: python3 tools/build_history.py tools/history_src/ligas.txt tools/history_src/copas.txt tools/history_src/extra.txt ProStats-Mobile/web/www/logos/history.json
+Corrections from the user's reviews live in tools/history_fixes.py."""
+import re, sys, json, unicodedata, difflib, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import history_fixes as FX
 
 SEASON_HEAD = re.compile(r"^(\d{4}(?:\s*[/-]\s*\d{2,4})?|\d{2}/\d{2})(?=[\s:\-]|$)")
 LABEL_YEAR = re.compile(r"^([^\t]*?\b(?:19|20)\d{2}(?:/\d{2,4})?\b[^\t]*?)(?:\t+|\s{2,})(.+)$")
@@ -11,7 +14,7 @@ MONTH_DAY = re.compile(r"^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*
 FMT = {"Schweizer Cup": "venue", "Trophée des Champions": "venue", "Coppa Itália": "win_ab", "Supercopa de España": "win_ab",
        "Campeón de Campeones": "ab_win", "Super Copa Do Brasil": "ab_win", "Supercoppa": "ab_score", "Svenska Cupen": "ab_score",
        "Liga MX Clausura e Liga MX Apertura": "cols"}
-SKIP = re.compile(r"no winners|not held|n/a|w/o|n[aã]o (contestado|disputado|realizad)|cancel|abandon|suspens|no competition|void|não houve|nao houve|interromp", re.I)
+SKIP = re.compile(r"not contested|no winners|not held|n/a|n/p|w/o|unofficial war|n[aã]o (contestad|disputad|realizad)|cancel|abandon|suspens|no competition|void|não houve|nao houve|interromp", re.I)
 FLAG = re.compile(r"[\U0001F1E6-\U0001F1FF]")
 
 COMP_RENAME = {"League 1": "Ligue 1", "Budesliga": "2. Bundesliga", "Liga MX Clausura e Liga MX Apertura": "Liga MX",
@@ -60,6 +63,8 @@ def prep(body):
     body = re.sub(r"^#\s*", "", body)
     body = re.sub(r"\s\(([A-Z]{2,6})\)", "", body)                       # (NAFBL) league tags
     body = re.sub(r"\bann\b", "0-0", body)
+    body = re.sub(r"\babd\b\s*", "", body)
+    body = re.sub(r"(\d+-\d+)p\b", r"[\1 pen]", body)
     body = re.sub(r"\((\d+-\d+)\s*Pen\)", r"[\1 pen]", body, flags=re.I)
     body = re.sub(r"\(\s*(\d+-\d+)\s*,\s*(\d+-\d+)\s*\)", r"  \1 \2  ", body)
     body = re.sub(r"\(\s*(\d+-\d+)\s*(?:\(\s*(?:Pen\s*)?(\d+-\d+)\s*\))?\s*\)", lambda m: f"  {m[1]}  " + (f"[{m[2]} pen]  " if m[2] else ""), body)  # Copa Argentina
@@ -70,9 +75,19 @@ def winner_of(a, b, w):
     if k(w) and (k(w) in k(b) or k(b) in k(w)) and not (k(w) in k(a) and len(k(a)) >= len(k(b))): return b, a
     return a, b
 
+def strip_date_venue(body):
+    """'25/09/68 Buenos Aires Estudiantes   1-0 ...': the venue column is 13 characters wide"""
+    body = body.expandtabs(8)
+    m = re.match(r"^\d{1,2}/\s?\d{1,2}/\d{2}\s", body)
+    if m:
+        rest = body[m.end():]
+        if len(rest) > 14 and rest[12] == " " and rest[13] != " ": return rest[13:]
+        if len(rest) > 14 and rest[12] == " ": return rest[13:].lstrip()
+    return DATE_VENUE.sub("", body)
+
 def parse_match(body):
     """returns (teamA, goalsA, goalsB, teamB) or None; supports '0-0 2-1' two-leg lines (sum)"""
-    body = DATE_VENUE.sub("", body.strip())
+    body = strip_date_venue(body.strip())
     ms = list(SCORE.finditer(body))
     if not ms: return None
     first = ms[0]; a = clean_team(body[:first.start()])
@@ -82,11 +97,60 @@ def parse_match(body):
     while i < len(ms) and re.fullmatch(r"\s*", body[last.end():ms[i].start()]):
         ga += int(ms[i][1]); gb += int(ms[i][2]); last = ms[i]; i += 1
     rest = body[last.end():]
-    rest = re.split(r"\t+|\s{2,}|\[|\(|\bagg\b|\baet\b|\bAET\b", rest.strip())[0]
+    note = rest
+    rest = re.split(r"\t+|\s{2,}|\[|\(\s*(?=\d|in\b|as\b|on\b|at\b|after\b|aet|pen)|\bagg\b|\baet\b|\bAET\b", rest.strip())[0]
     b = clean_team(rest)
     if not looks_team(b): return None
-    pm = re.search(r"(\d{1,2})\s?-\s?(\d{1,2})\s*(?:pen|p\b)", body[last.end():], re.I)
-    return a, ga, gb, b, (int(pm[1]), int(pm[2])) if pm else None
+    pm = re.search(r"(\d{1,2})\s?-\s?(\d{1,2})\s*(?:pen|p\b)", note, re.I)
+    return a, ga, gb, b, (int(pm[1]), int(pm[2])) if pm else None, note
+
+ABBR = [(r"^Indep\.\s*", "Independiente "), (r"^Ind\.\s*", "Independiente "), (r"\bAtl\.\s*", "Atlético "), (r"^Bor\.\s*", "Borussia "), (r"^Est\.\s*", "Estudiantes ")]
+def expand(n):
+    for a, b in ABBR: n = re.sub(a, b, n)
+    return n
+def tkey(n):
+    n = re.sub(r"\s*\(.*?\)", "", FX.rename(expand(n), None))
+    return re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFD", n.lower()).encode("ascii", "ignore").decode())
+def note_winner(note, a, b):
+    m = re.search(r"([A-Z][\w .'’-]+?)\s+won\b", note or "")
+    if not m: return None
+    w = tkey(m[1])
+    if w and (w in tkey(a) or tkey(a) in w): return a, b
+    if w and (w in tkey(b) or tkey(b) in w): return b, a
+    return None
+def decide(ms):
+    """champion of a season from its match lines: score, then penalties, then an explicit note,
+       two legs: points, then aggregate; a third match (play-off / replay) decides on its own"""
+    keys = {}
+    for m in ms:
+        for t in (m[0], m[3]):
+            k = tkey(t)
+            j = next((x for x in keys if x == k or difflib.SequenceMatcher(None, x, k).ratio() > 0.84 or (min(len(x), len(k)) >= 5 and (x in k or k in x))), None)
+            keys.setdefault(j or k, t)
+    def same(t, k): k2 = tkey(t); return k2 == k or difflib.SequenceMatcher(None, k2, k).ratio() > 0.84 or (min(len(k2), len(k)) >= 5 and (k2 in k or k in k2))
+    def single(m):
+        a, ga, gb, b, pn, note = m
+        if ga != gb: return (a, b) if ga > gb else (b, a)
+        if pn and pn[0] != pn[1]: return (a, b) if pn[0] > pn[1] else (b, a)
+        return note_winner(note, a, b) or (a, b)
+    if len(ms) == 1 or len(keys) != 2: return single(ms[0])
+    if len(ms) >= 3: return single(ms[-1])
+    (k1, t1), (k2, t2) = list(keys.items())
+    pts = {k1: 0, k2: 0}; gl = {k1: 0, k2: 0}
+    for a, ga, gb, b, pn, note in ms:
+        ka = k1 if same(a, k1) else k2; kb = k2 if ka == k1 else k1
+        gl[ka] += ga; gl[kb] += gb
+        if ga > gb: pts[ka] += 2
+        elif gb > ga: pts[kb] += 2
+        else: pts[ka] += 1; pts[kb] += 1
+    if pts[k1] != pts[k2]: return (t1, t2) if pts[k1] > pts[k2] else (t2, t1)
+    if gl[k1] != gl[k2]: return (t1, t2) if gl[k1] > gl[k2] else (t2, t1)
+    for m in reversed(ms):
+        a, ga, gb, b, pn, note = m
+        if pn and pn[0] != pn[1]: return (a, b) if pn[0] > pn[1] else (b, a)
+        w = note_winner(note, a, b)
+        if w: return w
+    return ms[0][0], ms[0][3]
 
 def ab_to_match(body):
     """'A - B   venue   2-1' -> 'A  2-1  B'"""
@@ -98,8 +162,13 @@ def ab_to_match(body):
     tail = m[2][sc.end():]
     return f"{a}  {sc[1]}-{sc[2]}  {b}  {tail}"
 
+# competition titles written without ":" in the TXT files
+NOCOLON_HEADERS = {"Campeonato Mineiro", "Campeonato Catarinense", "Chinese FA Super Cup", "King's Cup", "Saudi Super Cup", "AIFF Super Cup / Federation Cup", "TFF Süper Kupa"}
+# former names of a competition inside its own list: not a new competition
+SUBTITLES = {"Head of State's Cup", "President's Cup (Cumhurbaskanligi Kupasi)", "Atatürk Cup", "Super Cup"}
 def is_header(line):
     if not line or line[0] in " \t•": return False
+    if line.strip() in NOCOLON_HEADERS: return True
     if FLAG.search(line[:4]): return True
     if SEASON_HEAD.match(line): return False
     if LABEL_YEAR.match(line) and not line.rstrip().endswith(":"): return False
@@ -115,7 +184,7 @@ def header_name(line):
 
 def parse(path, out):
     lines = open(path, encoding="utf-8").read().replace("\r", "").split("\n")
-    comp = None; country = ""; comp_country = ""; mx_base = None; seasons = None; cur = None; skip = False; durand_team = None
+    comp = None; country = ""; comp_country = ""; mx_base = None; nb_seen = False; seasons = None; cur = None; skip = False; durand_team = None
     pending_head = None
     def flush():
         nonlocal seasons
@@ -124,20 +193,8 @@ def parse(path, out):
             rows = []
             for s in seasons:
                 if s.get("matches"):
-                    tot = {}
-                    for a, ga, gb, b, _ in s["matches"]:
-                        tot[a] = tot.get(a, 0) + ga; tot[b] = tot.get(b, 0) + gb
-                    if len(s["matches"]) == 1 or len(tot) != 2:
-                        a, ga, gb, b, pn = s["matches"][0]; champ, ru = a, b
-                        if FMT.get(comp) == "ab_score":
-                            if gb > ga or (ga == gb and pn and pn[1] > pn[0]): champ, ru = b, a
-                    else:
-                        (t1, g1), (t2, g2) = list(tot.items())
-                        if g1 == g2:   # level on aggregate: winner of the last leg, else first-listed team
-                            a, ga, gb, b, pn = s["matches"][-1]; champ, ru = (a, b) if ga >= gb else (b, a)
-                            if pn: champ, ru = (a, b) if pn[0] >= pn[1] else (b, a)
-                        else: champ, ru = (t1, t2) if g1 > g2 else (t2, t1)
-                    a, ga, gb, b, _ = s["matches"][0]
+                    champ, ru = decide(s["matches"])
+                    a, ga, gb, b, _, _ = s["matches"][0]
                     score = f"{ga}-{gb}" if len(s["matches"]) == 1 else ""
                     if len(s["matches"]) == 1 and champ != a: score = f"{gb}-{ga}"
                     s["champ"], s["ru"], s["score"] = champ, ru, score
@@ -151,6 +208,7 @@ def parse(path, out):
     for idx, raw in enumerate(lines):
         line = raw.rstrip()
         st = line.strip()
+        if st in SUBTITLES: continue
         if not st or set(st) <= set("-_=") :
             if st and set(st) <= set("-"): pending_head = None
             continue
@@ -165,13 +223,14 @@ def parse(path, out):
                 continue
             if re.search(r"Títulos e Vices", name): continue
             if re.search(r"Clubes/Regimentos com 1", name): durand_team = None; continue
-            if comp == "Copas Campeões e Vices" or name in ("Ligas", "Copas Campeões e Vices"):
-                comp = name; continue
-            flush(); comp = name; comp_country = country; seasons = []; cur = None; skip = False; durand_team = None; mx_base = None
+            if name in ("Ligas", "Copas Campeões e Vices"): continue
+            m0 = re.match(r"^\W*([A-Za-zÀ-ÿ ]+):\s*\S", FLAG.sub("", line).strip())
+            if m0: country = m0[1].strip()          # "🇩🇰 Dinamarca: Danish Cup (Pokalen)"
+            flush(); comp = name; comp_country = country; seasons = []; cur = None; skip = False; durand_team = None; mx_base = None; nb_seen = False
             continue
         if seasons is None: continue
         if st.startswith("NB") or st.startswith("Nota") or st.startswith("{"):
-            skip = True; continue
+            skip = True; nb_seen = True; continue
         if skip:
             if not line[0].isspace() and re.search(r"champions", line, re.I) and not SEASON_HEAD.match(line): skip = False
             continue
@@ -184,9 +243,11 @@ def parse(path, out):
             y = int(m[1]); rest = m[2]
             ru = clean_team(re.sub(r"^vs\.?\s*", "", rest)) if rest.lower().startswith("vs") else ""
             seasons.append({"season": str(y), "end": y, "champ": durand_team, "ru": ru}); continue
-        m = re.match(r"^•\s*(.+?)\s*\(\d+\):\s*(\d{4})\s*(?:\(vs\.?\s*(.+?)\))?\.?$", st)
+        m = re.match(r"^•\s*(.+?)\s*\(\d+\):\s*(\d{4}.*)$", st)
         if m:
-            seasons.append({"season": m[2], "end": int(m[2]), "champ": clean_team(m[1]), "ru": clean_team(m[3] or "")}); continue
+            for y, ru in re.findall(r"(\d{4})\s*(?:\(vs\.?\s*([^)]+)\))?", m[2]):
+                seasons.append({"season": y, "end": int(y), "champ": clean_team(m[1]), "ru": clean_team(ru or "")})
+            continue
         # ---- continuation lines ----
         if line[0].isspace() and not SEASON_HEAD.match(st):
             if FMT.get(comp) == "cols" and mx_base and not st.startswith("["):
@@ -218,7 +279,9 @@ def parse(path, out):
             season, end = label_season(lm[1]); body = lm[2]
         if FMT.get(comp) == "cols" and not body.strip(): mx_base = (season, end); cur = None; continue
         if SKIP.search(body) or not body.strip(): cur = None; continue
-        if any(s["season"] == season for s in seasons) and not re.search(r"[a-z]", season, re.I):
+        tg = re.match(r"^\s*\(([A-Za-zÀ-ÿ .]+)\)\s*", body)
+        if tg and not re.search(r"[a-z]", season, re.I): season = f"{season} {tg[1].strip()}"; body = body[tg.end():]
+        if nb_seen and any(s["season"] == season for s in seasons) and not re.search(r"[a-z]", season, re.I):
             cur = None; continue   # later tables of the same section (promotion lists, etc.)
         body = prep(body.rstrip(":"))
         fmt = FMT.get(comp)
@@ -251,19 +314,7 @@ def parse(path, out):
 
 out = []
 for p in sys.argv[1:-1]: parse(p, out)
-INTL = {"Copa do Mundo", "FIFA Intercontinental Cup", "FIFA Club World Cup", "UEFA Champions League", "UEFA Europa League",
-        "UEFA Conference League", "UEFA Super Cup", "Copa Libertadores", "Copa Sul-Americana", "Recopa Sul-Americana", "UEFA Euro"}
-COUNTRY_FIX = {"A-League": "Austrália", "Durand Cup": "Índia", "Arábia Saudita": "Arábia Saudita"}
-byname = {c["n"]: c for c in out}
-for c in out:
-    if c["n"] in INTL: c["g"] = ""
-    if c["n"] in COUNTRY_FIX: c["g"] = COUNTRY_FIX[c["n"]]
-    if c["n"] == "Arábia Saudita": c["n"] = "King's Cup"
-# the user's file has Danish 2004/05+ champions pasted at the end of the Scottish list
-sc, dk = byname.get("Scottish Premiership"), byname.get("3F Superliga")
-if sc and dk:
-    mv = [r for r in sc["r"] if "/" in r[0]]; sc["r"] = [r for r in sc["r"] if "/" not in r[0]]; dk["r"].extend(mv)
-BAD = re.compile(r"not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked", re.I)
+BAD = re.compile(r"not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked|n[aã]o disputad", re.I)
 def fix_name(n):
     n = re.sub(r"^.*\(now ([^)]+)\).*$", r"\1", n)
     n = re.sub(r"^[DT]\s+(?=[A-Z])", "", n)
@@ -273,7 +324,10 @@ def fix_name(n):
     n = re.sub(r"\s*\((North|South|Group [A-Z])\).*$", "", n)
     n = re.sub(r"\s+\d+ points? behind.*$", "", n)
     n = n.replace('"', "")
-    return n.strip(" ,;")
+    n = re.sub(r"^\([^)]*\)\s*", "", n)
+    n = re.sub(r"\s*\((Federal|after|as winner)[^)]*\)", "", n)
+    if re.match(r"^\d", n) and not re.match(r"^\d+\.\s?[A-Z]", n): n = ""
+    return expand(n.strip(" ,;"))
 for c in out:
     rows = []
     for r in c["r"]:
@@ -281,17 +335,9 @@ for c in out:
         if BAD.search(r[3]): r[3] = ""
         if not BAD.search(r[2]): rows.append(r)
     c["r"] = rows
-    c["r"].sort(key=lambda r: (r[1], r[0]))
-# titles that predate the user's lists (needed so star counts match the real totals)
-byname["Serie A"]["b"] = {"Genoa": 9, "Pro Vercelli": 7, "Milan AC": 3, "Juventus FC": 2, "FC Internazionale": 2, "Bologna": 2, "Torino": 1, "Casale": 1, "Novese": 1}
-# no Eredivisie list was supplied: last seasons + all-time totals before them (PSV 27 after 2025/26)
-out.insert(next(i for i, c in enumerate(out) if c["n"] == "Liga Portugal"), {"n": "Eredivisie", "g": "Holanda",
-    "r": [["2021/22", 2022, "Ajax", "PSV", ""], ["2022/23", 2023, "Feyenoord", "PSV", ""], ["2023/24", 2024, "PSV", "Feyenoord", ""],
-          ["2024/25", 2025, "PSV", "Ajax", ""], ["2025/26", 2026, "PSV", "", ""]],
-    "b": {"Ajax": 35, "PSV": 24, "Feyenoord": 15, "HVV": 10, "Sparta Rotterdam": 6, "RAP": 5, "Go Ahead Eagles": 4, "Willem II": 3, "HBS": 3,
-          "AZ": 2, "ADO Den Haag": 2, "Heracles Almelo": 2, "RCH": 2, "FC Twente": 1, "NAC Breda": 1, "DWS": 1, "Be Quick": 1, "SC Enschede": 1, "Quick Den Haag": 1}})
+out = FX.apply(out)
 for c in out:
     for r in c["r"]:
         if r[3] and r[3] == r[2]: r[3] = ""
-json.dump({"v": 1, "c": out}, open(sys.argv[-1], "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"v": 2, "c": out, "alias": FX.LOGO_ALIAS, "nl": sorted(FX.NO_LOGO), "eq": FX.EQUIV}, open(sys.argv[-1], "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(len(out), "competitions", sum(len(c["r"]) for c in out), "rows")
