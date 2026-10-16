@@ -1471,7 +1471,7 @@ function myBallons(){ return (S.ballondor_custom||[]).filter(b => b.nome === S.i
    "Bayer 04 Leverkusen") -> typo-tolerant edit distance. User-chosen logos always win (Store.logos). */
 const LOGO_STOP = new Set("fc cf sc ac as afc cd c f club clube de do da dos das del la le el the futebol football futbol calcio sport sports sd ud us ss ssc rc rcd cfc fk if bk sk cp ec e y a s and of sa".split(" "));
 const BR_UF = new Set("ac al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rj rn rs ro rr sc sp se to".split(" "));
-const lnorm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ø/g,"o").replace(/ł/g,"l").replace(/ß/g,"ss").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim();
+const lnorm = s => String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ø/g,"o").replace(/æ/g,"ae").replace(/ĳ/g,"ij").replace(/ł/g,"l").replace(/ß/g,"ss").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim();
 const stripYears = s => String(s||"").replace(/\b(19|20)\d{2}(\s*[\/-]\s*\d{2,4})?\b/g," ");
 const lkey = s => lnorm(s).replace(/ /g,"");
 const sigToks = s => lnorm(s).split(" ").filter(x => x && !LOGO_STOP.has(x));

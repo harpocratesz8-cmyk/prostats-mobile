@@ -176,7 +176,7 @@ RENAME_ALL.update({
     "FC Cette": "Football Club de Sète", "FC Sète": "Football Club de Sète", "FC Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard",
     "Football Club de Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard", "Football Club Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard", "Sochaux": "Football Club de Sochaux-Montbeliard",
     "Stade Malherbe Caen Calvados Basse-Normandie": "Stade Malherbe Caen", "Angers Sporting Club de l'Ouest": "Angers SCO", "SCO Angers": "Angers SCO",
-    "Gazélec Football Club Ajaccio": "AC Ajaccio", "Espérance Sportive Troyes Aube Champagne": "ESTAC Troyes", "AS Troyes": "ESTAC Troyes",
+    "Gazélec Football Club Ajaccio": "Gazélec Ajaccio", "Espérance Sportive Troyes Aube Champagne": "ESTAC Troyes", "AS Troyes": "ESTAC Troyes",
     "CA des Sports Généraux": "CASG Paris", "CA de la Soc. Générale": "CASG Paris", "FC Lorient Bretagne Sud": "FC Lorient", "Football Club Lorient": "FC Lorient", "Lorient": "FC Lorient",
     "FC Rouen": "Football Club Rouennais", "Football Club Rouen": "Football Club Rouennais", "Rouen": "Football Club Rouennais", "Racing Club de France": "Racing Club de Paris",
     "Red Star Olympique": "Red Star FC", "Red Star Olympique Audonien": "Red Star FC", "Red Star Amical Club": "Red Star FC", "Red Star Olympique Aud.": "Red Star FC",

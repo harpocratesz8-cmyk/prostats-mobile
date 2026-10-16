@@ -22,7 +22,8 @@ RENAME = {"Sport Club Internacional": ("Internacional-BA", []), "SC Internaciona
           "San Grancoscp Greek-American AC": ("San Francisco Greek-American", ["San Francisco Greek-American AC"]),
           "Club Nacional": ("Club Nacional", ["Nacional (Asunción)", "Club Nacional (Paraguai)"]), "Centre de Deportes Sabadell": ("Centro de Deportes Sabadell", []),
           "Colo Colo de Futebol e Regatas": ("Colo Colo de Futebol e Regatas", ["Colo Colo de Ilhéus"]), "Velocitas": ("Velocitas", ["Velocitas (Breda)"]),
-          "Union Athletique Sedan-Torcy": ("UA Sedan-Torcy", ["Union Athletique Sedan-Torcy"]), "Cercle Athl. de Paris": ("Cercle Athlétique de Paris", ["Cercle Athl. de Paris"])}
+          "Union Athletique Sedan-Torcy": ("UA Sedan-Torcy", ["Union Athletique Sedan-Torcy"]), "Cercle Athl. de Paris": ("Cercle Athlétique de Paris", ["Cercle Athl. de Paris"]),
+          "Gazélec Ajaccio": ("Gazélec Ajaccio", ["Gazélec Football Club Ajaccio", "GFC Ajaccio", "GFCA", "Gazélec FC Ajaccio"])}
 ALIAS_ONLY = {"Racing Genk": "Genk", "Shandong Luneng": "Shandong Taishan", "RC Deportivo": "R.C. Deportivo de A Coruña", "SEC Bastia": "SC Bastia"}   # same club as an EA logo: keep the EA image
 NATIONS = {"Yugoslavia": ["Iugoslávia"], "Soviet Union": ["União Soviética", "URSS"], "Czechoslovakia": ["Tchecoslováquia"]}
 j = json.load(open(idx_path, encoding="utf-8"))
