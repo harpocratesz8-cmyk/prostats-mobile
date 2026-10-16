@@ -16,23 +16,31 @@ RENAME = {"Sport Club Internacional": ("Internacional-BA", []), "SC Internaciona
           "São Paulo (BA)": ("São Paulo-BA", []), "Luffwaffen SV Hamburg": ("Luftwaffen SV Hamburg", []), "Shenzhen Jianliao": ("Shenzhen Jianlibao", []),
           "guangzhou Evergrande": ("Guangzhou Evergrande", ["Guangzhou FC"]), "Bordeaux": ("Bordeaux", ["Girondins de Bordeaux", "FC Girondins de Bordeaux"]),
           "AA São Bento": ("AA São Bento", []), "Albion": ("Albion", []), "Colorado": ("Colorado EC", ["Colorado-PR"]), "Paulista": ("Paulista", ["Paulista FC"]),
-          "Atlético Futebol Clube": ("Atlético Futebol Clube", []), "CSKA Moscow": ("CSKA Moscow", ["CSKA Moskva", "CSKA Moscou"])}
-ALIAS_ONLY = {"Racing Genk": "Genk", "Shandong Luneng": "Shandong Taishan"}   # same club as an EA logo: keep the EA image
+          "Atlético Futebol Clube": ("Atlético Futebol Clube", []), "CSKA Moscow": ("CSKA Moscow", ["CSKA Moskva", "CSKA Moscou"]),
+          "AAB (Associação Atlética da Bahia)": ("AAB-BA", ["Associação Atlética da Bahia"]), "SC Eintrach": ("SC Eintracht", []),
+          "Busan I'Park": ("Busan IPark", ["Busan I'Park"]), "Fall River ROvers": ("Fall River Rovers", []),
+          "San Grancoscp Greek-American AC": ("San Francisco Greek-American", ["San Francisco Greek-American AC"]),
+          "Club Nacional": ("Club Nacional", ["Nacional (Asunción)", "Club Nacional (Paraguai)"]), "Centre de Deportes Sabadell": ("Centro de Deportes Sabadell", []),
+          "Colo Colo de Futebol e Regatas": ("Colo Colo de Futebol e Regatas", ["Colo Colo de Ilhéus"]), "Velocitas": ("Velocitas", ["Velocitas (Breda)"]),
+          "Union Athletique Sedan-Torcy": ("UA Sedan-Torcy", ["Union Athletique Sedan-Torcy"]), "Cercle Athl. de Paris": ("Cercle Athlétique de Paris", ["Cercle Athl. de Paris"])}
+ALIAS_ONLY = {"Racing Genk": "Genk", "Shandong Luneng": "Shandong Taishan", "RC Deportivo": "R.C. Deportivo de A Coruña", "SEC Bastia": "SC Bastia"}   # same club as an EA logo: keep the EA image
 NATIONS = {"Yugoslavia": ["Iugoslávia"], "Soviet Union": ["União Soviética", "URSS"], "Czechoslovakia": ["Tchecoslováquia"]}
 j = json.load(open(idx_path, encoding="utf-8"))
 E = j["e"]
 added = replaced = 0
+later = []
 for f in sorted(os.listdir(src)):
-    if not f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")): continue
-    raw = dec(os.path.splitext(f)[0]).strip()
-    if raw in ALIAS_ONLY:
-        ex = next(e for e in E if e[1] == ALIAS_ONLY[raw]); ex[3] = list(dict.fromkeys(ex[3] + [raw])); continue
+    if not f.lower().endswith((".png", ".jpg", ".jpeg", ".webp")) and "." in f[-5:] and not re.search(r"\.[A-Z]?$", f): continue
+    raw = dec(re.sub(r"\.(png|jpe?g|webp)$", "", f, flags=re.I)).strip()
+    if raw in ALIAS_ONLY: later.append(raw); continue
     m = re.match(r"^(.*?)\s*\((.*)\)\s*$", raw)
     name, aliases = (m[1].strip(), [m[2].strip()]) if m else (raw, [])
     if raw in RENAME: name, aliases = RENAME[raw]; aliases = list(aliases)
     k = "n" if name in NATIONS else kind
     if k == "n": aliases += NATIONS[name]
-    im = Image.open(os.path.join(src, f)).convert("RGBA"); bb = im.getbbox()
+    try: im = Image.open(os.path.join(src, f)).convert("RGBA")
+    except Exception: continue
+    bb = im.getbbox()
     if bb: im = im.crop(bb)
     im.thumbnail((128, 128), Image.LANCZOS)
     ex = next((e for e in E if e[0] == k and key(e[1]) == key(name)), None)
@@ -42,6 +50,8 @@ for f in sorted(os.listdir(src)):
         n = max([int(e[2].split("/")[1].split(".")[0]) for e in E if e[0] == k] + [-1]) + 1
         rel = f"{k}/{n}.webp"; E.append([k, name, rel, aliases]); added += 1
     im.save(os.path.join(out, rel), "WEBP", quality=82, method=6)
+for raw in later:
+    ex = next(e for e in E if e[1] == ALIAS_ONLY[raw]); ex[3] = list(dict.fromkeys(ex[3] + [raw]))
 # common short names that the extra (historic) logos must not steal
 EXTRA_ALIASES = {"Hamburger SV": ["Hamburg", "Hamburgo", "HSV"], "Standard de Liege": ["Liège", "Liege", "Standard Liège", "Standard de Liège"],
                  "Shenzhen Peng City": ["Shenzhen"], "Dalian Yingbo": ["Dalian"], "S.V. Zulte Waregem": ["Waregem", "Zulte Waregem", "Zulte-Waregem"],

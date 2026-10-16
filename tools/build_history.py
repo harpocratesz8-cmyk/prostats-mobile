@@ -6,15 +6,17 @@ import re, sys, json, unicodedata, difflib, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import history_fixes as FX
 
-SEASON_HEAD = re.compile(r"^(\d{4}(?:\s*[/-]\s*\d{2,4})?|\d{2}/\d{2})(?=[\s:\-]|$)")
+SEASON_HEAD = re.compile(r"^(\d{4}(?:\s*[/\-–]\s*\d{2,4})?|\d{2}/\d{2})\+?(?=[\s:\-]|$)")
 LABEL_YEAR = re.compile(r"^([^\t]*?\b(?:19|20)\d{2}(?:/\d{2,4})?\b[^\t]*?)(?:\t+|\s{2,})(.+)$")
-SCORE = re.compile(r"(?<![\d/,.])(\d{1,2})\s?-\s?(\d{1,2})(?![\d/])")
+SCORE = re.compile(r"(?<![\d/,.])(\d{1,2})\s?[-–]\s?(\d{1,2})(?![\d/])")
+# "Rangers   4  Aberdeen   0"  /  "Queen's Park   1:2  Third Lanark   1:0" (replays)  /  "w/o ... dna"
+SPACED = re.compile(r"^(?P<a>\S.*?)\s{2,}(?P<ga>\d+(?::\d+)*|w/o)\s{2,}(?P<b>\S.*?)\s{2,}(?P<gb>\d+(?::\d+)*|dna)(?P<note>\s.*)?$")
 DATE_VENUE = re.compile(r"^\d{1,2}/\s?\d{1,2}(?:/\d{2})?\s+.*?(?:\t+|\s{2,})")
 MONTH_DAY = re.compile(r"^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d{1,2}\s+")
 FMT = {"Schweizer Cup": "venue", "Trophée des Champions": "venue", "Coppa Itália": "win_ab", "Supercopa de España": "win_ab",
-       "Campeón de Campeones": "ab_win", "Super Copa Do Brasil": "ab_win", "Supercoppa": "ab_score", "Svenska Cupen": "ab_score",
+       "Campeón de Campeones": "ab_win", "Super Copa Do Brasil": "ab_win", "Supercoppa": "ab_score", "Svenska Cupen": "ab_score", "KNVB Beker": "ab_score",
        "Liga MX Clausura e Liga MX Apertura": "cols"}
-SKIP = re.compile(r"not contested|no winners|not held|n/a|n/p|w/o|unofficial war|n[aã]o (contestad|disputad|realizad)|cancel|abandon|suspens|no competition|void|não houve|nao houve|interromp", re.I)
+SKIP = re.compile(r"not contested|no winners|not held|n/a|n/p|unofficial war|n[aã]o (contestad|disputad|realizad)|cancel|abandon|suspens|no competition|void|não houve|nao houve|interromp", re.I)
 FLAG = re.compile(r"[\U0001F1E6-\U0001F1FF]")
 
 COMP_RENAME = {"League 1": "Ligue 1", "Budesliga": "2. Bundesliga", "Liga MX Clausura e Liga MX Apertura": "Liga MX",
@@ -25,7 +27,7 @@ COMP_RENAME = {"League 1": "Ligue 1", "Budesliga": "2. Bundesliga", "Liga MX Cla
                "Liga Portugal (Portugal)": "Liga Portugal", "UEFA Eurocopa": "UEFA Euro"}
 
 def norm_season(s):
-    s = re.sub(r"\s+", "", s).replace("-", "/")
+    s = re.sub(r"\s+", "", s).replace("–", "/").replace("-", "/").rstrip("+")
     m = re.fullmatch(r"(\d{2})/(\d{2})", s)
     if m: a = int(m[1]); y = (1900 if a >= 50 else 2000) + a; return f"{y}/{m[2]}", y + 1
     m = re.fullmatch(r"(\d{4})/(\d{2,4})", s)
@@ -86,8 +88,16 @@ def strip_date_venue(body):
     return DATE_VENUE.sub("", body)
 
 def parse_match(body):
-    """returns (teamA, goalsA, goalsB, teamB) or None; supports '0-0 2-1' two-leg lines (sum)"""
+    """returns (teamA, goalsA, goalsB, teamB, pens, note, score text) or None; '0-0 2-1' two-leg lines are summed"""
     body = strip_date_venue(body.strip())
+    sp = SPACED.match(body)
+    if sp:
+        a, b = clean_team(sp["a"]), clean_team(sp["b"])
+        if looks_team(a) and looks_team(b):
+            if sp["ga"] == "w/o": return a, 1, 0, b, None, "w/o", "w/o"
+            la = [int(x) for x in sp["ga"].split(":")]; lb = [int(x) for x in sp["gb"].split(":")]
+            n = min(len(la), len(lb))
+            return a, la[n-1], lb[n-1], b, None, sp["note"] or "", ", ".join(f"{x}-{y}" for x, y in zip(la, lb))
     ms = list(SCORE.finditer(body))
     if not ms: return None
     first = ms[0]; a = clean_team(body[:first.start()])
@@ -101,8 +111,9 @@ def parse_match(body):
     rest = re.split(r"\t+|\s{2,}|\[|\(\s*(?=\d|in\b|as\b|on\b|at\b|after\b|aet|pen)|\bagg\b|\baet\b|\bAET\b", rest.strip())[0]
     b = clean_team(rest)
     if not looks_team(b): return None
-    pm = re.search(r"(\d{1,2})\s?-\s?(\d{1,2})\s*(?:pen|p\b)", note, re.I)
-    return a, ga, gb, b, (int(pm[1]), int(pm[2])) if pm else None, note
+    pm = re.search(r"(\d{1,2})\s?[-–]\s?(\d{1,2})\s*(?:pen|p\b)", note, re.I)
+    txt = " ".join(f"{x[1]}-{x[2]}" for x in ms[:i]) + (f" ({pm[1]}-{pm[2]} pen)" if pm else "")
+    return a, ga, gb, b, (int(pm[1]), int(pm[2])) if pm else None, note, txt
 
 ABBR = [(r"^Indep\.\s*", "Independiente "), (r"^Ind\.\s*", "Independiente "), (r"\bAtl\.\s*", "Atlético "), (r"^Bor\.\s*", "Borussia "), (r"^Est\.\s*", "Estudiantes ")]
 def expand(n):
@@ -118,6 +129,13 @@ def note_winner(note, a, b):
     if w and (w in tkey(a) or tkey(a) in w): return a, b
     if w and (w in tkey(b) or tkey(b) in w): return b, a
     return None
+def same_key(x, k):
+    """same team written two ways ("Indep. Santa Fe" / "Independiente Santa Fe"), but "Nacional" is not "Internacional" """
+    if x == k: return True
+    if difflib.SequenceMatcher(None, x, k).ratio() > 0.84: return True
+    lo, hi = sorted((x, k), key=len)
+    return len(lo) >= 5 and lo in hi and len(lo) / len(hi) >= 0.7
+
 def decide(ms):
     """champion of a season from its match lines: score, then penalties, then an explicit note,
        two legs: points, then aggregate; a third match (play-off / replay) decides on its own"""
@@ -125,11 +143,11 @@ def decide(ms):
     for m in ms:
         for t in (m[0], m[3]):
             k = tkey(t)
-            j = next((x for x in keys if x == k or difflib.SequenceMatcher(None, x, k).ratio() > 0.84 or (min(len(x), len(k)) >= 5 and (x in k or k in x))), None)
+            j = next((x for x in keys if same_key(x, k)), None)
             keys.setdefault(j or k, t)
-    def same(t, k): k2 = tkey(t); return k2 == k or difflib.SequenceMatcher(None, k2, k).ratio() > 0.84 or (min(len(k2), len(k)) >= 5 and (k2 in k or k in k2))
+    def same(t, k): return same_key(tkey(t), k)
     def single(m):
-        a, ga, gb, b, pn, note = m
+        a, ga, gb, b, pn, note = m[:6]
         if ga != gb: return (a, b) if ga > gb else (b, a)
         if pn and pn[0] != pn[1]: return (a, b) if pn[0] > pn[1] else (b, a)
         return note_winner(note, a, b) or (a, b)
@@ -137,7 +155,7 @@ def decide(ms):
     if len(ms) >= 3: return single(ms[-1])
     (k1, t1), (k2, t2) = list(keys.items())
     pts = {k1: 0, k2: 0}; gl = {k1: 0, k2: 0}
-    for a, ga, gb, b, pn, note in ms:
+    for a, ga, gb, b, pn, note, *_ in ms:
         ka = k1 if same(a, k1) else k2; kb = k2 if ka == k1 else k1
         gl[ka] += ga; gl[kb] += gb
         if ga > gb: pts[ka] += 2
@@ -146,7 +164,7 @@ def decide(ms):
     if pts[k1] != pts[k2]: return (t1, t2) if pts[k1] > pts[k2] else (t2, t1)
     if gl[k1] != gl[k2]: return (t1, t2) if gl[k1] > gl[k2] else (t2, t1)
     for m in reversed(ms):
-        a, ga, gb, b, pn, note = m
+        a, ga, gb, b, pn, note = m[:6]
         if pn and pn[0] != pn[1]: return (a, b) if pn[0] > pn[1] else (b, a)
         w = note_winner(note, a, b)
         if w: return w
@@ -194,9 +212,8 @@ def parse(path, out):
             for s in seasons:
                 if s.get("matches"):
                     champ, ru = decide(s["matches"])
-                    a, ga, gb, b, _, _ = s["matches"][0]
-                    score = f"{ga}-{gb}" if len(s["matches"]) == 1 else ""
-                    if len(s["matches"]) == 1 and champ != a: score = f"{gb}-{ga}"
+                    flip = lambda t: re.sub(r"(\d+)-(\d+)", lambda q: f"{q[2]}-{q[1]}", t)
+                    score = ", ".join((m[6] if tkey(m[0]) == tkey(champ) else flip(m[6])) for m in s["matches"] if m[6])
                     s["champ"], s["ru"], s["score"] = champ, ru, score
                 if s.get("champ"): rows.append([s["season"], s["end"], s["champ"], s.get("ru") or "", s.get("score") or ""])
             if rows:
@@ -229,7 +246,8 @@ def parse(path, out):
             flush(); comp = name; comp_country = country; seasons = []; cur = None; skip = False; durand_team = None; mx_base = None; nb_seen = False
             continue
         if seasons is None: continue
-        if st.startswith("NB") or st.startswith("Nota") or st.startswith("{"):
+        if st.startswith("Nota") or st.startswith("{"): continue
+        if st.startswith("NB"):
             skip = True; nb_seen = True; continue
         if skip:
             if not line[0].isspace() and re.search(r"champions", line, re.I) and not SEASON_HEAD.match(line): skip = False
@@ -278,6 +296,13 @@ def parse(path, out):
             if not lm: continue
             season, end = label_season(lm[1]); body = lm[2]
         if FMT.get(comp) == "cols" and not body.strip(): mx_base = (season, end); cur = None; continue
+        if "|" in body:      # "1921–22 | North Winner: X #1 | North Runner-up: Y | ..."  /  "| Champion: X | Runner-up: Y"
+            f = {k.strip().lower(): v.strip() for k, v in (p.split(":", 1) for p in body.split("|") if ":" in p)}
+            if f.get("champion"): seasons.append({"season": season, "end": end, "champ": clean_team(f["champion"]), "ru": clean_team(f.get("runner-up", ""))})
+            for side, lab in (("north", "Norte"), ("south", "Sul")):
+                if f.get(f"{side} winner"): seasons.append({"season": f"{season} {lab}", "end": end, "champ": clean_team(f[f"{side} winner"]), "ru": clean_team(f.get(f"{side} runner-up", ""))})
+            cur = None; continue
+        body = re.sub(r"^\+\s*", "", body)
         if SKIP.search(body) or not body.strip(): cur = None; continue
         tg = re.match(r"^\s*\(([A-Za-zÀ-ÿ .]+)\)\s*", body)
         if tg and not re.search(r"[a-z]", season, re.I): season = f"{season} {tg[1].strip()}"; body = body[tg.end():]
@@ -314,10 +339,13 @@ def parse(path, out):
 
 out = []
 for p in sys.argv[1:-1]: parse(p, out)
-BAD = re.compile(r"not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked|n[aã]o disputad", re.I)
+BAD = re.compile(r"^w/o$|^dna$|cup withheld|no final|not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked|n[aã]o disputad", re.I)
 def fix_name(n):
     n = re.sub(r"^.*\(now ([^)]+)\).*$", r"\1", n)
-    n = re.sub(r"^[DT]\s+(?=[A-Z])", "", n)
+    n = re.sub(r"^[DTQ]\s+(?=[A-Z])", "", n)
+    n = re.sub(r"^w/o\s+", "", n)
+    n = re.sub(r"\s\d+\s*\([^)]*penalt[^)]*\)$", "", n)
+    n = re.sub(r"(?<=[A-Za-z.)])\s\d$", "", n)
     n = re.sub(r"^\d+\s*[–-]\s*\d+\s+", "", n)
     n = re.sub(r"\s\d+(:\d+)+$", "", n)
     n = re.sub(r"\s\d+\s+[A-Z].*?\s\d+\b.*$", "", n)
@@ -327,6 +355,7 @@ def fix_name(n):
     n = re.sub(r"^\([^)]*\)\s*", "", n)
     n = re.sub(r"\s*\((Federal|after|as winner)[^)]*\)", "", n)
     if re.match(r"^\d", n) and not re.match(r"^\d+\.\s?[A-Z]", n): n = ""
+    if len(n) > 4 and n.isupper() and "." not in n: n = " ".join(w.capitalize() if len(w) > 3 and w.isalpha() else w for w in n.split())
     return expand(n.strip(" ,;"))
 for c in out:
     rows = []

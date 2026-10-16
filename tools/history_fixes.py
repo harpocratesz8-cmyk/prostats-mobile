@@ -139,6 +139,145 @@ SHIFT_YEAR = {"Recopa Sul-Americana": 1}
 # titles that predate the lists (so star counts match the real totals)
 BASE = {"Serie A": {"Genoa": 9, "Pro Vercelli": 7, "Milan AC": 3, "Juventus FC": 2, "FC Internazionale": 2, "Bologna": 2, "Torino": 1, "Casale": 1, "Novese": 1}}
 
+
+# ======================= review round 2 =======================
+RENAME_ALL.update({
+    "1. FC Frankfurt/Oder": "1. FC Frankfurt", "Vorwärts Berlin": "1. FC Frankfurt", "FC Homburg/Saar": "FC 08 Homburg",
+    # Korea (current club names / logos)
+    "Daewoo Royals": "Busan IPark", "Pusan Daewoo Royals": "Busan IPark", "Busan Icons": "Busan IPark", "Busan I'Park": "Busan IPark",
+    "Lucky-Goldstar Hwangso": "FC Seoul", "Anyang LG Cheetahs": "FC Seoul", "POSCO Atoms": "FC Pohang Steelers", "Pohang Steelers": "FC Pohang Steelers",
+    "Yukong Elephants": "Jeju SK FC", "Bucheon SK": "Jeju SK FC", "Ulsan Hyundai Horang-i": "Ulsan HD FC", "Ulsan HD": "Ulsan HD FC",
+    "Chunan Ilhwa Chunma": "Seongnam FC", "Ilhwa Chunma": "Seongnam FC", "Seongnam Ilhwa Chunma": "Seongnam FC", "Songnam Ilhwa Chunma": "Seongnam FC",
+    "Seongnam Ulhwa Chunma": "Seongnam FC", "Songnam Ulhwa Chunma": "Seongnam FC", "Chonbuk Hyundai Dinos": "Jeonbuk Hyundai Motors FC",
+    "Chonbuk Hyundai Motors": "Jeonbuk Hyundai Motors FC", "Jeonbuk Hyundai Motors": "Jeonbuk Hyundai Motors FC", "Suwon S. Bluewings": "Suwon Samsung Bluewings",
+    "Chunnam Dragons": "Jeonnam Dragons", "Taejon Citizen": "Daejeon Hana Citizen FC",
+    # Denmark / Bahia: AaB (Aalborg) is not AAB (Associação Atlética da Bahia)
+    "AAB": "AAB-BA",
+    # Scotland
+    "Dumbarton & Rangers": "Dumbarton", "Inverness Caled. Thistle": "Inverness Caled.Thistle", "Inverness Caledonian Thistle": "Inverness Caled.Thistle",
+    "Hamilton Academicals": "Hamilton Academical", "Queen Of The South": "Queen of the South", "Vale Of Leven": "Vale of Leven",
+    # Spain
+    "Hércules FC": "Hércules CF", "Real Murcia FC": "Real Murcia CF", "Castilla CF": "Real Madrid Castilla C.F.", "Racing de Irún": "Real Unión Club",
+    "Real Unión de Irún": "Real Unión Club", "Ciclista de San Sebastián": "Real Sociedad de Fútbol", "Vigo Sporting": "R.C. Celta de Vigo",
+    "Recreativo de Huelva": "RC Recreativo de Huelva", "RC Deportivo": "R.C. Deportivo de A Coruña", "RC Deportivo de La Coruña": "R.C. Deportivo de A Coruña",
+    "Centro de Deportes Sabadell": "Centro de Deportes Sabadell", "Gimnastica de Madrid": "Gimnástica de Madrid",
+    # USA
+    "St. Louis Busch Seniors": "St. Louis Scott Gallagher",
+    # France
+    "Olympique de Lyon": "Olympique Lyonnais", "Lille Olympique Sporting Club": "LOSC Lille", "Lille OSC": "LOSC Lille", "LOSC Lille Métropole": "LOSC Lille", "Lille": "LOSC Lille",
+    "Olympique Gymnaste Club de Nice": "OGC Nice", "Nice": "OGC Nice", "Racing Club de Lens": "RC Lens", "Racing Club Lensois": "RC Lens", "Lens": "RC Lens",
+    "Racing Club de Strasbourg": "Strasbourg", "Racing Club de Strasbourg Alsace": "Strasbourg", "RC Strasbourg": "Strasbourg",
+    "Association de la Jeunesse Auxerroise": "AJ Auxerre", "AJ Auxerroise": "AJ Auxerre", "Auxerre": "AJ Auxerre",
+    "Montpellier H.S.C.": "Montpellier", "Montpellier-Hérault FC": "Montpellier", "Montpellier-Hérault SC": "Montpellier", "Montpellier Paillade Sport Club": "Montpellier",
+    "Stade Olympique Montpelliérain": "Montpellier", "Sp. Ol. Montpelliérrains": "Montpellier", "Sports Ol. Montpelliérains": "Montpellier",
+    "Le Havre Athletic Club": "Le Havre AC", "Havre Athletic Club": "Le Havre AC", "Le Havre": "Le Havre AC",
+    "Sporting Club de Bastia": "SC Bastia", "Sporting Étoile Club Bastia": "SC Bastia", "SEC Bastia": "SC Bastia", "Bastia": "SC Bastia",
+    "Association Sportive Nancy Lorraine": "AS Nancy Lorraine", "AS Nancy-Lorraine": "AS Nancy Lorraine",
+    "FC Cette": "Football Club de Sète", "FC Sète": "Football Club de Sète", "FC Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard",
+    "Football Club de Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard", "Football Club Sochaux-Montbéliard": "Football Club de Sochaux-Montbeliard", "Sochaux": "Football Club de Sochaux-Montbeliard",
+    "Stade Malherbe Caen Calvados Basse-Normandie": "Stade Malherbe Caen", "Angers Sporting Club de l'Ouest": "Angers SCO", "SCO Angers": "Angers SCO",
+    "Gazélec Football Club Ajaccio": "AC Ajaccio", "Espérance Sportive Troyes Aube Champagne": "ESTAC Troyes", "AS Troyes": "ESTAC Troyes",
+    "CA des Sports Généraux": "CASG Paris", "CA de la Soc. Générale": "CASG Paris", "FC Lorient Bretagne Sud": "FC Lorient", "Football Club Lorient": "FC Lorient", "Lorient": "FC Lorient",
+    "FC Rouen": "Football Club Rouennais", "Football Club Rouen": "Football Club Rouennais", "Rouen": "Football Club Rouennais", "Racing Club de France": "Racing Club de Paris",
+    "Red Star Olympique": "Red Star FC", "Red Star Olympique Audonien": "Red Star FC", "Red Star Amical Club": "Red Star FC", "Red Star Olympique Aud.": "Red Star FC",
+    "Paris Saint-Germain Football Club": "Paris Saint-Germain", "Paris Saint-Germain FC": "Paris Saint-Germain",
+    "Girondins A.S.P. de Bordeaux": "Bordeaux", "Girondins de Bordeaux F.C.": "Bordeaux", "Girondins de Bordeaux FC": "Bordeaux", "Girondins A.S.P.": "Bordeaux",
+    "Stade Rennais UC": "Stade Rennais FC", "Stade Rennais Université Club": "Stade Rennais FC", "Stade Rennais Football Club": "Stade Rennais FC", "Stade Rennais": "Stade Rennais FC", "Rennes": "Stade Rennais FC",
+    "Association Sportive de Monaco": "AS Monaco", "Association Sportive de Monaco Football": "AS Monaco", "Association Sportive de Monaco Football Club": "AS Monaco", "Monaco": "AS Monaco",
+    "Association Sportive de Saint-Étienne": "AS Saint-Étienne", "Association Sportive de Saint-Étienne Loire": "AS Saint-Étienne",
+    "Association Sportive de Saint-Étienne de Loire": "AS Saint-Étienne", "AS Saint-Etienne": "AS Saint-Étienne", "Saint-Etienne": "AS Saint-Étienne",
+    "Football Club de Nantes": "FC Nantes", "Nantes": "FC Nantes", "CS Metz": "FC Metz", "Football Club de Metz": "FC Metz", "Football Club Tours": "Tours FC",
+    "Nīmes Olympique": "Nîmes Olympique", "Nîmes": "Nîmes Olympique", "Stade Franēais": "Stade Français", "La Berrichonne de Chāteauroux": "La Berrichonne de Châteauroux",
+    "La Berrichonne Châteauroux": "La Berrichonne de Châteauroux", "Évian Thonon Gaillard Football Club": "Evian Thonon Gaillard Football Club",
+    "Evian-Thonon Gaillard FC": "Evian Thonon Gaillard Football Club", "Union Sportive Valenciennes-Anzin": "Valenciennes Football Club",
+    "Union Sportive Valenciennes-Anzin Arrondissement": "Valenciennes Football Club", "US Valenciennes-Anzin": "Valenciennes Football Club",
+    "Union Athlétique Sedan-Torcy": "UA Sedan-Torcy", "Reims": "Stade de Reims", "Marseille": "Olympique de Marseille", "Olympique Marseille": "Olympique de Marseille",
+    "Strasbourg": "Strasbourg", "Bordeaux": "Bordeaux", "Toulouse": "Toulouse FC",
+    # Netherlands
+    "Quick (Den Haag)": "Quick Den Haag", "Haarlem": "HFC Haarlem", "N.E.C.": "N.E.C. Nijmegen", "N.E.C": "N.E.C. Nijmegen", "Roda JC Kerkrade": "Roda J.C.", "Rapid J.C.": "Roda J.C.",
+    # Brazil
+    "Paysandu-RJ": "Paissandu-RJ", "Ferroviário (PR)": "Ferroviário-PR", "Ferroviário-PR": "Ferroviário-PR", "Sport Club São Paulo (RS)": "Sport Club São Paulo",
+    "AAB (Salvador)": "AAB-BA", "OB": "Odense Boldklub", "Atlético Aviación": "Club Atlético de Madrid",
+})
+RENAME_COMP.update({
+    "Copa Libertadores": {"Barcelona": "Barcelona SC", "América": "América de Cali", "Nacional": "Club Nacional de Football"},
+    "FIFA Intercontinental Cup": {"Nacional": "Club Nacional de Football"},
+    "U.S. Open Cup": {"Vasco da Gama": "Bridgeport Vasco de Gama", "Eintracht Frankfurt": "SC Eintracht", "Eintracht": "SC Eintracht"},
+    "Campeonato Cearense": {"Tramways": "Tramways-CE"},
+    "Campeonato Pernambucano": {"Tramways": "Transways-PE"},
+    "Campeonato Paranaense": {"Ferroviário-PR": "Ferroviário-PR", "Ferroviário": "Ferroviário-PR", "Colorado": "Colorado EC"},
+    "Campeonato Gaúcho": {"Cruzeiro": "Cruzeiro-RS", "São Paulo-RS": "Sport Club São Paulo", "São Paulo": "Sport Club São Paulo", "Pelotas": "EC Pelotas", "Bagé": "GE Bagé"},
+    "Liga Profesional de Fútbol": {"Arsenal": "Arsenal de Sarandí"}, "Copa Argentina": {"Arsenal": "Arsenal de Sarandí"},
+    "Trofeo de Campeones Superliga": {"Arsenal": "Arsenal de Sarandí"},
+    "Supercopa Argentina": {"Arsenal FC": "Arsenal de Sarandí", "Arsenal": "Arsenal de Sarandí", "CA Boca Juniors": "Boca Juniors", "CA River Plate": "River Plate"},
+    "KNVB Beker": {"Quick (Den Haag) 2": "Quick Den Haag"},
+})
+# with a logo of their own now (exact names still win over this list)
+NO_LOGO -= {"1. FC Frankfurt/Oder", "Club Nacional (Paraguai)"}
+RENAME_ALL["Nacional (Asunción)"] = "Club Nacional"
+SET.update({
+    ("KNVB Beker", "1982"): ("AZ Alkmaar", "F.C. Utrecht", ""),
+    ("Coupe de France", "1944"): ("Équipe Fédérale Nancy-Lorraine", "Équipe Fédérale Reims-Champagne"),
+    ("Coupe de France", "1957"): ("Toulouse Football Club", None),
+    ("Ligue 2 BKT", "1952/53"): ("Toulouse Football Club", None),
+    ("U.S. Open Cup", "1955"): ("SC Eintracht", None),
+    ("Campeonato Catarinense", "1956"): ("Operário-SC", None),
+})
+ADD.update({
+    "Copa del Rey": [["1904", 1904, "Athletic de Bilbao", "", "w/o"], ["2020", 2020, "Real Sociedad de Fútbol", "Athletic de Bilbao", "1-0"]],
+    "Campeonato Carioca": [["1937", 1937, "São Cristóvão", "", ""], ["1979 Especial", 1979, "Flamengo", "", ""]],
+    "Campeonato Catarinense": [["1926", 1926, "Avaí", "", ""], ["1983", 1983, "Joinville", "", ""], ["2024", 2024, "Criciúma", "", ""]],
+    "Scottish Premiership": [["1891", 1891, "Rangers", "", ""]],
+})
+DROP |= {("Ligue 1", s) for s in ("1939/40", "1940/41", "1941/42", "1942/43", "1943/44", "1944/45")}
+def _rows(lst):
+    out = []
+    for lab, ch, ru in lst:
+        m = re.match(r"^(\d{4})(?:/(\d{2}))?", lab); y = int(m[1]) + (1 if m[2] else 0)
+        out.append([lab, y, ch, ru, ""])
+    return out
+# whole seasons rewritten from the user's lists: competition -> {season: [(label, champion, runner-up), ...]}
+REPLACE = {
+    "Campeonato Baiano": {"1938": [("1938", "Botafogo-BA", ""), ("1938", "Bahia", "")], "1999": [("1999", "Vitória", "Esporte Clube Poções"), ("1999", "Bahia", "Esporte Clube Poções")]},
+    "Campeonato Gaúcho": {"1918": [("1918", "GE Brasil", ""), ("1918", "Cruzeiro-RS", ""), ("1918", "14 de Julho", "")]},
+    "Ligue 2 BKT": {"1933/34": [("1933/34 Nord", "Red Star FC", ""), ("1933/34 Sud", "Olympique Alèsien", "")], "1938/39": [("1938/39", "Red Star FC", "")],
+                    "1945/46": [("1945/46 Nord", "FC Nancy", ""), ("1945/46 Sud", "Montpellier", "")], "1952/53": [("1952/53", "Toulouse Football Club", "")]},
+    "LaLiga Hypermotion": {},
+}
+for lab, ch in [("1970/71", "Paris Saint-Germain"), ("1971/72", "Valenciennes Football Club"), ("1972/73", "RC Lens"), ("1973/74", "LOSC Lille"), ("1974/75", "AS Nancy Lorraine"),
+                ("1975/76", "Angers SCO"), ("1976/77", "Strasbourg"), ("1977/78", "LOSC Lille"), ("1978/79", "Football Club de Gueugnon"), ("1979/80", "AJ Auxerre"),
+                ("1980/81", "Stade Brestois 29"), ("1981/82", "Toulouse FC"), ("1982/83", "Stade Rennais FC"), ("1983/84", "Tours FC"), ("1984/85", "Le Havre AC"),
+                ("1985/86", "Racing Club de Paris"), ("1986/87", "Montpellier"), ("1987/88", "Strasbourg"), ("1988/89", "Olympique Lyonnais"), ("1989/90", "AS Nancy Lorraine"),
+                ("1990/91", "Le Havre AC"), ("1991/92", "Bordeaux"), ("1992/93", "Football Club de Martigues")]:
+    REPLACE["Ligue 2 BKT"][lab] = [(lab, ch, "")]
+for lab, a, b in [("1949/50", "Real Racing Club de Santander", "CD Alcoyano"), ("1950/51", "Real Gijón", "Club Atlético Tetuán"), ("1951/52", "Real Oviedo", "CD Málaga"),
+                  ("1952/53", "Club Atlético Osasuna", "Real Jaén CF"), ("1953/54", "CD Alavés", "UD Las Palmas"), ("1954/55", "Cultural y Deportiva Leonesa", "Real Murcia CF"),
+                  ("1955/56", "Club Atlético Osasuna", "Real Jaén CF"), ("1956/57", "Real Gijón", "Granada CF"), ("1957/58", "Real Oviedo", "Real Betis Balompié"),
+                  ("1958/59", "Real Valladolid Deportivo", "Elche CF"), ("1959/60", "Real Racing Club de Santander", "RCD Mallorca"), ("1960/61", "Club Atlético Osasuna", "CD Tenerife"),
+                  ("1961/62", "R.C. Deportivo de A Coruña", "Córdoba CF"), ("1962/63", "Pontevedra CF", "Real Murcia CF"), ("1963/64", "R.C. Deportivo de A Coruña", "UD Las Palmas"),
+                  ("1964/65", "Pontevedra CF", "RCD Mallorca"), ("1965/66", "R.C. Deportivo de A Coruña", "Hércules CF"), ("1966/67", "Real Sociedad de Fútbol", "CD Málaga"),
+                  ("1967/68", "R.C. Deportivo de A Coruña", "Granada CF")]:
+    REPLACE["LaLiga Hypermotion"][lab] = [(lab + " Grupo 1", a, ""), (lab + " Grupo 2", b, "")]
+SAUDI = [("1957/58", "Al-Wehda"), ("1958/59", "Al-Ittihad"), ("1959/60", "Al-Ittihad"), ("1960/61", "Al-Ittihad"), ("1961/62", "Al-Hilal"), ("1962/63", "Al-Ahli"),
+         ("1963/64", "Al-Ittihad"), ("1964/65", "Al-Hilal"), ("1965/66", "Al-Ahli"), ("1968/69", "Al-Ahli"), ("1970/71", "Al-Ahli"), ("1971/72", "Al-Ahli"),
+         ("1972/73", "Al-Ahli"), ("1973/74", "Al-Nassr"), ("1974/75", "Al-Nassr")]
+REPLACE["Roshn Saudi League"] = {lab: [(lab, ch, "")] for lab, ch in SAUDI}
+DENMARK = [("1912/13", "KB"), ("1913/14", "KB"), ("1915/16", "B 93"), ("1916/17", "KB"), ("1917/18", "KB"), ("1918/19", "AB"), ("1919/20", "B 1903"), ("1920/21", "AB"),
+           ("1921/22", "KB"), ("1922/23", "BK Frem"), ("1923/24", "B 1903"), ("1924/25", "KB"), ("1925/26", "B 1903"), ("1926/27", "B 93")]
+REPLACE["3F Superliga"] = {lab: [(lab, ch, "")] for lab, ch in DENMARK}
+ARG_OLD = [("1891", "Saint Andrew's"), ("1893", "Lomas Athletic"), ("1894", "Lomas Athletic"), ("1895", "Lomas Athletic"), ("1896", "Lomas Athletic"), ("1897", "Lomas Athletic"),
+           ("1898", "Lomas Athletic"), ("1899", "Belgrano Athletic"), ("1900", "Alumni"), ("1901", "Alumni"), ("1902", "Alumni"), ("1903", "Alumni"), ("1904", "Belgrano Athletic"),
+           ("1905", "Alumni"), ("1906", "Alumni"), ("1907", "Alumni"), ("1908", "Belgrano Athletic"), ("1909", "Alumni"), ("1910", "Alumni"), ("1911", "Alumni"),
+           ("1912 AAF", "Quilmes Atlético Club"), ("1912 FAF", "Porteño"), ("1913 AAF", "Racing Club"), ("1913 FAF", "Estudiantes de La Plata"), ("1914 AAF", "Racing Club"),
+           ("1914 FAF", "Porteño"), ("1915", "Racing Club"), ("1916", "Racing Club"), ("1917", "Racing Club"), ("1918", "Racing Club"), ("1919 AAF", "Boca Juniors"),
+           ("1919 AAmF", "Racing Club"), ("1920 AAF", "Boca Juniors"), ("1920 AAmF", "River Plate"), ("1921 AAF", "Club Atlético Huracán"), ("1921 AAmF", "Racing Club"),
+           ("1922 AAF", "Club Atlético Huracán"), ("1922 AAmF", "Club Atlético Independiente"), ("1923 AAF", "Boca Juniors"), ("1923 AAmF", "San Lorenzo de Almagro"),
+           ("1924 AAF", "Boca Juniors"), ("1924 AAmF", "San Lorenzo de Almagro"), ("1925 AAF", "Club Atlético Huracán"), ("1925 AAmF", "Racing Club"), ("1926 AAF", "Boca Juniors"),
+           ("1926 AAmF", "Club Atlético Independiente"), ("1927", "San Lorenzo de Almagro"), ("1928", "Club Atlético Huracán"), ("1929", "Club de Gimnasia y Esgrima La Plata"),
+           ("1930", "Boca Juniors")]
+REPLACE["Liga Profesional de Fútbol"] = {}
+for lab, ch in ARG_OLD: REPLACE["Liga Profesional de Fútbol"].setdefault(lab.split()[0], []).append((lab, ch, ""))
+
 def rename(n, comp):
     if not n: return n
     n = n.replace("ĳ", "ij").replace("Ĳ", "IJ")
@@ -176,7 +315,8 @@ def apply(out):
             r[2] = rename(r[2], n); r[3] = rename(r[3], n)
             if n in TWO_GROUPS and r[0] in TWO_GROUPS[n] and r[3]:
                 rows.append([r[0] + " Norte", r[1], r[2], "", ""]); rows.append([r[0] + " Sul", r[1], r[3], "", ""]); continue
-            if SPLIT_COMPS.match(n) and "," in r[2]:
+            if (SPLIT_COMPS.match(n) and "," in r[2]) or "(shared)" in r[2]:
+                r[2] = re.sub(r"\s*\(shared\)", "", r[2])
                 for part in [p.strip() for p in r[2].split(",") if p.strip()]: rows.append([r[0], r[1], rename(part, n), "", ""])
                 continue
             if (n, r[0]) in DROP: continue
@@ -184,11 +324,14 @@ def apply(out):
             if fx:
                 if fx[0]: r[2] = fx[0]
                 if fx[1] is not None: r[3] = fx[1]
+                if len(fx) > 2: r[4] = fx[2]
             rows.append(r)
         if n in SHIFT_YEAR:
             for r in rows:
                 m = re.match(r"^(\d{4})(.*)$", r[0])
                 if m: r[0] = str(int(m[1]) + SHIFT_YEAR[n]) + m[2]; r[1] += SHIFT_YEAR[n]
+        for sn, lst in REPLACE.get(n, {}).items():
+            rows = [r for r in rows if not (r[0] == sn or r[0].startswith(sn + " "))] + _rows(lst)
         have = {(r[0], k(r[2])) for r in rows}
         for a in ADD.get(n, []):
             seasons = {r[0] for r in rows}
@@ -205,5 +348,6 @@ def apply(out):
         if n in BASE: c["b"] = BASE[n]
         if re.match(r"^(Campeonato |Copa do Nordeste|Copa Verde|Supercopa do Brasil)", n): c["em"] = 5   # state leagues end by May
         if n == "Liga Profesional de Fútbol":
-            for r in c["r"]: r[0] = arg_label(r[0])
+            for r in c["r"]:
+                if not re.search(r"\bAA(m)?F\b|FAF", r[0]): r[0] = arg_label(r[0])
     return out

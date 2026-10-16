@@ -1504,6 +1504,7 @@ function makeDB(types){ return {
   /* conservative lookup for the bundled history lists (thousands of old club names): exact names, or all
      significant words of one name inside the other ("SL Benfica" ~ "Benfica", "Esporte Clube Bahia" ~ "Bahia") */
   strict(q){
+    const k0 = lkey(q); if(k0 && this.exact.has(k0)) return this.exact.get(k0);          // "B 1903": the year is part of the name
     const kf = lkey(stripYears(q)); if(kf && this.exact.has(kf)) return this.exact.get(kf);
     q = stripYears(String(q||"").replace(/\s*\([^)]*\)\s*$/,"")); const k = lkey(q); if(!k || !this.list.length) return null;
     const ck = "!"+k; if(this.cache.has(ck)) return this.cache.get(ck);
@@ -2902,7 +2903,9 @@ function histTeam(name, nat){
   const ck = (nat?"n|":"c|")+name; if(Hist.tcache.has(ck)) return Hist.tcache.get(ck);
   const raw = String(name||"").trim(), base = raw.replace(/\s*\([^)]*\)\s*$/,"") || raw;
   const a = HIST_ALIAS[lkey(base)]; let e = null;
-  if(a !== "" && !Hist.nl.has(lkey(raw)) && !Hist.nl.has(lkey(base))) e = canonE(nat ? (NatDB.strict(raw) || NatDB.strict(a||base) || ClubDB.strict(raw) || ClubDB.strict(a||base)) : (ClubDB.strict(raw) || ClubDB.strict(a||base)));
+  const blocked = Hist.nl.has(lkey(raw)) || Hist.nl.has(lkey(base));
+  if(blocked) e = canonE(ClubDB.exact.get(lkey(raw)) || (nat ? NatDB.exact.get(lkey(raw)) : null) || null);   // only a logo with exactly this name
+  else if(a !== "") e = canonE(nat ? (NatDB.strict(raw) || NatDB.strict(a||base) || ClubDB.strict(raw) || ClubDB.strict(a||base)) : (ClubDB.strict(raw) || ClubDB.strict(a||base)));
   const r = {k: e ? e.f : "h:"+lkey(a||base), e, label: e ? dbLabel(e) : base};
   Hist.tcache.set(ck, r); return r;
 }
