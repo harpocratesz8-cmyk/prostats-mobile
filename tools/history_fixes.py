@@ -278,6 +278,17 @@ ARG_OLD = [("1891", "Saint Andrew's"), ("1893", "Lomas Athletic"), ("1894", "Lom
 REPLACE["Liga Profesional de Fútbol"] = {}
 for lab, ch in ARG_OLD: REPLACE["Liga Profesional de Fútbol"].setdefault(lab.split()[0], []).append((lab, ch, ""))
 
+# Serie A before the single-table era (the TXT list starts in 1929/30); 1926/27 Torino was revoked
+SERIE_A_OLD = [("1898", "Genoa C.F.C."), ("1899", "Genoa C.F.C."), ("1900", "Genoa C.F.C."), ("1901", "A.C. Milan"), ("1902", "Genoa C.F.C."), ("1903", "Genoa C.F.C."),
+               ("1904", "Genoa C.F.C."), ("1905", "Juventus F.C."), ("1906", "A.C. Milan"), ("1907", "A.C. Milan"), ("1908", "Pro Vercelli"), ("1909", "Pro Vercelli"),
+               ("1909/10", "F.C. Internazionale Milano"), ("1910/11", "Pro Vercelli"), ("1911/12", "Pro Vercelli"), ("1912/13", "Pro Vercelli"), ("1913/14", "Casale"),
+               ("1914/15", "Genoa C.F.C."), ("1919/20", "F.C. Internazionale Milano"), ("1920/21", "Pro Vercelli"), ("1921/22", "Pro Vercelli"), ("1921/22", "Novese"),
+               ("1922/23", "Genoa C.F.C."), ("1923/24", "Genoa C.F.C."), ("1924/25", "Bologna F.C. 1909"), ("1925/26", "Juventus F.C."), ("1927/28", "Torino F.C."),
+               ("1928/29", "Bologna F.C. 1909")]
+REPLACE["Serie A"] = {}
+for lab, ch in SERIE_A_OLD: REPLACE["Serie A"].setdefault(lab, []).append((lab, ch, ""))
+BASE.pop("Serie A", None)   # those titles are now real rows of the list
+
 def rename(n, comp):
     if not n: return n
     n = n.replace("ĳ", "ij").replace("Ĳ", "IJ")
