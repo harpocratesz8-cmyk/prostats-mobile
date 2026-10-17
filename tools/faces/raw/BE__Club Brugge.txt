@@ -1,0 +1,51 @@
+18051194|Hans Vanaken|32
+27162493|Raphael Onyedika|24
+36152916|Christos Tzolis|23
+49056376|Félix Lemaréchal|21
+8167246|Simon Mignolet|37
+2000009057|Carlos Forbs|21
+2000184216|Nicolò Tresoldi|20
+18059927|Brandon Mechele|32
+2000033033|Joel Ordóñez|21
+37069474|Ludovit Reis|25
+53146811|Hugo Vetlesen|25
+2000108398|Joaquin Seys|20
+2000098012|Aleksandar Stanković|19
+37076256|Bjorn Meijer|22
+2000006275|Romeo Vermant|21
+18083575|Nordin Jackers|27
+2000091515|Kyriani Sabbe|20
+2000205018|Mamadou Diakhon|19
+93060362|Gustaf Nilsson|28
+18114980|Hugo Siquet|23
+2000261117|Shandre Campbell|19
+18115747|Cisse Sandra|21
+2000091517|Jorne Spileers|20
+2000365472|Vince Osuji|19
+18115742|Lynnt Audoor|21
+37084979|Dani van den Heuvel|22
+2000219856|Axl De Corte|19
+2000368735|Stan Naert|17
+2000368899|Emiel Callens|17
+2000307452|Iwo Polakow|18
+2000368895|Daan Braspenning|17
+2000449255|Utku Kurtal|16
+2000474686|Al-Hassan Kamara|16
+2000474703|Mamadou Balde|16
+2000455111|Bas Snaet|16
+2000474045|Jean-Paul Bayiha|16
+2000368896|Thibeau Kestemont|17
+2000425313|Noah Rwabuzisoni|17
+2000368250|Brian Didrich|17
+2000368795|Lyen Ferrant|16
+2000368794|Gilles Van Steeland|17
+2000480324|Senne Delahaye|15
+2000474056|Mateo Haesaert|16
+2000480341|Stan Troch|16
+2000449258|Don Ndombele|16
+2000531038|Léni Strouwen|15
+2000455089|Jippe Caes|16
+2000455106|Xander Vandenberghe|16
+2000474064|Luca Rousseaux|16
+2000474697|Felix Van As|16
+2000474050|Jesse De Boever|16

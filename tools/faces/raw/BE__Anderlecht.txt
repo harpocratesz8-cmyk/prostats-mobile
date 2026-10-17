@@ -1,0 +1,43 @@
+85023676|Thorgan Hazard|32
+18115024|Ilay Camara|22
+49044569|Moussa Diarra|24
+71106198|Danylo Sikan|24
+18107457|Killian Sardella|23
+18116329|Mario Stroeykens|20
+18015959|Colin Coosemans|32
+18101825|Adriano Bertaccini|24
+51063413|César Huerta|24
+18107452|Marco Kana|22
+37071196|Enric Llansana|24
+93024775|Ludwig Augustinsson|31
+2000368243|Nathan De Cat|16
+2000193127|Coba|22
+18105040|Yari Verschaeren|24
+2000107760|Tristan Degreef|20
+2000069115|Nathan-Dylan Saliba|21
+2000288835|Mihajlo Cvetković|18
+2000034387|Lucas Hey|22
+91199070|Justin Heekeren|24
+2000151705|Mihajlo Ilić|22
+2000301241|Mathys Angély|18
+2000112676|Ali Maamar|20
+18105035|Joachim Imbrechts|23
+2000455088|Joakim Lavia|16
+2000368916|Mohamed Abdellaoui|17
+2000368918|Gorak Ghale|17
+2000474549|Noa Ojea|15
+2000449227|Ilyas Benktib|16
+2000455087|Rune Verstrepen|16
+2000368246|Jonathan Hungenaert|17
+2000254632|Kamiel Timmermans|16
+2000261010|Timéo Ilunga-Tshiapidia|18
+2000474678|Saliou Dia|16
+2000474059|Noah Kalonji|16
+2000474062|Rami Lougmani|16
+2000449230|Kylian Liema Olinga|16
+2000449231|Yssouf Sankharé|16
+2000368917|Hussen Hassen|17
+2000426400|Taysir El Heggach|17
+2000455093|Nuño Denayer|16
+2000474052|Milan Debast|16
+2000474674|Aulon Asani|16

@@ -1,0 +1,48 @@
+45083761|Shogo Taniguchi|33
+45101234|Ryotaro Ito|27
+18116009|Ilias Sebaoui|23
+2000239998|Keisuke Goto|20
+2000064264|Taiga Hata|23
+18074562|Wolke Janssens|30
+45117126|Rihito Yamamoto|23
+48037983|Abdoulaye Sissako|27
+18115856|Robert-Jan Vanwesemael|23
+30034782|Arbnor Muja|26
+47038965|Visar Musliu|30
+49038939|Loïc Mbe Soh|24
+18096778|Joedrick Pupe|28
+53104571|Simen Juklerød|31
+83282870|Leo Kokubo|24
+2000283687|Kaito Matsuzawa|24
+49048371|Ryan Merlen|23
+2000024003|Isaías Delpupo|22
+2000206143|Oumar Diouf|22
+2000290485|Shion Shinkawa|17
+2000022217|Alouis Diriken|21
+8189606|Jo Coppens|34
+2000307458|Illyès Benachour|18
+2000055180|Emile Kondé|20
+2000446273|Lazaros Tsioliaridis|16
+2000428151|Denzel Opoku|17
+2000423750|Sham Wetungany|17
+2000366563|Korneel Hendrickx|17
+2000307235|Oved Guessou|18
+2000449293|David Assi|16
+2000428146|Moustafa Camara|17
+2000382857|Ilyas Orhan|16
+2000428148|Siebe Schurmans|17
+2000531573|Erwin Vermeulen|16
+2000428145|Keylan Gaïse Kopa|16
+2000514193|Yanis Ngoy|16
+2000516686|Amjad Maidoub|17
+2000514200|Luciano Mweze Baraka|16
+2000481392|Bode Pieters|15
+2000430766|Mustafa Arda Yildirim|18
+2000428149|Allen Sombi Kelo|17
+2000514197|Stig Vandewinkel|15
+2000514195|Ferre Van Herck|16
+2000514199|Witse Vandervelpen|15
+2000514201|Kas Nys|16
+2000514194|Bryan Dignef|15
+2000514198|James Jaspaert|16
+2000514196|Jef Schepers|16

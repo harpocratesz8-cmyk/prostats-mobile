@@ -1,0 +1,40 @@
+735216|Cristiano Ronaldo|40
+67104772|Íñigo Martínez|34
+83169822|João Félix|25
+85104424|Kingsley Coman|29
+85100467|Sadio Mané|33
+24016529|Marcelo Brozović|32
+49047065|Mohamed Simakan|25
+2000055284|Ângelo|20
+19337914|Bento|26
+2000106805|Nawaf Al-Aqidi|25
+2000073458|Nawaf Bu Washl|25
+23470663|Abdulelah Al-Amri|28
+23374871|Sultan Al-Ghannam|31
+23397312|Abdullah Al-Khaibari|28
+23470656|Abdulrahman Ghareeb|28
+2000014013|Aiman Yahya|24
+23443281|Abdullah Al-Hamddan|25
+23470671|Ali Al-Hassan|28
+23431992|Nader Al-Sharari|29
+2000190701|Saad Al-Nasser|24
+23374866|Sami Al-Naji|28
+23470996|Raghid Najjar|28
+2000227142|Abdulmalik Al-Jaber|21
+2000198695|Salem Al-Najdi|22
+2000123879|Mohammed Marran|24
+2000260549|Hayder Abdulkareem|20
+2000397392|Rakan Al-Ghamdi|19
+2000325628|Yousef Al-Tahan|18
+2000419532|Saad Haqawi|19
+2000419531|Awad Aman|20
+2000114368|Waleed Ayyash|21
+2000273346|Bassam Hazazi|20
+2000504661|Faris Salem|17
+2000130293|Muhannad Barah|21
+2000504656|Abdulrahman Al-Otaibi|17
+2000504660|Maher Tawashi|17
+2000516227|Mubarak Al-Buainain|19
+2000516234|Abdulrahman Sufyani|17
+2000516230|Walid Al-Mashdaq|18
+2000519673|Habeeb Al-Antaif|17

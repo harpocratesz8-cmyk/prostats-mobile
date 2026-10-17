@@ -1,0 +1,39 @@
+14180903|Mateo Retegui|26
+67030696|Nacho|35
+51056626|Julián Quiñones|28
+78067241|Nahitan Nández|29
+19186901|Otávio|30
+91124144|Julian Weigl|29
+18010782|Koen Casteels|33
+78094302|Gastón Álvarez|25
+2000114762|Musab Al-Juwayr|22
+2000253243|Christopher Bonsu Baah|20
+2000285894|Mohammed Abu Al-Shamat|22
+23167669|Yasser Al-Shahrani|33
+2000073461|Waleed Al-Ahmad|26
+23470691|Turki Al-Ammar|25
+2000184692|Jehad Thikri|23
+23208476|Abdullah Al-Salem|32
+2000273988|Gabriel Carvalho|17
+23167217|Ahmed Al-Kassar|34
+23311456|Ali Hazazi|31
+2000032859|Haitham Asiri|24
+23248120|Mohammed Qasem|30
+23470668|Ibrahim Mahnashi|25
+2000044609|Meshari Sunyur|23
+2000238362|Alejandro Vergaz|19
+2000520793|Chefe|17
+2000440797|Fernando Formoso|18
+2000477570|Amar Al-Yuhaybi|19
+2000310283|Anas Al-Ahmadi|20
+2000463690|Adel Al-Mutairi|20
+2000532076|Eyad Houssa|18
+2000375138|Talal Al-Harthi|17
+2000227406|Jathob Al-Dhafieri|18
+2000463736|Mohammed Al-Nuqaydan|18
+2000434414|Bader Al-Omair|20
+2000532075|Khalid Hazazi|20
+2000519688|Saeed Al-Dossari|17
+2000519662|Abubaker Saeed|16
+2000519665|Wafi Al-Aklubi|17
+2000532078|Yasser Al-Dhafiri|18

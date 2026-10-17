@@ -1,0 +1,33 @@
+21024436|Nikola Vasilj|29|nikola-vasilj
+93053901|Eric Smith|28|eric-smith
+48039548|Mathias Pereira Lage|28|mathias-pereira-lage
+61041668|Jackson Irvine|32|jackson-irvine
+45117151|Joel Chima Fujita|23|joel-chima-fujita
+47023240|Karol Mets|32|karol-mets
+92064816|Hauke Wahl|31|hauke-wahl
+2000092217|Tomoya Ando|26|tomoya-ando
+37063647|Martijn Kaars|26|martijn-kaars
+36081836|Manolis Saliakas|28|manolis-saliakas
+72049289|James Sands|25|james-sands
+45107600|Taichi Hara|26|taichi-hara
+15069939|Connor Metcalfe|25|connor-metcalfe
+29198448|Danel Sinani|28|danel-sinani
+91204749|Louis Oppie|23|louis-oppie
+53110138|Mathias Rasmussen|27|mathias-rasmussen
+49059805|Andréas Hountondji|23|andreas-hountondji
+16202269|David Nemeth|24|david-nemeth
+96143927|Arkadiusz Pyrka|22|arkadiusz-pyrka
+96045832|Adam Dźwigała|29|adam-dzwigala
+29236380|Ricky-Jade Jones|22|ricky-jade-jones
+91175827|Lars Ritzka|27|lars-ritzka
+2000049977|Ben Voll|24|ben-voll
+16191386|Simon Spari|23|simon-spari
+2000019643|Fin Stevens|22|fin-stevens
+2000374059|Abdoulie Ceesay|21|abdoulie-ceesay
+2000199797|Jannik Robatsch|20|jannik-robatsch
+2000173923|Romeo Aigbekaen|21|romeo-aigbekaen
+2000258045|Marwin Schmitz|18|marwin-schmitz
+2000273812|Jannik Westphal|20|jannik-westphal
+2000018284|Emil Gazdov|21|emil-gazdov
+2000330405|Nick Schmidt|17|nick-schmidt
+2000194716|Muhammad Dahaba|20|muhammad-dahaba

@@ -1,0 +1,33 @@
+37041763|Jorrit Hendrix|30
+91175877|Paul Jaeckel|26
+91194541|Jannis Heuer|25
+91150179|Joshua Mees|29
+91177001|Oliver Batista Meier|24
+2000238715|Shin Yamada|25
+91156204|Marco Meyerhöfer|29
+91138468|Marvin Schulz|30
+2000065718|Johannes Schenk|22
+91172551|Tobias Raschl|25
+25058269|Imad Rondić|26
+91181690|Marcel Benger|27
+91150290|Etienne Amenyido|27
+2000053585|Niko Koulis|26
+91194000|Lars Lokotsch|29
+91181689|Charalampos Makridis|29
+91150073|Torge Paetow|29
+91119334|Rico Preißinger|28
+2000037769|Jano ter Horst|23
+27013698|Mikkel Kirkeskov|33
+91202100|Yassine Bouchama|28
+92057833|Simon Scherder|32
+2000016037|Zidan Sertdemir|20
+2000171312|Antonio Tikvić|21
+93141679|Oscar Vilhelmsson|21
+92086236|Malik Batmaz|25
+91166134|Morten Behrens|28
+91203930|Luca Bolay|22
+2000037746|Marvin Benjamins|22
+2000141730|Marian Kirsch|21
+2000330195|Tidiane Gueye|23
+2000275497|Niklas Varelmann|18
+2000275502|Michel Scharlau|18

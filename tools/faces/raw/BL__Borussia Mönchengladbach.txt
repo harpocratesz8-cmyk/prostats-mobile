@@ -1,0 +1,40 @@
+92065436|Tim Kleindienst|29|tim-kleindienst
+48036785|Franck Honorat|28|franck-honorat
+92012093|Kevin Stöger|31|kevin-stoger
+91206105|Rocco Reitz|23|rocco-reitz
+91144903|Moritz Nicolas|27|moritz-nicolas
+98033057|Nico Elvedi|28|nico-elvedi
+98029083|Haris Tabaković|31|haris-tabakovic
+91144396|Robin Hack|26|robin-hack
+37046467|Kevin Diks|28|kevin-diks
+2000020405|Philipp Sander|27|philipp-sander
+91167376|Florian Neuhaus|28|florian-neuhaus
+91194484|Yannik Engelhardt|24|yannik-engelhardt
+92067018|Marvin Friedrich|29|marvin-friedrich
+91193050|Jens Castrop|21|jens-castrop
+45109947|Shuto Machino|25|shuto-machino
+72051281|Giovanni Reyna|22|giovanni-reyna
+72051619|Joe Scally|22|joe-scally
+49037694|Nathan Ngoumou|25|nathan-ngoumou
+2000154596|Lukas Ullrich|21|lukas-ullrich
+2000151926|Kota Takai|20|kota-takai
+93142507|Hugo Bolin|21|hugo-bolin
+2000116422|Fabio Chiarodia|20|fabio-chiarodia
+2000110066|Alejo Sarco|19|alejo-sarco
+91190660|Jan Olschowsky|23|jan-olschowsky
+2000189121|Tiago Pereira Cardoso|19|tiago-pereira-cardoso
+35006814|Tobias Sippel|37|tobias-sippel
+2000468465|Wael Mohya|16|wael-mohya
+2000308734|Jan Urbich|21|jan-urbich
+2000259404|Niklas Swider|18|niklas-swider
+2000497358|Iaia Manco Danfa|18|iaia-manco-danfa
+2000158240|Veit Stange|21|veit-stange
+2000259414|Fritz Fleck|18|fritz-fleck
+2000258630|Yannick Michaelis|18|yannick-michaelis
+2000259383|Tyler Meiser|18|tyler-meiser
+2000174371|Simon Walde|20|simon-walde
+2000180868|Nico Vidic|18|nico-vidic
+2000331099|Mathieu Nguefack|17|mathieu-nguefack
+2000331102|Elias Vali Fard|17|elias-vali-fard
+2000331090|Marcello Trippel|17|marcello-trippel
+2000331091|Niko Horvat|16|niko-horvat

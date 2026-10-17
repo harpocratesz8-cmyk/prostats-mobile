@@ -1,0 +1,36 @@
+27010680|Christian Eriksen|33|christian-eriksen
+2000069643|Mohamed Amoura|25|mohamed-amoura
+96085886|Kamil Grabara|26|kamil-grabara
+91100466|Maximilian Arnold|31|maximilian-arnold
+24053458|Lovro Majer|27|lovro-majer
+27097478|Joakim Mæhle|28|joakim-maehle
+16253898|Patrick Wimmer|24|patrick-wimmer
+27122565|Jonas Wind|26|jonas-wind
+27143432|Jesper Lindstrøm|25|jesper-lindstrom
+93065023|Mattias Svanberg|26|mattias-svanberg
+19354886|Vini Souza|26|vini-souza
+92018446|Marius Müller|32|marius-muller
+63025710|Denis Vavro|29|denis-vavro
+36159445|Kostas Koulierakis|21|kostas-koulierakis
+29162924|Moritz Jenz|26|moritz-jenz
+91105029|Yannick Gerhardt|31|yannick-gerhardt
+91207901|Kilian Fischer|24|kilian-fischer
+2000146355|Adam Daghim|19|adam-daghim
+2000115205|Jeanuël Belocian|20|jeanuel-belocian
+2000104915|Saël Kumbedi|20|sael-kumbedi
+19284576|Rogério|27|rogerio
+72056310|Kevin Paredes|22|kevin-paredes
+37084995|Jenson Seelt|22|jenson-seelt
+2000215183|Bence Dárdai|19|bence-dardai
+2000178883|Aaron Zehnter|20|aaron-zehnter
+2000147146|Dženan Pejčinović|20|dzenan-pejcinovic
+2000199186|Jonas Adjetey|21|jonas-adjetey
+2000329424|Kento Shiogai|20|kento-shiogai
+5610023|Pavao Pervan|37|pavao-pervan
+2000259397|Jan Bürger|18|jan-burger
+2000072360|Cleiton|22|cleiton
+2000330215|Pharell Hensel|18|pharell-hensel
+2000259390|Till Neininger|18|till-neininger
+2000259417|Trevor Benedict|18|trevor-benedict
+2000332414|Bruno Katz|17|bruno-katz
+2000239333|Jakub Zieliński|17|jakub-zielinski

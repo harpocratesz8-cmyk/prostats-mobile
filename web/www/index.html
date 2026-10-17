@@ -535,6 +535,11 @@ body.locked{overflow:hidden}
 .hc-seasons .ss{width:62px;flex:none;font-size:12.5px;font-weight:700;color:var(--muted)}
 .hc-plaque{display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;padding:12px;border:1px solid color-mix(in srgb,var(--gold) 40%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--gold) 7%,var(--surface))}
 
+.avatar.face{background:#1b2537;overflow:hidden;padding:0}
+.avatar.face img{width:100%;height:100%;object-fit:cover;object-position:top}
+.face-mini{width:26px;height:26px;border-radius:50%;object-fit:cover;object-position:top;background:#1b2537;flex:none;border:1px solid var(--line,#2a3550)}
+.face-mini.ph{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-size:10px;font-weight:800;font-family:var(--f-display)}
+
 </style>
 </head>
 <body>
@@ -1929,7 +1934,7 @@ function vMoreSub(k){
     body = out.length ? out.map(([lbl,agg])=>`<div class="sec-h"><h2>${esc(lbl)}</h2></div><div class="ilist">${Object.entries(agg).sort((a,b)=>b[1].j-a[1].j).map(([c,a])=>`<button class="item" data-act="compRep" data-v="${esc(normComp(c))}" data-s="">${logoOf(c)?crest(c,36):`<span class="ico" style="color:var(--accent)">${IC.cup}</span>`}<div class="grow"><div class="t">${esc(c)} <span class="muted">›</span></div><div class="s">${a.seasons.size} ${t("season").toLowerCase()}${a.seasons.size>1&&LANG==="en"?"s":a.seasons.size>1?"s":""}</div></div><div class="num" style="font-size:18px;font-weight:700">${a.j} · ${a.g} · ${a.a}</div></button>`).join("")}</div>`).join("") : empty(t("no_data"), t("no_data_s"));
   } else if(k==="squad"){
     const ks = Object.keys(S.dados_elenco||{}).sort((a,b)=>seasonSortKey(b)-seasonSortKey(a));
-    body = ks.length ? ks.map(k2=>`<div class="season-h"><span>${esc(k2)}</span><span>${(S.dados_elenco[k2]||[]).length}</span></div><div class="tbl-wrap"><table><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th></tr></thead><tbody>${[...(S.dados_elenco[k2]||[])].sort((a,b)=>int(b.jogos)-int(a.jogos)).map(p=>`<tr><td>${esc(p.nome)}</td><td>${esc(p.posicao)}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td></tr>`).join("")}</tbody></table></div>`).join("") : empty(t("no_data"), LANG==="en"?"Squad data entered in the PC app shows up here.":"O elenco cadastrado no app do PC aparece aqui.");
+    body = ks.length ? ks.map(k2=>{ const sc = clubOfSeason(k2); return `<div class="season-h"><span>${esc(k2)}</span><span>${(S.dados_elenco[k2]||[]).length}</span></div><div class="tbl-wrap"><table><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th></tr></thead><tbody>${[...(S.dados_elenco[k2]||[])].sort((a,b)=>int(b.jogos)-int(a.jogos)).map(p=>`<tr><td><span class="row" style="gap:8px">${faceMini(p.nome, sc)}${esc(p.nome)}</span></td><td>${esc(p.posicao)}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td></tr>`).join("")}</tbody></table></div>`; }).join("") : empty(t("no_data"), LANG==="en"?"Squad data entered in the PC app shows up here.":"O elenco cadastrado no app do PC aparece aqui.");
   } else if(k==="data"){
     return vData();
   }
@@ -2121,19 +2126,22 @@ function vPartners(){
   const f = UI.parSeason||""; const P = {};
   const names = s => String(s||"").split(",").map(x=>x.trim()).filter(Boolean).map(x=>x.replace(/\S+/g, w=>w[0].toUpperCase()+w.slice(1).toLowerCase()));
   for(const j of S.ultimas_performances){ if(f && seasonOf(j)!==f) continue; const d = j.Detalhes||{};
-    for(const n of names(d.AssistRecebidaDe)){ const x = P[n] = P[n]||{rec:0,dad:0}; x.rec++; }
-    for(const n of names(d.AssistDadaPara)){ const x = P[n] = P[n]||{rec:0,dad:0}; x.dad++; } }
+    const club = j.Time || S.informacoes["Clube Atual"]; const sel = isSelMatch(j);
+    const add = (n, k) => { const x = P[n] = P[n]||{rec:0,dad:0,cl:{}}; x[k]++; if(!sel) x.cl[club] = (x.cl[club]||0)+1; };
+    for(const n of names(d.AssistRecebidaDe)) add(n, "rec");
+    for(const n of names(d.AssistDadaPara)) add(n, "dad"); }
+  const pc = n => { const e = Object.entries((P[n]||{}).cl||{}).sort((a,b)=>b[1]-a[1])[0]; return e ? e[0] : ""; };
   const all = Object.entries(P).map(([n,x])=>[n,{...x,tot:x.rec+x.dad}]).sort((a,b)=>b[1].tot-a[1].tot);
   if(!all.length) return seasonPicker(f,"parSeason") + empty(t("no_data"), t("partners_empty"));
   const me = (S.informacoes["Nome Completo"]||"").split(" ")[0]; const max = Math.max(1,...all.map(([,x])=>Math.max(x.rec,x.dad)));
   const topRec = all.filter(([,x])=>x.rec).sort((a,b)=>b[1].rec-a[1].rec).slice(0,5), topDad = all.filter(([,x])=>x.dad).sort((a,b)=>b[1].dad-a[1].dad).slice(0,5);
-  const av = n => `<span class="avatar" style="--c:hsl(${hue(n)} 50% 40%)">${esc(initials(n).slice(0,2))}</span>`;
+  const av = n => faceAvatar(n, pc(n));
   return `${seasonPicker(f,"parSeason")}
-    <div class="card trio"><div class="tiny">${t("best_trio")}</div><div class="trio-row">${all[1]?`<div>${av(all[1][0])}<b>${esc(all[1][0])}</b><span class="num">${all[1][1].tot}</span></div>`:""}<div class="me">${av(me)}<b>${esc(me)}</b><span>${t("you")}</span></div><div>${av(all[0][0])}<b>${esc(all[0][0])}</b><span class="num">${all[0][1].tot}</span></div></div></div>
-    <div class="mini-grid"><div class="card"><div class="fsec" style="color:var(--go);margin:0 0 6px">${t("waiters")}</div>${topRec.map(([n,x])=>`<div class="row between small"><span>${esc(n)}</span><b class="num">${x.rec}</b></div>`).join("")||"–"}</div>
-      <div class="card"><div class="fsec" style="color:var(--accent);margin:0 0 6px">${t("served")}</div>${topDad.map(([n,x])=>`<div class="row between small"><span>${esc(n)}</span><b class="num">${x.dad}</b></div>`).join("")||"–"}</div></div>
+    <div class="card trio"><div class="tiny">${t("best_trio")}</div><div class="trio-row">${all[1]?`<div>${av(all[1][0])}<b>${esc(all[1][0])}</b><span class="num">${all[1][1].tot}</span></div>`:""}<div class="me"><span class="avatar" style="--c:hsl(${hue(me)} 50% 40%)">${esc(initials(me).slice(0,2))}</span><b>${esc(me)}</b><span>${t("you")}</span></div><div>${av(all[0][0])}<b>${esc(all[0][0])}</b><span class="num">${all[0][1].tot}</span></div></div></div>
+    <div class="mini-grid"><div class="card"><div class="fsec" style="color:var(--go);margin:0 0 6px">${t("waiters")}</div>${topRec.map(([n,x])=>`<div class="row between small"><span class="row" style="gap:6px">${faceMini(n,pc(n))}${esc(n)}</span><b class="num">${x.rec}</b></div>`).join("")||"–"}</div>
+      <div class="card"><div class="fsec" style="color:var(--accent);margin:0 0 6px">${t("served")}</div>${topDad.map(([n,x])=>`<div class="row between small"><span class="row" style="gap:6px">${faceMini(n,pc(n))}${esc(n)}</span><b class="num">${x.dad}</b></div>`).join("")||"–"}</div></div>
     <div class="card"><div class="legend" style="margin:0 0 10px"><span><i style="background:var(--go)"></i>${t("you_received")}</span><span><i style="background:var(--accent)"></i>${t("you_gave")}</span></div>
-      <div class="bars">${all.slice(0,15).map(([n,x])=>`<div class="bar"><div class="lbl"><span>${esc(n)}</span><b class="num">${x.tot}</b></div><div class="trk dual"><i style="width:${100*x.rec/max}%;background:var(--go)"></i></div><div class="trk dual"><i style="width:${100*x.dad/max}%;background:var(--accent)"></i></div></div>`).join("")}</div></div>`;
+      <div class="bars">${all.slice(0,15).map(([n,x])=>`<div class="bar"><div class="lbl"><span class="row" style="gap:6px">${faceMini(n,pc(n))}${esc(n)}</span><b class="num">${x.tot}</b></div><div class="trk dual"><i style="width:${100*x.rec/max}%;background:var(--go)"></i></div><div class="trk dual"><i style="width:${100*x.dad/max}%;background:var(--accent)"></i></div></div>`).join("")}</div></div>`;
 }
 
 /* ---------- Time machine ---------- */
@@ -3088,6 +3096,62 @@ function histPlaque(c){
     <button class="btn sm" data-act="histOpen" data-k="${esc(comp.key)}">🏛 ${t("hist_open")}</button></div>`;
 }
 
+/* ================= Player faces (bundled logos/faces.json + logos/p/<id>.webp) =================
+   Faces come from a Football Manager facepack; each entry is [fmId, name, club, league].
+   A name typed in the PC app ("Kane", "H. Kane", "Harry Kane") is matched to a face, using the club
+   of the season/match to tell apart players with the same surname. */
+const FaceDB = (() => {
+  let list = [], byTok = new Map(), ready = false;
+  const toks = s => lnorm(s).split(" ").filter(Boolean);
+  const clubKey = c => { if(!c) return ""; const e = LogoDB.resolve(c); return e ? e.n : lkey(c); };
+  function load(j){
+    list = (j.e||[]).map(([id, n, c, l]) => ({ id, n, c, l, t: toks(n), ck: null }));
+    byTok = new Map(); for(const p of list) for(const w of new Set(p.t)) { if(!byTok.has(w)) byTok.set(w, []); byTok.get(w).push(p); }
+    ready = true;
+  }
+  const memo = new Map();
+  function find(name, club){
+    if(!ready || !name) return null;
+    const key = name + "|" + (club||""); if(memo.has(key)) return memo.get(key);
+    const q = toks(String(name).replace(/\b[A-Za-z]\.\s*/g, m => m[0] + " ")); // "H. Kane" -> "h kane"
+    let res = null;
+    if(q.length){
+      const last = q[q.length-1];
+      // candidates: share the last word of the typed name
+      let cand = (byTok.get(last)||[]);
+      // full words typed must all appear (initials only need to match a first letter)
+      cand = cand.filter(p => q.every(w => w.length===1 ? p.t.some(x=>x[0]===w) : p.t.includes(w)));
+      if(cand.length){
+        const ck = clubKey(club);
+        const inClub = ck ? cand.filter(p => (p.ck === null ? (p.ck = clubKey(p.c)) : p.ck) === ck) : [];
+        const exact = cand.filter(p => p.t.join(" ") === q.join(" "));
+        if(inClub.length === 1) res = inClub[0];
+        else if(inClub.length > 1){ const ex = inClub.filter(p => exact.includes(p)); res = ex.length === 1 ? ex[0] : null; }
+        else if(exact.length === 1 && q.length > 1) res = exact[0];       // full name, unique in the whole pack
+      }
+    }
+    memo.set(key, res); return res;
+  }
+  return { load, find, get ready(){ return ready; }, get size(){ return list.length; } };
+})();
+async function loadFaceDB(){ try{ const r = await fetch("logos/faces.json"); if(!r.ok) return; FaceDB.load(await r.json()); }catch(e){} }
+
+/* avatar: real face when found, otherwise the coloured initials circle */
+function faceAvatar(name, club, cls=""){
+  const p = FaceDB.find(name, club);
+  if(p) return `<span class="avatar face ${cls}" title="${esc(p.n)} · ${esc(p.c)}"><img src="logos/p/${p.id}.webp" alt="" loading="lazy"></span>`;
+  return `<span class="avatar ${cls}" style="--c:hsl(${hue(name)} 50% 40%)">${esc(initials(name).slice(0,2))}</span>`;
+}
+function faceMini(name, club){
+  const p = FaceDB.find(name, club);
+  return p ? `<img class="face-mini" src="logos/p/${p.id}.webp" alt="" loading="lazy">` : `<span class="face-mini ph" style="--c:hsl(${hue(name)} 50% 40%)">${esc(initials(name).slice(0,2))}</span>`;
+}
+/* club the player wore in a given season (most matches), for squad lists */
+function clubOfSeason(season){
+  const c = {}; for(const j of S.ultimas_performances){ if(seasonOf(j)!==season || isSelMatch(j)) continue; const t0 = j.Time || S.informacoes["Clube Atual"]; if(t0) c[t0] = (c[t0]||0)+1; }
+  const e = Object.entries(c).sort((a,b)=>b[1]-a[1])[0]; return e ? e[0] : S.informacoes["Clube Atual"];
+}
+
 /* ================= render & routing ================= */
 function render(){
   histReset(); const v = view(); document.documentElement.lang = LANG==="en" ? "en" : "pt-BR";
@@ -3306,7 +3370,7 @@ function histBackToList(){
 }
 /* ================= boot ================= */
 (async function boot(){
-  await Promise.all([Store.init(), loadLogoDBs()]);
+  await Promise.all([Store.init(), loadLogoDBs(), loadFaceDB()]);
   await loadHistory();
   const id = Store.index.active; const d = id ? await Store.load(id) : null;
   if(d) S = normalize(d);

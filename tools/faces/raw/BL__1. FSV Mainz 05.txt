@@ -1,0 +1,36 @@
+91143491|Nadiem Amiri|28|nadiem-amiri
+49034179|Anthony Caci|28|anthony-caci
+45116977|Kaishu Sano|24|kaishu-sano
+91188358|Paul Nebel|22|paul-nebel
+91108278|Dominik Kohr|31|dominik-kohr
+16147386|Stefan Posch|28|stefan-posch
+91105813|Robin Zentner|30|robin-zentner
+66032157|Lee Jae-Sung|32|lee-jae-sung
+53102029|Andreas Hanche-Olsen|28|andreas-hanche-olsen
+16045742|Philipp Mwene|31|philipp-mwene
+91187678|Benedict Hollerbach|24|benedict-hollerbach
+91004660|Stefan Bell|33|stefan-bell
+49054676|Silas|26|silas
+37027194|Sheraldo Becker|30|sheraldo-becker
+92028423|Danny da Costa|32|danny-da-costa
+98010781|Silvan Widmer|32|silvan-widmer
+91004704|Daniel Batz|34|daniel-batz
+92092364|Lennard Maloney|25|lennard-maloney
+91182877|Phillip Tietz|28|phillip-tietz
+27161397|William Bøving|22|william-boving
+92084880|Maxim Leitsch|27|maxim-leitsch
+45117408|Sota Kawasaki|23|sota-kawasaki
+2000065610|Armindo Sieb|22|armindo-sieb
+16283828|Nikolas Veratschnig|22|nikolas-veratschnig
+2000274341|Kacper Potulski|17|kacper-potulski
+2000170587|Nelson Weiper|20|nelson-weiper
+91205109|Lasse Rieß|23|lasse-riess
+2000258757|Kasey Bos|21|kasey-bos
+91190772|Niklas Tauer|24|niklas-tauer
+2000197269|Daniel Gleiber|20|daniel-gleiber
+2000516384|Fabio Moreno Fell|25|fabio-moreno-fell
+2000170586|Philipp Schulz|20|philipp-schulz
+2000180858|Maxim Dal|19|maxim-dal
+2000375700|Jeremiah Debrah|16|jeremiah-debrah
+12095983|Alynho Haïdara|16|alynho-haidara
+12095723|Mokéssé Bamba|17|mokesse-bamba

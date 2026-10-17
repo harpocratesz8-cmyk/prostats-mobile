@@ -1,0 +1,49 @@
+67279755|José Marsà|23
+18100347|Ortwin De Wolf|28
+18044169|Benito Raman|30
+37064140|Tommy St. Jago|25
+37084822|Myron van Brederode|22
+67291957|Nacho Miras|27
+93034229|Kerim Mrabti|31
+2000045009|Maksim Kireev|21
+2000102983|Bill Antonio|22
+2000017261|Mathis Servais|20
+18113895|Mory Konaté|31
+93099935|Fredrik Hammar|24
+2000226023|Gora Diouf|21
+18115739|Keano Vanrafelghem|21
+2000062329|Massimo Decoene|21
+49060934|Redouane Halhal|22
+2000453412|Bouke Boersma|20
+2000055336|Bilal Bafdili|20
+2000096636|Thérence Koudou|20
+18107081|Hassane Bandé|26
+2000068406|Dikeni Salifou|22
+2000134946|Halil Özdemir|19
+2000191978|Lovro Golič|19
+2000449300|Moncef Zekri|16
+2000313719|Mauro Lenaerts|17
+2000228325|Kaito Verheyden|19
+2000368811|Alex Ezinwa|17
+2000424412|Joran Lievrouw|16
+2000424403|Yassine M'Hammedi|17
+2000480349|Noah Bomble|15
+2000424405|Darhein Sayala|17
+2000512792|Lars Bucumi|16
+2000453869|Roderik Hinoul|16
+2000480344|Ayoub Chaibi|16
+2000424410|Ayoub El Jaray|17
+2000512821|Eden Tandu|16
+2000512830|Yani Van Winghe|16
+2000512825|Nathan Wamba Tchuanyo|16
+2000512796|Maxim Beauprez|16
+2000424411|Amadou Diallo|17
+2000512822|Maico Verbinnen|16
+2000512806|Mateus Sousa Alves|16
+2000512794|Daoud Aznabet|16
+2000512820|Matthieu Vermeersch|15
+2000512818|Ayoub Ouali|16
+2000512823|Riyaan El Kaddouri|16
+2000512819|Sem Pluys|16
+2000512824|Immanuel Teofilo|16
+2000512826|Abdeslam Chaara|16
