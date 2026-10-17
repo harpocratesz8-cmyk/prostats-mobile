@@ -1,0 +1,22 @@
+33027508|Joel Pohjanpalo|30
+43096264|Tommaso Augello|30
+43112998|Emmanuel Gyasi|31
+43091093|Mattia Bani|31
+43161989|Antonio Palumbo|28
+43153083|Jacopo Segre|28
+53116120|Dennis Johnsen|27
+43113705|Pietro Ceccaroni|29
+43375253|Filippo Ranocchia|24
+83209861|Rui Modesto|25
+43125080|Giangiacomo Magnani|29
+49037592|Claudio Gomes|24
+50071707|Jérémy Le Douaron|27
+43392081|Niccolò Pierozzi|23
+85144161|Alexis Blin|28
+43077666|Alfred Gomis|31
+96011201|Bartosz Bereszyński|33
+33020908|Jesse Joronen|32
+43486027|Aljoša Vasić|23
+43500343|Samuel Giovane|22
+43617791|Davide Veroli|22
+96122121|Patryk Peda|23
