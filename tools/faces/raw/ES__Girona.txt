@@ -1,0 +1,27 @@
+35017428|Marc-André ter Stegen|33
+71080414|Viktor Tsygankov|27
+67258832|Iván Martín|26
+85093001|Thomas Lemar|29
+67260440|Bryan Gil|24
+67153373|Álex Moreno|32
+37005632|Daley Blind|35
+2000062512|Arnau Martínez|22
+67232115|Fran Beltrán|26
+49052370|Azzedine Ounahi|25
+67155094|David López|35
+67136579|Paulo Gazzaniga|33
+8169215|Axel Witsel|36
+67245418|Abel Ruiz|25
+37048153|Donny van de Beek|28
+67115581|Portu|33
+71113671|Vladyslav Vanat|23
+67281886|Alejandro Francés|22
+2000065892|Hugo Rincón|22
+67156610|Rubén Blanco|29
+67039108|Juan Carlos|37
+78000806|Cristhian Stuani|38
+2000221609|Vitor Reis|19
+2000094152|Claudio Echeverri|19
+2000210771|Vladyslav Krapyvtsov|20
+2000164598|Joel Roca|20
+2000165475|Ricard Artero|22

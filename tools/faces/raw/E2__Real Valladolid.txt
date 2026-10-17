@@ -1,0 +1,26 @@
+2000050721|Peter Federico|22
+2000076898|Ramón|22
+2000077164|Pablo Tomeo|25
+2000046668|Noah Ohio|22
+2000053421|Guille Bueno|22
+2000065657|David Torres|22
+2000065644|Álvaro Aceves|21
+2000065658|Mario Maroto|21
+2000139344|Chuki|21
+2000139355|Garri|20
+2000207003|Mohamed Jaouab|23
+19270874|Marcos André|28
+24050201|Stanko Jurić|28
+24060277|Stipe Biuk|22
+28094954|Sergi Canós|28
+49040095|Mathis Lachuer|24
+49040111|Julien Ponceau|24
+48042718|Clément Michelin|28
+67147196|Carlos Clerc|33
+67176059|Iván Alejo|30
+67213756|Amath N'Diaye|28
+67278046|Víctor Meseguer|26
+67293621|Juanmi Latasa|24
+78105029|Lucas Sanseviero|24
+83228729|Guilherme Fernandes|24
+89051871|Vegard Erlien|27
