@@ -14,7 +14,7 @@ for r in csv.DictReader(open(lst, encoding="utf-8")):
     fid = r["fm_id"]; f = src / f"{fid}.png"
     if not f.exists(): continue
     im = Image.open(f).convert("RGBA"); im.thumbnail((128, 128), Image.LANCZOS)
-    im.save(out / f"{fid}.webp", "WEBP", quality=78, method=6)
+    im.save(out / f"{fid}.webp", "WEBP", quality=78, method=4)
     have[fid] = [fid, r["jogador"], r["clube"], r["liga"]]; added += 1
 idx["e"] = sorted(have.values(), key=lambda e: (e[3], e[2], e[1]))
 idx_p.write_text(json.dumps(idx, ensure_ascii=False, separators=(",", ":")))
