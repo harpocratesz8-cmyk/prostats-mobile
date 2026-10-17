@@ -1,0 +1,24 @@
+28016969|Nam Tae-Hee|34
+2000136155|Italo|27
+66037117|Kim Dong-Jun|30
+66034941|Lee Chang-Min|31
+66028999|Kwon Chang-Hoon|31
+2000010877|An Chan-Gi|27
+47075014|Gytis Paulauskas|25
+19366604|Émerson Ramon|24
+66037054|Kim Geon-Woong|27
+48037015|Julien Célestine|27
+66010090|Rim Chang-Woo|33
+16204298|Kim Jae-Woo|27
+45100844|Yu In-Soo|30
+66014120|Chung Woon|36
+2000076070|Kim Ryun-Sung|23
+2000160980|Kim Shin-jin|24
+66040928|Park Chang-Jun|28
+66037323|Park Dong-Jin|30
+2000078998|Oh Jae-Hyeok|23
+2000067283|Jang Min Gyu|26
+2000083262|Shin Sang-Eun|25
+2000083252|Heo Gang-Jun|23
+2000353062|Kim Jae-Min|22
+66046980|Choi Won-Chang|24
