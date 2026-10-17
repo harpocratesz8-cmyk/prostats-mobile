@@ -3,3 +3,4 @@
 - Argentina: 35 por time
 - China, Coreia, Dinamarca, Escocia: 30 por time
 - Zaragoza: Esteban Andrada (ID errado)
+- Chelsea: Reece James (ID errado no site)
