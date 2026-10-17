@@ -17,3 +17,12 @@
 20045048|Tomás Romero|24
 2000251482|Jonny Shore|18
 20034986|Greg Ranjitsingh|31
+2000322102|Malachi Jones|21
+2000436812|Nico Cavallo|23
+2000436509|Max Murray|23
+2000167433|Máximo Carrizo|17
+2000273488|Drew Baiera|18
+2000446810|Seymour Reid|17
+2000455642|Mac Learned|22
+2000520296|Cooper Flax|21
+2000520312|Kevin Pierre|22

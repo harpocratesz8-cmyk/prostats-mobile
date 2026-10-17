@@ -19,3 +19,6 @@
 2000067927|Felipe Andrade|23
 2000155502|Nick Markanich|25
 72023396|Jimmy Maurer|36
+2000448520|Blake Gillingham|25
+2000520281|Logan Erb|21
+2000520307|Reese Miller|21

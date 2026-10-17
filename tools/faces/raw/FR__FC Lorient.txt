@@ -22,3 +22,61 @@
 13220325|Nathaniel Adjei|22
 49039271|Bandiougou Fadiga|24
 85051044|Benjamin Leroy|36
+2000302092|Trevan Sanusi|18
+2000294177|Oussama Lyakoubi|20
+12095287|Martin Bley|19
+2000476724|Lucas Leaudais|20
+2000129407|Baptiste Macon|21
+2000510727|Mamadou Koné|18
+2000442706|Antton Mouledous|18
+2000300303|Isaac Monnier|18
+2000289558|Cyril Borval|20
+2000193415|Izak Akakpo|21
+2000300380|Daniel Semedo|21
+2000290023|Stevan Siba|18
+2000303029|Côme Fromager|21
+2000290021|Samir Haribou|18
+2000478323|Sohaib Belarbi|20
+2000209052|Mohamed Hmamouch|19
+2000243519|Noam Marchal|19
+2000412883|Noah Le Gal|18
+2000381104|Samba Diop|19
+2000111329|Jai Semenyo|22
+2000311306|Bahliseny Fofana|17
+2000494123|Matis Brault|21
+2000386411|Salah-Dine El Mezouari|21
+2000394117|Enzo Salomon|18
+2000489961|Macéo Amougui Montreuil|17
+2000381105|Ilan Pain|18
+2000501564|Rayann Trulès|16
+2000399306|Tom Neveu|17
+2000419555|Raphaël Michel|16
+2000501441|Kévin Williams|15
+2000501438|Arcial Nzamu Ena|16
+2000412312|Matéo Prigent|18
+2000501396|Thomas Peslerbe|16
+2000412870|Imran Pengam|17
+2000489965|Elie Nkpa|17
+2000527247|Jules Aboudh|16
+2000501440|Olan Lamaille-Dacalor|16
+2000412875|Dorian Guizouarn|17
+2000501550|Victor Mabon|17
+2000489968|Seny Dang Tiep|16
+2000419550|Samirdine Boinaidi|17
+2000412877|Mactar Ly|17
+2000501401|Ezekiel Yapo|16
+2000489972|Mansour Dia|16
+2000508374|Mathys Agbadouma|16
+2000508376|Djedjom Paniah|16
+2000501494|Tapsirou Sidy Lam|16
+2000501402|Shaï Nkeng Etamé|16
+2000419548|Malo Le Bolay|17
+2000501436|Jalil Traoré|16
+2000399314|Paul Mahéas|17
+2000399310|Tom Bregardis|17
+2000501399|Pavel Valenzuela-Simoneton|16
+2000419553|Emmanuel Nzala|17
+2000527236|Milan Le Gall|17
+2000527237|Lucas Nayel|17
+2000527249|Gianni Favale-Corneilde|16
+2000527250|Lenny Tabarin|15

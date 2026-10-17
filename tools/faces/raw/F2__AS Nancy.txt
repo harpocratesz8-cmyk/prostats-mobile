@@ -21,3 +21,35 @@
 48036265|Adrien Julloux|28
 48047670|Elydjah Mendy|25
 50065578|Bakari Camara|31
+2000305100|Enzo Tacafred|19
+2000117085|Yannis Nahounou|21
+2000116936|Hugo Barbier|20
+2000291718|Zakaria Ztouti|18
+2000329200|Pape Niama Sissoko|19
+2000243518|Mattheo Guendez|19
+2000305103|Chafik El Hansar|20
+2000530456|Lucas Schnepp|23
+2000179744|Lenny Piètre|19
+2000200003|Kenzo Noël|18
+2000187522|Almami Touré|18
+2000130989|Brunnel Tutuana|20
+2000336132|Yanis Delaveau|18
+2000305105|Youssouf Tandia|19
+2000233963|Michael Mortume|19
+2000288644|Jean-Michel Dalberant|20
+2000291708|Quentin Carpentier|19
+2000074082|Elfayed Maanrifa|21
+2000336124|Paul Diomandé|19
+2000531643|Edgar Adam|18
+2000516145|Noah Ya|18
+2000516143|Arsenne Colas|18
+2000396407|Lilian Capo-Chichi|17
+2000510346|Jordy Ntary Backala|17
+2000516147|Réginald Barzin|17
+2000510347|Isaac Arthaud|17
+2000531642|Samad Elaji|15
+2000531640|Ryane Ouadah|16
+2000531641|Yanis Parisot|16
+2000531645|Martin Stoquiaux|17
+2000531648|Mohand Allach|16
+2000531652|Tex Tecassala|16

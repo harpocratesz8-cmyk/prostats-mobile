@@ -17,3 +17,12 @@
 2000197947|Ran Benyamin|21
 20049383|Brooks Thompson|23
 2000234760|Nolan Norris|20
+2000436558|Sam Sarver|22
+2000518557|Ricky Louis|20
+2000520292|Slade Starnes|21
+2000477113|Josh Torquato|17
+2000396192|Álvaro Augusto|20
+2000332116|Michael Collodi|24
+2000250751|Diego García|18
+2000522069|Nicholas Simmonds|18
+2000441678|Caleb Swann|18

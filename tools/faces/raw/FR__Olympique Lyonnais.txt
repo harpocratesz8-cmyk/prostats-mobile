@@ -20,3 +20,61 @@
 25062522|Adam Karabec|22
 85134755|Rémy Descamps|29
 85031826|Rachid Ghezzal|33
+2000288923|Khalis Merah|18
+2000188850|Achraf Laâziri|22
+2000107107|Mathys De Carvalho|20
+2000386313|Noham Kamara|18
+2000395183|Rémi Himbert|17
+2000240343|Lassine Diarra|22
+2000377137|Fallou Fall|19
+2000497719|Adil Hamdani|16
+2000395184|Tiago Gonçalves|17
+2000260077|Yvann Konan|18
+2000288934|Steeve Kango|18
+2000185929|Daryll Benlahlou|19
+2000185937|Ali Hassan|20
+2000388694|Ibrahim Halilou Mouhaman|20
+2000107106|Yannis Lagha|21
+2000185935|Prince Mbatshi|19
+2000395180|Néhémie Lurika|17
+2000185932|Bryan Meyo|19
+2000288930|Kelyan Yahia|18
+2000303764|Timothée Dutot|17
+2000217386|Imdad Charifou|18
+2000395187|Matthias Da Silva|17
+2000288938|Ibrahima Fall|21
+2000037325|Joss Marques da Silva|21
+2000497713|Kenan Doganay|16
+2000288936|Emeric Etondé|18
+2000394101|Boubakar Diarra|18
+2000496292|Billy-Paul Mavudia|16
+2000395179|Mathieu Hoareau|17
+2000288939|Haktan Şener|18
+2000395230|Melvyn Otobo|17
+2000497721|Issiaga Soumah|15
+2000496285|Kassim Mnamdji|16
+2000395229|Angel Garcia|17
+2000497724|Hocine Boulegroun|17
+2000497725|Nader Saad|18
+2000497722|Ajdin Muminovic|16
+2000496291|Aboubacar Sacko|17
+2000496283|Axel Barreau|16
+2000395219|Esteban Thyvent|18
+2000497715|Walid Nechab|16
+2000496286|Kylian Negri|16
+2000497723|Gnadou Gohi|16
+2000288933|Wassim El Abrougui|18
+2000497726|Noah Duclieu|17
+2000496284|Mathis Iwosso|16
+2000395228|Paul Moulot|17
+2000395185|Ottman Katirag|18
+2000496288|Adam Alioui|16
+2000496287|Felix Onana|16
+2000497717|Djibril Merouani|16
+2000395217|Adrien Danis|17
+2000496289|Nolan Velut|16
+2000497714|Jalis Bouabdellah|17
+2000497718|Hédi Chekhab|15
+2000496290|Aaron Trincat|16
+2000497716|Edwin Titalom|16
+2000497720|Amine Lazrak|16

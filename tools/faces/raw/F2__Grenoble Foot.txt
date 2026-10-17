@@ -19,3 +19,26 @@
 85100192|Bobby Allain|33
 2000079277|Arthur Lallias|22
 2000120104|Evans Maurin|24
+12094010|Samba Diba|21
+49060927|Nesta Zahui|22
+2000108579|Yadali Bayo|20
+2000035330|Rayan Allico|21
+2000530413|Téo Germinario|17
+2000530414|Gabriel Bonnoit|18
+2000491006|Ismaïl Khasanov|20
+2000490992|Noah Grondin|18
+2000419603|Bilel Mili|18
+2000419601|Adil Khalifa|18
+2000419605|Engeda Romeyer|18
+2000279945|Hirinai Vahirua|19
+2000416577|Yassine El Guartit|19
+2000416576|Edouard Leclerc|19
+2000530416|Fadi Boudireb|17
+2000279968|Iheb Dams|19
+2000530417|Hugo Delaye|16
+2000530418|Arslane Rouag|17
+2000530420|Najim Guerbaa|17
+2000530419|Teaveura Parker|17
+2000530421|Kenny Julien|17
+2000530423|Noah Eoga|17
+2000530422|Israel Masinsa Mangabu|16

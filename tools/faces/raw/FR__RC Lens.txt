@@ -18,3 +18,52 @@
 8434157|Régis Gurtner|38
 2000265839|Andrija Bulatović|18
 34000464|Mathieu Gorgelin|34
+2000205277|Ismaëlo Ganiou|20
+2000205299|Rayan Fofana|19
+2000205269|Anthony Bermont|20
+2000205287|Fodé Sylla|19
+2000388083|Kyllian Antonio|17
+2000433421|Nidal Čelik|18
+85146318|Steven Fortes|33
+2000289155|Mattéo Escouflaire|20
+2000217387|Erawan Garnier|19
+2000290361|Oscar Lenne|18
+2000289163|Ismaël Aouad|19
+2000291571|Samuel Dié|19
+2000401277|Ilan Jourdren|16
+2000388087|Ognjen Obradovic|17
+2000297055|Mustapha Sissoko|18
+2000503231|Moussa Diarra|18
+2000291493|Ilan Ducourtioux|18
+2000200564|Alpha Diallo|19
+2000290364|Lucas Robbe|18
+2000191032|Ken-Gaston Koumous|19
+2000388092|Daivy Lefranc-Yeboah|17
+2000289215|Adam Delplace|18
+2000388104|Elijah Mendy|17
+2000388705|Mohamed Seddik|17
+2000502224|Tim Gallezot|17
+2000484399|Jaheden Rocolat Delmas|16
+2000484386|Axel Senez|16
+2000484250|Arthur Mogo Njimfo|16
+2000484067|Léopold Joursky|16
+2000484071|Giovan Errichiello|17
+2000388121|Wael Sahli|17
+2000388128|Jibril Rajil|17
+2000484080|Ilyes Grini|15
+2000391231|Nasser Bouyahmed|20
+2000484240|Nathanaël Gane Bernardino|16
+2000484398|Tom Dulongpont|16
+2000502252|Ibrahim Diallo|17
+2000502220|Ilies Bouramala|16
+2000502234|Ali Ghazi|17
+2000484076|Pitshou Etshele|17
+2000502208|Fedwan Messaoudi|16
+2000484377|Djulian Fernoc|17
+2000484234|Noé Kemtchoum Stasiowski|16
+2000484247|Seybou Konaté|16
+2000502231|Issa Dramé|16
+2000484382|Andy Nzi|16
+2000484388|Sidi Dioumarana|16
+2000484395|Kamil Adebayo|16
+2000502214|Nino Pierrat|16

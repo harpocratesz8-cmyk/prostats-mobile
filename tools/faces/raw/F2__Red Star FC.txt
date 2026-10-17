@@ -19,3 +19,61 @@
 217987|Guillaume Trani|27
 85104572|Mouez Hassen|30
 48048764|Hacène Benali|25
+73201865|Josué Escartin|22
+2000303262|Abdelsamad Hachem|23
+49040089|Rayane Doucouré|24
+49063422|Vincent Kany|23
+2000386409|Enzo Legrix|20
+49049909|Mohamed Ali Lakbi|23
+2000505663|Rudy Thalmensi|26
+2000505679|Diadé Camara|31
+49061656|Mehdi Chafii|22
+73201959|Aboudramane Sanogo|24
+85004411|Josué Balamandji|35
+2000530183|Lucas Besson|21
+2000288935|Helder Oliveira Da Silva|18
+2000138313|Mohafidh Ahamada|21
+50084240|Karim Aïdoudi|23
+2000289614|Bakari Diawara|19
+2000516022|Sékou Guindo|21
+2000110876|Marley Milord|21
+49038273|Amidou Diallo|26
+49054727|Hassane Labiad|25
+2000505683|Malik Diawakana|23
+49045973|Amallah Kaloga|24
+2000418435|Mathis Galonde|17
+2000520717|Paolo De Sousa Rodrigues|17
+2000520212|Amin Krim Hamdaoui|17
+2000520213|Aymen Charaka|17
+2000520718|Abdel Kader Mekrous Mdjahri|17
+2000520214|Ismaël Sylla|17
+2000520720|Noah Beye Filiot|17
+49060039|Marc-Olivier Kehi|22
+2000520205|Jules Petit Jean|17
+2000520206|Rafael Heleno|16
+2000520208|Samuel Junior Eto’o|17
+2000520209|Jérémie Beyoko Mpongo|17
+2000520210|Alassane Kanaté Soumahoro|17
+2000520211|Yanis Ouidir|17
+2000520215|Cheikh Tidiane Diako|17
+2000520216|Merrick Robert|17
+2000520716|Kaïs Amine|17
+2000520719|Tidiane Dicko-Sudrot|15
+2000530174|Tomy Cadet|19
+2000530177|Yassine M'Zembaba|27
+2000530187|Ibrahim Bakayoko|19
+2000520726|Issac Fataki|16
+2000530172|Adam Fatahine|18
+2000530179|Mamadou Bah|24
+2000520722|Issam Chahlafi|17
+2000520723|Nolhann Bélise|17
+2000530176|Enzo Dron|21
+2000520724|Tim Deniau|17
+2000520725|Abdoulaye Soumbounou|17
+2000530169|Makan Traoré|16
+2000530192|Mohammed Amara|19
+2000530193|Ayoub Knoun|18
+2000530170|Mathéo Robert|16
+2000530194|Kanon Gahou|18
+2000530196|Hamidou Gaye|18
+2000530198|Enzo Aïche|18

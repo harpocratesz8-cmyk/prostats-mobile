@@ -18,3 +18,62 @@
 2000108576|Amadou Samoura|21
 49047421|Teddy Bartouche-Selbonne|28
 49055790|Albin Démouchy|23
+2000201720|Tanguy Ahile|20
+2000314978|Jérémie Matumona|19
+2000025747|Youssef Njoya|21
+2000292952|Idriss Planeix|18
+2000111892|Eden Gassama|19
+2000023194|Trésor Matondo|21
+2000140030|Noah Marec|20
+2000112076|Héliohdino Tavares|20
+2000006282|Breyton Fougeu|21
+49056039|Salatiel Decarpentrie|23
+2000112075|Abdoulaye Niakaté|20
+2000123824|Vimoj Muntu Wa Mungu|20
+2000293363|Ibrahima Diakité|18
+2000200540|Brice Seymour|20
+2000294883|Ilias Miraoui|20
+2000201216|Joël Matondo|20
+2000116661|Kenzo Kies|20
+2000331224|Ewan Aucan|18
+2000259840|Gaspard Ambassa|19
+2000214513|Landry Kitenge|19
+2000381113|Ben Ibrahim Siby|19
+2000200826|Nathan Fondja|19
+2000325243|Mustapha Azenked|18
+2000293362|Ahmed Bouchoukh|18
+2000291150|Nathan Le Goff|19
+2000291115|Noa Ebane Caro|19
+2000331220|Jean-Yves Djegou|18
+2000291148|Nicolas Florival|18
+2000396103|Evan Cideme|17
+2000478936|Ilan Assongo|16
+2000393188|Fadiala Tounkara|17
+2000293361|Albert Masson|18
+2000374478|Lucas Rakotozafy|18
+2000432339|Brandon Gédéon|17
+2000489931|Evan Letrouit|16
+2000392499|Sekouba Keita|17
+2000396098|Mathéo Lyncee|17
+2000293360|Adel Sebihi|18
+2000524795|Diego Dufort|16
+2000473631|Youssouf Diallo|17
+2000293357|Mamadou Diawara|18
+2000291689|Kyan Kouadio|18
+2000396088|Jonathan Louis|17
+2000473882|Mamadou Camara|17
+2000374470|Paul Fleurus|18
+2000479766|Assman Hamadi|16
+2000492989|Héloïm Ndongala|16
+2000479007|Wally Kembo|16
+2000396095|Mehdi Zbaïri|17
+2000432341|Sandro Rodrigues|17
+2000392497|Milo Rospape|17
+2000473632|Jovite Mvucani|16
+2000489098|Théo Bourdon-Rey|16
+2000486193|Steven Le Cadelec|15
+2000488733|Maxence Nsiloulou|16
+2000486189|Mathieu Le Guen|16
+2000478929|Joshua Mvouama|16
+2000492993|Corentin Nicolas|16
+2000488735|Jérémie Heradi|15

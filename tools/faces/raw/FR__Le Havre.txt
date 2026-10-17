@@ -19,3 +19,64 @@
 84151685|Felix Mambimbi|24
 49058792|Timothée Pembélé|22
 49048554|Godson Kyeremeh|25
+2000200559|Paul Argney|19
+2000335934|Kenny Quetant|18
+2000275537|Daren Mosengo|18
+2000297060|Enzo Koffi|19
+2000297063|Noam Obougou Jacquet|19
+2000297058|Guy Noël Zohouri|18
+2000475043|Stephan Zagadou|16
+2000401491|Georges Gomis|17
+2000401492|Bissenty Gomis|17
+2000475041|Adams Diabaté|19
+2000218687|Emmanuel Bably|19
+2000312683|Kabangu Alex Teixeira|18
+2000502686|Karamoko Camara|18
+2000502695|Aaron Bétéhé|17
+2000401475|Ethan Nkouka|17
+2000502673|Thomas Rousseau|17
+2000401469|Thierno Bah|18
+2000207119|Matthieu Cuirassier|22
+2000502648|Benoît Sida|17
+2000130980|Ebroni Gnoan|20
+2000502691|Enzo Evora Dias|16
+2000502643|Yanis Monkolot|16
+2000513134|Dahiss Mendy|17
+2000502688|Naïm Oubekhti|17
+2000113675|Yanis Beau-Djellel|20
+2000401484|Yassine Loubane|17
+49053184|Jean-Baptiste N'Guessan|24
+2000513300|Mahmoud Akim Soumahoro|16
+2000513131|Mohamed Soumah|17
+2000513160|Zakariya Aamchoune|16
+2000513271|Ayman Ben Cheikh|16
+2000502646|Bocar Wade|17
+2000401488|Hakim Dongopandji|18
+2000196869|Lenny Lankoso|20
+2000513244|Yohann Malu Kelo|17
+2000513126|Djibril Achoui|16
+2000513285|Mario Balan-Bitca|15
+2000513137|Alexandre Bouzamita|17
+2000513161|Yanis Soh|17
+2000513676|Malyk Dembélé|16
+2000513654|Brian Esson|16
+2000502654|Malachie Iboko Lisasi|18
+2000513275|Tidjani Thiam|17
+2000513130|Hayman Aziz|18
+2000513129|Mathyss Gicquel|16
+2000513680|Adam Benali|16
+2000513284|Sufyan Ainani|17
+2000513295|Nathan Kawonda|16
+2000513672|Kwider Benmakrelouf|16
+2000513279|Nicolas Reut|16
+2000513639|Fabio Rodrigues Nallet|16
+2000513273|Arsène Dezailles|17
+2000513125|Jules Barido|16
+2000513296|Djibril Ouziad|16
+2000513276|Solan Murel|17
+2000513159|Enzo Couturier|17
+2000513294|Adel Hamouda|17
+2000513286|Désiré Bylansa|17
+2000502676|Alan Uriev|18
+2000513651|Yacine Chalabi|16
+2000419982|Ahmed Bentahar|18

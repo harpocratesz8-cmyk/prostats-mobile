@@ -15,3 +15,58 @@
 2000131100|Théo Chennahi|20
 2000125193|Everson Pereira|21
 49062660|Nabil Homssa|23
+2000287938|Naoufel El Hannach|18
+2000288922|Enzo Molebe|17
+2000279711|Yanis Issoufou|18
+2000291042|Wilfried Ndollo Bille|20
+2000166495|Axel Guéguin|20
+2000291488|Yannick Sidibé|18
+2000488027|Fayssal El Mahboub|17
+2000487228|Mamadou Bamba Sarr|19
+2000487232|Angelo Tognarelli|17
+2000505571|Mathis Chambon|16
+2000489752|Leny Lamore|17
+2000294806|Viktor Džodić|18
+2000294778|Kabissan Gomis|18
+2000401275|Robin Thiland-Hérard|17
+2000401217|Matisse Kapitza|18
+2000216319|Mathis Robinand|19
+2000401209|Kevin Kandem|19
+2000216085|Lucas Da Silva|19
+2000489999|Ruben Rey|16
+2000489749|Noam Benramdane|16
+2000488049|Charles Grimaud|16
+2000489747|Tidiane Diallo|16
+2000489751|Waness El Ghazza|16
+2000294674|Craig Mamilo|19
+2000505574|Antéo Benedetto|18
+2000488026|Teymour Mohammed|18
+2000491171|Mathias Abdou|15
+2000490004|Yassin El Azzouzi|16
+2000487246|Yves-Brice Moussongo Bahel|18
+2000294807|Yvan Djemba|20
+2000487244|Pierre Daniel Épée Ngango|18
+2000493484|Bernardo Canovas|16
+2000401221|Giani Carbone|18
+2000491170|Hichem Adberrebi|17
+2000401213|Marouane Lahmidini|19
+2000216328|Mohamed Zeghadi|19
+2000401302|Tyron Rutijanwa|17
+2000505569|Hylan Halamski|16
+2000493475|Rayane El Fenniri|16
+2000401280|Gabin Skrela|17
+2000401299|Kéziah Bantsimba|17
+2000401223|Djomoh Koné|18
+2000401283|Noah Vidal Cartoux|17
+2000401285|Isyak Mohamed|17
+2000401303|Léo Mellin|17
+2000401301|Camille Archimbeau|17
+2000491173|Killyan Arragain|17
+2000493480|Mélik Savy|16
+2000493482|Kaïs Guignon|16
+2000491174|Kienzola Ntondo|16
+2000401279|Destin Selemby Doudou|17
+2000401260|Gabriel Martin|18
+2000488058|Ewen Basty|16
+2000401305|Adam El Boughlamy|17
+2000493477|Edine Ihamouine|16

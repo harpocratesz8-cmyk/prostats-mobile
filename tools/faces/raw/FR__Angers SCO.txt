@@ -15,3 +15,53 @@
 43013866|Abdoulaye Bamba|35
 2000209925|Emmanuel Biumla|20
 49048391|Melvin Zinga|23
+2000271170|Marius Courcoul|18
+2000501353|Harouna Djibirin|18
+2000289956|Prosper Peter|17
+2000191409|Lanroy Machine|19
+2000183493|Dan Sinaté|19
+2000289947|Marius Louër|18
+2000334572|Amine Moussaoui|18
+2000205785|Oumar Pona|19
+2000394912|Marius Savidan|18
+2000035163|Noah Nadje|21
+2000513890|Yahya Jlidi|16
+2000392637|Léo Latour|18
+2000280407|Salifou Sylla|18
+2000138110|Moussa Grange|20
+2000392540|Aymeris Ligeon|18
+2000191471|Junior Ngambi|19
+2000209080|Ilann Garin|19
+2000413411|Nattio Sonnerat-Deschamps|16
+2000491451|Sofian Attaba|19
+2000201211|Lionel Ngangué|20
+2000502430|Jules Bouffandeau|15
+2000392591|Max-Edgar Chabot|17
+2000392641|Rayan Ouffa|18
+2000312072|Sofiane Tahri|18
+2000394911|Kylian Aïssi|17
+2000502431|Ianis Sacko|15
+2000289944|Enzo Sautereau|19
+2000209062|Brady Gouandjia|18
+2000513891|Vasco Hervouet|16
+2000392595|Raphaël Nzabakomada-Yakoma|18
+2000392626|Enzo Bellouti|18
+2000296200|Jibril El Baraka|18
+2000460270|Yanis Mercha|17
+2000392565|Ylies Ounissi|17
+2000413483|Yessine Ben Mahmoud|17
+2000413479|Ruben Macedo Da Costa|17
+2000513870|Eliot Davoine-Coupry|16
+2000392629|Haris Toholin|17
+2000413471|Nathan Rabiller|17
+2000513892|Joshua Esnault|15
+2000303765|Yann Llahona|18
+2000501364|Alix Hugon|16
+2000413438|Alix Bablée|17
+2000513869|Noa Gnaly|16
+2000513893|Kévine Froissard|16
+2000413503|Abdaiyaan Vidal|16
+2000513868|Leyti Tessier Pongui|15
+2000491456|Yanis Fofana|17
+2000491475|Bané Diatta|17
+2000491410|Awab Qurashi Mukhtar|17

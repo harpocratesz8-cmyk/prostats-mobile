@@ -16,3 +16,39 @@
 48050283|Setigui Karamoko|25
 49049782|Kyllian Gasnier|23
 12092909|Souleymane Basse|21
+2000125873|Neil Glossoa|20
+2000231165|Cheikh Fall|21
+2000184182|Edhy Zuliani|20
+2000278474|Omar Sissoko|18
+2000407210|Salif Lebouath|23
+2000120093|Enzo Dos Santos|21
+2000126675|Thiema Gueye|20
+2000023335|Robin Verhaeghe|21
+2000129618|Clément Darribère|22
+2000476931|Enzo Derouin|17
+2000160429|Titouan Nihouarn|20
+50042847|Valentin Liénard|27
+2000188236|Clément Pujos|19
+2000531430|Tidjan Diaby|21
+2000516177|Matis Duval|17
+2000117669|Jason Mosango|20
+2000205031|Alexandre Fernandes|21
+2000335899|Cheikh Sané|23
+2000516178|Wa'il Jaafar|18
+2000516176|Tao Belabdi|18
+2000335902|Mathieu Dauriac|20
+2000516330|Amine Akkal|19
+2000417042|Falahidine Saïd-Ahamada|20
+2000129623|Theo Fortes|22
+2000138311|Maksim Samoilov|22
+2000399414|Brandon Nativoha|17
+2000516331|Alexandre Estrade|17
+2000417045|Adam El Mahjouby|19
+2000531432|Noam Maluzo Lawol|19
+2000516334|Thibaut Batbedat|16
+2000291271|Patxi Idiart|18
+2000407218|Mensah Govou|19
+2000129614|Salman Buyrukcan|21
+2000129619|Mathias Fonnicola|21
+2000129615|Bastien Castet Bellocq|22
+2000531429|Vincen Cassourret|16

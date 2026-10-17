@@ -19,3 +19,4 @@
 2000283603|Iker Fimbres|20
 2000064674|Alonso Aceves|24
 51074641|Luis Gustavo Sánchez|25
+67053076|Sergio Canales|34

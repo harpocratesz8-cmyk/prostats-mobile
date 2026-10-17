@@ -17,3 +17,60 @@
 2000023222|Djaoui Cissé|21
 28084932|Glen Kamara|29
 2000267443|Abdelhamid Ait Boudlal|19
+2000201223|Mathys Silistrie|19
+2000289509|Yaël Thébault|18
+2000289214|Joël-Emmanuel Coulibaly|18
+2000289537|Mervin Gbeme|18
+2000291616|Mahamadou Nagida|20
+2000289206|Steeve Mvodo Mvodo|18
+2000289228|Lucas Rosier|18
+2000191928|Nordan Mukiele|19
+2000289513|Ayoub Akabou|18
+2000399076|Mohamed Chebbi|17
+2000201206|Paolo Limon|19
+2000296231|Kilian Belazzoug|18
+2000191960|Florian Truffert|19
+2000399532|Kelvin Dongopandji|18
+2000379333|Ruben Lomet|16
+2000399539|Elías Legendre|17
+2000399518|Mehdi Husson|17
+2000191957|Issa Habri|19
+2000289245|Henrick Do Marcolino|19
+2000289528|Junior Ake|18
+2000289549|Melvin Jambry|18
+2000289552|Diego Coutadeur|17
+2000201159|Dorian Fraeyman|19
+2000289211|Amadou Diallo|19
+2000399527|Chibuike Ugochukwu|16
+2000191937|Djibril Diallo|19
+2000201185|Isiaka Soukouna|19
+2000473923|Dee-Shawn Jacinthe|16
+2000486570|Noham Diop|15
+2000432922|Antoine Vauleon|17
+2000273652|Steven Gaote|17
+2000399516|Boukary Coulibaly|17
+2000432910|Alexis Fernandes|17
+2000399541|Erwan Traoré|17
+2000399065|Rio Saint-Surin|17
+2000473915|Firmin Thétiot|16
+2000473881|Maxime Paredes|16
+2000473935|Noé Le Page|16
+2000473932|Noah Loufoundou|16
+2000473921|Joseph Peter|16
+2000473890|Abdoulaye Bamba|16
+2000473895|Kenny Assignon|17
+2000486565|Robin Pavis|15
+2000432923|Alexis Bernard|17
+2000432924|Lorys Jagu|17
+2000486566|Curtis Nouvi|15
+2000486555|Mamadou Aliou Diallo|15
+2000399547|Maxence Metayer|17
+2000473893|Yanis Aube|16
+2000473897|Noa Koumanou|16
+2000473917|Sacha Mandanda|16
+2000473876|Ilyes Zamoum|16
+2000473878|Nathan Guillemain|16
+2000473933|Jules Simon|16
+2000473931|Yaya Camara|16
+2000473874|Alexis Ramel|16
+2000473887|Liam Poulin|16

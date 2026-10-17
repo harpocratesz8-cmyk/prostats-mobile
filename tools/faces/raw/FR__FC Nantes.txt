@@ -20,3 +20,59 @@
 2000191040|Louis Leroux|19
 49045927|Ignatius Ganago|26
 62075319|Uroš Radaković|31
+2000191043|Herba Guirassy|18
+2000390047|Tylel Tati|17
+2000191038|Bahmed Deuff|19
+2000276963|Amady Camara|20
+2000111261|Alexis Mirbach|20
+2000119578|Mathieu Acapandié|20
+49058975|Lucas Bonelli|22
+2000126376|Enzo Mongo|20
+49058985|Sacha Ziani|21
+49060923|Moutanabi Bodiang|22
+2000280401|Yoann Chauvin|18
+2000191036|Louka Gautier|19
+2000128364|Sékou Doucouré|20
+2000026486|Hugo Lamy|21
+2000476417|Jordi Kuange|19
+2000035960|Thimothé David|21
+2000390057|Klaus Camara|17
+2000392969|Tom Raiani|17
+2000481260|Joshua Dago|16
+2000481783|Loan Merrifield|16
+2000280298|Daniel Le Duigou|18
+2000191042|Brayan Nzita|19
+2000393035|Sanah Camara|17
+2000291354|José Nabil|19
+2000278470|Taigy Dugard|18
+2000393054|Lenny Savin|17
+2000390041|Louis Dore|17
+2000389311|Yanel Zeze|17
+2000212955|Musunda Mwamba|18
+2000280426|Christian Djonda|18
+2000280557|Héraba Gassama|17
+2000191039|Many Le Toux|19
+2000481630|Yanis Mboah|16
+2000389274|Eden Eboa M'bella|19
+2000393048|Zohir Oissa|17
+2000280411|Babacar Fall|18
+2000393038|Quentin Forget|17
+2000393051|Ahmadou Sarr|17
+2000280463|Alexandre Conti|18
+2000392910|Junior Kone Doumbia|18
+2000393032|Gareth Yon|17
+2000393044|Nayad Khenissi|17
+2000481249|Jalen Foucan|16
+2000392955|Wael Dahmani|17
+2000393031|Naim Telmoudi|17
+2000393034|Amed Aiki|16
+2000280292|Stanislas Natiez|18
+2000481784|Kevy Djemeuni Essam|15
+2000481266|Simon Audouin|16
+2000481281|Octave Schneider|16
+2000481268|Nolan Bouteix|16
+2000481272|Lilian Djeudje|15
+2000481756|Mohamed Amine Idrissi|16
+2000481739|Ibrahim Camara|16
+2000481781|Lamine Diackhaby|16
+2000481785|Paul-David Bikouta|16

@@ -19,3 +19,49 @@
 2000197467|Ibrahim Fofana|21
 49062124|Samuel Ntamack|24
 85079685|Alexis Sauvage|33
+2000377297|Amine Chabane|18
+2000113569|Coleen Louis|20
+2000269197|Yanis Rafii|20
+2000374861|Messy Manitu|19
+2000422499|Tidiane Leye|17
+2000385234|Ousmane Ouédraogo|17
+2000404815|Téo Lachevre|18
+2000476925|Nathan Talbot|17
+2000210468|Mehdi Harfi|20
+2000198508|Driss Kembo|19
+2000414306|Carraro Injaï|19
+2000295953|Kossi Comlan|18
+2000297132|Louis Moussier|19
+2000295422|Ilan Daf|18
+2000413318|Alfoussen Dramé|19
+2000503845|Aly Traoré|16
+2000419435|Enzo Somon|17
+2000328043|Oscar Aissat|18
+2000166464|Andréa Parsy-Lucas|20
+2000476926|Yassine Kharrat|18
+2000419431|Gibril Bayoumi|17
+2000443547|Mamadou Camara|17
+2000414134|Djibril El Mahjoubi|18
+2000413517|Peterson Paul|18
+2000306446|Daniel Akinleye|18
+2000414220|Adem Karchi|19
+2000312939|Yanis Zirmi|18
+2000413518|Lindjeck Tchonko Towo|18
+2000306416|Foly Amegatse|18
+2000414138|Waly Keïta|18
+2000229044|Lou Alexandre|19
+2000414219|Ilyas Yaméogo|17
+2000413520|Corneille Diarrassouba|19
+2000303624|Owen Karsenti|18
+2000503288|Mathis Turpin|16
+2000443543|Lendon Vercruysse|17
+2000443519|Karl Tamkio Djomo|17
+2000419443|David Diazayisua Mamona|17
+2000443545|Hatim Bentaleb|17
+2000443514|Christophe Ackah|17
+2000414309|Ilyane Imedjdoubene|17
+2000413519|Aydin Atigan|17
+2000414140|Ilies Abdelkrim|18
+2000414137|Rafael Makengélé|18
+2000443510|Robin Jouffroy|18
+2000419196|Grégoire Diatta|20

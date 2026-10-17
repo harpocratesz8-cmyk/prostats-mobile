@@ -17,3 +17,64 @@
 85018050|Zacharie Boucher|33
 49037853|Lucas Maronnier|25
 85081097|Hillel Konaté|30
+2000269819|Mathys Detourbet|18
+2000187507|Yvann Titi|19
+2000314829|Roman Murcy|19
+2000237616|Ibrahim Traoré|19
+2000269778|Aly Sidibé|20
+2000187030|Enzo Kost|19
+2000269832|Anis Ouzenadji|18
+2000396658|Amadou Diakité|20
+2000237610|Sankhoun Diawara|19
+2000205275|Wylan Pierrilus|19
+2000382029|Nathan Deheppe|22
+2000269844|Nino Cornuau Djodjevic|18
+2000328762|Modibo Keita|21
+2000476049|Christ Batola|16
+2000269787|Noah Donkor-Znamensky|18
+2000448498|Elijah Odede|18
+2000396660|Souleymane Diallo|18
+2000393731|Arthylio Nadé|18
+2000269841|Enisio Carneiro|17
+2000291562|Fred Ondoa|18
+2000207327|Louis Varela|19
+2000094884|Tom Akpakoun|20
+2000382027|Ilian Ounissi|17
+2000237612|Tom Chupin|19
+2000382021|Ryan Pitou|17
+2000492417|Mathys Ouhab|18
+2000384656|Idrissa Soukouna|16
+2000393719|Anthony Ngueouya|17
+2000382016|Kervens Renciot|17
+2000441264|Khays Guimba-Babot|17
+2000476056|Nael Betka|17
+2000476046|Noah Karamoko|16
+2000393727|Djibril Konaté|17
+2000416166|Yves Laffet|17
+2000304429|Preston Nsifua|19
+2000492423|Lassana Simakha|18
+2000416172|Aissa Azehaf|18
+2000483051|Alexis Coquard|15
+2000421167|Ange Koffi Ehola|17
+2000269780|Saad Filali|18
+2000205084|Karamady Gassama|18
+2000295425|Marc Anthony Nkoumouck|19
+2000269851|Salimou Diarra|18
+2000393706|Louis Themis|17
+2000269826|Ryan Guerda|18
+2000421162|Ismaël Guenengai|17
+2000421168|Liam Bourlard|17
+2000476053|Fayyad Issilamou Hamza|16
+2000205178|Pablo Hernandez|19
+2000476051|Namory Dosso Koné|16
+2000384657|Mahamadou Koïta|17
+2000483052|Adam Beymik|16
+2000238603|David Kouale Kondrou|19
+2000297844|Théo Binon|18
+2000384654|Christopher Cladec|16
+2000492420|Yasser Khiri|16
+2000476041|Mael Etoa Ekindy|16
+2000328770|Preston Zenga|18
+2000524449|Kylian Ngola Ramadan|16
+2000492412|Chrys Clet|16
+2000524441|Diego Hernandez|16

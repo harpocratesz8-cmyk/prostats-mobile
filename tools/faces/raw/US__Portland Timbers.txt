@@ -19,3 +19,7 @@
 72041403|Eric Miller|32
 72053051|Trey Muse|25
 2000088414|Alex Bonetig|22
+2000436515|Ian Smith|22
+2000041605|Hunter Sulte|23
+2000322599|Gage Guerra|22
+2000277353|Sawyer Jura|19

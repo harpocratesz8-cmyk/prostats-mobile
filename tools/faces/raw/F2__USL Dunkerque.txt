@@ -18,3 +18,51 @@
 2000268699|Alex Daho|21
 67111494|Íñigo Eguaras|33
 85145202|Aboubakary Kanté|30
+2000399932|Malick Diop|19
+2000311874|Zaid Seha|18
+2000290365|Mathys Niflore|18
+2000414141|Théna Massock|17
+2000116945|Lenny Dziki|20
+2000208105|Maedine Makhloufi|20
+2000128953|Elie Kayembe Tete|20
+2000301340|Malone Boucard|18
+2000299378|Mamadu Silla|18
+2000119986|Mattéo Bebey Sake|20
+2000305947|Assane N'Doye|21
+2000303343|Sébastien Tou|20
+2000520325|Mouhamed Sissokho|20
+2000375520|Ladji Sylla|18
+2000205291|Rafael Ranschaert|19
+2000336479|Tiago Le Callet|18
+2000396441|Jilva Vangwa|17
+2000305758|Lois Lacroix|18
+2000294684|Fidèle Malcolm Bongelo|19
+2000291667|Firas Belabdelli|18
+2000280559|Alan Pressard|18
+2000167132|Adel Bacha|21
+2000126207|Dimitri Roszak|21
+2000417802|Mathis Dando|18
+2000416052|Marco Decherf|18
+48046019|Raphaël Breem|25
+2000519589|Clément Moulun|18
+2000416050|Benny Eguge|18
+2000336053|Thomas Marie-Joseph|20
+2000416046|Noa Galliou Amande|18
+2000416063|Salim Boulouiz|19
+2000416071|Timéo Gourlin|19
+2000520360|Ibrahim Auger|17
+2000520370|Elyas Kharrat|17
+2000289725|Rony Tavares|19
+2000416047|Lilian Claeys|18
+2000394121|Elrich Success|18
+2000418433|Mattéo Perrot|17
+2000416055|Nils Jacquet|19
+2000416079|Noah Nemorin|18
+2000520363|Mattys Bertrand|17
+2000520366|Lilian Anselin|17
+2000520367|Chrome Gomis|17
+2000520368|Elouann Jannin|17
+2000520369|Mohamed Sylla|17
+2000520371|Mathis Ndagijimana|17
+2000520375|Aymane Aouainate|18
+2000520373|Augustin Bruyère|16

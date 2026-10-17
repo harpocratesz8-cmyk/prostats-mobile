@@ -20,3 +20,70 @@
 2000131124|Christian Mawissa|20
 2000016527|Stanis Idumbo|20
 92071859|Philipp Köhn|27
+2000138872|Kassoum Ouattara|20
+2000011419|Mamadou Coulibaly|21
+2000180882|Paris Brunner|19
+2000289863|Bradel Kiwa|19
+2000188753|Aladji Bamba|19
+2000263154|Pape Cabral|18
+2000254426|Samuel Nibombé|17
+2000104909|Ritchy Valmé|20
+2000406231|Ilies Belmokhtar|17
+49062319|Yann Lienard|22
+12095248|Oumar Konaté|18
+2000188768|Joan Tincres|19
+2000188767|Nacim Dendani|19
+2000375515|Boubakar Dembaga|19
+2000368257|Daryl Leunga Leunga|17
+2000294117|Nick Mokabakila|18
+2000126747|Romaric Etonde|20
+2000217388|Amal Boura|18
+2000183490|Mathis Coudour|19
+2000381320|Safouane Benzahra|16
+2000449303|Matthias Wamu Oyatambwe|16
+49061581|Nazim Babaï|22
+2000188739|Yanis Benchaouch|19
+2000491154|Axel Decrenisse|16
+2000295393|Jules Stawiecki|18
+2000188741|Kévin Sitou|19
+2000294140|Yannick Dodo|18
+2000404827|Checkina Dzabatou Ecko|17
+2000294158|Kenan Moulangou|18
+2000201938|Mohamed Bob|27
+2000188751|Ilane Touré|18
+2000188770|Malick Sylla|19
+2000500824|Ekene Chukwuani|16
+2000294150|Imrane El Ouaroudi|17
+2000294102|Loïc Tiamuna Lubaki|18
+2000188740|Ethan Schulz|19
+2000491189|David Dunne|16
+2000295254|Anis Soubeir|18
+2000405825|Melvin Gomes Da Veiga|17
+2000406232|Kamron Dimata-Gomis|17
+2000405817|Massiremba Dramé|17
+2000405832|Chaihane Badoro|17
+2000406229|David Balliana|17
+2000294171|Wassim Guerchi|18
+2000416184|Ismaïl Bamba|18
+2000404823|Alexander Sellegard|17
+2000491177|Mathys Plessis|16
+2000405852|Melvyn Gelie|17
+2000491141|Mehdi Tlili|16
+2000512225|Jassim Djelloul|17
+2000405827|Najd Ajroud|17
+2000128341|Akim Bouheddi|20
+2000404832|Verges Samory Camara|17
+2000491133|Nahël Haddani|16
+2000405856|Yasir Mouh|17
+2000406233|Djordan Mongo-Mpeho|17
+2000491172|Yoann Pujol|16
+2000404822|Kenley Milien|17
+2000491184|Kaïs Petit|16
+2000491176|Salioubarro Badji|16
+2000491194|Christian Eba|16
+2000491175|Viany Munzengo Letellier|16
+2000491201|Enzo Mbangue Mbom|16
+2000306109|Sirak Samson Bein|17
+49046861|Nassim Lallemand|26
+2000491148|Ackah-Tidiane Zoukrou|16
+2000491202|Imrane Robert|16

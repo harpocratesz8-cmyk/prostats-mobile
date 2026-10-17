@@ -17,3 +17,34 @@
 49054624|Mehdi Baaloudj|24
 49062372|Ryan Ponti|27
 49056285|Hermann Tebily|23
+2000290382|Mathis Saka|18
+2000111264|Dylan Vangi|19
+49046141|Lucas Margueron|24
+2000128175|Enzo Crombez|22
+2000289625|Mathis Delebarre|18
+2000314024|Corentin Issanchou|20
+2000508109|Yanis Dahalani|20
+2000416493|Morgan Corredor|20
+2000407810|Elage Tandian|17
+2000530360|Lucas Boulet|18
+2000401251|Joshua N'Diefi|18
+2000516028|Alexis Ortega|19
+2000449306|Adam Khanouri|16
+2000335865|Antoine Caubet|20
+2000314027|Emile Vignaud|19
+2000314397|Ali Kebbeh|18
+2000516040|Tom Bosc|16
+2000516031|Enzo Couderc|17
+2000335874|Isaiah Girardin|19
+2000516032|Lohan Frontin|17
+2000516041|Thibaut Pradel|17
+2000516039|Maexan Teyssedre|17
+2000335859|Anis Didon|20
+2000516027|Louis Bonnieu|19
+2000530366|Hakim Basla|20
+2000530357|Mae Toppan|17
+2000530408|Kaan Akşit|17
+2000530378|Pablo Saint Martin|16
+2000530410|Roméo Trémolières|17
+2000531668|Mathis Bedel Valette|16
+2000531670|Marius Grimonet|16

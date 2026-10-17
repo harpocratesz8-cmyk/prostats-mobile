@@ -21,3 +21,66 @@
 2000385919|Ibrahim Mbaye|17
 2000402688|Dro|17
 2000288850|Quentin Ndjantou|17
+2000320060|Khalil Ayari|20
+2000091572|Ilyes Housni|20
+2000198858|Renato Marin|19
+2000308789|Ilian Mhand|20
+2000386347|Mathis Jangeal|17
+2000497044|David Boly|16
+2000426369|Pierre Mounguengue|17
+2000385920|Hermann Diandaga|17
+2000386356|Adam Ayari|17
+2000179732|Yanis Khafi|19
+2000386352|Elijah Ly|17
+2000179715|Bilal Laurendon|19
+2000295450|Djamy Olax|18
+2000426249|Martin James|17
+2000179719|Thomas Cordier|19
+2000289659|Dimitri Lucea|18
+2000487229|Wassim Slama|16
+2000386325|Emmanuel Mbemba|17
+2000386337|Rayan Abo El Nay|18
+29022622|Gaël Nlundulu|33
+2000297053|Ethan Luvambano|18
+2000295451|Noah Nsoki|18
+2000288727|Zayon Chtaï-Telamio|18
+2000490733|Paul Bourdin|16
+2000295504|Yanis Bastaraud|17
+2000386406|Bryan Francillonne|18
+2000386344|Paul Caumeil|17
+2000344632|Lucas Batbedat|16
+2000426361|Toumani Diagouraga|17
+2000349269|Fabio Domingos|17
+2000426366|Aymen Assab|16
+2000386421|Mathias Lavenette|19
+2000426372|Hugo Kissanga|19
+2000288863|Daniel Marques Nunes|18
+2000426251|Younes Idder|17
+2000295500|Abdou Fanne Drame|18
+2000490723|Moïse Talanga Malomba|16
+2000471676|Edem Ghalleb|16
+50053212|Kévin Louaisil|37
+2000490732|Noha Tiehi|16
+2000406688|Mohamed Amine El Idrissi|20
+50051893|Mathieu Oliveira|32
+2000490724|Lorenzo Kana-Biyik|16
+2000490716|Jarell Paisley|16
+2000426253|Kaïs Anelka|17
+2000386342|Vainqueur Diyinu Nzinga|17
+2000471671|Charles Bouygue|17
+2000426362|Samba Coulibaly|17
+2000471669|Noa Bezeme|18
+2000490734|Mamadou Meité|16
+2000426252|Nahil Kanté|16
+2000490714|Adam Mouak|16
+2000269802|Landry N'Dri Guessan|18
+2000478687|Seif Taha|17
+2000386320|Simon Couillot|18
+2000426365|Adame Laidouni|17
+2000386308|Arthur Vignaud|17
+2000490729|Seydou Konaté|16
+2000490738|Bakoutoubo Dramé|16
+2000490739|Camron Delgado|16
+2000490720|Kemokho Gassama|16
+2000075819|Théo Mouyemé|21
+2000491127|Ilian Saleh|15

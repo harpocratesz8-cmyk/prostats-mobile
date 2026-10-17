@@ -19,3 +19,61 @@
 2000101953|Ebenezer Annan|22
 88026173|Ben Old|22
 2000124284|Joshua Duffus|20
+2000469965|Marten-Chris Paalberg|16
+2000208200|Karim Cissé|20
+2000373421|Strahinja Stojković|18
+2000297870|Nadir El Jamali|18
+2000208550|Kevin Pedro|19
+12095479|Modibo Sissoko|18
+2000344636|Djylian N'Guessan|16
+2000344634|Paul Eymard|17
+2000298067|Luan Gadegbeku|18
+2000271226|Lassana Traoré|18
+2000440798|Mamadou Konté|18
+2000116643|Jebryl Sahraoui|20
+2000006284|Jibril Othman|21
+2000208194|Jules Mouton|20
+2000298868|Axel Dodote|18
+2000399408|Issam Cheikh|18
+2000131121|Issiaka Touré|20
+2000440795|Daniel Epanya|17
+2000232244|Meïvyn Agesilas|19
+2000484596|Nathan Kasia Nkondo|16
+2000297507|Samy Achour|18
+2000398301|Adam Baallal|18
+2000440803|Ismaël Verhoeven|17
+2000297498|Mateo Houngbo Civier|18
+2000208525|Ewan Hornech|19
+2000297485|Noa Delacroix|19
+2000398983|Joseph Derache|17
+2000399406|Noham Aini|17
+2000399374|Alexis Colombet|17
+2000297867|Valentin Depalle|18
+2000399411|Mehdy Lutin-Zidee|17
+2000399391|Noah Moulin|17
+2000299414|Helmi Ben Tiba|18
+2000399385|Rayan Aït Amer|17
+2000399383|Tom Teillol|16
+2000399392|Sonny Yvars|17
+2000399379|Nathan Mouton|17
+2000299410|Maxence Tatuszka|18
+2000399377|El Fayed Mnemoi|17
+2000517076|Mylan Toty|16
+2000535197|Elysée Ntambu Mvaka|20
+2000208812|Yanis Mimoun|19
+2000399375|Sacha Nedic|17
+2000484224|Rafael Fuleki|16
+2000484599|Maxime Lengué-Lenou|16
+2000484251|Maël Massé|16
+2000517082|Melvin Bijot|16
+2000484595|Théo Jolivet|16
+2000484593|Noham Akil|16
+2000484594|Dawoud Assoumani|15
+2000484261|Lorik Vial|15
+2000517077|Samuel Fuleki|16
+2000517078|Madi Gary|16
+2000527415|Bryan Ngindu|16
+2000517079|Loevan Charros|16
+2000484598|Shadaï Lengi|16
+2000517081|Ilyes Mansouri|16
+2000517083|Matheis Piskor|16

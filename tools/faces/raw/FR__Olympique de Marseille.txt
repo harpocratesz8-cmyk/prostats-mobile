@@ -20,3 +20,65 @@
 37055849|Jeffrey de Lange|27
 2000119392|Tochukwu Nnadi|22
 2000011617|Bilal Nadir|21
+85087278|Stéphane Sparagna|30
+2000294786|Pladi Nzinga-Pambani|18
+36150349|Sofiane Sidi Ali|30
+2000305693|Tadjidine Mmadi|18
+2000292793|Yanis Sellami|18
+2000245872|Ange Lago|20
+48043567|Théo Vermot|28
+2000289434|Nouhoum Kamissoko|20
+2000210633|Victor Joseph|19
+2000289433|Kelian Le Pironnec|19
+2000305702|Rayan Ouro Bang Na|18
+2000294128|Joris Silvente|18
+2000298866|Fodé Camara|18
+2000277560|Félix Bienck|18
+2000413419|Moctar Guirassy|17
+2000292791|Max Corbon|18
+2000426364|Mohamed Baradji|17
+2000055323|Jelle Van Neck|21
+2000413424|Antoine Valero|17
+2000413422|Marlon Pineau|17
+2000480025|Gianni Calisto|16
+2000480032|Milan Leccese|16
+2000480027|Amir Kernif|17
+2000480031|Kilian Ghaud|17
+2000305679|Kyle-Warreeck Magaud|18
+2000210610|Alexandre Tunkadi|19
+2000294500|Alexandre Issanga|18
+2000490088|Babacar Dione|16
+2000413423|Azhar Ali|17
+2000404820|Wassim Moussaoui|17
+2000504183|Ziyad Baha|15
+2000480028|Malik Ahamadi|16
+2000490108|Christ Dégnan Konan|16
+2000490093|Kahéne Gomis|16
+2000490112|Saïd Remadnia|16
+2000214882|Mathis Clément|19
+2000413420|Bradley Lévy|17
+2000292784|Lucas Daubenfeld|19
+2000399274|Ugo Lamare El Kadmiri|18
+2000292782|Kelyann Bezahaf|19
+2000399275|Krys Foleu Téné|18
+2000490115|Yakyne Youssouf Moumini|16
+2000490113|Jassim Waazane|15
+2000399266|Pablo Rigal|17
+2000292787|Paolo Trigano|19
+2000398642|Cheick Diarra|17
+2000413418|Dan Cohen|17
+2000212921|Hilan Hamzaoui Slimani|19
+2000292785|Anis Doubal|18
+2000413415|Ayman Ibrahim|17
+2000490086|Tom Beunaiche|16
+2000305698|Mathis-Tahiry Andrianaivo Mahefa|17
+2000398644|Daniel Mabomba|19
+2000195271|Ibrahim Gomis|20
+2000392964|Adama Camara|17
+2000393030|Yassine Badaoui|17
+2000490101|Ruben Rodriguez|15
+2000490082|Mailey Lépaulard-Nibo|16
+2000490105|Kaïs Ali|16
+2000497262|Kalvin André|16
+2000490083|Raïs Ali|16
+2000490110|Lucas Roman|16

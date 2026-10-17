@@ -19,3 +19,7 @@
 72051250|Tom Barlow|30
 2000261283|Gerardo Valenzuela|20
 20041932|Kyle Smith|33
+2000322350|Kenji Mboma Dem|23
+2000017534|Fabian Mrozek|21
+2000367276|Ștefan Chirilă|18
+2000233962|Stiven Jimenez|18

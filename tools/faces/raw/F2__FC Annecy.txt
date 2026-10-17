@@ -17,3 +17,34 @@
 85133816|Cédric Makutungu|27
 48038918|Thomas Callens|26
 49061461|Mattéo Veillon|23
+2000385891|Alejandro Gomes Rodríguez|17
+2000283795|Triston Rowe|18
+2000198730|Travis Patterson|19
+2000412304|Quentin Paris|18
+2000313385|Hamza Koutoune|18
+2000116591|Alexis Casadeï|20
+49060041|Killian Camélé|22
+2000205550|Nolan Ferro|19
+50036323|Yanis Méguirèche|32
+2000187514|Matéo Gonzalez|19
+2000388593|Wael Debbiche|20
+2000503226|Adji-Joel Aharrh Gnama|27
+2000208858|Kilyan Jusseron-Veniere|18
+2000419916|Esteban Riou|18
+2000267525|Tony Robert|21
+2000503221|Aymerick Nedelec|18
+2000424839|Ibrahim Raache|19
+2000503224|Idriss Monteville|20
+2000530028|Thym-Gory Makengo|18
+2000503228|Gabin Secrétant|16
+2000416491|Louka Durand|16
+2000503222|Cyrus Biz|18
+2000530027|Randy Baleka|19
+2000530031|Andi Bauda|18
+2000530435|Djibril Camara|16
+2000530440|Noham Nasrallah|16
+2000530434|Timeo Campanella|16
+2000530426|Heni Benaouda|17
+2000530437|Archibald Fossati|17
+2000530439|Bilal Martin|17
+2000530428|Lucas Métral|17

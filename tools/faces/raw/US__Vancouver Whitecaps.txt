@@ -21,3 +21,9 @@
 2000031888|Isaac Boehmer|23
 2000028279|Belal Halbouni|25
 51042345|Adrián Zendejas|29
+2000259922|Tate Johnson|20
+2000436581|Nikola Djordjevic|22
+2000334164|Jeevan Badwal|19
+2000362107|Liam MacKenzie|18
+2000476111|Rayan Elloumi|17
+2000252688|Mihail Gherasimencov|20

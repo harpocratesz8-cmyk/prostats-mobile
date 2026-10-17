@@ -540,6 +540,7 @@ body.locked{overflow:hidden}
 .face-mini{width:26px;height:26px;border-radius:50%;object-fit:cover;object-position:top;background:#1b2537;flex:none;border:1px solid var(--line,#2a3550)}
 .face-mini.ph{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-size:10px;font-weight:800;font-family:var(--f-display)}
 
+.sq-tbl th,.sq-tbl td{padding-left:5px!important;padding-right:5px!important}.sq-tbl td:first-child{max-width:150px;overflow:hidden;text-overflow:ellipsis}.sq-tbl .rt{min-width:0;padding:1px 5px}
 </style>
 </head>
 <body>
@@ -864,7 +865,7 @@ pt: {
   photo_credit:"Foto: Reprodução / Agência ProStats",
   numbers_of:"Os números de {n}",
   see_match:"Ver detalhes da partida",
-  history:"Campeões", history_s:"Todos os campeões da história", hist_search:"Buscar competição ou país", hist_yours:"Suas competições", hist_intl:"Internacionais",
+  history:"Campeões", history_s:"Todos os campeões da história", hist_search:"Buscar competição ou país", hist_add:"Adicionar campeões", hist_add_s:"Escolha a temporada e o país e preencha os campeões de todas as competições de uma vez. Deixe em branco o que não quiser mudar; apagar um nome remove o campeão que você digitou.", hist_country:"País", champ_f:"Campeão", runner_f:"Vice", hist_saved_n:"Campeões salvos ({n})", hist_locked:"definido pela sua carreira", hist_auto_note:"Finais que você disputou entram sozinhas: basta o jogo ter “Final” no campo Rodada. Se perder, o adversário vira campeão e seu time aparece como vice.", hist_you_ru:"VICE (VOCÊ)", agg_short:"agr.", news_see_hist:"Ver todos os campeões da competição", mate_add:"Companheiro", mate_edit:"Editar companheiro", m_games:"Jogos", m_goals:"Gols", m_ast:"Assist.", m_yc:"Amarelos", m_rc:"Vermelhos", m_avg:"Nota média", m_avg_s:"Nota", m_total:"Total na temporada", m_bycomp:"Por competição (opcional)", m_bycomp_s:"Se preencher as competições, o total da temporada é somado automaticamente.", m_addcomp:"+ Adicionar competição", m_del_q:"Remover {n} do elenco?", squad_empty:"Toque em “+ Companheiro” para cadastrar os colegas de time de cada temporada, com posição, jogos, gols, assistências, cartões e nota.", hist_yours:"Suas competições", hist_intl:"Internacionais",
   hist_editions:"edições", hist_since:"desde", hist_last:"Atual campeão", hist_top:"Maior campeão", hist_rank:"Ranking", hist_seasons:"Temporadas",
   hist_runner:"Vices", hist_runner1:"vice", hist_last_t:"último em", hist_you:"SUA CARREIRA", hist_your_titles:"Seus títulos", vs_short:"vs",
   hist_nth:"título do {club} na história da competição", hist_leader:"{club} é o maior campeão da competição", hist_pos:"{n}º no ranking histórico · líder: {lead} ({t})",
@@ -1176,7 +1177,7 @@ en: {
   photo_credit:"Photo: ProStats Agency",
   numbers_of:"{n}'s numbers",
   see_match:"See match details",
-  history:"Champions", history_s:"Every champion in history", hist_search:"Search competition or country", hist_yours:"Your competitions", hist_intl:"International",
+  history:"Champions", history_s:"Every champion in history", hist_search:"Search competition or country", hist_add:"Add champions", hist_add_s:"Pick the season and the country and fill in the champions of every competition at once. Leave blank what you don't want to change; clearing a name removes a champion you typed.", hist_country:"Country", champ_f:"Champion", runner_f:"Runner-up", hist_saved_n:"Champions saved ({n})", hist_locked:"set by your career", hist_auto_note:"Finals you played are added automatically: the match just needs “Final” in the Round field. If you lose, the opponent becomes champion and your team is listed as runner-up.", hist_you_ru:"RUNNER-UP (YOU)", agg_short:"agg.", news_see_hist:"See every champion of the competition", mate_add:"Teammate", mate_edit:"Edit teammate", m_games:"Apps", m_goals:"Goals", m_ast:"Assists", m_yc:"Yellows", m_rc:"Reds", m_avg:"Avg rating", m_avg_s:"Rating", m_total:"Season total", m_bycomp:"By competition (optional)", m_bycomp_s:"If you fill in the competitions, the season total is added up automatically.", m_addcomp:"+ Add competition", m_del_q:"Remove {n} from the squad?", squad_empty:"Tap “+ Teammate” to add your teammates for each season, with position, apps, goals, assists, cards and rating.", hist_yours:"Your competitions", hist_intl:"International",
   hist_editions:"editions", hist_since:"since", hist_last:"Holder", hist_top:"Most titles", hist_rank:"Ranking", hist_seasons:"Seasons",
   hist_runner:"Runners-up", hist_runner1:"runner-up", hist_last_t:"last in", hist_you:"YOUR CAREER", hist_your_titles:"Your titles", vs_short:"vs",
   hist_nth:"title in {club}'s history in this competition", hist_leader:"{club} hold the record in this competition", hist_pos:"No. {n} all-time · leader: {lead} ({t})",
@@ -1889,7 +1890,7 @@ function vMore(){
   return `<div class="menu-grid">${MORE_ITEMS.map(([k,l,ic])=>`<button data-act="more" data-v="${k}"><span class="ico">${ic}</span><b>${t(l)}</b><small>${t(l==="ballon_t"?"ballon_s":l==="marketv"?"market_s":k+"_s")}</small>${k==="news"&&S.noticias_nao_lidas?`<span class="badge">${S.noticias_nao_lidas}</span>`:""}</button>`).join("")}</div>
     <a class="btn block" style="margin-top:14px;text-decoration:none;color:var(--fg)" href="https://ko-fi.com/prostats" target="_blank" rel="noopener">☕ ${t("support")}</a>`;
 }
-function backBar(title, addAct){ return `<div class="row between"><button class="btn sm" data-act="moreBack">← ${t("more")}</button>${addAct&&!SAMPLE?`<button class="btn sm acc" data-act="${addAct}">+ ${t("add_trophy").split(" ")[0]}</button>`:""}</div><h2 style="font-family:var(--f-display);font-size:26px;text-transform:uppercase;margin-top:4px">${title}</h2>`; }
+function backBar(title, addAct){ return `<div class="row between"><button class="btn sm" data-act="moreBack">← ${t("more")}</button>${addAct&&!SAMPLE?`<button class="btn sm acc" data-act="${addAct}">+ ${addAct==="addMate"?t("mate_add"):t("add_trophy").split(" ")[0]}</button>`:""}</div><h2 style="font-family:var(--f-display);font-size:26px;text-transform:uppercase;margin-top:4px">${title}</h2>`; }
 function vMoreSub(k){
   if(k==="news") return vNews();
   if(k==="history") return vHistory();
@@ -1933,8 +1934,7 @@ function vMoreSub(k){
     if(Object.keys(sc).length) out.push([TYPE_LBL[LANG]["Supercopa"], sc]);
     body = out.length ? out.map(([lbl,agg])=>`<div class="sec-h"><h2>${esc(lbl)}</h2></div><div class="ilist">${Object.entries(agg).sort((a,b)=>b[1].j-a[1].j).map(([c,a])=>`<button class="item" data-act="compRep" data-v="${esc(normComp(c))}" data-s="">${logoOf(c)?crest(c,36):`<span class="ico" style="color:var(--accent)">${IC.cup}</span>`}<div class="grow"><div class="t">${esc(c)} <span class="muted">›</span></div><div class="s">${a.seasons.size} ${t("season").toLowerCase()}${a.seasons.size>1&&LANG==="en"?"s":a.seasons.size>1?"s":""}</div></div><div class="num" style="font-size:18px;font-weight:700">${a.j} · ${a.g} · ${a.a}</div></button>`).join("")}</div>`).join("") : empty(t("no_data"), t("no_data_s"));
   } else if(k==="squad"){
-    const ks = Object.keys(S.dados_elenco||{}).sort((a,b)=>seasonSortKey(b)-seasonSortKey(a));
-    body = ks.length ? ks.map(k2=>{ const sc = clubOfSeason(k2); return `<div class="season-h"><span>${esc(k2)}</span><span>${(S.dados_elenco[k2]||[]).length}</span></div><div class="tbl-wrap"><table><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th></tr></thead><tbody>${[...(S.dados_elenco[k2]||[])].sort((a,b)=>int(b.jogos)-int(a.jogos)).map(p=>`<tr><td><span class="row" style="gap:8px">${faceMini(p.nome, sc)}${esc(p.nome)}</span></td><td>${esc(p.posicao)}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td></tr>`).join("")}</tbody></table></div>`; }).join("") : empty(t("no_data"), LANG==="en"?"Squad data entered in the PC app shows up here.":"O elenco cadastrado no app do PC aparece aqui.");
+    add = "addMate"; body = vSquad();
   } else if(k==="data"){
     return vData();
   }
@@ -2274,6 +2274,7 @@ function comboSource(src){
   if(src==="comp" || src==="trophy") return {mine: uniq([...P.map(j=>j["Competição"]), ...(S?S.conquistas.map(c=>c[1]):[])]), all: uniq([...COMP_SUGGEST, ...db(["l","k"])])};
   if(src==="opp") return {mine: uniq(P.map(j=>j["Adversário"])), all: uniq(db(["c","n"]))};
   if(src==="club") return {mine: uniq(S ? [S.informacoes["Clube Atual"], nationalTeam(), ...Object.keys(S.dados_desempenho_por_clubes)] : []), all: uniq(db(["c","n"]))};
+  if(src==="mate") return {mine: S ? mateNames(UI.mateSeason || squadSeasons()[0]) : [], all: []};
   if(src==="award") return {mine: uniq(S ? [S.informacoes["Clube Atual"], ...P.map(j=>j["Competição"])] : []), all: uniq([...db(["l","k"]), ...db(["c"])])};
   return {mine:[], all:[]};
 }
@@ -2822,7 +2823,7 @@ function newsItems(){
   const feed = S.feed_noticias||[];
   const unreadFor = j => feed.some(n => n.tipo==="match" && !n.lida && n.data===j.Data && n.stats && n.stats.adv===j["Adversário"]);
   const items = P.map(j => ({kind:"match", j, date:dateNum(j.Data), unread:unreadFor(j)}));
-  feed.filter(n => n.tipo && n.tipo!=="match").forEach((n,i) => items.push({kind:"other", n, date:dateNum(n.data), unread:!n.lida}));
+  feed.forEach((n,i) => { if(n.tipo && n.tipo!=="match") items.push({kind:"other", n, fi:i, date:dateNum(n.data), unread:!n.lida}); });
   return items.sort((a,b)=>b.date-a.date);
 }
 function vNews(){
@@ -2830,7 +2831,7 @@ function vNews(){
   if(!items.length) return `<div class="stack">${back()}${empty(t("no_news"), t("no_news_s"))}</div>`;
   const cards = items.map((it, k) => {
     if(it.kind==="other"){ const n = it.n; const ttl = n.tipo==="titulo"; const lg = ttl ? logoOf(n.comp) : null; const hc = ttl ? histCompOf(n.comp) : null;
-      return `<${hc?`button data-act="histOpen" data-k="${esc(hc.key)}"`:"div"} class="nw-card ${it.unread?"unread":""}" style="--nb:${ttl?"#2A1F05":"#0F1E33"};--na:${ttl?"#FBBF24":"#38BDF8"}"><span class="nw-band">${lg?`<img src="${lg}" alt="">`:""}<b>${esc(n.tag||"")}</b><span class="grow"></span><span>${esc(n.data||"")}</span>${it.unread?`<i class="nw-dot"></i>`:""}</span>${ttl&&n.clube?`<span class="nw-sb">${crest(n.clube,44)}</span>`:""}<span class="nw-body"><h4>${esc(n.titulo||"")}</h4><p>${esc(n.texto_curto||"")}</p></span></${hc?"button":"div"}>`; }
+      return `<${ttl?`button data-act="openTitleNews" data-i="${it.fi}"`:"div"} class="nw-card ${it.unread?"unread":""}" style="--nb:${ttl?"#2A1F05":"#0F1E33"};--na:${ttl?"#FBBF24":"#38BDF8"}"><span class="nw-band">${lg?`<img src="${lg}" alt="">`:""}<b>${esc(n.tag||"")}</b><span class="grow"></span><span>${esc(n.data||"")}</span>${it.unread?`<i class="nw-dot"></i>`:""}</span>${ttl&&n.clube?`<span class="nw-sb">${crest(n.clube,44)}</span>`:""}<span class="nw-body"><h4>${esc(n.titulo||"")}</h4><p>${esc(n.texto_curto||"")}</p></span></${ttl?"button":"div"}>`; }
     const j = it.j; const art = buildArticle(j); const sel = isSelMatch(j); const th = compTheme(j["Competição"], sel); const lg = logoOf(j["Competição"]);
     const idx = S.ultimas_performances.indexOf(j); const L = art.home ? (j.Time||S.informacoes["Clube Atual"]) : j["Adversário"], R = art.home ? j["Adversário"] : (j.Time||S.informacoes["Clube Atual"]);
     const sc = art.sc ? (art.home ? `${art.sc.mine}-${art.sc.theirs}` : `${art.sc.theirs}-${art.sc.mine}`) : esc(j.Resultado||"");
@@ -2949,15 +2950,18 @@ function careerRows(comp){
 }
 function histTimeline(comp){
   const memo = histMemo(); if(memo.tl.has(comp)) return memo.tl.get(comp);
-  const cut = memo.cut, mine = careerRows(comp), mineY = new Set(mine.map(r=>r.y));
-  const rows = comp.r.filter(r => !(cut && rowEndTs(r[0], r[1], comp.nat, comp.em) > cut) && !mineY.has(r[1])).map(r => { const t0 = histTeam(r[2], comp.nat);
+  const cut = memo.cut, mine = careerRows(comp); const byY = new Map(); for(const r of mine) if(r.y<9999 && !byY.has(r.y)) byY.set(r.y, r);
+  const extra = [];
+  for(const f of (histFinals().get(comp)||[])){ const m = byY.get(f.y); if(m){ if(f.me && !m.ru){ m.ru = f.ru; m.ruT = f.ruT; m.sc = f.sc; m.fin = true; } continue; } const r = {...f}; extra.push(r); byY.set(f.y, r); }
+  for(const r of manualRows(comp)){ if(byY.has(r.y)) continue; extra.push(r); byY.set(r.y, r); }
+  const rows = comp.r.filter(r => !(cut && rowEndTs(r[0], r[1], comp.nat, comp.em) > cut) && !byY.has(r[1])).map(r => { const t0 = histTeam(r[2], comp.nat);
     return {s:r[0], y:r[1], champ:r[2], ru:r[3], sc:r[4], k:t0.k, e:t0.e, label:t0.label}; });
-  const tl = [...rows, ...mine].sort((a,b)=> a.y-b.y || String(a.s).localeCompare(String(b.s)));
+  const tl = [...rows, ...mine, ...extra].sort((a,b)=> a.y-b.y || String(a.s).localeCompare(String(b.s)));
   memo.tl.set(comp, tl); return tl;
 }
 function histMemo(){
   if(Hist.memo) return Hist.memo;
-  Hist.memo = {cut:careerCut(), tl:new Map(), rank:new Map(), stars:null}; return Hist.memo;
+  Hist.memo = {cut:careerCut(), tl:new Map(), rank:new Map(), stars:null, fin:null}; return Hist.memo;
 }
 /* all-time table: titles (incl. titles before the list) and runner-up finishes */
 function histRanking(comp){
@@ -2965,7 +2969,7 @@ function histRanking(comp){
   const T = new Map(); const get = (k, e, label) => { if(!T.has(k)) T.set(k, {k, e, label, t:0, v:0, last:0, first:0, me:0}); return T.get(k); };
   for(const [n, q] of Object.entries(comp.b||{})){ const t0 = histTeam(n, comp.nat); get(t0.k, t0.e, t0.label).t += q; }
   for(const r of histTimeline(comp)){ const x = get(r.k, r.e, r.label); x.t++; if(r.y<9999 && r.y >= x.last && r.e){ x.e = r.e; x.label = r.label; } if(r.y<9999){ x.last = Math.max(x.last, r.y); if(!x.first) x.first = r.y; } if(r.me) x.me++;
-    if(r.ru){ const t1 = histTeam(r.ru, comp.nat); get(t1.k, t1.e, t1.label).v++; } }
+    if(r.ru){ const t1 = r.ruT || histTeam(r.ru, comp.nat); get(t1.k, t1.e, t1.label).v++; } }
   const list = [...T.values()].filter(x=>x.t||x.v).sort((a,b)=> b.t-a.t || b.v-a.v || a.first-b.first);
   memo.rank.set(comp, list); return list;
 }
@@ -3029,7 +3033,7 @@ function histTitleNews(compName, club, seasonTxt, starsBefore){
     let streak = 1; if(cur && cur.y<9999){ let y = cur.y; while(true){ const step = tl.some(r=>r.y===y-1) ? 1 : 0; if(!step) break; const p = tl.filter(r=>r.y===y-1); if(p.some(r=>r.k===u.k)){ streak++; y--; } else break; } }
     const rank = histRanking(comp); const lead = rank[0]; const second = rank.find(x=>x.k!==u.k);
     const gap = prev && cur && prev.y<9999 && cur.y<9999 ? cur.y - prev.y : 0;
-    const cn = comp.n;
+    const cn = compLbl(comp.n);
     if(n === 1){ head = en ? `${club} win the ${cn} for the first time in their history` : `${club} conquista ${cn} pela primeira vez na história`;
       txt = en ? `A historic first: with ${F} in the side, ${club} finally lift the trophy.` : `Feito inédito: com ${F} em campo, o ${club} finalmente levanta a taça.`; }
     else if(streak >= 2){ const w = en ? (streak===2?"Back-to-back":streak===3?"Three in a row":`${streak} in a row`) : `${ORD_PT[streak-1]||streak+"x "}campeão`;
@@ -3044,32 +3048,32 @@ function histTitleNews(compName, club, seasonTxt, starsBefore){
   } else { head = en ? `${club} win the ${compName}` : `${club} conquista ${compName}`; txt = en ? `${F} lifts another trophy (${seasonTxt}).` : `${F} levanta mais uma taça (${seasonTxt}).`; }
   if(starsAfter > starsBefore) txt += en ? (starsAfter===1 ? ` ${club} earn their first star above the crest.` : ` A new star goes above the ${club} crest — ${starsAfter} in total.`) : (starsAfter===1 ? ` O escudo do ${club} ganha sua primeira estrela.` : ` O escudo do ${club} ganha mais uma estrela — agora são ${starsAfter}.`);
   let last = 0, ld = ""; for(const j of S.ultimas_performances||[]){ const d = dateNum(j.Data); if(d > last){ last = d; ld = j.Data; } }
-  return {tipo:"titulo", data:ld||todayDMY(), titulo:head, texto_curto:txt, tag:en?"TITLE":"TÍTULO", comp:compName, clube:club, lida:false};
+  return {tipo:"titulo", data:ld||todayDMY(), titulo:head, texto_curto:txt, tag:en?"TITLE":"TÍTULO", comp:compName, clube:club, temp:seasonTxt, lida:false};
 }
 
 /* ---------- views ---------- */
 function vHistory(){
   if(!Hist.ready) return `${backBar(t("history"))}${empty(t("no_data"), "")}`;
   if(UI.histComp){ const c = Hist.comps.find(x=>x.key===UI.histComp) || Hist.byName.get(UI.histComp); if(c) return vHistComp(c); UI.histComp = null; }
-  const used = new Set([...(S.conquistas||[]).map(c=>histCompOf(c[1])), ...S.ultimas_performances.map(j=>histCompOf(j["Competição"]))].filter(Boolean));
+  const used = histUsed();
   const item = c => { const tl = histTimeline(c); const last = tl[tl.length-1]; const first = tl[0];
-    return `<button class="item hc-item" data-act="histOpen" data-k="${esc(c.key)}" data-n="${esc(lnorm(c.n+" "+c.g))}">${c.e?`<span class="crest img" style="--s:34px"><img src="${c.e.f}" alt="" width="34" height="34" loading="lazy"></span>`:`<span class="ico">${IC.cup}</span>`}
-      <div class="grow"><div class="t">${esc(c.n)}</div><div class="s">${tl.length} ${t("hist_editions")}${first?` · ${t("hist_since")} ${esc(first.s)}`:""}</div></div>
+    return `<button class="item hc-item" data-act="histOpen" data-k="${esc(c.key)}" data-n="${esc(histSearchKey(c))}">${c.e?`<span class="crest img" style="--s:34px"><img src="${c.e.f}" alt="" width="34" height="34" loading="lazy"></span>`:`<span class="ico">${IC.cup}</span>`}
+      <div class="grow"><div class="t">${esc(compLbl(c.n))}</div><div class="s">${tl.length} ${t("hist_editions")}${first?` · ${t("hist_since")} ${esc(first.s)}`:""}</div></div>
       ${last?`<span class="hc-last">${histCrest(last, 26)}<small>${esc(String(last.s).slice(-7))}</small></span>`:""}</button>`; };
-  const groups = new Map(); for(const c of Hist.comps){ const g = c.g || t("hist_intl"); if(!groups.has(g)) groups.set(g, []); groups.get(g).push(c); }
-  const order = [...groups.keys()].sort((a,b)=> (a===t("hist_intl")?-1:b===t("hist_intl")?1:0) || (a==="Brasil"?-1:b==="Brasil"?1:0) || a.localeCompare(b));
+  const {groups, order} = histGroups();
   return `<div class="stack">${backBar(t("history"))}
     <input class="inp" id="histQ" type="search" placeholder="${t("hist_search")}" autocomplete="off">
+    ${SAMPLE?"":`<button class="btn acc block" data-act="histBulk">＋ ${t("hist_add")}</button>`}
     ${used.size?`<div class="hc-group" data-g="1"><div class="lbl">${t("hist_yours")}</div><div class="ilist">${[...used].map(item).join("")}</div></div>`:""}
-    ${order.map(g=>`<div class="hc-group"><div class="lbl">${esc(g)}</div><div class="ilist">${groups.get(g).map(item).join("")}</div></div>`).join("")}
+    ${order.map(g=>`<div class="hc-group"><div class="lbl">${esc(groupLbl(g))}</div><div class="ilist">${groups.get(g).map(item).join("")}</div></div>`).join("")}
   </div>`;
 }
 function vHistComp(c){
   const tl = histTimeline(c), rank = histRanking(c); const last = tl[tl.length-1]; const top = rank[0];
   const mine = new Set([...Object.keys(S.dados_desempenho_por_clubes||{}), S.informacoes["Clube Atual"], S.informacoes["Nacionalidade"], ...(S.conquistas||[]).map(x=>x[3])].filter(Boolean).map(n=>userTeam(n).k));
   const myTitles = tl.filter(r=>r.me).length; const tab = UI.histTab || "rank";
-  const head = `<div class="row between"><button class="btn sm" data-act="histBack">← ${t("history")}</button></div>
-    <div class="hc-hero">${c.e?`<img src="${c.e.f}" alt="">`:`<span class="ico">${IC.cup}</span>`}<div><h2>${esc(c.n)}</h2><div class="small muted">${c.g?esc(c.g)+" · ":""}${tl.length} ${t("hist_editions")}${tl[0]?` · ${t("hist_since")} ${esc(tl[0].s)}`:""}</div></div></div>
+  const head = `<div class="row between"><button class="btn sm" data-act="histBack">← ${t("history")}</button>${SAMPLE?"":`<button class="btn sm acc" data-act="histBulk" data-g="${esc(c.g||"")}">＋ ${t("hist_add").split(" ")[0]}</button>`}</div>
+    <div class="hc-hero">${c.e?`<img src="${c.e.f}" alt="">`:`<span class="ico">${IC.cup}</span>`}<div><h2>${esc(compLbl(c.n))}</h2><div class="small muted">${c.g?esc(groupLbl(c.g))+" · ":""}${tl.length} ${t("hist_editions")}${tl[0]?` · ${t("hist_since")} ${esc(tl[0].s)}`:""}</div></div></div>
     <div class="kpis three">
       <div class="kpi">${top?histCrest(top,30):""}<span class="num" style="font-size:20px">${top?top.t:"–"}</span><span>${t("hist_top")}</span></div>
       <div class="kpi">${last?histCrest(last,30):""}<span class="num" style="font-size:16px">${last?esc(last.s):"–"}</span><span>${t("hist_last")}</span></div>
@@ -3080,7 +3084,7 @@ function vHistComp(c){
     body = `<div class="ilist hc-rank">${rank.slice(0,80).map((x,i)=>`<div class="item ${mine.has(x.k)?"me":""}"><span class="pos num">${i+1}</span>${histCrest(x,32)}<div class="grow"><div class="t">${esc(x.label)}${x.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">★ ${x.me}</span>`:""}</div><div class="s">${x.v?`${x.v} ${x.v===1?t("hist_runner1"):t("hist_runner").toLowerCase()}`:""}${x.last?`${x.v?" · ":""}${t("hist_last_t")} ${x.last}`:""}</div></div><span class="num big-n">${x.t}</span></div>`).join("")}</div>
       ${Object.keys(c.b||{}).length?`<div class="small muted">${t("hist_base_note")}</div>`:""}`;
   } else {
-    body = `<div class="ilist hc-seasons">${[...tl].reverse().slice(0,220).map(r=>`<div class="item ${r.me?"me":""}"><span class="ss num">${esc(r.s==="?"?"–":r.s)}</span>${histCrest(r,30)}<div class="grow"><div class="t">${esc(r.label)}${r.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">${t("hist_you")}</span>`:""}</div>${r.ru?`<div class="s">${r.sc?`<b class="num">${esc(r.sc)}</b> `:""}${t("vs_short")} ${esc(histTeam(r.ru, c.nat).label)}</div>`:""}</div></div>`).join("")}</div>`;
+    body = `<div class="ilist hc-seasons">${[...tl].reverse().slice(0,220).map(r=>`<div class="item ${r.me||r.lost?"me":""}"><span class="ss num">${esc(r.s==="?"?"–":r.s)}</span>${histCrest(r,30)}<div class="grow"><div class="t">${esc(r.label)}${r.me?` <span class="chip" style="color:var(--gold);border-color:var(--gold)">${t("hist_you")}</span>`:""}${r.lost?` <span class="chip" style="color:var(--muted)">🥈 ${t("hist_you_ru")}</span>`:""}</div>${r.ru?`<div class="s">${r.sc?`<b class="num">${esc(r.sc)}</b> `:""}${t("vs_short")} ${esc((r.ruT||histTeam(r.ru, c.nat)).label)}</div>`:""}</div></div>`).join("")}</div>`;
   }
   return `<div class="stack">${head}${body}</div>`;
 }
@@ -3094,6 +3098,222 @@ function histPlaque(c){
     ${pos?`<div class="small muted">${pos===1?t("hist_leader",{club:esc(c[3])}):t("hist_pos",{n:pos, lead:esc(lead.label), t:lead.t})}</div>`:""}
     ${st?`<div class="small">${starsSVG(Math.min(st,5)).replace("<svg",'<svg style="height:12px;vertical-align:-1px"')} ${st} ${t("stars_lbl")}</div>`:""}
     <button class="btn sm" data-act="histOpen" data-k="${esc(comp.key)}">🏛 ${t("hist_open")}</button></div>`;
+}
+
+
+/* ---------- finals played in the career -> champion + runner-up of that edition ----------
+   A match whose round (Rodada) is "Final" decides the edition: a loss puts the opponent on the list
+   with the user's club as runner-up; a win adds the runner-up (and the title, if it wasn't registered). */
+const isFinalRound = r => { const s = lnorm(r); return /(^| )(grand |grande )?finale?( |$)/.test(s) && !/semi|quart|oitav|octav|quarter|eighth|1 (4|8|16)|pre|elimin|grup|group|play ?off|repesc/.test(s); };
+const compSplit = comp => comp.r.length ? /\//.test(String(comp.r[comp.r.length-1][0])) : true;
+const compSeasonLbl = (comp, y) => compSplit(comp) ? `${y-1}/${String(y).slice(-2)}` : String(y);
+function histFinals(){
+  const memo = histMemo(); if(memo.fin) return memo.fin;
+  const by = new Map();
+  for(const j of (S && S.ultimas_performances) || []){ const comp = histCompOf(j["Competição"]); if(!comp) continue; const sp = findSpecific(j); if(!sp || !isFinalRound(sp.rodada)) continue;
+    const d = parseDMY(j.Data); if(!d) continue; const y = compSplit(comp) ? (d.getMonth()+1 >= 7 ? d.getFullYear()+1 : d.getFullYear()) : d.getFullYear();
+    if(!by.has(comp)) by.set(comp, new Map()); const m = by.get(comp); if(!m.has(y)) m.set(y, []); m.get(y).push(j); }
+  const out = new Map();
+  for(const [comp, m] of by){ const rows = [];
+    for(const [y, js] of m){ js.sort((a,b)=>dateNum(a.Data)-dateNum(b.Data)); let mine = 0, theirs = 0, ok = true;
+      for(const j of js){ const x = scoreSplit(j); if(!x){ ok = false; break; } mine += x.mine; theirs += x.theirs; }
+      if(!ok) continue; const last = js[js.length-1]; let win = mine>theirs ? true : mine<theirs ? false : null; let pen = null;
+      if(win===null){ pen = pensSplit(last); if(pen && pen.mine!==pen.theirs) win = pen.mine > pen.theirs; }
+      if(win===null) continue;
+      const my = last.Time || S.informacoes["Clube Atual"], opp = last["Adversário"]; const cw = win ? my : opp, cl = win ? opp : my;
+      const sc = (win ? `${mine}-${theirs}` : `${theirs}-${mine}`) + (pen ? ` (${win?pen.mine:pen.theirs}-${win?pen.theirs:pen.mine} ${t("pens_short")})` : "") + (js.length>1 ? ` ${t("agg_short")}` : "");
+      const u = userTeam(cw); rows.push({s:compSeasonLbl(comp, y), y, champ:cw, ru:cl, ruT:userTeam(cl), sc, me:win, lost:!win, fin:true, k:u.k, e:u.e, label:u.label, date:last.Data}); }
+    out.set(comp, rows); }
+  memo.fin = out; return out;
+}
+/* champions typed by the user (other countries' competitions after a season ends) */
+function manualRows(comp){
+  const M = (S && S.campeoes_manuais && S.campeoes_manuais[lkey(comp.n)]) || {};
+  return Object.entries(M).filter(([, v]) => v && v.c).map(([y, v]) => { const u = userTeam(v.c);
+    return {s:v.s || compSeasonLbl(comp, +y), y:+y, champ:v.c, ru:v.v||"", ruT:v.v ? userTeam(v.v) : null, sc:"", k:u.k, e:u.e, label:u.label, man:true}; });
+}
+const GROUP_EN = {"Brasil":"Brazil","Inglaterra":"England","Alemanha":"Germany","Espanha":"Spain","Itália":"Italy","França":"France","Arábia Saudita":"Saudi Arabia",
+  "Coreia do Sul":"South Korea","Índia":"India","Bélgica":"Belgium","Escócia":"Scotland","Turquia":"Turkey","Romênia":"Romania","Polônia":"Poland","Irlanda":"Ireland",
+  "México":"Mexico","Holanda":"Netherlands","Estados Unidos":"United States","Austrália":"Australia","Áustria":"Austria","Dinamarca":"Denmark","Suíça":"Switzerland",
+  "Suécia":"Sweden","Noruega":"Norway","Argentina":"Argentina","Portugal":"Portugal","China":"China"};
+const GROUP_ALIAS = {"Holanda":"Holland","Estados Unidos":"USA America","Turquia":"Türkiye","Coreia do Sul":"Korea","Irlanda":"Republic of Ireland","Escócia":"Scottish","Inglaterra":"English"};
+const COMP_EN = {"Copa do Mundo":"FIFA World Cup","Copa Sul-Americana":"Copa Sudamericana South American","Recopa Sul-Americana":"Recopa Sudamericana","Brasileirão":"Brazilian Serie A",
+  "Copa do Brasil":"Brazil Cup","Supercopa do Brasil":"Brazil Super Cup","Copa do Nordeste":"Northeast Cup","UEFA Euro":"European Championship","Copa Libertadores":"Libertadores"};
+const groupLbl = g => !g ? t("hist_intl") : LANG==="en" ? (GROUP_EN[g]||g) : g;
+const compLbl = n => LANG==="en" && n==="Copa do Mundo" ? "World Cup" : n;
+const histSearchKey = c => lnorm([c.n, COMP_EN[c.n]||"", c.g, GROUP_EN[c.g]||"", GROUP_ALIAS[c.g]||"", c.g ? "" : "internacional international"].join(" "));
+
+/* ---------- add the champions of many competitions at once ---------- */
+function histGroups(){
+  const groups = new Map(); for(const c of Hist.comps){ const g = c.g || ""; if(!groups.has(g)) groups.set(g, []); groups.get(g).push(c); }
+  const order = [...groups.keys()].sort((a,b)=> (a===""?-1:b===""?1:0) || (a==="Brasil"?-1:b==="Brasil"?1:0) || groupLbl(a).localeCompare(groupLbl(b)));
+  return {groups, order};
+}
+/* does the edition end in the second half of a European season (May/June)? -> "2025/26" maps to 2026; otherwise to 2025 */
+const EURO_G = new Set(["Inglaterra","Alemanha","Espanha","Portugal","Itália","França","Bélgica","Escócia","Turquia","Romênia","Polônia","Holanda","Áustria","Dinamarca","Suíça","Arábia Saudita","Austrália","Índia"]);
+const compEndYear = comp => compSplit(comp) || ["Copa do Mundo","UEFA Euro"].includes(comp.n) || (EURO_G.has(comp.g) && !/(^| )super(?! ?(lig|league|liga))|community shield|campeones|(^| )champions( |$)|cruijff|durand/.test(lnorm(comp.n)));
+const bulkY = (comp, s) => { const m = /^(\d{4})\s*[\/-]\s*(\d{2,4})$/.exec(String(s||"")); if(m) return compEndYear(comp) ? +m[1]+1 : +m[1]; return parseInt(s,10) || new Date().getFullYear(); };
+function histBulkList(season, g){
+  const {groups} = histGroups(); const used = histUsed();
+  const list = g==="*yours" ? [...used] : (groups.get(g) || []);
+  if(!list.length) return empty(t("no_data"), "");
+  return list.map((c, i) => { const y = bulkY(c, season); const lbl = compSeasonLbl(c, y); const ck = lkey(c.n);
+    const tl = histTimeline(c); const cur = tl.find(r => r.y===y);
+    const P = (UI.hbPending||{})[ck+"|"+y]; const man = ((S.campeoes_manuais||{})[ck]||{})[y];
+    const lock = cur && (cur.me || cur.fin) ? cur : null;
+    const cv = P ? P.c : man ? man.c : "", vv = P ? P.v : man ? man.v||"" : "";
+    const ph = cur && !cur.man ? cur.label : "", phv = cur && !cur.man && cur.ru ? (cur.ruT||histTeam(cur.ru, c.nat)).label : "";
+    const inp = (nm, val, lab, p) => field(lab, `<div class="cb"><input class="inp" name="${nm}" data-combo="opp" value="${esc(val)}" placeholder="${esc(p)}" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="next"><div class="cb-list" hidden role="listbox"></div></div>`, "");
+    return `<div class="card hb-row" data-ck="${esc(ck)}" data-y="${y}" data-s="${esc(lbl)}" style="padding:10px 12px">
+      <div class="row" style="gap:8px;margin-bottom:6px">${c.e?`<img src="${c.e.f}" alt="" width="24" height="24" style="object-fit:contain">`:`<span class="ico">${IC.cup}</span>`}<b class="grow">${esc(compLbl(c.n))}</b><span class="chip num">${esc(lbl)}</span></div>
+      ${lock ? `<div class="small">🏆 <b>${esc(lock.label)}</b>${lock.ru?` · ${t("runner_f")}: ${esc((lock.ruT||histTeam(lock.ru,c.nat)).label)}`:""} <span class="muted">— ${t("hist_locked")}</span></div>`
+        : `<div class="fgrid">${inp("hc_"+i, cv, t("champ_f"), ph)}${inp("hv_"+i, vv, t("runner_f"), phv)}</div>`}
+    </div>`; }).join("");
+}
+function histUsed(){ return new Set([...(S.conquistas||[]).map(c=>histCompOf(c[1])), ...S.ultimas_performances.map(j=>histCompOf(j["Competição"]))].filter(Boolean)); }
+function histBulkStash(){
+  const P = UI.hbPending = UI.hbPending || {};
+  document.querySelectorAll("#hbList .hb-row").forEach(r => { const ins = r.querySelectorAll("input"); if(ins.length < 2) return;
+    P[r.dataset.ck+"|"+r.dataset.y] = {c:ins[0].value.trim(), v:ins[1].value.trim(), s:r.dataset.s}; });
+}
+function histBulkSheet(g0){
+  if(!Hist.ready) return; UI.hbPending = {};
+  const ss = [...new Set([...seasonsList()])]; if(!ss.length) ss.push(seasonKey(todayDMY(), saveUsesEuro()));
+  const {order} = histGroups(); const used = histUsed();
+  const g = g0 != null ? g0 : (used.size ? "*yours" : order[0]);
+  const gOpts = [...(used.size?[["*yours", t("hist_yours")]]:[]), ...order.map(x=>[x, groupLbl(x)])];
+  const body = `<div class="stack">
+    <p class="small muted" style="margin:0">${t("hist_add_s")}</p>
+    <div class="fgrid">${field(t("season"), `<select class="inp" id="hbS">${ss.map(s=>`<option>${esc(s)}</option>`).join("")}</select>`, "")}
+      ${field(t("hist_country"), `<select class="inp" id="hbG">${gOpts.map(([v,l])=>`<option value="${esc(v)}" ${v===g?"selected":""}>${esc(l)}</option>`).join("")}</select>`, "")}</div>
+    <div id="hbList" class="stack">${histBulkList(ss[0], g)}</div>
+    <p class="small muted" style="margin:0">${t("hist_auto_note")}</p>
+    <button class="btn pri block" data-act="histBulkSave">${t("save")}</button></div>`;
+  openSheet(t("hist_add"), body, root => {
+    const re = () => { histBulkStash(); $("#hbList", root).innerHTML = histBulkList($("#hbS", root).value, $("#hbG", root).value); };
+    $("#hbS", root).addEventListener("change", re); $("#hbG", root).addEventListener("change", re);
+  });
+}
+function histBulkSave(){
+  histBulkStash(); const M = S.campeoes_manuais = S.campeoes_manuais || {}; let n = 0;
+  for(const [key, p] of Object.entries(UI.hbPending||{})){ const i = key.lastIndexOf("|"); const ck = key.slice(0, i), y = key.slice(i+1);
+    const box = M[ck] = M[ck] || {};
+    if(p.c){ if(!box[y] || box[y].c!==p.c || (box[y].v||"")!==p.v){ box[y] = {c:p.c, v:p.v, s:p.s}; n++; } }
+    else if(box[y]){ delete box[y]; n++; }
+    if(!Object.keys(box).length) delete M[ck]; }
+  UI.hbPending = {}; commit(); histReset(); closeSheet(); toast(t("hist_saved_n", {n})); render();
+}
+
+/* ---------- full article for a title story ---------- */
+function openTitleNews(fi){
+  const n = (S.feed_noticias||[])[fi]; if(!n) return;
+  if(!n.lida){ n.lida = true; S.noticias_nao_lidas = Math.max(0,(S.noticias_nao_lidas||0)-1); commit(); }
+  const en = LANG==="en"; const comp = n.comp, club = n.clube; const hc = histCompOf(comp); const lg = logoOf(comp);
+  const F = String(S.informacoes["Nome Completo"]||"").split(" ")[0];
+  const sameComp = j => normComp(j["Competição"])===normComp(comp) || (hc && histCompOf(j["Competição"])===hc);
+  let js = S.ultimas_performances.filter(j => sameComp(j) && (!club || (j.Time||S.informacoes["Clube Atual"])===club));
+  const sy = /(\d{4})(?:\s*[\/-]\s*(\d{2,4}))?/.exec(String(n.temp||"")); let season = sy ? (sy[2] ? `${sy[1]}/${String(sy[2]).slice(-2)}` : sy[1]) : "";
+  if(!season && js.length){ const lastJ = [...js].sort((a,b)=>dateNum(b.Data)-dateNum(a.Data))[0]; season = seasonOf(lastJ); }
+  if(season){ const inS = js.filter(j => seasonOf(j)===season || String(seasonOf(j)).startsWith(season) || season.startsWith(String(seasonOf(j)))); if(inS.length) js = inS; }
+  const pl = js.filter(played); const g = js.reduce((s,j)=>s+int(j.Gols),0), a = js.reduce((s,j)=>s+int(j["Assistências"]),0);
+  const nt = pl.filter(j=>flt(j.Nota)>0); const avg = nt.length ? nt.reduce((s,j)=>s+flt(j.Nota),0)/nt.length : 0;
+  const W = js.filter(j=>outcome(j)==="W").length, D = js.filter(j=>outcome(j)==="D").length, Lq = js.filter(j=>outcome(j)==="L").length;
+  const fin = js.filter(j => { const sp = findSpecific(j); return sp && isFinalRound(sp.rodada); }).sort((a,b)=>dateNum(b.Data)-dateNum(a.Data))[0];
+  const paras = [n.texto_curto||""];
+  if(js.length) paras.push(en ? `${F} took part in ${js.length} match${js.length>1?"es":""} of the campaign (${W} wins, ${D} draws, ${Lq} defeats), with ${g} goal${g===1?"":"s"} and ${a} assist${a===1?"":"s"}${avg?`, averaging a ${avg.toFixed(2)} rating`:""}.`
+    : `${F} disputou ${js.length} jogo${js.length>1?"s":""} da campanha (${W} vitórias, ${D} empates e ${Lq} derrotas), com ${g} gol${g===1?"":"s"} e ${a} assistência${a===1?"":"s"}${avg?` e nota média de ${avg.toFixed(2)}`:""}.`);
+  if(fin){ const x = scoreSplit(fin); const ps = pensSplit(fin);
+    paras.push(en ? `In the final, ${club} beat ${fin["Adversário"]}${x?` ${x.mine}-${x.theirs}`:""}${ps?` (${ps.mine}-${ps.theirs} on penalties)`:""}${int(fin.Gols)?`, with ${F} scoring ${int(fin.Gols)>1?int(fin.Gols)+" goals":"once"}`:""}.`
+      : `Na decisão, o ${club} superou o ${fin["Adversário"]}${x?` por ${x.mine} a ${x.theirs}`:""}${ps?` (${ps.mine} a ${ps.theirs} nos pênaltis)`:""}${int(fin.Gols)?`, com ${int(fin.Gols)>1?int(fin.Gols)+" gols":"gol"} de ${F}`:""}.`); }
+  if(hc){ const u = userTeam(club); const tot = histTitles(hc, u.k); const rank = histRanking(hc); const pos = rank.findIndex(x=>x.k===u.k)+1; const lead = rank[0];
+    if(tot) paras.push(en ? `It is title number ${tot} for ${club} in the ${compLbl(hc.n)}${pos===1?", the most successful club in the competition's history.":lead?`; ${lead.label} lead the all-time list with ${lead.t}.`:"."}`
+      : `É o ${tot}º título do ${club} na história da ${compLbl(hc.n)}${pos===1?", o maior campeão da competição.":lead?`; o ${lead.label} lidera o ranking histórico com ${lead.t}.`:"."}`); }
+  const box = js.length ? [[t("games_word"), js.length],[t("goals"), g],[t("assists"), a],[t("rating").split(" ")[0], avg?avg.toFixed(2):"–"]] : [];
+  const body = `<article class="art" style="--nb:#2A1F05;--na:#FBBF24">
+    <div class="art-hero"><div class="art-tag">${lg?`<img src="${lg}" alt="">`:""}<span>${esc(n.tag||"")}</span><span class="art-kick">${esc(compLbl(comp||""))}${season?" · "+esc(season):""}</span></div>
+      <h2>${esc(n.titulo||"")}</h2><div class="art-by">${esc(n.data||"")}</div></div>
+    <figure class="art-board"><div class="ab-side">${crest(club,86)}<span>${esc(shortName(club||""))}</span></div><div class="ab-mid"><div class="ab-score" style="font-size:42px">🏆</div><div class="ab-note">${esc(compLbl(comp||""))}</div></div>${lg?`<div class="ab-side"><span class="crest img" style="--s:86px"><img src="${lg}" alt="" width="86" height="86"></span><span>${esc(season||"")}</span></div>`:""}</figure>
+    <div class="art-text">${paras.filter(Boolean).map((p,k)=>`<p${k===0?' class="art-lead"':""}>${esc(p)}</p>`).join("")}
+      ${box.length?`<div class="art-box"><div class="art-box-h">${t("numbers_of",{n:esc(F)})}</div><div class="art-box-g">${box.map(([l,v])=>`<div><b class="num">${v}</b><span>${l}</span></div>`).join("")}</div></div>`:""}</div>
+    ${hc?`<button class="btn block" data-act="histOpen" data-k="${esc(hc.key)}">🏛 ${t("news_see_hist")}</button>`:""}
+  </article>`;
+  openSheet(t("news"), body); render();
+}
+
+/* ---------- squad: teammates of each season, typed on the phone ---------- */
+const POS_ALL = () => [...new Set([...POSITIONS[LANG], ...POSITIONS.pt])];
+function squadSeasons(){ const s = [...new Set([...seasonsList(), ...Object.keys(S.dados_elenco||{})])].sort((a,b)=>seasonSortKey(b)-seasonSortKey(a) || (b>a?1:-1)); if(!s.length) s.push(seasonKey(todayDMY(), saveUsesEuro())); return s; }
+function mateNames(season){
+  const club = clubOfSeason(season); const own = (S.dados_elenco[season]||[]).map(p=>p.nome);
+  const part = []; for(const j of S.ultimas_performances){ if(seasonOf(j)!==season) continue; const d = j.Detalhes||{}; for(const k of ["AssistRecebidaDe","AssistDadaPara"]) for(const n of String(d[k]||"").split(",")) if(n.trim()) part.push(n.trim()); }
+  return [...new Set([...FaceDB.ofClub(club), ...part])].filter(n => !own.includes(n));
+}
+function mateForm(season, idx){
+  const L = S.dados_elenco = S.dados_elenco || {}; const p = idx!=null ? (L[season]||[])[idx] : null;
+  const ss = squadSeasons(); const s0 = season || UI.squadSeason || ss[0]; if(!ss.includes(s0)) ss.unshift(s0);
+  UI.mateSeason = s0;
+  const myComps = [...new Set(S.ultimas_performances.filter(j=>seasonOf(j)===s0 && !isSelMatch(j)).map(j=>j["Competição"]))];
+  const comps = p && Array.isArray(p.comps) && p.comps.length ? p.comps : myComps.map(c=>({comp:c}));
+  const v = (x) => x==null || x==="" ? "" : String(x);
+  const num = (nm, lab, val, dec) => field(lab, `<input class="inp" name="${nm}" value="${esc(v(val))}" inputmode="${dec?"decimal":"numeric"}" placeholder="0" autocomplete="off">`, "");
+  const cRow = (c, i) => `<div class="card mc-row" style="padding:10px"><div class="row between" style="margin-bottom:4px"><span class="tiny">#${i+1}</span><button type="button" class="x" data-act="mateDelComp" aria-label="${t("remove")}">${IC.trash.replace('<svg','<svg width="14" height="14"')}</button></div>
+    ${combo("cc_"+i, c.comp||"", t("comp"), "comp", "full", true)}
+    <div class="fgrid" style="grid-template-columns:repeat(3,1fr)">${num("cj_"+i,t("m_games"),c.jogos)}${num("cg_"+i,t("m_goals"),c.gols)}${num("ca_"+i,t("m_ast"),c.assists)}${num("cy_"+i,"🟨",c.amarelos)}${num("cr_"+i,"🟥",c.vermelhos)}${num("cn_"+i,t("m_avg"),c.nota,true)}</div></div>`;
+  UI.mateCompN = comps.length;
+  const posOpts = [...new Set([...(p&&p.posicao?[p.posicao]:[]), ...POS_ALL()])];
+  const body = `<form id="mateForm" class="stack" novalidate><div class="fgrid">
+      ${combo("nome", p?p.nome:"", t("name_col"), "mate", "full", true)}
+      ${sSel("posicao", t("pos_col"), posOpts, p?p.posicao:posOpts[0], "")}
+      ${sSel("season", t("season"), ss, s0, "")}
+      <div class="fsec full">${t("m_total")}</div>
+      <div class="full fgrid" style="grid-template-columns:repeat(3,1fr)">${num("jogos",t("m_games"),p&&p.jogos)}${num("gols",t("m_goals"),p&&p.gols)}${num("assists",t("m_ast"),p&&p.assists)}${num("amarelos","🟨 "+t("m_yc"),p&&p.amarelos)}${num("vermelhos","🟥 "+t("m_rc"),p&&p.vermelhos)}${num("nota",t("m_avg"),p&&p.nota,true)}</div>
+      <div class="fsec full">${t("m_bycomp")}</div><div class="full small muted" style="margin-top:-6px">${t("m_bycomp_s")}</div>
+      <div class="full stack" id="mateComps">${comps.map(cRow).join("")}</div>
+      <button type="button" class="btn sm full" data-act="mateAddComp">${t("m_addcomp")}</button></div>
+    <button class="btn pri block" type="submit">${t("save")}</button></form>`;
+  openSheet(p ? t("mate_edit") : t("mate_add"), body, root => {
+    root.querySelector('[name="season"]').addEventListener("change", e => { UI.mateSeason = e.target.value;
+      const have = new Set([...root.querySelectorAll('.mc-row [name^="cc_"]')].map(x=>x.value.trim()).filter(Boolean));
+      for(const c of new Set(S.ultimas_performances.filter(j=>seasonOf(j)===e.target.value && !isSelMatch(j)).map(j=>j["Competição"]))) if(!have.has(c)) $("#mateComps", root).insertAdjacentHTML("beforeend", cRow({comp:c}, UI.mateCompN++)); });
+    root.addEventListener("click", e => { const b = e.target.closest("[data-act]"); if(!b) return;
+      if(b.dataset.act==="mateAddComp"){ e.preventDefault(); e.stopPropagation(); const i = UI.mateCompN++; $("#mateComps", root).insertAdjacentHTML("beforeend", cRow({}, i)); }
+      else if(b.dataset.act==="mateDelComp"){ e.preventDefault(); e.stopPropagation(); b.closest(".mc-row").remove(); } }, true);
+    $("#mateForm", root).addEventListener("submit", e => { e.preventDefault();
+      const val = nm => { const el = root.querySelector(`[name="${nm}"]`); return el ? el.value.trim() : ""; };
+      const nome = val("nome"); if(!nome){ toast(t("need_fields"), true); return; }
+      const cs = []; root.querySelectorAll(".mc-row").forEach(r => { const g = k => { const el = r.querySelector(`[name^="${k}_"]`); return el ? el.value.trim() : ""; };
+        const c = {comp:g("cc"), jogos:int(g("cj")), gols:int(g("cg")), assists:int(g("ca")), amarelos:int(g("cy")), vermelhos:int(g("cr")), nota:Math.min(10, Math.max(0, flt(g("cn").replace(",","."))))};
+        if(c.comp && (c.jogos || c.gols || c.assists || c.amarelos || c.vermelhos || c.nota)) cs.push(c); });
+      let tot;
+      if(cs.length){ let nw = 0, ns = 0; tot = {jogos:0, gols:0, assists:0, amarelos:0, vermelhos:0, nota:0};
+        for(const c of cs){ tot.jogos += c.jogos; tot.gols += c.gols; tot.assists += c.assists; tot.amarelos += c.amarelos; tot.vermelhos += c.vermelhos; if(c.nota>0){ const w = Math.max(1, c.jogos); ns += c.nota*w; nw += w; } }
+        tot.nota = nw ? Math.round(ns/nw*100)/100 : 0; }
+      else tot = {jogos:int(val("jogos")), gols:int(val("gols")), assists:int(val("assists")), amarelos:int(val("amarelos")), vermelhos:int(val("vermelhos")), nota:Math.min(10, Math.max(0, flt(val("nota").replace(",","."))))};
+      const rec = Object.assign({}, p || {}, {nome, posicao:val("posicao"), ...tot, comps:cs});
+      const sNew = val("season") || s0;
+      if(p){ const arr = L[season]; arr.splice(idx, 1); if(!arr.length) delete L[season]; }
+      (L[sNew] = L[sNew] || []).push(rec); UI.squadSeason = sNew;
+      commit(); closeSheet(); toast(t("saved")); render(); });
+  });
+}
+function mateSheet(season, idx){
+  const p = ((S.dados_elenco||{})[season]||[])[idx]; if(!p) return; const club = clubOfSeason(season);
+  const nota = flt(p.nota);
+  const kp = [[t("m_games"), int(p.jogos)],[t("m_goals"), int(p.gols)],[t("m_ast"), int(p.assists)],["🟨", int(p.amarelos)],["🟥", int(p.vermelhos)],[t("m_avg"), nota?rating(nota):"–"]];
+  const cs = Array.isArray(p.comps) ? p.comps : [];
+  openSheet(t("squad"), `<div class="stack">
+    <div class="row" style="gap:12px">${faceAvatar(p.nome, club, "lg")}<div class="grow"><div style="font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1.05;text-transform:uppercase">${esc(p.nome)}</div><div class="small muted">${esc(p.posicao||"")} · ${esc(season)}${club?" · "+esc(club):""}</div></div></div>
+    <div class="mini-grid" style="grid-template-columns:repeat(3,1fr)">${kp.map(([l,x])=>`<div class="mini"><span class="tiny">${l}</span><span class="num">${x}</span></div>`).join("")}</div>
+    ${cs.length?`<div class="tbl-wrap"><table><thead><tr><th>${t("comp")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${cs.map(c=>`<tr><td><span class="row" style="gap:6px">${logoOf(c.comp)?`<img src="${logoOf(c.comp)}" alt="" width="18" height="18" style="object-fit:contain">`:""}${esc(c.comp)}</span></td><td>${int(c.jogos)}</td><td class="hl">${int(c.gols)}</td><td>${int(c.assists)}</td><td>${int(c.amarelos)}</td><td>${int(c.vermelhos)}</td><td>${flt(c.nota)?rating(c.nota):"–"}</td></tr>`).join("")}</tbody></table></div>`:""}
+    ${SAMPLE?"":`<button class="btn block" data-act="mateEdit" data-s="${esc(season)}" data-i="${idx}">✎ ${t("edit")}</button>
+    <div id="mateConfirm"><button class="btn dng block" data-act="mateAskDel" data-s="${esc(season)}" data-i="${idx}">${t("remove")}</button></div>`}
+  </div>`);
+}
+function vSquad(){
+  const ks = Object.keys(S.dados_elenco||{}).filter(k=>(S.dados_elenco[k]||[]).length).sort((a,b)=>seasonSortKey(b)-seasonSortKey(a) || (b>a?1:-1));
+  if(!ks.length) return empty(t("no_data"), t("squad_empty"));
+  return ks.map(k2 => { const sc = clubOfSeason(k2); const L = (S.dados_elenco[k2]||[]).map((p,i)=>({p,i})).sort((a,b)=>int(b.p.jogos)-int(a.p.jogos) || int(b.p.gols)-int(a.p.gols));
+    return `<div class="season-h"><span>${esc(k2)}</span><span>${L.length}</span></div><div class="tbl-wrap"><table class="sq-tbl"><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${L.map(({p,i})=>`<tr data-act="mate" data-s="${esc(k2)}" data-i="${i}" style="cursor:pointer"><td><span class="row" style="gap:8px">${faceMini(p.nome, sc)}${esc(p.nome)}${Array.isArray(p.comps)&&p.comps.length?` <small class="muted">›</small>`:""}</span></td><td>${esc(p.posicao||"")}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td><td>${int(p.amarelos)||""}</td><td>${int(p.vermelhos)||""}</td><td>${flt(p.nota)?rating(p.nota):""}</td></tr>`).join("")}</tbody></table></div>`; }).join("");
 }
 
 /* ================= Player faces (bundled logos/faces.json + logos/p/<id>.webp) =================
@@ -3132,7 +3352,10 @@ const FaceDB = (() => {
     }
     memo.set(key, res); return res;
   }
-  return { load, find, get ready(){ return ready; }, get size(){ return list.length; } };
+  const cmap = new Map();
+  function ofClub(club){ if(!ready || !club) return []; const k = clubKey(club); const out = [];
+    for(const p of list){ if(!cmap.has(p.c)) cmap.set(p.c, clubKey(p.c)); if(cmap.get(p.c)===k) out.push(p.n); } return out; }
+  return { load, find, ofClub, get ready(){ return ready; }, get size(){ return list.length; } };
 })();
 async function loadFaceDB(){ try{ const r = await fetch("logos/faces.json"); if(!r.ok) return; FaceDB.load(await r.json()); }catch(e){} }
 
@@ -3295,6 +3518,14 @@ document.addEventListener("click", async e=>{
     case "editMatch": { const i = +b.dataset.i; UI.F = formFromMatch(i); UI.editIdx = i; UI.formTab = "info"; closeSheet(); go("add"); break; }
     case "askDel": { const i = +b.dataset.i; const j = S.ultimas_performances[i]; $("#mdActions").outerHTML = `<div class="confirm" id="mdActions"><b>${esc(t("delete_q",{adv:j["Adversário"]}))}</b><div class="row"><button class="btn grow" data-act="close">${t("cancel")}</button><button class="btn dng grow" data-act="doDel" data-i="${i}">${t("confirm_del")}</button></div></div>`; break; }
     case "doDel": { removeMatch(+b.dataset.i); commit(); closeSheet(); toast(t("deleted")); render(); break; }
+    case "histBulk": histBulkSheet(b.dataset.g != null ? b.dataset.g : null); break;
+    case "histBulkSave": histBulkSave(); break;
+    case "openTitleNews": openTitleNews(+b.dataset.i); break;
+    case "addMate": mateForm(null, null); break;
+    case "mate": mateSheet(b.dataset.s, +b.dataset.i); break;
+    case "mateEdit": { const s0 = b.dataset.s, i0 = +b.dataset.i; closeSheetNow(); mateForm(s0, i0); break; }
+    case "mateAskDel": { const p0 = (S.dados_elenco[b.dataset.s]||[])[+b.dataset.i]; if(!p0) break; $("#mateConfirm").innerHTML = `<div class="confirm"><b>${esc(t("m_del_q",{n:p0.nome}))}</b><div class="row"><button class="btn grow" data-act="close">${t("cancel")}</button><button class="btn dng grow" data-act="mateDel" data-s="${esc(b.dataset.s)}" data-i="${b.dataset.i}">${t("confirm_del")}</button></div></div>`; break; }
+    case "mateDel": { const arr = S.dados_elenco[b.dataset.s]||[]; arr.splice(+b.dataset.i, 1); if(!arr.length) delete S.dados_elenco[b.dataset.s]; commit(); closeSheet(); toast(t("deleted")); render(); break; }
     case "readNews": { const n = S.feed_noticias[+b.dataset.i]; if(n && !n.lida){ n.lida = true; S.noticias_nao_lidas = Math.max(0,(S.noticias_nao_lidas||0)-1); commit(); render(); } break; }
     case "readAll": S.feed_noticias.forEach(n=>n.lida=true); S.noticias_nao_lidas = 0; commit(); render(); break;
     case "editProfile": { const inf = S.informacoes; sheetForm(t("edit_profile"), sIn("nome",t("fullname"),inf["Nome Completo"])+sDate("nasc",t("birth"),inf["Data de Nascimento"])+sIn("nac",t("nation"),inf["Nacionalidade"],"")+sSel("pos",t("pos"),[...new Set([inf["Posição"],...POSITIONS[LANG]])],inf["Posição"],"")+sIn("alt",t("height"),inf["Altura"]||"","")+sIn("peso",t("weight"),inf["Peso"]||"","")+sIn("clube",t("club"),inf["Clube Atual"],"full")+sIn("ate",t("contract"),inf["Contrato Até"]||"",""),

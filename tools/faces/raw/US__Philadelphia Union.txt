@@ -19,3 +19,7 @@
 2000375873|Geiner Martínez|22
 20046496|George Marks|25
 20046610|Jeremy Rafanello|25
+2000274202|Andrew Rick|19
+2000361549|Eddy Davis|19
+2000298959|Sal Olivas|19
+2000468148|Finn Sundstrom|18

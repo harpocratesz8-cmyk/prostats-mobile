@@ -16,3 +16,25 @@
 2000108573|Azamat Uriev|21
 18110741|Blondy Nna Noukeu|23
 85096420|Xavier Lenogue|28
+2000386007|Gabin Capuano|19
+2000182981|Vincent Burlet|19
+2000097236|Zoran Moco|22
+2000240334|Emmanuel Kouassi|22
+2000205272|Florian Dewaele|20
+2000307788|Karim Boutera|19
+49063064|Florian Boulet|23
+2000435260|Louis Siliadin|23
+2000205264|Léo Baude|19
+2000476944|Luka Boiteau|19
+2000159609|Louis Hauet|21
+2000159613|Sohan Paillard|21
+2000476951|Souleymane Keïta|19
+2000509820|Tom Dupont|19
+2000218485|Jonathan Kapenga|21
+2000515765|Kenzo Angelo|24
+2000515763|Maxence Hahn|17
+2000509823|Thibault Pruvost|18
+2000515761|Kylian Gressier|18
+2000530023|Corentin Solitaire|20
+2000530024|Alexandre Brun|19
+2000530026|Jules Fourcroy|19

@@ -22,3 +22,56 @@
 49060803|Salis Abdul Samed|25
 2000238183|Kojo Peprah Oppong|21
 2000056828|Kevin Carlos|24
+2000462816|Djibril Coulibaly|16
+2000290560|Kaïl Boudache|19
+2000413349|Gabin Bernardeau|19
+2000407852|Otis Caporusso|17
+2000474103|Ethan Degny|16
+2000407808|Brad Mantsounga|17
+2000491758|Mattéo Bancillon|16
+2000491784|Jah-Mason Telusson|17
+2000290595|Everton Pereira|18
+2000407851|Yassine Aïche|17
+2000182821|Zoumana Diallo|20
+2000192282|Sami Wattel|19
+2000407849|Zinedine Hasni|17
+2000491762|Nassim Laarej|16
+2000491754|Elias Sahraoui|16
+2000491620|Martin Ponsot|16
+2000475103|Andria Svanidze|16
+2000491755|Esteban Vasseur|17
+2000491772|Abdourazak Mahamoud|16
+2000491757|Wajid Enjolras|16
+2000491786|Marc-Aurel Koffi|16
+2000491783|Ismael Mmadi Fatima|17
+2000401482|Abdoulaye Camara|17
+2000399903|Ishaq Zantour|17
+2000407800|William Betehe|17
+2000096695|Bartosz Żelazowski|20
+2000491763|Xavier Mandza|16
+2000491766|Ramy Benkhiat|16
+2000290800|Enguerrand Bouard|18
+2000290589|Millan Brignone|18
+2000290577|Yanis Sofikitis|18
+2000407835|Kayyum Alabi|17
+2000192269|Théo Bruyère|18
+2000121410|Laurenzo Monteiro|21
+2000192280|Mousslim Youssouf|19
+2000192276|Rayan Jerbi|19
+2000491788|Daniel Galitchi|16
+2000399905|Matys Youst|17
+2000407864|Thomas Bonnet|18
+2000407834|Mathis Fernandes Mendes|17
+2000491618|Loucas Guyot|16
+2000407799|Mounir Moussa|17
+2000290798|Kéfren Ali|18
+2000491752|Evan Baranik|16
+2000407811|Vincenzo Arfuso|17
+2000290599|Noah Yalcin|18
+2000491780|Djelan Morana|16
+2000491768|Lorenzo Domingues De Matos|16
+2000491753|Niels Dersy|16
+2000491765|Houdayfa Ayad|16
+2000491756|Lenny Pley|16
+2000491787|Simon Didier|16
+2000491782|Dylan Jams|17
