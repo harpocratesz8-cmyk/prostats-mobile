@@ -1,0 +1,10 @@
+name: fm-ids
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: search wikidata properties
+        run: |
+          curl -s -A "ProStatsBot/1.0 (personal project)" "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Football%20Manager&type=property&language=en&format=json&limit=30" | python3 -c "import json,sys; [print(e['id'],'|',e.get('label'),'|',e.get('description','')) for e in json.load(sys.stdin)['search']]"
+          curl -s -A "ProStatsBot/1.0 (personal project)" "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=sortitoutsi&type=property&language=en&format=json" | python3 -c "import json,sys; [print(e['id'],'|',e.get('label'),'|',e.get('description','')) for e in json.load(sys.stdin)['search']]"
