@@ -458,7 +458,7 @@ NO_LOGO |= {"Corinthian F.C."}
 
 # ======================= round 6: user's decisions on the open points =======================
 REPLACE["Liga Profesional de Fútbol"]["1891"] = [("1891", "Saint Andrew's", ""), ("1891", "Old Caledonians", "")]   # shared title
-NO_LOGO |= {"Old Caledonians"}
+# Old Caledonians: logo sent by the user
 DROP |= {("Copa del Rey", "1902"),            # Copa de la Coronación: not recognised by the RFEF
          ("Campeonato Gaúcho", "1918"),       # regional winners, not a state title for the FGF
          ("TFF Süper Kupa", "1999/00")}       # Atatürk Cup, not counted as a Super Cup by the TFF
