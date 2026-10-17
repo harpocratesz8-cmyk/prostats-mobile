@@ -1,0 +1,22 @@
+2004 | Shenzhen Jianlibao | Shandong Luneng
+2005 | Dalian Shide | Shanghai Shenhua
+2006 | Shandong Luneng | Shanghai Shenhua
+2007 | Changchun Yatai | Beijing Guoan
+2008 | Shandong Luneng | Shanghai Shenhua
+2009 | Beijing Guoan | Changchun Yatai
+2010 | Shandong Luneng | Tianjin TEDA
+2011 | Guangzhou Evergrande | Beijing Guoan
+2012 | Guangzhou Evergrande | Jiangsu Sainty
+2013 | Guangzhou Evergrande | Shandong Luneng
+2014 | Guangzhou Evergrande | Beijing Guoan
+2015 | Guangzhou Evergrande | Shanghai SIPG
+2016 | Guangzhou Evergrande | Jiangsu Suning
+2017 | Guangzhou Evergrande | Shanghai SIPG
+2018 | Shanghai SIPG | Guangzhou Evergrande
+2019 | Guangzhou Evergrande | Beijing Guoan
+2020 | Jiangsu Suning | Guangzhou Evergrande
+2021 | Shandong Taishan | Shanghai Port
+2022 | Wuhan Three Towns | Shandong Taishan
+2023 | Shanghai Port | Shandong Taishan
+2024 | Shanghai Port | Shanghai Shenhua
+2025 | Shanghai Port | Shanghai Shenhua

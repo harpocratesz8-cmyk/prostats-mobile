@@ -1,0 +1,45 @@
+1971 | Villa Nova | Remo
+1972 | Sampaio Corrêa | Campinense
+1980 | Londrina | CSA
+1981 | Guarani | Anapolina
+1982 | Campo Grande | CSA
+1983 | Juventus | CSA
+1984 | Uberlândia | Remo
+1985 | Tuna Luso | Goytacaz
+1988 | Inter de Limeira | Náutico
+1989 | Bragantino | São José
+1990 | Sport | Atlético Paranaense
+1991 | Paysandu | Guarani
+1992 | Paraná | Vitória
+1994 | Juventude | Goiás
+1995 | Atlético Paranaense | Coritiba
+1996 | União São João | América de Natal
+1997 | América Mineiro | Ponte Preta
+1998 | Gama | Botafogo
+1999 | Goiás | Santa Cruz
+2000 | Paraná | São Caetano
+2001 | Paysandu | Figueirense
+2002 | Criciúma | Fortaleza
+2003 | Palmeiras | Botafogo
+2004 | Brasiliense | Fortaleza
+2005 | Grêmio | Santa Cruz
+2006 | Atlético Mineiro | Sport
+2007 | Coritiba | Ipatinga
+2008 | Corinthians | Santo André
+2009 | Vasco da Gama | Guarani
+2010 | Coritiba | Figueirense
+2011 | Portuguesa | Náutico
+2012 | Goiás | Criciúma
+2013 | Palmeiras | Chapecoense
+2014 | Joinville | Ponte Preta
+2015 | Botafogo | Santa Cruz
+2016 | Atlético Goianiense | Avaí
+2017 | América Mineiro | Internacional
+2018 | Fortaleza | CSA
+2019 | Bragantino | Sport
+2020 | Chapecoense | América Mineiro
+2021 | Botafogo | Goiás
+2022 | Cruzeiro | Grêmio
+2023 | Vitória | Juventude
+2024 | Santos | Mirassol
+2025 | Coritiba | Athletico Paranaense

@@ -1,0 +1,114 @@
+1908 | Manchester United | Queens Park Rangers
+1909 | Newcastle United | Northampton Town
+1910 | Brighton and Hove Albion | Aston Villa
+1911 | Manchester United | Swindon Town
+1912 | Blackburn Rovers | Queens Park Rangers
+1913 | English Professionals XI | English Amateurs XI
+1920 | West Bromwich Albion | Tottenham Hotspur
+1921 | Tottenham Hotspur | Burnley
+1922 | Huddersfield Town | Liverpool
+1923 | English Professionals XI | English Amateurs XI
+1924 | English Professionals XI | English Amateurs XI
+1925 | English Amateurs XI | English Professionals XI
+1926 | English Amateurs XI | English Professionals XI
+1927 | Cardiff City | Corinthian
+1928 | Everton | Blackburn Rovers
+1929 | English Professionals XI | English Amateurs XI
+1930 | Arsenal | Sheffield Wednesday
+1931 | Arsenal | West Bromwich Albion
+1932 | Everton | Newcastle United
+1933 | Arsenal | Everton
+1934 | Arsenal | Manchester City
+1935 | Sheffield Wednesday | Arsenal
+1936 | Sunderland | Arsenal
+1937 | Manchester City | Sunderland
+1938 | Arsenal | Preston North End
+1948 | Arsenal | Manchester United
+1949 | Portsmouth
+1949 | Wolverhampton Wanderers
+1950 | England World Cup XI | FA Canadian Touring Team
+1951 | Tottenham Hotspur | Newcastle United
+1952 | Manchester United | Newcastle United
+1953 | Arsenal | Blackpool
+1954 | West Bromwich Albion
+1954 | Wolverhampton Wanderers
+1955 | Chelsea | Newcastle United
+1956 | Manchester United | Manchester City
+1957 | Manchester United | Aston Villa
+1958 | Bolton Wanderers | Wolverhampton Wanderers
+1959 | Wolverhampton Wanderers | Nottingham Forest
+1960 | Burnley
+1960 | Wolverhampton Wanderers
+1961 | Tottenham Hotspur | FA Select XI
+1962 | Tottenham Hotspur | Ipswich Town
+1963 | Everton | Manchester United
+1964 | Liverpool
+1964 | West Ham United
+1965 | Liverpool
+1965 | Manchester United
+1966 | Liverpool | Everton
+1967 | Manchester United
+1967 | Tottenham Hotspur
+1968 | Manchester City | West Bromwich Albion
+1969 | Leeds United | Manchester City
+1970 | Everton | Chelsea
+1971 | Leicester City | Liverpool
+1972 | Manchester City | Aston Villa
+1973 | Burnley | Manchester City
+1974 | Liverpool | Leeds United
+1975 | Derby County | West Ham United
+1976 | Liverpool | Southampton
+1977 | Liverpool
+1977 | Manchester United
+1978 | Nottingham Forest | Ipswich Town
+1979 | Liverpool | Arsenal
+1980 | Liverpool | West Ham United
+1981 | Aston Villa
+1981 | Tottenham Hotspur
+1982 | Liverpool | Tottenham Hotspur
+1983 | Manchester United | Liverpool
+1984 | Everton | Liverpool
+1985 | Everton | Manchester United
+1986 | Everton
+1986 | Liverpool
+1987 | Everton | Coventry City
+1988 | Liverpool | Wimbledon
+1989 | Liverpool | Arsenal
+1990 | Liverpool
+1990 | Manchester United
+1991 | Arsenal
+1991 | Tottenham Hotspur
+1992 | Leeds United | Liverpool
+1993 | Manchester United | Arsenal
+1994 | Manchester United | Blackburn Rovers
+1995 | Everton | Blackburn Rovers
+1996 | Manchester United | Newcastle United
+1997 | Manchester United | Chelsea
+1998 | Arsenal | Manchester United
+1999 | Arsenal | Manchester United
+2000 | Chelsea | Manchester United
+2001 | Liverpool | Manchester United
+2002 | Arsenal | Liverpool
+2003 | Manchester United | Arsenal
+2004 | Arsenal | Manchester United
+2005 | Chelsea | Arsenal
+2006 | Liverpool | Chelsea
+2007 | Manchester United | Chelsea
+2008 | Manchester United | Portsmouth
+2009 | Chelsea | Manchester United
+2010 | Manchester United | Chelsea
+2011 | Manchester United | Manchester City
+2012 | Manchester City | Chelsea
+2013 | Manchester United | Wigan Athletic
+2014 | Arsenal | Manchester City
+2015 | Arsenal | Chelsea
+2016 | Manchester United | Leicester City
+2017 | Arsenal | Chelsea
+2018 | Manchester City | Chelsea
+2019 | Manchester City | Liverpool
+2020 | Arsenal | Liverpool
+2021 | Leicester City | Manchester City
+2022 | Liverpool | Manchester City
+2023 | Arsenal | Manchester City
+2024 | Manchester City | Manchester United
+2025 | Crystal Palace | Liverpool

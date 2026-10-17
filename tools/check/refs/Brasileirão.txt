@@ -1,0 +1,69 @@
+1959 | Bahia | Santos
+1960 | Palmeiras | Fortaleza
+1961 | Santos | Bahia
+1962 | Santos | Botafogo
+1963 | Santos | Bahia
+1964 | Santos | Flamengo
+1965 | Santos | Vasco da Gama
+1966 | Cruzeiro | Santos
+1967 | Palmeiras
+1967 | Palmeiras
+1968 | Santos
+1968 | Botafogo
+1969 | Palmeiras | Cruzeiro
+1970 | Fluminense | Palmeiras
+1971 | Atlético Mineiro | São Paulo
+1972 | Palmeiras | Botafogo
+1973 | Palmeiras | São Paulo
+1974 | Vasco da Gama | Cruzeiro
+1975 | Internacional | Cruzeiro
+1976 | Internacional | Corinthians
+1977 | São Paulo | Atlético Mineiro
+1978 | Guarani | Palmeiras
+1979 | Internacional | Vasco da Gama
+1980 | Flamengo | Atlético Mineiro
+1981 | Grêmio | São Paulo
+1982 | Flamengo | Grêmio
+1983 | Flamengo | Santos
+1984 | Fluminense | Vasco da Gama
+1985 | Coritiba | Bangu
+1986 | São Paulo | Guarani
+1987 | Sport Recife | Guarani
+1988 | Bahia | Internacional
+1989 | Vasco da Gama | São Paulo
+1990 | Corinthians | São Paulo
+1991 | São Paulo | Bragantino
+1992 | Flamengo | Botafogo
+1993 | Palmeiras | Vitória
+1994 | Palmeiras | Corinthians
+1995 | Botafogo | Santos
+1996 | Grêmio | Portuguesa
+1997 | Vasco da Gama | Palmeiras
+1998 | Corinthians | Cruzeiro
+1999 | Corinthians | Atlético Mineiro
+2000 | Vasco da Gama | São Caetano
+2001 | Athletico Paranaense | São Caetano
+2002 | Santos | Corinthians
+2003 | Cruzeiro | Santos
+2004 | Santos | Athletico Paranaense
+2005 | Corinthians | Internacional
+2006 | São Paulo | Internacional
+2007 | São Paulo | Santos
+2008 | São Paulo | Grêmio
+2009 | Flamengo | Internacional
+2010 | Fluminense | Cruzeiro
+2011 | Corinthians | Vasco da Gama
+2012 | Fluminense | Atlético Mineiro
+2013 | Cruzeiro | Grêmio
+2014 | Cruzeiro | São Paulo
+2015 | Corinthians | Atlético Mineiro
+2016 | Palmeiras | Santos
+2017 | Corinthians | Palmeiras
+2018 | Palmeiras | Flamengo
+2019 | Flamengo | Santos
+2020 | Flamengo | Internacional
+2021 | Atlético Mineiro | Flamengo
+2022 | Palmeiras | Internacional
+2023 | Palmeiras | Grêmio
+2024 | Botafogo | Palmeiras
+2025 | Flamengo | Palmeiras

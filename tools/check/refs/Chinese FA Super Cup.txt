@@ -1,0 +1,21 @@
+1995 | Shanghai Shenhua | Jinan Taishan
+1996 | Dalian Wanda | Beijing Guoan
+1997 | Beijing Guoan | Dalian Wanda
+1998 | Shanghai Shenhua | Dalian Wanda Shide
+1999 | Liaoning F.C. | Shandong Luneng Taishan
+2000 | Dalian Shide | Chongqing Lifan
+2001 | Shanghai Shenhua | Dalian Shide
+2002 | Dalian Shide | Qingdao Etsong Hainiu
+2003 | Beijing Guoan | Shanghai Shenhua
+2012 | Guangzhou Evergrande | Tianjin Teda
+2013 | Jiangsu Sainty | Guangzhou Evergrande
+2014 | Guizhou Renhe | Guangzhou Evergrande
+2015 | Shandong Luneng Taishan | Guangzhou Evergrande
+2016 | Guangzhou Evergrande | Jiangsu Suning
+2017 | Guangzhou Evergrande | Jiangsu Suning
+2018 | Guangzhou Evergrande | Shanghai Shenhua
+2019 | Shanghai SIPG | Beijing Guoan
+2023 | Wuhan Three Towns | Shandong Taishan
+2024 | Shanghai Shenhua | Shanghai Port
+2025 | Shanghai Shenhua | Shanghai Port
+2026 | Beijing Guoan | Shanghai Port

@@ -1,0 +1,124 @@
+1903 | Athletic Bilbao | Madrid FC
+1904 | Athletic Bilbao | Español de Madrid
+1905 | Madrid FC | Athletic Bilbao
+1906 | Madrid FC | Athletic Bilbao
+1907 | Madrid FC | Bizcaya
+1908 | Madrid FC | Real Vigo Sporting
+1909 | Club Ciclista | Español de Madrid
+1910 | Athletic Bilbao | Vasconia SC
+1910 | Barcelona | Español de Madrid
+1911 | Athletic Bilbao | Español
+1912 | Barcelona | Gimnástica
+1913 | Barcelona | Real Sociedad
+1913 | Racing de Irún | Athletic Bilbao
+1914 | Athletic Bilbao | Espanya
+1915 | Athletic Bilbao | Español
+1916 | Athletic Bilbao | Madrid FC
+1917 | Madrid FC | Arenas
+1918 | Real Unión | Madrid FC
+1919 | Arenas | Barcelona
+1920 | Barcelona | Athletic Bilbao
+1921 | Athletic Bilbao | Atlético Madrid
+1922 | Barcelona | Real Unión
+1923 | Athletic Bilbao | Europa
+1924 | Real Unión | Real Madrid
+1925 | Barcelona | Arenas
+1926 | Barcelona | Atlético Madrid
+1927 | Real Unión | Arenas
+1928 | Barcelona | Real Sociedad
+1929 | RCD Español | Real Madrid
+1930 | Athletic Bilbao | Real Madrid
+1931 | Athletic Bilbao | Real Betis
+1932 | Athletic Bilbao | Barcelona
+1933 | Athletic Bilbao | Real Madrid
+1934 | Madrid FC | Valencia
+1935 | Sevilla | Sabadell
+1936 | Madrid FC | Barcelona
+1939 | Sevilla | Racing de Ferrol
+1940 | Español | Real Madrid
+1941 | Valencia | Español
+1942 | Barcelona | Athletic Bilbao
+1943 | Athletic Bilbao | Real Madrid
+1944 | Athletic Bilbao | Valencia
+1945 | Athletic Bilbao | Valencia
+1946 | Real Madrid | Valencia
+1947 | Real Madrid | Español
+1948 | Sevilla | Celta Vigo
+1949 | Valencia | Athletic Bilbao
+1950 | Athletic Bilbao | Valladolid
+1951 | Barcelona | Real Sociedad
+1952 | Barcelona | Valencia
+1953 | Barcelona | Athletic Bilbao
+1954 | Valencia | Barcelona
+1955 | Athletic Bilbao | Sevilla
+1956 | Athletic Bilbao | Atlético Madrid
+1957 | Barcelona | Español
+1958 | Athletic Bilbao | Real Madrid
+1959 | Barcelona | Granada
+1960 | Atlético Madrid | Real Madrid
+1961 | Atlético Madrid | Real Madrid
+1962 | Real Madrid | Sevilla
+1963 | Barcelona | Zaragoza
+1964 | Zaragoza | Atlético Madrid
+1965 | Atlético Madrid | Zaragoza
+1966 | Zaragoza | Athletic Bilbao
+1967 | Valencia | Athletic Bilbao
+1968 | Barcelona | Real Madrid
+1969 | Athletic Bilbao | Elche
+1970 | Real Madrid | Valencia
+1971 | Barcelona | Valencia
+1972 | Atlético Madrid | Valencia
+1973 | Athletic Bilbao | Castellón
+1974 | Real Madrid | Barcelona
+1975 | Real Madrid | Atlético Madrid
+1976 | Atlético Madrid | Zaragoza
+1977 | Real Betis | Athletic Bilbao
+1978 | Barcelona | Las Palmas
+1979 | Valencia | Real Madrid
+1980 | Real Madrid | Castilla
+1981 | Barcelona | Sporting Gijón
+1982 | Real Madrid | Sporting Gijón
+1983 | Barcelona | Real Madrid
+1984 | Athletic Bilbao | Barcelona
+1985 | Atlético Madrid | Athletic Bilbao
+1986 | Zaragoza | Barcelona
+1987 | Real Sociedad | Atlético Madrid
+1988 | Barcelona | Real Sociedad
+1989 | Real Madrid | Valladolid
+1990 | Barcelona | Real Madrid
+1991 | Atlético Madrid | Mallorca
+1992 | Atlético Madrid | Real Madrid
+1993 | Real Madrid | Zaragoza
+1994 | Zaragoza | Celta Vigo
+1995 | Deportivo La Coruña | Valencia
+1996 | Atlético Madrid | Barcelona
+1997 | Barcelona | Real Betis
+1998 | Barcelona | Mallorca
+1999 | Valencia | Atlético Madrid
+2000 | Espanyol | Atlético Madrid
+2001 | Zaragoza | Celta Vigo
+2002 | Deportivo La Coruña | Real Madrid
+2003 | Mallorca | Recreativo
+2004 | Zaragoza | Real Madrid
+2005 | Real Betis | Osasuna
+2006 | Espanyol | Zaragoza
+2007 | Sevilla | Getafe
+2008 | Valencia | Getafe
+2009 | Barcelona | Athletic Bilbao
+2010 | Sevilla | Atlético Madrid
+2011 | Real Madrid | Barcelona
+2012 | Barcelona | Athletic Bilbao
+2013 | Atlético Madrid | Real Madrid
+2014 | Real Madrid | Barcelona
+2015 | Barcelona | Athletic Bilbao
+2016 | Barcelona | Sevilla
+2017 | Barcelona | Alavés
+2018 | Barcelona | Sevilla
+2019 | Valencia | Barcelona
+2020 | Real Sociedad | Athletic Bilbao
+2021 | Barcelona | Athletic Bilbao
+2022 | Real Betis | Valencia
+2023 | Real Madrid | Osasuna
+2024 | Athletic Bilbao | Mallorca
+2025 | Barcelona | Real Madrid
+2026 | Real Sociedad | Atlético Madrid

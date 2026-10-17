@@ -1,0 +1,52 @@
+1972 | Ajax | Rangers
+1973 | Ajax | Milan
+1975 | Dynamo Kyiv | Bayern Munich
+1976 | Anderlecht | Bayern Munich
+1977 | Liverpool | Hamburger SV
+1978 | Anderlecht | Liverpool
+1979 | Nottingham Forest | Barcelona
+1980 | Valencia | Nottingham Forest
+1982 | Aston Villa | Barcelona
+1983 | Aberdeen | Hamburger SV
+1984 | Juventus | Liverpool
+1986 | Steaua București | Dynamo Kyiv
+1987 | Porto | Ajax
+1988 | KV Mechelen | PSV Eindhoven
+1989 | Milan | Barcelona
+1990 | Milan | Sampdoria
+1991 | Manchester United | Red Star Belgrade
+1992 | Barcelona | Werder Bremen
+1993 | Parma | Milan
+1994 | Milan | Arsenal
+1995 | Ajax | Zaragoza
+1996 | Juventus | Paris Saint-Germain
+1997 | Barcelona | Borussia Dortmund
+1998 | Chelsea | Real Madrid
+1999 | Lazio | Manchester United
+2000 | Galatasaray | Real Madrid
+2001 | Liverpool | Bayern Munich
+2002 | Real Madrid | Feyenoord
+2003 | Milan | Porto
+2004 | Valencia | Porto
+2005 | Liverpool | CSKA Moscow
+2006 | Sevilla | Barcelona
+2007 | Milan | Sevilla
+2008 | Zenit Saint Petersburg | Manchester United
+2009 | Barcelona | Shakhtar Donetsk
+2010 | Atlético Madrid | Inter Milan
+2011 | Barcelona | Porto
+2012 | Atlético Madrid | Chelsea
+2013 | Bayern Munich | Chelsea
+2014 | Real Madrid | Sevilla
+2015 | Barcelona | Sevilla
+2016 | Real Madrid | Sevilla
+2017 | Real Madrid | Manchester United
+2018 | Atlético Madrid | Real Madrid
+2019 | Liverpool | Chelsea
+2020 | Bayern Munich | Sevilla
+2021 | Chelsea | Villarreal
+2022 | Real Madrid | Eintracht Frankfurt
+2023 | Manchester City | Sevilla
+2024 | Real Madrid | Atalanta
+2025 | Paris Saint-Germain | Tottenham Hotspur
+2026 | Paris Saint-Germain | Aston Villa

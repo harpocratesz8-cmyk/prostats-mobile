@@ -1,0 +1,49 @@
+1944 | Sporting CP | Benfica
+1979 | Boavista | Porto
+1980 | Benfica | Sporting CP
+1981 | Porto | Benfica
+1982 | Sporting CP | Braga
+1983 | Porto | Benfica
+1984 | Porto | Benfica
+1985 | Benfica | Porto
+1986 | Porto | Benfica
+1987 | Sporting CP | Benfica
+1988 | Vitória de Guimarães | Porto
+1989 | Benfica | Belenenses
+1990 | Porto | Estrela da Amadora
+1991 | Porto | Benfica
+1992 | Boavista | Porto
+1993 | Porto | Benfica
+1994 | Porto | Benfica
+1995 | Sporting CP | Porto
+1996 | Porto | Benfica
+1997 | Boavista | Porto
+1998 | Porto | Braga
+1999 | Porto | Beira-Mar
+2000 | Sporting CP | Porto
+2001 | Porto | Boavista
+2002 | Sporting CP | Leixões
+2003 | Porto | União de Leiria
+2004 | Porto | Benfica
+2005 | Benfica | Vitória de Setúbal
+2006 | Porto | Vitória de Setúbal
+2007 | Sporting CP | Porto
+2008 | Sporting CP | Porto
+2009 | Porto | Paços de Ferreira
+2010 | Porto | Benfica
+2011 | Porto | Vitória de Guimarães
+2012 | Porto | Académica de Coimbra
+2013 | Porto | Vitória de Guimarães
+2014 | Benfica | Rio Ave
+2015 | Sporting CP | Benfica
+2016 | Benfica | Braga
+2017 | Benfica | Vitória de Guimarães
+2018 | Porto | Desportivo das Aves
+2019 | Benfica | Sporting CP
+2020 | Porto | Benfica
+2021 | Sporting CP | Braga
+2022 | Porto | Tondela
+2023 | Benfica | Porto
+2024 | Porto | Sporting CP
+2025 | Benfica | Sporting CP
+2026 | Porto | Torreense

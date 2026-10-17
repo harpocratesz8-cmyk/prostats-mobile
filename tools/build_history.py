@@ -136,6 +136,7 @@ def same_key(x, k):
     lo, hi = sorted((x, k), key=len)
     return len(lo) >= 5 and lo in hi and len(lo) / len(hi) >= 0.7
 
+TIED = []
 def decide(ms):
     """champion of a season from its match lines: score, then penalties, then an explicit note,
        two legs: points, then aggregate; a third match (play-off / replay) decides on its own"""
@@ -163,6 +164,13 @@ def decide(ms):
         else: pts[ka] += 1; pts[kb] += 1
     if pts[k1] != pts[k2]: return (t1, t2) if pts[k1] > pts[k2] else (t2, t1)
     if gl[k1] != gl[k2]: return (t1, t2) if gl[k1] > gl[k2] else (t2, t1)
+    TIED.append(ms)
+    if len(ms) == 2 and not any(m[4] for m in ms):
+        h1 = k1 if same(ms[0][0], k1) else k2; h2 = k1 if same(ms[1][0], k1) else k2
+        if h1 != h2:                       # home and away legs: away goals rule
+            aw = {k1: 0, k2: 0}
+            for a, ga, gb, b, *_ in ms: aw[k2 if same(a, k1) else k1] += gb
+            if aw[k1] != aw[k2]: return (t1, t2) if aw[k1] > aw[k2] else (t2, t1)
     for m in reversed(ms):
         a, ga, gb, b, pn, note = m[:6]
         if pn and pn[0] != pn[1]: return (a, b) if pn[0] > pn[1] else (b, a)
@@ -318,6 +326,7 @@ def parse(path, out):
         if fmt in ("win_ab", "ab_win", "cols"):
             cols = split_cols(re.sub(r"\s[-–]\s", "  ", body))
             cols = [clean_team(c) for c in cols if looks_team(c) and not SCORE.fullmatch(c.strip())]
+            cols = [c for c in cols if not re.match(r"^\s*\d+\s*[-–]\s*\d+", c)]   # "0-0, 2-4 pen" is a score, not a team
             cols = [c for c in cols if c]
             if len(cols) < 2: cur = None; continue
             if fmt == "win_ab": w = cols[0]; a, b = cols[1], cols[2] if len(cols) > 2 else ""; champ, ru = winner_of(a, b, w); cur["champ"], cur["ru"] = w, (ru if b else "")
@@ -354,7 +363,7 @@ def fix_name(n):
     n = n.replace('"', "")
     n = re.sub(r"^\([^)]*\)\s*", "", n)
     n = re.sub(r"\s*\((Federal|after|as winner)[^)]*\)", "", n)
-    if re.match(r"^\d", n) and not re.match(r"^\d+\.\s?[A-Z]", n): n = ""
+    if re.match(r"^\d", n) and not re.match(r"^\d+\.\s?[A-Z]", n) and not re.match(r"^1[89]\d\d\s[A-Z][a-z]", n): n = ""   # "1860 Munich" is a name
     if len(n) > 4 and n.isupper() and "." not in n: n = " ".join(w.capitalize() if len(w) > 3 and w.isalpha() else w for w in n.split())
     return expand(n.strip(" ,;"))
 for c in out:

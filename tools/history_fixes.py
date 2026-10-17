@@ -265,7 +265,7 @@ REPLACE["Roshn Saudi League"] = {lab: [(lab, ch, "")] for lab, ch in SAUDI}
 DENMARK = [("1912/13", "KB"), ("1913/14", "KB"), ("1915/16", "B 93"), ("1916/17", "KB"), ("1917/18", "KB"), ("1918/19", "AB"), ("1919/20", "B 1903"), ("1920/21", "AB"),
            ("1921/22", "KB"), ("1922/23", "BK Frem"), ("1923/24", "B 1903"), ("1924/25", "KB"), ("1925/26", "B 1903"), ("1926/27", "B 93")]
 REPLACE["3F Superliga"] = {lab: [(lab, ch, "")] for lab, ch in DENMARK}
-ARG_OLD = [("1891", "Saint Andrew's"), ("1893", "Lomas Athletic"), ("1894", "Lomas Athletic"), ("1895", "Lomas Athletic"), ("1896", "Lomas Athletic"), ("1897", "Lomas Athletic"),
+ARG_OLD = [("1891", "Saint Andrew's"), ("1893", "Lomas Athletic"), ("1894", "Lomas Athletic"), ("1895", "Lomas Athletic"), ("1896", "Lomas Academy"), ("1897", "Lomas Athletic"),
            ("1898", "Lomas Athletic"), ("1899", "Belgrano Athletic"), ("1900", "Alumni"), ("1901", "Alumni"), ("1902", "Alumni"), ("1903", "Alumni"), ("1904", "Belgrano Athletic"),
            ("1905", "Alumni"), ("1906", "Alumni"), ("1907", "Alumni"), ("1908", "Belgrano Athletic"), ("1909", "Alumni"), ("1910", "Alumni"), ("1911", "Alumni"),
            ("1912 AAF", "Quilmes Atlético Club"), ("1912 FAF", "Porteño"), ("1913 AAF", "Racing Club"), ("1913 FAF", "Estudiantes de La Plata"), ("1914 AAF", "Racing Club"),
@@ -412,3 +412,46 @@ REPLACE.setdefault("Brasileirão", {}).update({
 for y, pro, ama in [("1931", "Boca Juniors", "Estudiantil Porteño"), ("1932", "River Plate", "Sportivo Barracas"),
                     ("1933", "San Lorenzo de Almagro", "Dock Sud"), ("1934", "Boca Juniors", "Estudiantil Porteño")]:
     REPLACE["Liga Profesional de Fútbol"][y] = [(y + " LAF", pro, ""), (y + " AAmF", ama, "")]
+
+# ======================= round 5: comparison against Wikipedia lists =======================
+SET.update({
+    ("Bundesliga", "1920/21"): ("1.FC Nürnberg", "Vorwärts 1890 Berlin"),          # final 5-0 vs Vorwärts 90, not Frankfurt
+    ("Johan Cruijff Schaal", "1995"): ("Ajax", "Feyenoord"),
+    ("Johan Cruijff Schaal", "1999"): ("Feyenoord", "Ajax", "3-2"),
+    ("Johan Cruijff Schaal", "2000"): ("PSV", "Roda J.C."),
+    ("Johan Cruijff Schaal", "2006"): ("Ajax", "PSV"),
+})
+NO_LOGO |= {"Vorwärts 1890 Berlin", "Lomas Academy"}
+ADD.setdefault("Eredivisie", []).extend([["1889/90", 1890, "HFC Haarlem", "", ""], ["1892/93", 1893, "HFC Haarlem", "", ""], ["1896/97", 1897, "RAP", "", ""]])
+ADD.setdefault("Supercopa de España", []).extend([["1984", 1984, "Athletic de Bilbao", "", ""]])
+# crests borrowed from another club by loose matching (audit of every non-exact match)
+RENAME_COMP.setdefault("Taça de Portugal Placard", {}).update({"Atlético CP": "Atlético Clube de Portugal"})
+RENAME_COMP.setdefault("Liga MX", {}).update({"España": "Real Club España", "U. de Guadalajara": "Universidad de Guadalajara"})
+RENAME_COMP.setdefault("Campeón de Campeones", {}).update({"España": "Real Club España"})
+RENAME_COMP.setdefault("KNVB Beker", {}).update({"Excelsior": "Excelsior Rotterdam"})
+RENAME_COMP.setdefault("Brack Super League", {}).update({"Old Boys (Basel)": "BSC Old Boys Basel", "Old Boys": "BSC Old Boys Basel"})
+RENAME_COMP.setdefault("Supertaça Cândido de Oliveira", {}).update({"Vitória SC": "Vitória SC Guimarães"})
+NO_LOGO |= {"Atlético Clube de Portugal", "Real Club España", "Universidad de Guadalajara", "FC Lyon", "Cork", "BSC Old Boys Basel",
+            "Los Angeles Armenian", "Los Angeles Croatia", "Los Angeles Scots", "San Francisco CD Mexico", "San Francisco Scots"}
+EQUIV += [["Vålerenga Fotball", "Vålerengens IF"], ["Sporting Kansas City", "Kansas City Wizards"], ["FC Dallas", "Dallas Burn"],
+          ["Chicago Sparta A &BA", "Chicago Sparta"], ["Mohammedan SC", "Mohammedan Sporting Club"], ["Sepsi O.S.K. Sf. Gheorghe", "Sepsi Sf. Gheorghe"]]
+NO_LOGO |= {"AD Almería"}                    # defunct 1971-82 club, not UD Almería
+# Serie B seasons with several group winners
+ADD.setdefault("Serie BKT", []).extend([["1934/35", 1935, "Bari", "", ""], ["1937/38", 1938, "Modena", "", ""],
+    ["1946/47", 1947, "Lucchese", "", ""], ["1946/47", 1947, "Salernitana", "", ""],
+    ["1947/48", 1948, "Padova", "", ""], ["1947/48", 1948, "Palermo", "", ""]])
+ADD.setdefault("Brasileirão Série B", []).append(["2000", 2000, "Paraná", "São Caetano", ""])   # Copa João Havelange, Módulo Amarelo
+SET.update({("3. Liga", "2024/25"): ("Arminia Bielefeld", None), ("3. Liga", "2025/26"): ("VfL Osnabrück", None)})
+DROP |= {("Chinese Super League", "2021/22")}       # the 2021 season, not 2021/22
+ADD.setdefault("Chinese Super League", []).append(["2021", 2021, "Shandong Taishan", "", ""])
+SET.update({("Trofeo de Campeones Superliga", "2024"): ("Club Estudiantes de La Plata", "Vélez Sarsfield", "3-0"),
+            ("Trofeo de Campeones Superliga", "2025"): ("Club Estudiantes de La Plata", "Platense", "2-1"),
+            ("Supercopa Argentina", "2024"): ("Vélez Sarsfield", "Club Central Córdoba de Santiago del Estero", "2-0")})
+# Indian Super Cup: Jan 2024 East Bengal; Apr 2025 FC Goa 3-0 Jamshedpur; Dec 2025 FC Goa beat East Bengal on penalties
+REPLACE.setdefault("AIFF Super Cup", {}).update({"2024": [("2024", "East Bengal FC", "Odisha FC")],
+                                                 "2025": [("2025", "FC Goa", "Jamshedpur FC"), ("2025/26", "FC Goa", "East Bengal FC")]})
+RENAME_COMP.setdefault("Norwegian Cup (Cupen)", {}).update({"Sparta": "Sparta Sarpsborg", "Sparta Rotterdam": "Sparta Sarpsborg"})
+NO_LOGO |= {"Sparta Sarpsborg"}
+RENAME_COMP.setdefault("Community Shield", {}).update({"Corinthians": "Corinthian F.C.", "Corinthian": "Corinthian F.C."})
+RENAME_COMP.setdefault("Campeón de Campeones", {}).update({"Santos": "Santos Laguna"})
+NO_LOGO |= {"Corinthian F.C."}

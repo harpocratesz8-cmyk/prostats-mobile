@@ -1,0 +1,129 @@
+1906 | Fluminense | Paysandu
+1907 | Botafogo
+1907 | Fluminense
+1908 | Fluminense | Botafogo
+1909 | Fluminense | Botafogo
+1910 | Botafogo | Fluminense
+1911 | Fluminense | America
+1912 | Botafogo
+1912 | Paysandu
+1913 | America | Flamengo
+1914 | Flamengo | Botafogo
+1915 | Flamengo | Fluminense
+1916 | America | Botafogo
+1917 | Fluminense | America
+1918 | Fluminense | Botafogo
+1919 | Fluminense | Flamengo
+1920 | Flamengo | Fluminense
+1921 | Flamengo | America
+1922 | America | Flamengo
+1923 | Vasco da Gama | Flamengo
+1924 | Fluminense
+1924 | Vasco da Gama
+1925 | Flamengo | Fluminense
+1926 | São Cristóvão | Vasco da Gama
+1927 | Flamengo | Fluminense
+1928 | America | Vasco da Gama
+1929 | Vasco da Gama | America
+1930 | Botafogo | Vasco da Gama
+1931 | America | Vasco da Gama
+1932 | Botafogo | Flamengo
+1933 | Botafogo
+1933 | Bangu
+1934 | Botafogo
+1934 | Vasco da Gama
+1935 | Botafogo
+1935 | America
+1936 | Vasco da Gama
+1936 | Fluminense
+1937 | Fluminense | Flamengo
+1938 | Fluminense | Flamengo
+1939 | Flamengo | Vasco da Gama
+1940 | Fluminense | Flamengo
+1941 | Fluminense | Flamengo
+1942 | Flamengo | Botafogo
+1943 | Flamengo | Fluminense
+1944 | Flamengo | Vasco da Gama
+1945 | Vasco da Gama | Botafogo
+1946 | Fluminense | Botafogo
+1947 | Vasco da Gama | Botafogo
+1948 | Botafogo | Vasco da Gama
+1949 | Vasco da Gama | Fluminense
+1950 | Vasco da Gama | America
+1951 | Fluminense | Bangu
+1952 | Vasco da Gama | Flamengo
+1953 | Flamengo | Fluminense
+1954 | Flamengo | America
+1955 | Flamengo | America
+1956 | Vasco da Gama | Fluminense
+1957 | Botafogo | Fluminense
+1958 | Vasco da Gama | Flamengo
+1959 | Fluminense | Botafogo
+1960 | America | Fluminense
+1961 | Botafogo | Flamengo
+1962 | Botafogo | Flamengo
+1963 | Flamengo | Fluminense
+1964 | Fluminense | Bangu
+1965 | Flamengo | Bangu
+1966 | Bangu | Flamengo
+1967 | Botafogo | Bangu
+1968 | Botafogo | Flamengo
+1969 | Fluminense | Flamengo
+1970 | Vasco da Gama | Fluminense
+1971 | Fluminense | Flamengo
+1972 | Flamengo | Fluminense
+1973 | Fluminense | Flamengo
+1974 | Flamengo | Vasco da Gama
+1975 | Fluminense | Botafogo
+1976 | Fluminense | Vasco da Gama
+1977 | Vasco da Gama | Flamengo
+1978 | Flamengo | Vasco da Gama
+1979 | Flamengo
+1979 | Flamengo
+1980 | Fluminense | Vasco da Gama
+1981 | Flamengo | Vasco da Gama
+1982 | Vasco da Gama | Flamengo
+1983 | Fluminense | Flamengo
+1984 | Fluminense | Flamengo
+1985 | Fluminense | Bangu
+1986 | Flamengo | Vasco da Gama
+1987 | Vasco da Gama | Flamengo
+1988 | Vasco da Gama | Flamengo
+1989 | Botafogo | Flamengo
+1990 | Botafogo | Vasco da Gama
+1991 | Flamengo | Fluminense
+1992 | Vasco da Gama | Flamengo
+1993 | Vasco da Gama | Fluminense
+1994 | Vasco da Gama | Flamengo
+1995 | Fluminense | Flamengo
+1996 | Flamengo | Vasco da Gama
+1997 | Botafogo | Vasco da Gama
+1998 | Vasco da Gama | Flamengo
+1999 | Flamengo | Vasco da Gama
+2000 | Flamengo | Vasco da Gama
+2001 | Flamengo | Vasco da Gama
+2002 | Fluminense | Americano
+2003 | Vasco da Gama | Fluminense
+2004 | Flamengo | Vasco da Gama
+2005 | Fluminense | Volta Redonda
+2006 | Botafogo | Madureira
+2007 | Flamengo | Botafogo
+2008 | Flamengo | Botafogo
+2009 | Flamengo | Botafogo
+2010 | Botafogo | Vasco da Gama
+2011 | Flamengo | Fluminense
+2012 | Fluminense | Botafogo
+2013 | Botafogo | Fluminense
+2014 | Flamengo | Vasco da Gama
+2015 | Vasco da Gama | Botafogo
+2016 | Vasco da Gama | Botafogo
+2017 | Flamengo | Fluminense
+2018 | Botafogo | Vasco da Gama
+2019 | Flamengo | Vasco da Gama
+2020 | Flamengo | Fluminense
+2021 | Flamengo | Fluminense
+2022 | Fluminense | Flamengo
+2023 | Fluminense | Flamengo
+2024 | Flamengo | Nova Iguaçu
+2025 | Flamengo | Fluminense
+2026 | Flamengo | Fluminense

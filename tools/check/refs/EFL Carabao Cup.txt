@@ -1,0 +1,66 @@
+1961 | Aston Villa | Rotherham United
+1962 | Norwich City | Rochdale
+1963 | Birmingham City | Aston Villa
+1964 | Leicester City | Stoke City
+1965 | Chelsea | Leicester City
+1966 | West Bromwich Albion | West Ham United
+1967 | Queens Park Rangers | West Bromwich Albion
+1968 | Leeds United | Arsenal
+1969 | Swindon Town | Arsenal
+1970 | Manchester City | West Bromwich Albion
+1971 | Tottenham Hotspur | Aston Villa
+1972 | Stoke City | Chelsea
+1973 | Tottenham Hotspur | Norwich City
+1974 | Wolverhampton Wanderers | Manchester City
+1975 | Aston Villa | Norwich City
+1976 | Manchester City | Newcastle United
+1977 | Aston Villa | Everton
+1978 | Nottingham Forest | Liverpool
+1979 | Nottingham Forest | Southampton
+1980 | Wolverhampton Wanderers | Nottingham Forest
+1981 | Liverpool | West Ham United
+1982 | Liverpool | Tottenham Hotspur
+1983 | Liverpool | Manchester United
+1984 | Liverpool | Everton
+1985 | Norwich City | Sunderland
+1986 | Oxford United | Queens Park Rangers
+1987 | Arsenal | Liverpool
+1988 | Luton Town | Arsenal
+1989 | Nottingham Forest | Luton Town
+1990 | Nottingham Forest | Oldham Athletic
+1991 | Sheffield Wednesday | Manchester United
+1992 | Manchester United | Nottingham Forest
+1993 | Arsenal | Sheffield Wednesday
+1994 | Aston Villa | Manchester United
+1995 | Liverpool | Bolton Wanderers
+1996 | Aston Villa | Leeds United
+1997 | Leicester City | Middlesbrough
+1998 | Chelsea | Middlesbrough
+1999 | Tottenham Hotspur | Leicester City
+2000 | Leicester City | Tranmere Rovers
+2001 | Liverpool | Birmingham City
+2002 | Blackburn Rovers | Tottenham Hotspur
+2003 | Liverpool | Manchester United
+2004 | Middlesbrough | Bolton Wanderers
+2005 | Chelsea | Liverpool
+2006 | Manchester United | Wigan Athletic
+2007 | Chelsea | Arsenal
+2008 | Tottenham Hotspur | Chelsea
+2009 | Manchester United | Tottenham Hotspur
+2010 | Manchester United | Aston Villa
+2011 | Birmingham City | Arsenal
+2012 | Liverpool | Cardiff City
+2013 | Swansea City | Bradford City
+2014 | Manchester City | Sunderland
+2015 | Chelsea | Tottenham Hotspur
+2016 | Manchester City | Liverpool
+2017 | Manchester United | Southampton
+2018 | Manchester City | Arsenal
+2019 | Manchester City | Chelsea
+2020 | Manchester City | Aston Villa
+2021 | Manchester City | Tottenham Hotspur
+2022 | Liverpool | Chelsea
+2023 | Manchester United | Newcastle United
+2024 | Liverpool | Chelsea
+2025 | Newcastle United | Liverpool
+2026 | Manchester City | Arsenal

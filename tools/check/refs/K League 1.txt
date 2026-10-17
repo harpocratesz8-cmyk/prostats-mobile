@@ -1,0 +1,43 @@
+1983 | Hallelujah FC | Daewoo Royals
+1984 | Daewoo Royals | Yukong Elephants
+1985 | Lucky-Goldstar Hwangso | POSCO Atoms
+1986 | POSCO Atoms | Lucky-Goldstar Hwangso
+1987 | Daewoo Royals | POSCO Atoms
+1988 | POSCO Atoms | Hyundai Horang-i
+1989 | Yukong Elephants | Lucky-Goldstar Hwangso
+1990 | Lucky-Goldstar Hwangso | Daewoo Royals
+1991 | Daewoo Royals | Hyundai Horang-i
+1992 | POSCO Atoms | Ilhwa Chunma
+1993 | Ilhwa Chunma | LG Cheetahs
+1994 | Ilhwa Chunma | Yukong Elephants
+1995 | Ilhwa Chunma | Pohang Atoms
+1996 | Ulsan Hyundai Horang-i | Suwon Samsung Bluewings
+1997 | Busan Daewoo Royals | Jeonnam Dragons
+1998 | Suwon Samsung Bluewings | Ulsan Hyundai Horang-i
+1999 | Suwon Samsung Bluewings | Busan Daewoo Royals
+2000 | Anyang LG Cheetahs | Bucheon SK
+2001 | Seongnam Ilhwa Chunma | Anyang LG Cheetahs
+2002 | Seongnam Ilhwa Chunma | Ulsan Hyundai Horang-i
+2003 | Seongnam Ilhwa Chunma | Ulsan Hyundai Horang-i
+2004 | Suwon Samsung Bluewings | Pohang Steelers
+2005 | Ulsan Hyundai Horang-i | Incheon United
+2006 | Seongnam Ilhwa Chunma | Suwon Samsung Bluewings
+2007 | Pohang Steelers | Seongnam Ilhwa Chunma
+2008 | Suwon Samsung Bluewings | FC Seoul
+2009 | Jeonbuk Hyundai Motors | Seongnam Ilhwa Chunma
+2010 | FC Seoul | Jeju United
+2011 | Jeonbuk Hyundai Motors | Ulsan Hyundai
+2012 | FC Seoul | Jeonbuk Hyundai Motors
+2013 | Pohang Steelers | Ulsan Hyundai
+2014 | Jeonbuk Hyundai Motors | Suwon Samsung Bluewings
+2015 | Jeonbuk Hyundai Motors | Suwon Samsung Bluewings
+2016 | FC Seoul | Jeonbuk Hyundai Motors
+2017 | Jeonbuk Hyundai Motors | Jeju United
+2018 | Jeonbuk Hyundai Motors | Gyeongnam FC
+2019 | Jeonbuk Hyundai Motors | Ulsan Hyundai
+2020 | Jeonbuk Hyundai Motors | Ulsan Hyundai
+2021 | Jeonbuk Hyundai Motors | Ulsan Hyundai
+2022 | Ulsan Hyundai | Jeonbuk Hyundai Motors
+2023 | Ulsan Hyundai | Pohang Steelers
+2024 | Ulsan HD | Gangwon FC
+2025 | Jeonbuk Hyundai Motors | Daejeon Hana Citizen

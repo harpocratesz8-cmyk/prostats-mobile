@@ -1,0 +1,35 @@
+1949 | SVV | Quick 1888
+1991 | Feyenoord | PSV Eindhoven
+1992 | PSV Eindhoven | Feyenoord
+1993 | Ajax | Feyenoord
+1994 | Ajax | Feyenoord
+1995 | Ajax | Feyenoord
+1996 | PSV Eindhoven | Ajax
+1997 | PSV Eindhoven | Roda JC
+1998 | PSV Eindhoven | Ajax
+1999 | Feyenoord | Ajax
+2000 | PSV Eindhoven | Roda JC
+2001 | PSV Eindhoven | Twente
+2002 | Ajax | PSV Eindhoven
+2003 | PSV Eindhoven | FC Utrecht
+2004 | FC Utrecht | Ajax
+2005 | Ajax | PSV Eindhoven
+2006 | Ajax | PSV Eindhoven
+2007 | Ajax | PSV Eindhoven
+2008 | PSV Eindhoven | Feyenoord
+2009 | AZ | SC Heerenveen
+2010 | Twente | Ajax
+2011 | Twente | Ajax
+2012 | PSV Eindhoven | Ajax
+2013 | Ajax | AZ
+2014 | PEC Zwolle | Ajax
+2015 | PSV Eindhoven | FC Groningen
+2016 | PSV Eindhoven | Feyenoord
+2017 | Feyenoord | Vitesse
+2018 | Feyenoord | PSV Eindhoven
+2019 | Ajax | PSV Eindhoven
+2021 | PSV Eindhoven | Ajax
+2022 | PSV Eindhoven | Ajax
+2023 | PSV Eindhoven | Feyenoord
+2024 | Feyenoord | PSV Eindhoven
+2025 | PSV Eindhoven | Go Ahead Eagles

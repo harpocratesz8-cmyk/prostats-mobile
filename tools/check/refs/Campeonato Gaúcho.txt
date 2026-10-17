@@ -1,0 +1,106 @@
+1919 | Brasil de Pelotas | Grêmio
+1920 | Guarany de Bagé | Grêmio
+1921 | Grêmio | Riograndense (SM)
+1922 | Grêmio | Guarany de Alegrete
+1925 | Bagé | Grêmio
+1926 | Grêmio | Guarany de Bagé
+1927 | Internacional | Bagé
+1928 | Americano | Bagé
+1929 | Cruzeiro | Guarany de Bagé
+1930 | Pelotas | Grêmio
+1931 | Grêmio | Guarany de Alegrete
+1932 | Grêmio | Pelotas
+1933 | São Paulo | Grêmio
+1934 | Internacional | Grêmio
+1935 | 9º Regimento | Grêmio
+1936 | Rio Grande | Internacional
+1937 | Grêmio Santanense | Rio-Grandense (RG)
+1938 | Guarany de Bagé | Rio-Grandense (RG)
+1939 | Rio-Grandense (RG) | Grêmio Santanense
+1940 | Internacional | Bagé
+1941 | Internacional | Rio Grande
+1942 | Internacional | Floriano
+1943 | Internacional | Guarany (CS)
+1944 | Internacional | Bagé
+1945 | Internacional | Pelotas
+1946 | Grêmio | Rio-Grandense (RG)
+1947 | Internacional | Floriano
+1948 | Internacional | Grêmio Santanense
+1949 | Grêmio | Floriano
+1950 | Internacional | Floriano
+1951 | Internacional | Pelotas
+1952 | Internacional | Floriano
+1953 | Internacional | Brasil de Pelotas
+1954 | Renner | Brasil de Pelotas
+1955 | Internacional | Brasil de Pelotas
+1956 | Grêmio | Pelotas
+1957 | Grêmio | Bagé
+1958 | Grêmio | Guarany de Bagé
+1959 | Grêmio | Farroupilha
+1960 | Grêmio | Pelotas
+1961 | Internacional | Grêmio
+1962 | Grêmio | Internacional
+1963 | Grêmio | Internacional
+1964 | Grêmio | Internacional
+1965 | Grêmio | Juventude
+1966 | Grêmio | Internacional
+1967 | Grêmio | Internacional
+1968 | Grêmio | Internacional
+1969 | Internacional | Grêmio
+1970 | Internacional | Grêmio
+1971 | Internacional | Grêmio
+1972 | Internacional | Grêmio
+1973 | Internacional | Grêmio
+1974 | Internacional | Grêmio
+1975 | Internacional | Grêmio
+1976 | Internacional | Grêmio
+1977 | Grêmio | Internacional
+1978 | Internacional | Grêmio
+1979 | Grêmio | Esportivo
+1980 | Grêmio | Internacional
+1981 | Internacional | Grêmio
+1982 | Internacional | Grêmio
+1983 | Internacional | Brasil de Pelotas
+1984 | Internacional | Grêmio
+1985 | Grêmio | Internacional
+1986 | Grêmio | Internacional
+1987 | Grêmio | Internacional
+1988 | Grêmio | Internacional
+1989 | Grêmio | Internacional
+1990 | Grêmio | Caxias
+1991 | Internacional | Grêmio
+1992 | Internacional | Grêmio
+1993 | Grêmio | Internacional
+1994 | Internacional | Juventude
+1995 | Grêmio | Internacional
+1996 | Grêmio | Juventude
+1997 | Internacional | Grêmio
+1998 | Juventude | Internacional
+1999 | Grêmio | Internacional
+2000 | Caxias | Grêmio
+2001 | Grêmio | Juventude
+2002 | Internacional | 15 de Novembro
+2003 | Internacional | 15 de Novembro
+2004 | Internacional | Ulbra
+2005 | Internacional | 15 de Novembro
+2006 | Grêmio | Internacional
+2007 | Grêmio | Juventude
+2008 | Internacional | Juventude
+2009 | Internacional | Grêmio
+2010 | Grêmio | Internacional
+2011 | Internacional | Grêmio
+2012 | Internacional | Caxias
+2013 | Internacional | Lajeadense
+2014 | Internacional | Grêmio
+2015 | Internacional | Grêmio
+2016 | Internacional | Juventude
+2017 | Novo Hamburgo | Internacional
+2018 | Grêmio | Brasil de Pelotas
+2019 | Grêmio | Internacional
+2020 | Grêmio | Caxias
+2021 | Grêmio | Internacional
+2022 | Grêmio | Ypiranga
+2023 | Grêmio | Caxias
+2024 | Grêmio | Juventude
+2025 | Internacional | Grêmio
+2026 | Grêmio | Internacional

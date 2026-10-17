@@ -1,0 +1,51 @@
+1955 | Reims | Lille
+1956 | Sedan | Nice
+1957 | Saint-Étienne | Toulouse
+1958 | Reims | Nîmes
+1959 | Le Havre | Nice
+1960 | Reims | Monaco
+1961 | Monaco | Sedan
+1962 | Saint-Étienne | Reims
+1965 | Nantes | Rennes
+1966 | Reims | Nantes
+1967 | Saint-Étienne | Lyon
+1968 | Saint-Étienne | Bordeaux
+1969 | Saint-Étienne | Marseille
+1970 | Nice | Saint-Étienne
+1971 | Rennes
+1971 | Marseille
+1972 | Bastia | Marseille
+1973 | Lyon | Nantes
+1985 | Monaco | Bordeaux
+1986 | Bordeaux | Paris Saint-Germain
+1995 | Paris Saint-Germain | Nantes
+1997 | Monaco | Nice
+1998 | Paris Saint-Germain | Lens
+1999 | Nantes | Bordeaux
+2000 | Monaco | Nantes
+2001 | Nantes | Strasbourg
+2002 | Lyon | Lorient
+2003 | Lyon | Auxerre
+2004 | Lyon | Paris Saint-Germain
+2005 | Lyon | Auxerre
+2006 | Lyon | Paris Saint-Germain
+2007 | Lyon | Sochaux
+2008 | Bordeaux | Lyon
+2009 | Bordeaux | Guingamp
+2010 | Marseille | Paris Saint-Germain
+2011 | Marseille | Lille
+2012 | Lyon | Montpellier
+2013 | Paris Saint-Germain | Bordeaux
+2014 | Paris Saint-Germain | Guingamp
+2015 | Paris Saint-Germain | Lyon
+2016 | Paris Saint-Germain | Lyon
+2017 | Paris Saint-Germain | Monaco
+2018 | Paris Saint-Germain | Monaco
+2019 | Paris Saint-Germain | Rennes
+2020 | Paris Saint-Germain | Marseille
+2021 | Lille | Paris Saint-Germain
+2022 | Paris Saint-Germain | Nantes
+2023 | Paris Saint-Germain | Toulouse
+2024 | Paris Saint-Germain | Monaco
+2025 | Paris Saint-Germain | Marseille
+2026 | Lens | Paris Saint-Germain

@@ -1,0 +1,138 @@
+1902 | SPAC | Paulistano
+1903 | SPAC | Paulistano
+1904 | SPAC | Paulistano
+1905 | Paulistano | Germânia
+1906 | Germânia | SC Internacional
+1907 | SC Internacional
+1908 | Paulistano | Germânia
+1909 | AA das Palmeiras | Paulistano
+1910 | AA das Palmeiras | SC Americano
+1911 | SPAC | SC Americano
+1912 | SC Americano | Paulistano
+1913 | Paulistano
+1913 | SC Americano
+1914 | AA São Bento
+1914 | Corinthians
+1915 | AA das Palmeiras
+1915 | Germânia
+1916 | Paulistano
+1916 | Corinthians
+1917 | Paulistano | Palestra Itália
+1918 | Paulistano | Corinthians
+1919 | Paulistano | Palestra Itália
+1920 | Palestra Itália | Paulistano
+1921 | Paulistano | Palestra Itália
+1922 | Corinthians | Palestra Itália
+1923 | Corinthians | Palestra Itália
+1924 | Corinthians | Paulistano
+1925 | AA São Bento | Corinthians
+1926 | Palestra Itália
+1926 | Paulistano
+1927 | Palestra Itália
+1927 | Paulistano
+1928 | Corinthians
+1928 | SC Internacional
+1929 | Corinthians
+1929 | Paulistano
+1930 | Corinthians | São Paulo
+1931 | São Paulo | Palestra Itália
+1932 | Palestra Itália | São Paulo
+1933 | Palestra Itália
+1933 | Albion
+1934 | Palestra Itália
+1934 | Fiorentino
+1935 | Portuguesa
+1935 | Santos
+1936 | Portuguesa
+1936 | Palestra Itália
+1937 | Corinthians | Palestra Itália
+1938 | Corinthians | São Paulo
+1939 | Corinthians | Palestra Itália
+1940 | Palestra Itália | Portuguesa
+1941 | Corinthians | São Paulo
+1942 | Palmeiras | Corinthians
+1943 | São Paulo | Corinthians
+1944 | Palmeiras | São Paulo
+1945 | São Paulo | Corinthians
+1946 | São Paulo | Corinthians
+1947 | Palmeiras | Corinthians
+1948 | São Paulo | Santos
+1949 | São Paulo | Palmeiras
+1950 | Palmeiras
+1951 | Corinthians | Palmeiras
+1952 | Corinthians | São Paulo
+1953 | São Paulo | Palmeiras
+1954 | Corinthians | Palmeiras
+1955 | Santos | Corinthians
+1956 | Santos | São Paulo
+1957 | São Paulo | Santos
+1958 | Santos | São Paulo
+1959 | Palmeiras | Santos
+1960 | Santos | Portuguesa
+1961 | Santos | Palmeiras
+1962 | Santos
+1963 | Palmeiras | São Paulo
+1964 | Santos | Palmeiras
+1965 | Santos | Palmeiras
+1966 | Palmeiras | Corinthians
+1967 | Santos | São Paulo
+1968 | Santos | Corinthians
+1969 | Santos | Palmeiras
+1970 | São Paulo
+1971 | São Paulo | Palmeiras
+1972 | Palmeiras | São Paulo
+1973 | Portuguesa
+1973 | Santos
+1974 | Palmeiras | Corinthians
+1975 | São Paulo | Portuguesa
+1976 | Palmeiras | XV de Piracicaba
+1977 | Corinthians | Ponte Preta
+1978 | Santos | São Paulo
+1979 | Corinthians | Ponte Preta
+1980 | São Paulo | Santos
+1981 | São Paulo | Ponte Preta
+1982 | Corinthians | São Paulo
+1983 | Corinthians | São Paulo
+1984 | Santos | Corinthians
+1985 | São Paulo | Portuguesa
+1986 | Inter de Limeira | Palmeiras
+1987 | São Paulo | Corinthians
+1988 | Corinthians | Guarani
+1989 | São Paulo | São José
+1990 | Bragantino | Novorizontino
+1991 | São Paulo | Corinthians
+1992 | São Paulo | Palmeiras
+1993 | Palmeiras | Corinthians
+1994 | Palmeiras | São Paulo
+1995 | Corinthians | Palmeiras
+1996 | Palmeiras | São Paulo
+1997 | Corinthians | São Paulo
+1998 | São Paulo | Corinthians
+1999 | Corinthians | Palmeiras
+2000 | São Paulo | Santos
+2001 | Corinthians | Botafogo
+2002 | Ituano | União São João
+2003 | Corinthians | São Paulo
+2004 | São Caetano | Paulista
+2005 | São Paulo | Corinthians
+2006 | Santos | São Paulo
+2007 | Santos | São Caetano
+2008 | Palmeiras | Ponte Preta
+2009 | Corinthians | Santos
+2010 | Santos | Santo André
+2011 | Santos | Corinthians
+2012 | Santos | Guarani
+2013 | Corinthians | Santos
+2014 | Ituano | Santos
+2015 | Santos | Palmeiras
+2016 | Santos | Audax
+2017 | Corinthians | Ponte Preta
+2018 | Corinthians | Palmeiras
+2019 | Corinthians | São Paulo
+2020 | Palmeiras | Corinthians
+2021 | São Paulo | Palmeiras
+2022 | Palmeiras | São Paulo
+2023 | Palmeiras | Água Santa
+2024 | Palmeiras | Santos
+2025 | Corinthians | Palmeiras
+2026 | Palmeiras | Novorizontino

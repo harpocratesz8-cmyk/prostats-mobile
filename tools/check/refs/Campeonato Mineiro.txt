@@ -1,0 +1,115 @@
+1915 | Atlético Mineiro | Yale
+1916 | América | Atlético Mineiro
+1917 | América | Atlético Mineiro
+1918 | América | Atlético Mineiro
+1919 | América | Sete de Setembro
+1920 | América | Sete de Setembro
+1921 | América | Atlético Mineiro
+1922 | América | Palestra Itália
+1923 | América | Palestra Itália
+1924 | América | Palestra Itália
+1925 | América
+1926 | Atlético Mineiro
+1926 | Palestra Itália
+1927 | Atlético Mineiro | América
+1928 | Palestra Itália | Atlético Mineiro
+1929 | Palestra Itália | Atlético Mineiro
+1930 | Palestra Itália | América
+1931 | Atlético Mineiro | Palestra Itália
+1932 | Atlético Mineiro
+1932 | Villa Nova
+1933 | Villa Nova
+1934 | Villa Nova | Atlético Mineiro
+1935 | Villa Nova | Atlético Mineiro
+1936 | Atlético Mineiro | Siderúrgica
+1937 | Siderúrgica | Villa Nova
+1938 | Atlético Mineiro | Siderúrgica
+1939 | Atlético Mineiro | América
+1940 | Palestra Itália | Atlético Mineiro
+1941 | Atlético Mineiro | Siderúrgica
+1942 | Atlético Mineiro | América
+1943 | Cruzeiro | Atlético Mineiro
+1944 | Cruzeiro | Atlético Mineiro
+1945 | Cruzeiro | Villa Nova
+1946 | Atlético Mineiro | Villa Nova
+1947 | Atlético Mineiro | Villa Nova
+1948 | América | Atlético Mineiro
+1949 | Atlético Mineiro | América
+1950 | Atlético Mineiro | Cruzeiro
+1951 | Villa Nova | Atlético Mineiro
+1952 | Atlético Mineiro | Siderúrgica
+1953 | Atlético Mineiro | Villa Nova
+1954 | Atlético Mineiro | Cruzeiro
+1955 | Atlético Mineiro | Democrata-SL
+1956 | Atlético Mineiro
+1956 | Cruzeiro
+1957 | América | Democrata-SL
+1958 | Atlético Mineiro | América
+1959 | Cruzeiro | América
+1960 | Cruzeiro | Siderúrgica
+1961 | Cruzeiro | América
+1962 | Atlético Mineiro | Cruzeiro
+1963 | Atlético Mineiro | Democrata-SL
+1964 | Siderúrgica | América
+1965 | Cruzeiro | América
+1966 | Cruzeiro | Atlético Mineiro
+1967 | Cruzeiro | Atlético Mineiro
+1968 | Cruzeiro | Atlético Mineiro
+1969 | Cruzeiro | Atlético Mineiro
+1970 | Atlético Mineiro | Cruzeiro
+1971 | América | Cruzeiro
+1972 | Cruzeiro | Atlético Mineiro
+1973 | Cruzeiro | América
+1974 | Cruzeiro | Atlético Mineiro
+1975 | Cruzeiro | Atlético Mineiro
+1976 | Atlético Mineiro | Cruzeiro
+1977 | Cruzeiro | Atlético Mineiro
+1978 | Atlético Mineiro | Cruzeiro
+1979 | Atlético Mineiro | Cruzeiro
+1980 | Atlético Mineiro | Cruzeiro
+1981 | Atlético Mineiro | Cruzeiro
+1982 | Atlético Mineiro | Cruzeiro
+1983 | Atlético Mineiro | Cruzeiro
+1984 | Cruzeiro | Atlético Mineiro
+1985 | Atlético Mineiro | Cruzeiro
+1986 | Atlético Mineiro | Cruzeiro
+1987 | Cruzeiro | Atlético Mineiro
+1988 | Atlético Mineiro | Cruzeiro
+1989 | Atlético Mineiro | Cruzeiro
+1990 | Cruzeiro | Atlético Mineiro
+1991 | Atlético Mineiro | Democrata-GV
+1992 | Cruzeiro | América
+1993 | América | Atlético Mineiro
+1994 | Cruzeiro | Atlético Mineiro
+1995 | Atlético Mineiro | América
+1996 | Cruzeiro | Atlético Mineiro
+1997 | Cruzeiro | Villa Nova
+1998 | Cruzeiro | Atlético Mineiro
+1999 | Atlético Mineiro | América
+2000 | Atlético Mineiro | Cruzeiro
+2001 | América | Atlético Mineiro
+2002 | Caldense | Ipatinga
+2003 | Cruzeiro | Atlético Mineiro
+2004 | Cruzeiro | Atlético Mineiro
+2005 | Ipatinga | Cruzeiro
+2006 | Cruzeiro | Ipatinga
+2007 | Atlético Mineiro | Cruzeiro
+2008 | Cruzeiro | Atlético Mineiro
+2009 | Cruzeiro | Atlético Mineiro
+2010 | Atlético Mineiro | Ipatinga
+2011 | Cruzeiro | Atlético Mineiro
+2012 | Atlético Mineiro | América
+2013 | Atlético Mineiro | Cruzeiro
+2014 | Cruzeiro | Atlético Mineiro
+2015 | Atlético Mineiro | Caldense
+2016 | América | Atlético Mineiro
+2017 | Atlético Mineiro | Cruzeiro
+2018 | Cruzeiro | Atlético Mineiro
+2019 | Cruzeiro | Atlético Mineiro
+2020 | Atlético Mineiro | Tombense
+2021 | Atlético Mineiro | América
+2022 | Atlético Mineiro | Cruzeiro
+2023 | Atlético Mineiro | América
+2024 | Atlético Mineiro | Cruzeiro
+2025 | Atlético Mineiro | América
+2026 | Cruzeiro | Atlético Mineiro

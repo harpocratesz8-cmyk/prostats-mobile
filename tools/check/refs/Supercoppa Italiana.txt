@@ -1,0 +1,38 @@
+1988 | AC Milan | Sampdoria
+1989 | Inter Milan | Sampdoria
+1990 | Napoli | Juventus
+1991 | Sampdoria | Roma
+1992 | AC Milan | Parma
+1993 | AC Milan | Torino
+1994 | AC Milan | Sampdoria
+1995 | Juventus | Parma
+1996 | Fiorentina | AC Milan
+1997 | Juventus | Vicenza
+1998 | Lazio | Juventus
+1999 | Parma | AC Milan
+2000 | Lazio | Inter Milan
+2001 | Roma | Fiorentina
+2002 | Juventus | Parma
+2003 | Juventus | AC Milan
+2004 | AC Milan | Lazio
+2005 | Inter Milan | Juventus
+2006 | Inter Milan | Roma
+2007 | Roma | Inter Milan
+2008 | Inter Milan | Roma
+2009 | Lazio | Inter Milan
+2010 | Inter Milan | Roma
+2011 | AC Milan | Inter Milan
+2012 | Juventus | Napoli
+2013 | Juventus | Lazio
+2014 | Napoli | Juventus
+2015 | Juventus | Lazio
+2016 | AC Milan | Juventus
+2017 | Lazio | Juventus
+2018 | Juventus | AC Milan
+2019 | Lazio | Juventus
+2020 | Juventus | Napoli
+2021 | Inter Milan | Juventus
+2022 | Inter Milan | AC Milan
+2023 | Inter Milan | Napoli
+2024 | AC Milan | Inter Milan
+2025 | Napoli | Bologna

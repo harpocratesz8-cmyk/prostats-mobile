@@ -1,0 +1,17 @@
+1960 | Soviet Union | Yugoslavia
+1964 | Spain | Soviet Union
+1968 | Italy | Yugoslavia
+1972 | West Germany | Soviet Union
+1976 | Czechoslovakia | West Germany
+1980 | West Germany | Belgium
+1984 | France | Spain
+1988 | Netherlands | Soviet Union
+1992 | Denmark | Germany
+1996 | Germany | Czech Republic
+2000 | France | Italy
+2004 | Greece | Portugal
+2008 | Spain | Germany
+2012 | Spain | Italy
+2016 | Portugal | France
+2020 | Italy | England
+2024 | Spain | England

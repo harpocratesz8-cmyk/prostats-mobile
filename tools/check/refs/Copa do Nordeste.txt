@@ -1,0 +1,22 @@
+1994 | Sport | CRB
+1997 | Vitória | Bahia
+1998 | América de Natal | Vitória
+1999 | Vitória | Bahia
+2000 | Sport | Vitória
+2001 | Bahia | Sport
+2002 | Bahia | Vitória
+2003 | Vitória | Fluminense de Feira
+2010 | Vitória | ABC
+2013 | Campinense | ASA
+2014 | Sport | Ceará
+2015 | Ceará | Bahia
+2016 | Santa Cruz | Campinense
+2017 | Bahia | Sport
+2018 | Sampaio Corrêa | Bahia
+2019 | Fortaleza | Botafogo-PB
+2020 | Ceará | Bahia
+2021 | Bahia | Ceará
+2022 | Fortaleza | Sport
+2023 | Ceará | Sport
+2024 | Fortaleza | CRB
+2025 | Bahia | Confiança
