@@ -289,6 +289,26 @@ REPLACE["Serie A"] = {}
 for lab, ch in SERIE_A_OLD: REPLACE["Serie A"].setdefault(lab, []).append((lab, ch, ""))
 BASE.pop("Serie A", None)   # those titles are now real rows of the list
 
+# ======================= review round 3 (list "Times sem escudo") =======================
+RENAME_ALL.update({
+    "Liaoning Bird": "Liaoning Fushun", "Chongqing Lifan": "Chongqing Liangjiang Athletic", "Qingdao Beilaite": "Qingdao Hainiu",
+    "Chicago Croatian": "Chicago Croatia", "St. Louis Central Breweries": "St. Louis Shamrocks", "Philadelphia United German-Hungarian": "Philadelphia United German-Hungarians",
+    "Racing Club Roubaisien": "Racing Club Roubaix", "P.E.C.": "PEC Zwolle", "P.E.C. Zwolle": "PEC Zwolle", "Border Security Force": "Border Security Force - BSF", "JCT FC": "JCT Mills",
+    "The Wednesday": "Sheffield Wednesday", "Preston NE": "Preston North End", "Tottenham Hostpur": "Tottenham Hotspur", "Bournemouth & Boscombe Athletic": "AFC Bournemouth",
+    "Brighton & Hove Alb": "Brighton & Hove Albion", "Limerick United": "Limerick", "Waterford United": "Waterford F.C.", "Ambrosiana-Inter": "F.C. Internazionale Milano",
+    "Lanerossi Vicenza": "Vicenza", "Pescara": "Delfino Pescara 1936", "Sampiedarenese": "Sampierdarenese", "Tijuana": "Club Tijuana Xoloitzcuintles de Caliente",
+    "Tecos UAG": "U.A.G.", "Bodø/Glimt": "FK BodøGlimt", "SOFK Lyn": "Lyn", "Vålerengen": "Vålerengens IF", "Odd Grenland": "Odd", "FK Skeid": "Skeid", "Moss FK": "Moss",
+    "Stabæk Fotball": "Stabæk", "Fram": "Fram IF", "Larvik Turn": "Larvik Turn IF", "Gjøvik/Lyn": "Gjøvik-Lyn", "Follo": "Follo FK", "CWKS Warszawa": "Legia Warszawa",
+    "ŁKS-Ptak Łódź": "ŁKS Łódź", "Unia Chorzów": "Ruch Chorzów", "Gwardia Kraków": "Wisła Kraków", "Budowlani Gdańsk": "Lechia Gdańsk", "Leixões SC": "Leixões Sport Club",
+    "SC Beira Mar": "SC Beira-Mar", "U.C.A.S. Petroșani": "Jiul Petroșani", "România Cluj": "Victoria Cluj", "C.S.U. Cluj": "Universitatea Sibiu",
+    "Colentina București": "Colentina", "Hälsingborgs IF": "Helsingborgs IF", "IK Sleipner": "IF Sleipner", "FC Sankt Gallen": "FC St. Gallen 1879",
+    "Montriond Lausanne": "FC Lausanne-Sport", "Lausanne-Sports": "FC Lausanne-Sport", "Brühl Sankt Gallen": "SC Brühl St. Gallen", "Akhisar Belediye": "Akhisarspor",
+    "Başakşehir": "Rams Başakşehir Futbol Kulübü", "Başakşehir FK": "Rams Başakşehir Futbol Kulübü", "İstanbul BB SK": "Rams Başakşehir Futbol Kulübü",
+    "İstanbul Başakşehir": "Rams Başakşehir Futbol Kulübü", "Queen's Regiment": "The Queen's Royal Regiment", "Vitória SC Guimarães": "Vitória SC Guimarães",
+})
+# own crest, but the titles belong to the successor (FIFA counts West Germany's World Cups for Germany)
+LINEAGE = {"West Germany": "Germany"}
+
 def rename(n, comp):
     if not n: return n
     n = n.replace("ĳ", "ij").replace("Ĳ", "IJ")
@@ -362,3 +382,6 @@ def apply(out):
             for r in c["r"]:
                 if not re.search(r"\bAA(m)?F\b|FAF", r[0]): r[0] = arg_label(r[0])
     return out
+# round 3: names that would borrow another club's crest
+RENAME_ALL.update({"Quick (Nijmegen)": "Quick Nijmegen"})
+NO_LOGO |= {"Quick Nijmegen", "Académica", "Dinamo Obor București", "S.G. Sibiu"}

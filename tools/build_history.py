@@ -339,11 +339,11 @@ def parse(path, out):
 
 out = []
 for p in sys.argv[1:-1]: parse(p, out)
-BAD = re.compile(r"^w/o$|^dna$|cup withheld|no final|not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked|n[aã]o disputad", re.I)
+BAD = re.compile(r"no league championship|^w/o$|^dna$|cup withheld|no final|not (played|awarded|finished|disputed)|no (championship|winners)|local leagues|^\??$|^[-–]$|title revoked|n[aã]o disputad", re.I)
 def fix_name(n):
     n = re.sub(r"^.*\(now ([^)]+)\).*$", r"\1", n)
     n = re.sub(r"^[DTQ]\s+(?=[A-Z])", "", n)
-    n = re.sub(r"^w/o\s+", "", n)
+    n = re.sub(r"^(w/o|awd)\s+", "", n)
     n = re.sub(r"\s\d+\s*\([^)]*penalt[^)]*\)$", "", n)
     n = re.sub(r"(?<=[A-Za-z.)])\s\d$", "", n)
     n = re.sub(r"^\d+\s*[–-]\s*\d+\s+", "", n)
@@ -368,5 +368,5 @@ out = FX.apply(out)
 for c in out:
     for r in c["r"]:
         if r[3] and r[3] == r[2]: r[3] = ""
-json.dump({"v": 2, "c": out, "alias": FX.LOGO_ALIAS, "nl": sorted(FX.NO_LOGO), "eq": FX.EQUIV}, open(sys.argv[-1], "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump({"v": 2, "c": out, "alias": FX.LOGO_ALIAS, "nl": sorted(FX.NO_LOGO), "eq": FX.EQUIV, "lin": FX.LINEAGE}, open(sys.argv[-1], "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(len(out), "competitions", sum(len(c["r"]) for c in out), "rows")

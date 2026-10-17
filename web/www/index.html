@@ -2871,7 +2871,6 @@ const HIST_ALIAS = {
   espanol:"RCD Espanyol", rcdespanol:"RCD Espanyol", estudiantesdelp:"Estudiantes de La Plata",
   botafogodefuteboleregatas:"Botafogo", clubenauticocapibaribe:"Náutico", gremiofootballportoalegrense:"Grêmio", clubeatleticobragantino:"Bragantino",
   esporteclubevitoria:"Vitória", associacaoportuguesadedesportos:"Portuguesa", associacaoatleticapontepreta:"Ponte Preta",
-  westgermany:"Germany", czechoslovakia:"Czech Republic", sovietunion:"Russia",
   stbernards:"", espanoldemadrid:"", velocitasgroningenfeijenoord:""
 };
 /* stars already drawn on the bundled crest (so the badge only shows the extra ones) */
@@ -2879,7 +2878,7 @@ const DRAWN_STARS = {"Brazil":5, "Germany":4, "Italy":4, "Argentina":3, "France"
   "Olympique de Marseille":1, "AS Saint-Étienne":1, "PSV":2};
 const NAT_COMPS = new Set(["Copa do Mundo", "UEFA Euro"]);
 const CompDB = makeDB(["l","k"]);
-const Hist = {comps:[], byKey:new Map(), byName:new Map(), drawn:new Map(), ready:false, memo:null, tcache:new Map(), eq:new Map(), nl:new Set()};
+const Hist = {comps:[], byKey:new Map(), byName:new Map(), drawn:new Map(), ready:false, memo:null, tcache:new Map(), eq:new Map(), nl:new Set(), lin:{}};
 /* the same club stored twice in the logo database -> one identity (one crest, titles add up) */
 const canonE = e => e ? (Hist.eq.get(e.f) || e) : e;
 
@@ -2890,6 +2889,7 @@ async function loadHistory(){
     Hist.comps = j.c.map(c => { const e = CompDB.resolve(c.n); return {n:c.n, g:c.g||"", r:c.r, b:c.b||{}, em:c.em||0, e, key: e ? e.f : "h:"+lkey(c.n), nat:NAT_COMPS.has(c.n)}; });
     for(const c of Hist.comps){ if(!Hist.byKey.has(c.key)) Hist.byKey.set(c.key, c); Hist.byName.set(lkey(c.n), c); }
     for(const n of j.nl||[]) Hist.nl.add(lkey(n));
+    Hist.lin = j.lin || {};
     const seen = new Map(); for(const e of ClubDB.list){ const k0 = lkey(e.n); if(seen.has(k0)) Hist.eq.set(e.f, seen.get(k0)); else seen.set(k0, e); }
     for(const g of j.eq||[]){ const es = g.map(n=>ClubDB.strict(n)).filter(Boolean); for(const e of es.slice(1)) if(e.f!==es[0].f) Hist.eq.set(e.f, canonE(es[0])); }
     for(const [n, k] of Object.entries(DRAWN_STARS)){ const e = NatDB.strict(n) || ClubDB.strict(n); if(e) Hist.drawn.set(e.f, k); }
@@ -2907,6 +2907,8 @@ function histTeam(name, nat){
   if(blocked) e = canonE(ClubDB.exact.get(lkey(raw)) || (nat ? NatDB.exact.get(lkey(raw)) : null) || null);   // only a logo with exactly this name
   else if(a !== "") e = canonE(nat ? (NatDB.strict(raw) || NatDB.strict(a||base) || ClubDB.strict(raw) || ClubDB.strict(a||base)) : (ClubDB.strict(raw) || ClubDB.strict(a||base)));
   const r = {k: e ? e.f : "h:"+lkey(a||base), e, label: e ? dbLabel(e) : base};
+  const succ = Hist.lin[raw] || Hist.lin[base];          // e.g. West Germany: own crest, titles count for Germany
+  if(succ){ const s2 = histTeam(succ, nat); r.k = s2.k; }
   Hist.tcache.set(ck, r); return r;
 }
 /* names the user typed (clubs in the save): the normal tolerant lookup, limited to clubs / national teams */
@@ -2954,7 +2956,7 @@ function histRanking(comp){
   const memo = histMemo(); if(memo.rank.has(comp)) return memo.rank.get(comp);
   const T = new Map(); const get = (k, e, label) => { if(!T.has(k)) T.set(k, {k, e, label, t:0, v:0, last:0, first:0, me:0}); return T.get(k); };
   for(const [n, q] of Object.entries(comp.b||{})){ const t0 = histTeam(n, comp.nat); get(t0.k, t0.e, t0.label).t += q; }
-  for(const r of histTimeline(comp)){ const x = get(r.k, r.e, r.label); x.t++; if(r.y<9999){ x.last = Math.max(x.last, r.y); if(!x.first) x.first = r.y; } if(r.me) x.me++;
+  for(const r of histTimeline(comp)){ const x = get(r.k, r.e, r.label); x.t++; if(r.y<9999 && r.y >= x.last && r.e){ x.e = r.e; x.label = r.label; } if(r.y<9999){ x.last = Math.max(x.last, r.y); if(!x.first) x.first = r.y; } if(r.me) x.me++;
     if(r.ru){ const t1 = histTeam(r.ru, comp.nat); get(t1.k, t1.e, t1.label).v++; } }
   const list = [...T.values()].filter(x=>x.t||x.v).sort((a,b)=> b.t-a.t || b.v-a.v || a.first-b.first);
   memo.rank.set(comp, list); return list;

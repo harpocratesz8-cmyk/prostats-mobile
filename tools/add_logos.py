@@ -25,7 +25,7 @@ RENAME = {"Sport Club Internacional": ("Internacional-BA", []), "SC Internaciona
           "Union Athletique Sedan-Torcy": ("UA Sedan-Torcy", ["Union Athletique Sedan-Torcy"]), "Cercle Athl. de Paris": ("Cercle Athlétique de Paris", ["Cercle Athl. de Paris"]),
           "Gazélec Ajaccio": ("Gazélec Ajaccio", ["Gazélec Football Club Ajaccio", "GFC Ajaccio", "GFCA", "Gazélec FC Ajaccio"])}
 ALIAS_ONLY = {"Racing Genk": "Genk", "Shandong Luneng": "Shandong Taishan", "RC Deportivo": "R.C. Deportivo de A Coruña", "SEC Bastia": "SC Bastia"}   # same club as an EA logo: keep the EA image
-NATIONS = {"Yugoslavia": ["Iugoslávia"], "Soviet Union": ["União Soviética", "URSS"], "Czechoslovakia": ["Tchecoslováquia"]}
+NATIONS = {"West Germany": ["Alemanha Ocidental", "Alemanha Oc."], "Yugoslavia": ["Iugoslávia"], "Soviet Union": ["União Soviética", "URSS"], "Czechoslovakia": ["Tchecoslováquia"]}
 j = json.load(open(idx_path, encoding="utf-8"))
 E = j["e"]
 added = replaced = 0
@@ -58,6 +58,10 @@ EXTRA_ALIASES = {"Hamburger SV": ["Hamburg", "Hamburgo", "HSV"], "Standard de Li
                  "Shenzhen Peng City": ["Shenzhen"], "Dalian Yingbo": ["Dalian"], "S.V. Zulte Waregem": ["Waregem", "Zulte Waregem", "Zulte-Waregem"],
                  "Anápolis FC": ["Anápolis", "Anapolis"], "Colorado Rapids": ["Colorado"], "1. FC Union Berlin": ["Union Berlin"], "SK Rapid Wien": ["Rapid Wien", "Rapid Viena"],
                  "VfB Stuttgart": ["VfB"], "FC CFR 1907 Cluj": ["CFR Cluj", "CFR"]}
+# EA entries shown under another name (the old name stays as an alias)
+RENAME_EXISTING = {"Vitória Sport Club": "Vitória SC Guimarães"}
+for e in E:
+    if e[1] in RENAME_EXISTING: e[3] = list(dict.fromkeys(e[3] + [e[1]])); e[1] = RENAME_EXISTING[e[1]]
 for e in E:
     if e[1] in EXTRA_ALIASES: e[3] = list(dict.fromkeys(e[3] + EXTRA_ALIASES[e[1]]))
 json.dump(j, open(idx_path, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
