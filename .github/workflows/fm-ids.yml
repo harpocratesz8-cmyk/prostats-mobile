@@ -1,10 +1,20 @@
 name: fm-ids
 on: workflow_dispatch
+permissions:
+  contents: write
 jobs:
-  probe:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - name: search wikidata properties
+      - uses: actions/checkout@v4
+      - name: run script
         run: |
-          curl -s -A "ProStatsBot/1.0 (personal project)" "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Football%20Manager&type=property&language=en&format=json&limit=30" | python3 -c "import json,sys; [print(e['id'],'|',e.get('label'),'|',e.get('description','')) for e in json.load(sys.stdin)['search']]"
-          curl -s -A "ProStatsBot/1.0 (personal project)" "https://www.wikidata.org/w/api.php?action=wbsearchentities&search=sortitoutsi&type=property&language=en&format=json" | python3 -c "import json,sys; [print(e['id'],'|',e.get('label'),'|',e.get('description','')) for e in json.load(sys.stdin)['search']]"
+          mkdir -p out
+          python3 tools/fm_ids.py out > out/log.txt 2>&1 || true
+      - name: publish to fm-data branch
+        run: |
+          cd out
+          git init -q -b fm-data
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add -A && git commit -q -m "fm data"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" fm-data
