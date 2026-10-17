@@ -361,6 +361,12 @@ def apply(out):
             for r in rows:
                 m = re.match(r"^(\d{4})(.*)$", r[0])
                 if m: r[0] = str(int(m[1]) + SHIFT_YEAR[n]) + m[2]; r[1] += SHIFT_YEAR[n]
+        if n == "Community Shield":
+            extra = []
+            for r in rows:
+                m = re.match(r"^(\d{4})\*\s+(.+)$", r[0])
+                if m: r[0] = m[1]; r[3] = ""; extra.append([m[1], r[1], rename(m[2].strip(), n), "", "shared"]); r[4] = "shared"
+            rows += extra
         for sn, lst in REPLACE.get(n, {}).items():
             rows = [r for r in rows if not (r[0] == sn or r[0].startswith(sn + " "))] + _rows(lst)
         have = {(r[0], k(r[2])) for r in rows}
@@ -385,3 +391,24 @@ def apply(out):
 # round 3: names that would borrow another club's crest
 RENAME_ALL.update({"Quick (Nijmegen)": "Quick Nijmegen"})
 NO_LOGO |= {"Quick Nijmegen", "Académica", "Dinamo Obor București", "S.G. Sibiu"}
+
+# ======================= round 4: full check of every list =======================
+RENAME_COMP.setdefault("Liga MX", {}).update({"América": "Club de Fútbol America", "America": "Club de Fútbol America"})
+RENAME_COMP.setdefault("Campeón de Campeones", {}).update({"América": "Club de Fútbol America"})
+RENAME_COMP.setdefault("Campeones Cup", {}).update({"Club América": "Club de Fútbol America", "America": "Club de Fútbol America"})
+RENAME_COMP.setdefault("Leagues Cup", {}).update({"América": "Club de Fútbol America", "Club América": "Club de Fútbol America"})
+RENAME_COMP.setdefault("Liga Profesional de Fútbol", {}).update({"Arsenal F.C.": "Arsenal de Sarandí", "Arsenal FC": "Arsenal de Sarandí"})
+RENAME_ALL.update({"Wanderers": "Wanderers F.C.", "New York City": "New York City FC"})
+NO_LOGO |= {"Wanderers F.C.", "New York City FC", "Los Angeles Kickers", "Los Angeles Maccabee"}
+ADD.setdefault("Liga MX", []).extend([["1970 México 70", 1970, "Cruz Azul", "Guadalajara", ""], ["1985 Prode 85", 1985, "Club de Fútbol America", "Tampico-Madero", ""],
+                                      ["1986 México 86", 1986, "Monterrey", "Tampico-Madero", ""]])
+ADD.setdefault("ÖFB Cup", []).append(["2008", 2008, "SV Horn", "", ""])
+ADD.setdefault("Supercopa de España", []).append(["1989", 1989, "Real Madrid CF", "", ""])
+REPLACE.setdefault("Brasileirão", {}).update({
+    "1967": [("1967 Taça Brasil", "Palmeiras", "Náutico"), ("1967 Robertão", "Palmeiras", "Internacional")],
+    "1968": [("1968 Taça Brasil", "Botafogo", "Fortaleza Esporte Clube"), ("1968 Robertão", "Santos", "Internacional")],
+    "2020": [("2020", "Flamengo", "Internacional")]})
+# Argentina 1931-1934: professional league (LAF) and amateur league (AAmF) side by side
+for y, pro, ama in [("1931", "Boca Juniors", "Estudiantil Porteño"), ("1932", "River Plate", "Sportivo Barracas"),
+                    ("1933", "San Lorenzo de Almagro", "Dock Sud"), ("1934", "Boca Juniors", "Estudiantil Porteño")]:
+    REPLACE["Liga Profesional de Fútbol"][y] = [(y + " LAF", pro, ""), (y + " AAmF", ama, "")]
