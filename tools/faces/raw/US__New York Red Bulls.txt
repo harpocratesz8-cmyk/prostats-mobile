@@ -1,0 +1,19 @@
+93011051|Emil Forsberg|33
+35015916|Eric Maxim Choupo-Moting|36
+93060547|Gustav Berggren|27
+72044164|Tim Parker|32
+91178616|Robert Voloder|24
+72056311|Jahkeele Marshall-Rutty|21
+2000130682|Jorge Ruvalcaba|23
+72053451|Cade Cowell|21
+53094972|Ethan Horvath|30
+20031861|John McCarthy|33
+61095819|Cameron Harper|23
+2000055263|Justin Che|21
+72056131|Dylan Nealis|26
+2000359100|Mohammed Sofo|20
+2000175800|Nehuén Benedetti|20
+2000040191|Juan José Mina|20
+2000257377|Ronald Donkor|20
+2000076972|AJ Marcucci|25
+2000110942|Roald Mitchell|22
