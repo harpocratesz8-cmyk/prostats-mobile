@@ -3216,8 +3216,8 @@ document.addEventListener("click", async e=>{
     case "ftab": UI.formTab = v; render(); break;
     case "more": UI.view = "more"; UI.more = v; render(); window.scrollTo(0,0); break;
     case "moreBack": UI.more = null; UI.histComp = null; render(); break;
-    case "histOpen": closeSheetNow(); UI.view = "more"; UI.more = "history"; UI.histComp = b.dataset.k; UI.histTab = "rank"; render(); window.scrollTo(0,0); break;
-    case "histBack": UI.histComp = null; render(); window.scrollTo(0,0); break;
+    case "histOpen": closeSheetNow(); if(UI.view==="more" && UI.more==="history" && !UI.histComp){ UI.histScroll = window.scrollY; const q = $("#histQ"); UI.histQ = q ? q.value : ""; } else { UI.histScroll = 0; UI.histQ = ""; } UI.view = "more"; UI.more = "history"; UI.histComp = b.dataset.k; UI.histTab = "rank"; render(); window.scrollTo(0,0); break;
+    case "histBack": histBackToList(); break;
     case "histTab": UI.histTab = v; render(); break;
     case "step": e.preventDefault(); tapFeedback(b); stepVal(b.dataset.k, +b.dataset.d); break;
     case "nota": { e.preventDefault(); tapFeedback(b); const n = Math.min(10, Math.max(0, flt(UI.F.Nota) + +b.dataset.d)); UI.F.Nota = n.toFixed(1); $("#f_Nota").value = UI.F.Nota; break; }
@@ -3298,6 +3298,12 @@ document.addEventListener("pointerdown", e=>{
   UI.F.mapa.push([px,py]); if(tot===0){ UI.F.Gols = String(UI.F.mapa.length); } render();
 });
 
+/* back to the champions list exactly where the user was (scroll position + search text) */
+function histBackToList(){
+  UI.histComp = null; render();
+  const q = $("#histQ"); if(q && UI.histQ){ q.value = UI.histQ; q.dispatchEvent(new Event("input", {bubbles:true})); }
+  const y = UI.histScroll || 0; window.scrollTo(0, y); requestAnimationFrame(()=>window.scrollTo(0, y));
+}
 /* ================= boot ================= */
 (async function boot(){
   await Promise.all([Store.init(), loadLogoDBs()]);
@@ -3308,7 +3314,7 @@ document.addEventListener("pointerdown", e=>{
   if(window.ProStatsNative && window.ProStatsNative.ready) { try{ window.ProStatsNative.ready(); }catch(e){} }
 })();
 /* Android back button: close sheet, then sub-screen, then go home */
-window.psBack = () => { if(!$("#sheet").hidden){ closeSheet(); return true; } if(UI.view==="more" && UI.more==="history" && UI.histComp){ UI.histComp = null; render(); return true; } if(UI.view==="more" && UI.more){ UI.more = null; render(); return true; } if(S && UI.view!=="home"){ go("home"); return true; } return false; };
+window.psBack = () => { if(!$("#sheet").hidden){ closeSheet(); return true; } if(UI.view==="more" && UI.more==="history" && UI.histComp){ histBackToList(); return true; } if(UI.view==="more" && UI.more){ UI.more = null; render(); return true; } if(S && UI.view!=="home"){ go("home"); return true; } return false; };
 
 if ("serviceWorker" in navigator && location.protocol === "https:" && location.hostname !== "app.prostats.local") {
   navigator.serviceWorker.register("sw.js").catch(() => {});
