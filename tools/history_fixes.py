@@ -455,3 +455,13 @@ NO_LOGO |= {"Sparta Sarpsborg"}
 RENAME_COMP.setdefault("Community Shield", {}).update({"Corinthians": "Corinthian F.C.", "Corinthian": "Corinthian F.C."})
 RENAME_COMP.setdefault("Campeón de Campeones", {}).update({"Santos": "Santos Laguna"})
 NO_LOGO |= {"Corinthian F.C."}
+
+# ======================= round 6: user's decisions on the open points =======================
+REPLACE["Liga Profesional de Fútbol"]["1891"] = [("1891", "Saint Andrew's", ""), ("1891", "Old Caledonians", "")]   # shared title
+NO_LOGO |= {"Old Caledonians"}
+DROP |= {("Copa del Rey", "1902"),            # Copa de la Coronación: not recognised by the RFEF
+         ("Campeonato Gaúcho", "1918"),       # regional winners, not a state title for the FGF
+         ("TFF Süper Kupa", "1999/00")}       # Atatürk Cup, not counted as a Super Cup by the TFF
+REPLACE.setdefault("Trophée des Champions", {})["1971"] = [("1971", "Olympique de Marseille", ""), ("1971", "Stade Rennais FC", "")]   # shared
+EQUIV += [["AFC UTA Arad", "Flamura roșie Arad"]]
+REPLACE["Campeonato Gaúcho"].pop("1918", None)
