@@ -1,0 +1,65 @@
+2000095783|Vitor Roque|20
+76053760|Jhon Arias|27
+28085588|Andreas Pereira|29
+79010306|Gustavo Gómez|32
+19302476|Paulinho|24
+2000044526|José Manuel López|24
+78077014|Joaquín Piquerez|26
+2000017278|Ramón Sosa|25
+19202746|Marlon Freitas|30
+19105713|Felipe Anderson|32
+19380455|Maurício|24
+28086745|Lucas Evangelista|30
+95040312|Murilo|28
+19350684|Bruno Fuchs|26
+19348822|Carlos Miguel|26
+78095755|Emiliano Martínez|25
+19369351|Khellven|24
+2000221411|Allan|21
+2000044680|Agustín Giay|21
+2000079323|Jefté|21
+315180|Marcelo Lomba|38
+2000315290|Luighi|19
+2000263998|Benedetti|19
+2000351881|Larson|20
+2000263996|Riquelme Fillipi|18
+2000331301|Erick Belé|18
+2000219167|Fabiano|19
+2000246368|Aranha|20
+2000301368|Rafael Coutinho|19
+2000329679|Arthur|19
+2000408356|Luís Pacheco|17
+2000221613|Figueiredo|19
+2000328935|Felipe Teresa|19
+2000393847|Victor Gabriel|18
+2000521530|Heittor|17
+2000521532|Thiago Pimenta|18
+2000272348|Halerrandrio|19
+2000531495|Koné Mohamed|17
+2000430155|André Lucas|19
+2000521536|João Paulo|18
+2000527014|Luis Sabóia|18
+2000357475|Rodrigo Gueti|19
+2000274221|Michel Cavalcante|19
+2000430159|Luis Arthur|19
+2000439846|Hugo|19
+2000376963|Antônio Marcos|18
+2000378258|Juliano|17
+2000165918|Vitor André|19
+2000275673|Guilherme Nogueira|18
+2000447962|Luccas Ramon|16
+2000444830|Ramon Riquelme|19
+2000408340|Juan Gabriel|17
+2000331317|Kidani|19
+2000471951|Derick|17
+2000331311|Felipe Goto|18
+2000331308|Wesley Lima|17
+2000331314|Luiz Sá|18
+2000408343|Luiz Fernando|17
+2000485017|Guilherme Lira|16
+2000520676|Ruan Yago|16
+2000485019|Matheus Gomes|16
+2000485025|Isaac Nicolas|16
+2000485023|Thiago|16
+2000530217|Isaac Leocadio|16
+2000521531|Kauan Lima|18

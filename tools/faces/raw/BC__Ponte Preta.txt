@@ -1,0 +1,47 @@
+2000284777|Sergio Palacios|20
+2000088615|Rodrigo Saravia|24
+55083804|Lucas Cunha|28
+19028281|Diogo Silva|39
+2000207206|Kevyson|21
+19125412|Danilo Barcelos|33
+19274672|Bryan Borges|28
+19062098|Elvis|34
+2111732|David Braz|38
+19087214|Jonathan Cafu|34
+2000033239|Thiago Coelho|30
+19221812|Diego Tavares|34
+19216901|Pacheco|34
+19333104|Daniel Baianinho|25
+19380234|Luis Phelipe|24
+19350781|David da Hora|25
+19165097|William Pottker|31
+19187641|Rodrigo Souza|37
+2000072571|Lucas Justen|22
+19159361|Tárik|32
+19408952|Jean Carlos|22
+2000246454|Brandão|21
+2000126283|Diego Porfirio|25
+2000445649|Gustavo Telles|20
+2000265942|João Gabriel|20
+63038219|Murilo|26
+2000518234|Matheus Henrique|17
+2000203747|Vinícius Ferrari|22
+2000495445|Diego Leão|20
+2000437766|Pedrinho|17
+2000518233|Lucas Emanuel|16
+2000495440|Miguel|20
+2000458456|Guilherme Viana|21
+19271096|Leo Gomes|28
+2000374072|Kaio Ganga|18
+2000520269|Júlio|18
+2000495435|Níkolas Francisco|18
+2000495433|Juan Rodrigues|19
+2000204149|Nicolas Araújo|19
+2000520314|Anderson|18
+2000523876|Vitinho|17
+2000278014|Vitor Ribeiro|26
+2000520266|Matheus Bosch|17
+2000125514|Diogo Ribeiro|23
+2000265940|Gabriel Braga|21
+2000265941|Guilherme Martins|20
+2000266136|Kawann|20

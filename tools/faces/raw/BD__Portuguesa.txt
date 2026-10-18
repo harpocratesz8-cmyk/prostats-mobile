@@ -1,0 +1,31 @@
+2000214959|Maceió|22
+19409399|Zé Vitor|25
+2000299743|Eduardo Biazus|24
+2000130175|Hudson|24
+19409474|Gustavo Henrique|25
+2000096902|Igor Torres|25
+19250018|Bruno Bertinato|27
+19356777|Thiaguinho|28
+19399062|João Paulo|24
+2000302554|Renê Sousa|21
+2000029811|Matheus Cadorini|22
+19371028|Caio Roque|23
+19270853|Salomão|28
+19168667|Tontini|29
+19152915|Franco|32
+2000157347|Cauari|22
+19009397|Éric Botteghin|37
+19380575|Lucas Hipólito|30
+19390628|Portuga|26
+43617532|Matheus Cecchini Muller|22
+2000333107|João Vitor|22
+2000257143|Denis|21
+19410691|Carlos Eduardo|24
+2000225480|Gustavo Sciencia|21
+2000492894|Wellington Junior|20
+2000492671|Romulo Araruna|18
+2000483547|Keven|20
+2000381872|Jotta|20
+2000275745|Cicinho|21
+2000326895|Eduardo Batista|20
+2000319813|Bertelli|18

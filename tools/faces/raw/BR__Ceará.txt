@@ -1,0 +1,43 @@
+2000101501|Dieguinho|29
+19144991|Pedro Henrique|35
+19386117|Vinicius Zanocelo|24
+19126379|Vina|34
+19225958|Éder|30
+19165275|Richardson|33
+19338194|Juan Alano|28
+19055591|Richard|34
+19270995|Luiz Otávio|32
+19145484|Luiz Otávio|36
+19364443|Fernando|25
+19390539|Matheus Araújo|23
+19323764|Fernandinho|27
+55070266|Rafael Ramos|30
+19284049|Matheusinho|27
+19350600|Wendel Silva|24
+19227020|Alex Silva|31
+19409041|Lucas Lima|25
+19174987|Bruno Ferreira|31
+2000088465|Lucca|22
+19222422|Sanchez|29
+19350648|Ronald|25
+2000371848|Jorge|24
+2000123119|Júlio César|21
+2000219342|Melk|18
+2000273206|Lodovico|19
+2000285441|Stanley Osei|20
+2000274534|Gabriel Amaral|19
+2000444823|Giulio|20
+2000335494|Kauã Ziegler|19
+2000273219|Bruninho|17
+2000442664|Izaque Belchior|18
+2000274048|João Gabriel|19
+2000274035|Martins|19
+2000219547|Janderson|19
+2000272373|Gabriel Rocha|19
+2000378919|Lucas Assis|17
+2000281124|Riquelme|18
+2000380165|Bernardo|18
+2000380149|Mateus Jorge|18
+2000273209|Vinícius Uchella|19
+2000273217|Brian Souza|19
+2000417672|Gui Silveira|19

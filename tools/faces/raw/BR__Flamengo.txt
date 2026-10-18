@@ -1,0 +1,58 @@
+78059800|Giorgian De Arrascaeta|31
+43036641|Jorginho|33
+19260885|Léo Ortiz|29
+19259566|Pedro|28
+19226741|Lucas Paquetá|27
+19320258|Samuel Lino|25
+19219840|Léo Pereira|29
+19067093|Alex Sandro|34
+67103336|Saúl|30
+19099575|Danilo|33
+78079444|Nicolás de la Cruz|28
+76040911|Jorge Carrascal|27
+19303821|Vitão|25
+14101872|Agustín Rossi|29
+19215572|Luiz Araújo|29
+86066846|Gonzalo Plata|24
+19325045|Emerson Royal|26
+75030706|Erick Pulgar|31
+19258642|Bruno Henrique|34
+19284037|Ayrton Lucas|28
+19233146|Everton Cebolinha|29
+78044524|Guillermo Varela|32
+19370048|Andrew|24
+2000164418|Evertton Araújo|22
+2000157410|Wallace Yan|20
+2000100102|Dyogo Alves|21
+2000372620|Pablo Lúcio|18
+2000345808|João Victor|18
+2000337350|Guilherme Gomes|19
+2000373829|Léo Nannetti|17
+2000531339|Juan Sayago|17
+2000183741|Weliton|20
+2000521651|Josmar|16
+2000484167|Diego Reyes|17
+2000443497|Gusttavo|19
+2000372630|Douglas Telles|18
+2000239562|Daniel Sales|19
+2000277571|Da Mata|19
+2000529566|Ramires|19
+2000372627|Joshua|18
+2000520574|Lucas Vieira|18
+2000380233|Kaio Júnior|18
+2000379528|Guilherme Barbosa|18
+2000372640|Ryan Roberto|17
+2000169216|Bill|19
+2000443501|Johnny|18
+2000443495|Germano|19
+2000441263|Ernest|18
+2000520685|Camargo|18
+2000522302|João Vitor Couto|16
+2000525856|Gabriel Werneck|16
+2000525100|Alan Santos|18
+2000525101|David Viana|18
+2000525102|Kaio Nóbrega|18
+2000525846|Jhefinho|17
+2000525849|Victor Hugo|17
+2000525854|Walace Inácio|16
+2000525855|Pedro Pinho|16

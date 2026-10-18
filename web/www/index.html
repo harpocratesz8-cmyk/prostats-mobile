@@ -541,6 +541,7 @@ body.locked{overflow:hidden}
 .face-mini.ph{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-size:10px;font-weight:800;font-family:var(--f-display)}
 
 .sq-tbl th,.sq-tbl td{padding-left:5px!important;padding-right:5px!important}.sq-tbl td:first-child{max-width:150px;overflow:hidden;text-overflow:ellipsis}.sq-tbl .rt{min-width:0;padding:1px 5px}
+.cb-face{width:30px!important;height:30px!important;border-radius:50%;object-fit:cover!important;object-position:top;background:#1b2537;flex:none}.cb-face.sil,.face-mini.sil,.avatar.sil{display:inline-grid;place-items:end center;overflow:hidden;background:#26324a}.cb-face.sil svg,.face-mini.sil svg,.avatar.sil svg{width:100%;height:100%}.face-mini.sil{padding:0}.cb-sub{display:block;font-size:11px;color:var(--muted);line-height:1.2}
 </style>
 </head>
 <body>
@@ -708,7 +709,7 @@ pt: {
   logo_from_gallery:"Usar imagem da galeria",
   logo_back_auto:"Voltar ao escudo automático",
   logo_db_info:"Banco EA FC: {c} times, {n} seleções, {l} ligas",
-  cb_used:"já usado",
+  cb_used:"já usado", assist_hint:"Comece a digitar e escolha o jogador. Para mais de um, separe com vírgula.",
   yes:"Sim",
   no:"Não",
   evaluation:"Avaliação",
@@ -1020,7 +1021,7 @@ en: {
   logo_from_gallery:"Use an image from the gallery",
   logo_back_auto:"Back to the automatic crest",
   logo_db_info:"EA FC database: {c} clubs, {n} national teams, {l} leagues",
-  cb_used:"used before",
+  cb_used:"used before", assist_hint:"Start typing and pick the player. For more than one, separate with a comma.",
   yes:"Yes",
   no:"No",
   evaluation:"Rating",
@@ -1790,7 +1791,7 @@ function vAdd(){
       <div class="fsec full">${t("creativity")}</div>${stepper("d.ChancesCriadas",D.ChancesCriadas,t("chances"))}${stepper("d.DriblesCertos",D.DriblesCertos,t("dribbles"))}
       ${textIn("d.xA",D.xA,t("xa"),"",'inputmode="decimal"')}${stepper("d.PreAssistencias",D.PreAssistencias,t("preassist"))}${stepper("d.FaltasSofridas",D.FaltasSofridas,t("fouled"))}<div></div>
       <div class="fsec full">${t("possession")}</div>${stepper("d.PossesGanhas",D.PossesGanhas,t("won"))}${stepper("d.PossesPerdidas",D.PossesPerdidas,t("lost"))}
-      <div class="fsec full">${t("chem")}</div>${textIn("d.AssistRecebidaDe",D.AssistRecebidaDe,t("assist_from"),"full")}${textIn("d.AssistDadaPara",D.AssistDadaPara,t("assist_to"),"full")}</div>`;
+      <div class="fsec full">${t("chem")}</div>${combo("d.AssistRecebidaDe",D.AssistRecebidaDe||"",t("assist_from"),"player")}${combo("d.AssistDadaPara",D.AssistDadaPara||"",t("assist_to"),"player")}<div class="full small muted" style="margin-top:-6px">${t("assist_hint")}</div></div>`;
   } else if(tab==="def"){
     inner = `<div class="fgrid"><div class="fsec full">${t("defensive")}</div>${stepper("d.Desarmes",D.Desarmes,t("tackles"))}${stepper("d.GolsSofridosTime",D.GolsSofridosTime,t("conceded"))}
       ${toggle("d.CleanSheet",D.CleanSheet,"🛡️ "+t("clean"),"full")}
@@ -2297,7 +2298,12 @@ function combo(key, val, lab, src, cls="full", asName=false){
   return field(lab, `<div class="cb"><input class="inp" ${attr} data-combo="${src}" value="${esc(val)}" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="done"><div class="cb-list" hidden role="listbox"></div></div>`, cls);
 }
 function comboOpen(inp){
-  const list = inp.parentElement.querySelector(".cb-list"); const opts = comboOptions(inp.dataset.combo, inp.value);
+  const list = inp.parentElement.querySelector(".cb-list");
+  if(inp.dataset.combo==="player"){ const opts = playerOptions(String(inp.value).split(",").pop().trim(), inp.value);
+    if(!opts.length){ list.hidden = true; return; }
+    list.innerHTML = opts.map(o => `<button type="button" class="cb-opt" role="option" data-cbv="${esc(o.n)}">${o.id?`<img class="cb-face" src="logos/p/${o.id}.webp" alt="" loading="lazy">`:`<span class="cb-face sil">${SIL_SVG}</span>`}<span class="grow">${esc(o.n)}${o.c?`<small class="cb-sub">${esc(o.c)}</small>`:""}</span>${o.mine?`<small>${t("cb_used")}</small>`:""}</button>`).join("");
+    list.hidden = false; return; }
+  const opts = comboOptions(inp.dataset.combo, inp.value);
   if(!opts.length){ list.hidden = true; return; }
   list.innerHTML = opts.map(o => { const lg = logoOf(o.n); return `<button type="button" class="cb-opt" role="option" data-cbv="${esc(o.n)}">${lg?`<img src="${lg}" alt="" loading="lazy">`:`<span class="cb-dot"></span>`}<span>${esc(o.n)}</span>${o.mine?`<small>${t("cb_used")}</small>`:""}</button>`; }).join("");
   list.hidden = false;
@@ -2311,7 +2317,9 @@ document.addEventListener("pointerdown", e => {
   if(!(e.target.closest && e.target.closest(".cb"))) comboCloseAll();
 }, true);
 document.addEventListener("click", e => { const opt = e.target.closest && e.target.closest(".cb-opt"); if(!opt) return;
-  const inp = opt.closest(".cb").querySelector("input"); inp.value = opt.dataset.cbv; inp.dispatchEvent(new Event("input", {bubbles:true})); comboCloseAll(); inp.blur(); });
+  const inp = opt.closest(".cb").querySelector("input");
+  if(inp.dataset.combo==="player"){ const parts = String(inp.value).split(","); parts[parts.length-1] = (parts.length>1?" ":"") + opt.dataset.cbv; inp.value = parts.join(","); }
+  else inp.value = opt.dataset.cbv; inp.dispatchEvent(new Event("input", {bubbles:true})); comboCloseAll(); inp.blur(); });
 document.addEventListener("focusout_disabled", e => { const i = e.target; if(i.dataset && i.dataset.combo) setTimeout(() => { if(document.activeElement !== i) { const l = i.parentElement && i.parentElement.querySelector(".cb-list"); if(l) l.hidden = true; } }, 120); });
 
 /* ================= helpers ================= */
@@ -3353,21 +3361,43 @@ const FaceDB = (() => {
     memo.set(key, res); return res;
   }
   const cmap = new Map();
+  function search(q, club, limit=30){ if(!ready) return []; const qt = toks(q); const ck = club ? clubKey(club) : "";
+    const ckOf = p => { if(!cmap.has(p.c)) cmap.set(p.c, clubKey(p.c)); return cmap.get(p.c); };
+    const out = [];
+    for(const p of list){ let sc = 0; const inClub = ck && ckOf(p)===ck;
+      if(qt.length){ if(!qt.every(w => p.t.some(x => x.startsWith(w)))) continue; sc = 20 + (p.t.join(" ").startsWith(qt.join(" ")) ? 10 : 0); }
+      else if(!inClub) continue;
+      if(inClub) sc += 50; out.push([sc, p]); }
+    return out.sort((a,b)=>b[0]-a[0] || a[1].n.length-b[1].n.length).slice(0, limit).map(x=>x[1]); }
   function ofClub(club){ if(!ready || !club) return []; const k = clubKey(club); const out = [];
     for(const p of list){ if(!cmap.has(p.c)) cmap.set(p.c, clubKey(p.c)); if(cmap.get(p.c)===k) out.push(p.n); } return out; }
-  return { load, find, ofClub, get ready(){ return ready; }, get size(){ return list.length; } };
+  return { load, find, ofClub, search, get ready(){ return ready; }, get size(){ return list.length; } };
 })();
 async function loadFaceDB(){ try{ const r = await fetch("logos/faces.json"); if(!r.ok) return; FaceDB.load(await r.json()); }catch(e){} }
 
-/* avatar: real face when found, otherwise the coloured initials circle */
+const SIL_SVG = `<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="12" r="6.2" fill="#7C8AA5"/><path d="M4.5 31c.8-7.2 5.6-11 11.5-11s10.7 3.8 11.5 11z" fill="#7C8AA5"/></svg>`;
+/* names for the assist fields: teammates already used, squad lists and the facepack (club of the match first) */
+function playerOptions(q, full){
+  const club = (UI.F && UI.F.Clube) || S.informacoes["Clube Atual"]; const typed = new Set(String(full||"").split(",").slice(0,-1).map(x=>lkey(x)).filter(Boolean));
+  const mine = new Map(); const addM = (n, c) => { n = String(n||"").trim(); if(n && !mine.has(lkey(n))) mine.set(lkey(n), {n, c}); };
+  for(const j of S.ultimas_performances){ const d = j.Detalhes||{}; for(const k of ["AssistRecebidaDe","AssistDadaPara"]) for(const n of String(d[k]||"").split(",")) addM(n, j.Time); }
+  for(const L of Object.values(S.dados_elenco||{})) for(const p of L||[]) addM(p.nome, "");
+  const qk = lnorm(q); const out = [], seen = new Set();
+  const push = (o) => { const k = lkey(o.n); if(seen.has(k) || typed.has(k)) return; seen.add(k); out.push(o); };
+  for(const m of mine.values()){ if(qk && !lnorm(m.n).split(" ").some(w => w.startsWith(qk.split(" ")[0])) && !lnorm(m.n).includes(qk)) continue;
+    const f = FaceDB.find(m.n, m.c || club); push({n:m.n, id:f?f.id:null, c:f?f.c:"", mine:true}); }
+  for(const p of FaceDB.search(q, club, 40)) push({n:p.n, id:p.id, c:p.c});
+  return out.slice(0, 40);
+}
+/* avatar: real face when found, otherwise a neutral silhouette */
 function faceAvatar(name, club, cls=""){
   const p = FaceDB.find(name, club);
   if(p) return `<span class="avatar face ${cls}" title="${esc(p.n)} · ${esc(p.c)}"><img src="logos/p/${p.id}.webp" alt="" loading="lazy"></span>`;
-  return `<span class="avatar ${cls}" style="--c:hsl(${hue(name)} 50% 40%)">${esc(initials(name).slice(0,2))}</span>`;
+  return `<span class="avatar sil ${cls}">${SIL_SVG}</span>`;
 }
 function faceMini(name, club){
   const p = FaceDB.find(name, club);
-  return p ? `<img class="face-mini" src="logos/p/${p.id}.webp" alt="" loading="lazy">` : `<span class="face-mini ph" style="--c:hsl(${hue(name)} 50% 40%)">${esc(initials(name).slice(0,2))}</span>`;
+  return p ? `<img class="face-mini" src="logos/p/${p.id}.webp" alt="" loading="lazy">` : `<span class="face-mini sil">${SIL_SVG}</span>`;
 }
 /* club the player wore in a given season (most matches), for squad lists */
 function clubOfSeason(season){
@@ -3546,7 +3576,8 @@ document.addEventListener("click", async e=>{
           const pc = S.dados_desempenho_por_clubes[fd.clube] = S.dados_desempenho_por_clubes[fd.clube] || {titulos:0,jogos:0,gols:0,assistencias:0}; pc.titulos = int(pc.titulos)+q;
           const img = trophyImg(c); c[1] = fd.nome; c[2] = "Temp "+fd.temp; c[3] = fd.clube; c[4] = q; if(img && !trophyImg(c)) Store.setTrophy(`${c[1]}_${c[3]}`, img);
           commit(); toast(t("saved")); render(); }); break; }
-    case "delTrophy": { closeSheetNow(); const c = S.conquistas[+b.dataset.i]; const pc = S.dados_desempenho_por_clubes[c[3]]; if(pc){ pc.titulos = Math.max(0,int(pc.titulos)-(int(c[4])||1)); if(int(pc.jogos)<=0 && int(pc.titulos)<=0 && !int(pc.gols) && !int(pc.assistencias)) delete S.dados_desempenho_por_clubes[c[3]]; }; S.conquistas.splice(+b.dataset.i,1); commit(); toast(t("removed")); render(); break; }
+    case "delTrophy": { closeSheetNow(); const c = S.conquistas[+b.dataset.i];
+      S.feed_noticias = (S.feed_noticias||[]).filter(n => { const hit = n.tipo==="titulo" && String(n.comp||"").toLowerCase()===String(c[1]).toLowerCase() && n.clube===c[3]; if(hit && !n.lida) S.noticias_nao_lidas = Math.max(0,(S.noticias_nao_lidas||0)-1); return !hit; }); const pc = S.dados_desempenho_por_clubes[c[3]]; if(pc){ pc.titulos = Math.max(0,int(pc.titulos)-(int(c[4])||1)); if(int(pc.jogos)<=0 && int(pc.titulos)<=0 && !int(pc.gols) && !int(pc.assistencias)) delete S.dados_desempenho_por_clubes[c[3]]; }; S.conquistas.splice(+b.dataset.i,1); commit(); toast(t("removed")); render(); break; }
     case "addAward": sheetForm(t("add_award"), sSel("tipo",t("award_type"),AWARD_TYPES[LANG],AWARD_TYPES[LANG][0])+sList("comp",t("comp"),[...new Set([S.informacoes["Clube Atual"],...S.ultimas_performances.map(j=>j["Competição"])])],S.informacoes["Clube Atual"])+sIn("det",t("detail_f"),"","full",'placeholder="'+(LANG==="en"?"e.g. November, 35 goals":"Ex: Novembro, 35 gols")+'"')+sIn("ano",t("year"),String(new Date().getFullYear()),"",'inputmode="numeric"')+sIn("qtd",t("qty"),"1","",'type="number" inputmode="numeric" min="1"'),
         fd=>{ const q = Math.max(1,int(fd.qtd)); const ex = S.premios_individuais.find(p=>p.tipo===fd.tipo && p.comp===fd.comp && String(p.ano)===String(fd.ano));
           if(ex){ ex.quantidade = int(ex.quantidade||1)+q; if(fd.det && !String(ex.detalhe||"").includes(fd.det)) ex.detalhe = ex.detalhe ? ex.detalhe+", "+fd.det : fd.det; }

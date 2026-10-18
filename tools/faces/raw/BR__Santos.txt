@@ -1,0 +1,67 @@
+19024412|Neymar|33
+19249631|Lucas Veríssimo|30
+19338228|Gabriel Brazão|24
+30035404|Gabriel Barbosa|28
+14183203|Benjamín Rollheiser|25
+14201730|Álvaro Barreal|24
+19249790|Rony|30
+19171250|Zé Rafael|32
+19073567|Willian Arão|33
+14177869|Adonis Frías|27
+19333767|Gabriel Menino|24
+14221703|Lautaro Díaz|27
+19102937|João Schmidt|32
+19215476|Luan Peres|30
+19246772|Thaciano|30
+19232616|Zé Ivaldo|28
+86000589|Tomás Rincón|37
+19258929|Igor Vinicius|28
+19383039|Moisés|28
+78091915|Christian Oliva|29
+2000206863|Gabriel Bontempo|20
+19152912|Mayke|32
+14172026|Gonzalo Escobar|28
+2000088460|Miguel Terceros|21
+2000379979|Vinícius Lira|17
+2000417769|Robinho Junior|17
+19399114|Diogenes|24
+19290866|Alex Nascimento|26
+2000379974|João Pedro|17
+2000272620|Mateus Xavier|18
+2000488891|Nadson|16
+2000172615|Nicola Profeta|19
+2000523947|Pepê Fermino|18
+2000218474|Rodrigo Cezar|18
+2000206937|Rodrigo Falcão|20
+2000205667|Enzo Boer|20
+2000488948|David Nogueira|16
+2000206870|Gustavo Henrique|20
+2000380524|Marcelo Torrez|19
+2000256316|Caio Araújo|20
+2000264287|Otávio|18
+2000380015|Pradella|17
+2000510252|Arthur do Vale|16
+2000510261|Vinicius Rocha|16
+2000491161|Vinícius Fabri|17
+2000229212|Lucas Yan|19
+2000491166|Benício|16
+2000277720|João Alves|17
+2000272626|Murillo|18
+2000491168|Samuel Pierri|17
+2000276354|João Alencar|18
+2000272618|Jackson|19
+2000379990|Antonny|18
+2000379985|Guilherme Cruz|17
+2000403419|Pedro Assis|18
+2000207203|Kenay|19
+2000380014|Assis|17
+2000380016|Rafa Gonzaga|17
+2000272636|João Ananias|18
+2000417767|Pedro Padula|18
+2000293250|Diego Santos|18
+2000488877|João Grando|17
+2000276361|Pedro Hian|19
+2000378911|Pierry|17
+2000379976|Ryan Gabriel|18
+2000379975|Lucas Arruda|18
+2000293257|Everton|19

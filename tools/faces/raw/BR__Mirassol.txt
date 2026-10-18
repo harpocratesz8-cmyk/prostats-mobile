@@ -1,0 +1,39 @@
+19162646|Reinaldo|35
+19041660|Walter|37
+19251466|Yuri Lara|31
+19249770|Neto Moura|28
+19216899|Willian Machado|28
+19095200|Eduardo|35
+19306798|Alesson|26
+19358051|Negueba|25
+19090895|Tiquinho Soares|34
+79030409|Antonio Galeano|25
+19358112|Nathan Fogaça|26
+19245683|Shaylon|28
+2000021000|Edson Carioca|28
+19351947|João Victor|27
+19271927|José Aldo|26
+19153477|Gabriel Pires|31
+19261651|Rodrigues|27
+19278016|Igor Cariús|32
+19367739|Lucas Oliveira|29
+55060173|Victor Luís|32
+14023268|Lucas Mugni|33
+19258902|André Luís|30
+19354891|Denilson|24
+19119371|Chico Kim|34
+19355315|Igor Formiga|26
+19220698|Carlos Eduardo|28
+19172116|Alex Muralha|35
+19171782|Daniel Borges|32
+19264442|Everton Galdino|28
+2000109747|Renato Marques|21
+19210609|Georgemy|29
+19108263|Thomazella|34
+2000520438|Vinicius Bacchi|18
+2000520449|Gabriel Rodrigues|17
+2000520452|Gabriel Schemes|18
+2000323755|Gabriel Faggioni|18
+2000295691|Leonardo Forti|20
+2000323738|Luiz Fernando|17
+2000278031|Murilo Picorelli|18

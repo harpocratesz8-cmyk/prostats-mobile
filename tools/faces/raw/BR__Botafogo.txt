@@ -1,0 +1,59 @@
+19371902|Danilo|24
+19162830|Alex Telles|32
+19273472|Vitinho|25
+14076367|Alexander Barboza|30
+19261284|Artur|27
+14185468|Nahuel Ferraresi|26
+19030933|Neto|35
+14042683|Joaquín Correa|30
+19101228|Allan|34
+13129531|Bastos|34
+19266403|Arthur Cabral|27
+14241925|Cristian Medina|23
+67264011|Chris Ramos|28
+78088631|Santiago Rodríguez|25
+19366935|Júnior Santos|30
+83208229|Kaio Pantaleão|29
+2000188763|Álvaro Montoro|18
+19090354|Edenílson|35
+2000087223|Lucas Villalba|24
+19051992|Marçal|36
+19337932|Léo Linck|24
+19400560|Matheus Martins|21
+2000052804|Newton|25
+2000076467|Mateo Ponte|22
+2000086446|Nathan Fernandes|20
+2000170179|Jordan Barrera|19
+19278774|Raul Steffens|27
+2000231497|Jhoan Hernández|19
+2000482325|Kadir Barría|17
+2000455818|Kadu Santos|19
+2000273232|Huguinho|18
+2000238718|Cristhian Loor|19
+2000111102|Ythallo|20
+2000491191|Miguel Caldas|16
+2000213003|Kauan Toledo|19
+2000369810|Juninho|17
+2000210808|Gabriel Abdias|19
+2000218553|Bernardo Valim|19
+2000518242|Riquelme Felipe|18
+2000277603|Lucas Camilo|19
+2000274298|Wallace Davi|18
+2000378011|Cauã Zappelini|18
+2000219162|Gabriel Justino|19
+2000491660|Caio Valle|17
+2000381024|Matheusinho|18
+2000377976|Felipe Januário|18
+2000491208|Arthur Novaes|16
+2000491203|Samuel Alves|17
+2000278896|Rhyan|19
+2000219252|Lucyo|19
+2000323730|Kauã Branco|19
+2000377974|Matheus Lima|17
+2000381036|Kauã Cruz|18
+2000220154|Rafael Porfírio|19
+2000463742|Pedro Paulo|17
+2000378233|Danillo|18
+2000377980|Marquinhos|18
+2000273226|Adriano|19
+2000457214|Ivan Molina|17
