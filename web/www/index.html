@@ -541,7 +541,7 @@ body.locked{overflow:hidden}
 .face-mini.ph{display:inline-grid;place-items:center;background:var(--c);color:#fff;font-size:10px;font-weight:800;font-family:var(--f-display)}
 
 .sq-tbl th,.sq-tbl td{padding-left:5px!important;padding-right:5px!important}.sq-tbl td:first-child{max-width:150px;overflow:hidden;text-overflow:ellipsis}.sq-tbl .rt{min-width:0;padding:1px 5px}
-.cb-face{width:30px!important;height:30px!important;border-radius:50%;object-fit:cover!important;object-position:top;background:#1b2537;flex:none}.cb-face.sil,.face-mini.sil,.avatar.sil{display:inline-grid;place-items:end center;overflow:hidden;background:#26324a}.cb-face.sil svg,.face-mini.sil svg,.avatar.sil svg{width:100%;height:100%}.face-mini.sil{padding:0}.cb-sub{display:block;font-size:11px;color:var(--muted);line-height:1.2}
+.cb-opt .cb-face{flex:0 0 30px!important;min-width:30px;max-width:30px;padding:0}.cb-face{width:30px!important;height:30px!important;border-radius:50%;object-fit:cover!important;object-position:top;background:#1b2537;flex:none}.cb-face.sil,.face-mini.sil,.avatar.sil{display:inline-grid;place-items:end center;overflow:hidden;background:#26324a}.cb-face.sil svg,.face-mini.sil svg,.avatar.sil svg{width:100%;height:100%}.face-mini.sil{padding:0}.cb-sub{display:block;font-size:11px;color:var(--muted);line-height:1.2}
 </style>
 </head>
 <body>
@@ -605,7 +605,7 @@ pt: {
   // data
   careers:"Carreiras salvas", active:"ativa", open:"Abrir", new_career:"Nova carreira", import_json:"Importar save (.json)", export_json:"Exportar save (.json)", copy_json:"Copiar JSON",
   import_ok:"Save importado: {n}", import_bad:"Arquivo inválido. Escolha o .json da pasta saves do ProStats.", export_hint:"Copie o texto abaixo e salve como .json, ou use o botão de exportar.", copied:"Copiado",
-  lang:"Idioma", theme:"Tema", storage:"Armazenamento", storage_cloud:"Seus saves ficam na sua conta e aparecem em qualquer aparelho em que você abrir este app.", storage_local:"Seus saves estão guardados só neste navegador. Exporte o .json de vez em quando para não perder nada.",
+  lang:"Idioma", theme:"Tema", theme_auto:"Sistema", theme_light:"Claro", theme_dark:"Escuro", theme:"Tema", storage:"Armazenamento", storage_cloud:"Seus saves ficam na sua conta e aparecem em qualquer aparelho em que você abrir este app.", storage_local:"Seus saves estão guardados só neste navegador. Exporte o .json de vez em quando para não perder nada.",
   del_career:"Excluir carreira", del_career_q:"Excluir a carreira de {n}? Isso não pode ser desfeito.",
   compat:"Compatível com o ProStats para PC. Do PC para o celular: mande o arquivo da pasta saves (WhatsApp, Drive, cabo USB) e toque em Importar save, ou abra o .json direto com o ProStats. Importar um save de um jogador que já existe no celular atualiza essa carreira.",
   // new career
@@ -918,7 +918,7 @@ en: {
   saved:"Saved", removed:"Removed", save:"Save", remove:"Remove",
   careers:"Saved careers", active:"active", open:"Open", new_career:"New career", import_json:"Import save (.json)", export_json:"Export save (.json)", copy_json:"Copy JSON",
   import_ok:"Save imported: {n}", import_bad:"Invalid file. Pick the .json from ProStats' saves folder.", export_hint:"Copy the text below and save it as .json, or use the export button.", copied:"Copied",
-  lang:"Language", theme:"Theme", storage:"Storage", storage_cloud:"Your saves live in your account and show up on any device where you open this app.", storage_local:"Your saves are stored in this browser only. Export the .json now and then so you never lose them.",
+  lang:"Language", theme:"Theme", theme_auto:"System", theme_light:"Light", theme_dark:"Dark", theme:"Theme", storage:"Storage", storage_cloud:"Your saves live in your account and show up on any device where you open this app.", storage_local:"Your saves are stored in this browser only. Export the .json now and then so you never lose them.",
   del_career:"Delete career", del_career_q:"Delete {n}'s career? This can't be undone.",
   compat:"Works with ProStats for PC. PC to phone: send the file from the saves folder (WhatsApp, Drive, USB cable) and tap Import save, or open the .json straight with ProStats. Importing a save for a player already on the phone updates that career.",
   nc_title:"Create a new career", personal:"Personal details", fullname:"Full name", birth:"Date of birth", nation:"Nationality", physical:"Physical & tactical", height:"Height", weight:"Weight", foot:"Preferred foot",
@@ -1212,6 +1212,14 @@ const MONTHS = {pt:["jan","fev","mar","abr","mai","jun","jul","ago","set","out",
 const BALLON_HIST = {"Lionel Messi":[2009,2010,2011,2012,2015,2019,2021,2023],"Cristiano Ronaldo":[2008,2013,2014,2016,2017],"Michel Platini":[1983,1984,1985],"Johan Cruijff":[1971,1973,1974],"Marco van Basten":[1988,1989,1992],"Franz Beckenbauer":[1972,1976],"Ronaldo Nazário":[1997,2002],"Alfredo Di Stefano":[1957,1959],"Kevin Keegan":[1978,1979],"Karl-Heinz Rummenigge":[1980,1981],"Stanley Matthews":[1956],"Raymond Kopa":[1958],"Luis Suárez":[1960],"Omar Sivori":[1961],"Josef Masopust":[1962],"Lev Yashin":[1963],"Denis Law":[1964],"Eusébio":[1965],"Bobby Charlton":[1966],"Flórián Albert":[1967],"George Best":[1968],"Gianni Rivera":[1969],"Gerd Muller":[1970],"Oleg Blokhin":[1975],"Allan Simonsen":[1977],"Paolo Rossi":[1982],"Igor Belanov":[1986],"Ruud Gullit":[1987],"Lothar Matthäus":[1990],"Jean-Pierre Papin":[1991],"Roberto Baggio":[1993],"Hristo Stoichkov":[1994],"George Weah":[1995],"Matthias Sammer":[1996],"Zinedine Zidane":[1998],"Rivaldo":[1999],"Luís Figo":[2000],"Michael Owen":[2001],"Pavel Nedved":[2003],"Andriy Shevchenko":[2004],"Ronaldinho":[2005],"Fabio Cannavaro":[2006],"Kaká":[2007],"Luka Modric":[2018],"Karim Benzema":[2022],"Rodri Hernández":[2024],"Erling Haaland":[2025]};
 
 /* ================= utils ================= */
+let THEME = (()=>{ try{ return localStorage.getItem("ps_theme") || "auto"; }catch(e){ return "auto"; } })();
+function applyTheme(){
+  const r = document.documentElement; if(THEME==="auto") r.removeAttribute("data-theme"); else r.setAttribute("data-theme", THEME);
+  const light = THEME==="light" || (THEME==="auto" && window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches);
+  const m = document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute("content", light ? "#EEF2F7" : "#0A1120");
+}
+function setTheme(v){ THEME = v; try{ localStorage.setItem("ps_theme", v); }catch(e){} applyTheme(); }
+applyTheme(); try{ matchMedia("(prefers-color-scheme: light)").addEventListener("change", applyTheme); }catch(e){}
 let LANG = (()=>{ try{ return localStorage.getItem("ps_lang") || DEFAULT_LANG; }catch(e){ return DEFAULT_LANG; } })();
 const t = (k, vars) => { let s = (I18N[LANG] && I18N[LANG][k]) ?? I18N.pt[k] ?? k; if (vars) for (const v in vars) s = s.replace("{"+v+"}", vars[v]); return s; };
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1958,6 +1966,8 @@ function vData(){
     <div class="card small muted">${t("compat")}</div>
     <div class="sec-h"><h2>${t("lang")}</h2></div>
     <div class="pick"><button data-act="lang" data-v="pt" aria-pressed="${LANG==="pt"}">Português</button><button data-act="lang" data-v="en" aria-pressed="${LANG==="en"}">English</button></div>
+    <div class="sec-h"><h2>${t("theme")}</h2></div>
+    <div class="pick">${["auto","light","dark"].map(v=>`<button data-act="theme" data-v="${v}" aria-pressed="${THEME===v}">${v==="light"?"☀️ ":v==="dark"?"🌙 ":"📱 "}${t("theme_"+v)}</button>`).join("")}</div>
     <div class="sec-h"><h2>${t("storage")}</h2></div>
     <div class="card small">${t("storage_device")}</div>
   </div>`;
@@ -3434,6 +3444,7 @@ function vWelcome(){
       <label class="btn block" for="importFile" style="cursor:pointer">⬆ ${t("import_json")}</label><input type="file" id="importFile" accept=".json,application/json" hidden>
       <button class="btn block" data-act="sample">${t("sample")}</button>
       <div class="pick" style="justify-content:center"><button data-act="lang" data-v="pt" aria-pressed="${LANG==="pt"}">PT</button><button data-act="lang" data-v="en" aria-pressed="${LANG==="en"}">EN</button></div>
+      <div class="pick" style="justify-content:center">${["auto","light","dark"].map(v=>`<button data-act="theme" data-v="${v}" aria-pressed="${THEME===v}">${v==="light"?"☀️":v==="dark"?"🌙":"📱"} ${t("theme_"+v)}</button>`).join("")}</div>
     </div></div>`;
 }
 
@@ -3611,6 +3622,7 @@ document.addEventListener("click", async e=>{
     case "pickLogo": await Store.setLogo(v, b.dataset.f); closeSheet(); render(); toast(t("saved")); break;
     case "rmLogo": await Store.setLogo(v, null); closeSheet(); render(); toast(t("removed")); break;
     case "copyExport": { const ta = $("#exportTxt"); try{ await navigator.clipboard.writeText(ta.value); toast(t("copied")); }catch(err){ ta.focus(); ta.select(); } break; }
+    case "theme": setTheme(v); render(); break;
     case "lang": LANG = v; try{ localStorage.setItem("ps_lang", v); }catch(err){} if(UI.F && UI.editIdx==null) UI.F = null; render(); break;
   }
 });
