@@ -1,0 +1,47 @@
+name: Gerar ProStats PC (Windows .exe)
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: [ 'pc/**', '.github/workflows/build-pc.yml' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exe:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install pyinstaller pillow matplotlib requests beautifulsoup4 numpy
+
+      - name: Compilar ProStats.exe
+        run: pyinstaller --noconfirm --onefile --windowed --name ProStats pc/ProStats.py
+
+      - name: Montar pacote (exe + pasta Dados)
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path pacote/ProStats | Out-Null
+          Copy-Item dist/ProStats.exe pacote/ProStats/
+          Copy-Item -Recurse web/www/logos pacote/ProStats/Dados
+          Compress-Archive -Path pacote/ProStats -DestinationPath ProStats_PC.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ProStats-PC
+          path: ProStats_PC.zip
+
+      - name: Publicar na aba Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: pc-v2.0.${{ github.run_number }}
+          name: ProStats PC 2.0.${{ github.run_number }}
+          make_latest: false
+          files: ProStats_PC.zip
