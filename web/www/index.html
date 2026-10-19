@@ -1274,6 +1274,9 @@ function normalize(d){
   const base = emptySave(); const out = Object.assign(base, d || {});
   for (const k of Object.keys(base)) if (out[k] == null) out[k] = emptySave()[k];
   out.informacoes = Object.assign(emptySave().informacoes, out.informacoes || {});
+  // squad cards use the PC keys (ca/cv); older phone saves used amarelos/vermelhos
+  for(const L of Object.values(out.dados_elenco||{})) for(const p of L||[]){ if(p.ca==null) p.ca = p.amarelos||0; if(p.cv==null) p.cv = p.vermelhos||0; delete p.amarelos; delete p.vermelhos;
+    for(const c of p.comps||[]){ if(c.ca==null) c.ca = c.amarelos||0; if(c.cv==null) c.cv = c.vermelhos||0; delete c.amarelos; delete c.vermelhos; } }
   return out;
 }
 const looksLikeSave = d => d && typeof d === "object" && ("informacoes" in d || "ultimas_performances" in d || "dados_desempenho" in d);
@@ -3276,7 +3279,7 @@ function mateForm(season, idx){
   const num = (nm, lab, val, dec) => field(lab, `<input class="inp" name="${nm}" value="${esc(v(val))}" inputmode="${dec?"decimal":"numeric"}" placeholder="0" autocomplete="off">`, "");
   const cRow = (c, i) => `<div class="card mc-row" style="padding:10px"><div class="row between" style="margin-bottom:4px"><span class="tiny">#${i+1}</span><button type="button" class="x" data-act="mateDelComp" aria-label="${t("remove")}">${IC.trash.replace('<svg','<svg width="14" height="14"')}</button></div>
     ${combo("cc_"+i, c.comp||"", t("comp"), "comp", "full", true)}
-    <div class="fgrid" style="grid-template-columns:repeat(3,1fr)">${num("cj_"+i,t("m_games"),c.jogos)}${num("cg_"+i,t("m_goals"),c.gols)}${num("ca_"+i,t("m_ast"),c.assists)}${num("cy_"+i,"🟨",c.amarelos)}${num("cr_"+i,"🟥",c.vermelhos)}${num("cn_"+i,t("m_avg"),c.nota,true)}</div></div>`;
+    <div class="fgrid" style="grid-template-columns:repeat(3,1fr)">${num("cj_"+i,t("m_games"),c.jogos)}${num("cg_"+i,t("m_goals"),c.gols)}${num("ca_"+i,t("m_ast"),c.assists)}${num("cy_"+i,"🟨",c.ca)}${num("cr_"+i,"🟥",c.cv)}${num("cn_"+i,t("m_avg"),c.nota,true)}</div></div>`;
   UI.mateCompN = comps.length;
   const posOpts = [...new Set([...(p&&p.posicao?[p.posicao]:[]), ...POS_ALL()])];
   const body = `<form id="mateForm" class="stack" novalidate><div class="fgrid">
@@ -3284,7 +3287,7 @@ function mateForm(season, idx){
       ${sSel("posicao", t("pos_col"), posOpts, p?p.posicao:posOpts[0], "")}
       ${sSel("season", t("season"), ss, s0, "")}
       <div class="fsec full">${t("m_total")}</div>
-      <div class="full fgrid" style="grid-template-columns:repeat(3,1fr)">${num("jogos",t("m_games"),p&&p.jogos)}${num("gols",t("m_goals"),p&&p.gols)}${num("assists",t("m_ast"),p&&p.assists)}${num("amarelos","🟨 "+t("m_yc"),p&&p.amarelos)}${num("vermelhos","🟥 "+t("m_rc"),p&&p.vermelhos)}${num("nota",t("m_avg"),p&&p.nota,true)}</div>
+      <div class="full fgrid" style="grid-template-columns:repeat(3,1fr)">${num("jogos",t("m_games"),p&&p.jogos)}${num("gols",t("m_goals"),p&&p.gols)}${num("assists",t("m_ast"),p&&p.assists)}${num("ca","🟨 "+t("m_yc"),p&&p.ca)}${num("cv","🟥 "+t("m_rc"),p&&p.cv)}${num("nota",t("m_avg"),p&&p.nota,true)}</div>
       <div class="fsec full">${t("m_bycomp")}</div><div class="full small muted" style="margin-top:-6px">${t("m_bycomp_s")}</div>
       <div class="full stack" id="mateComps">${comps.map(cRow).join("")}</div>
       <button type="button" class="btn sm full" data-act="mateAddComp">${t("m_addcomp")}</button></div>
@@ -3300,13 +3303,13 @@ function mateForm(season, idx){
       const val = nm => { const el = root.querySelector(`[name="${nm}"]`); return el ? el.value.trim() : ""; };
       const nome = val("nome"); if(!nome){ toast(t("need_fields"), true); return; }
       const cs = []; root.querySelectorAll(".mc-row").forEach(r => { const g = k => { const el = r.querySelector(`[name^="${k}_"]`); return el ? el.value.trim() : ""; };
-        const c = {comp:g("cc"), jogos:int(g("cj")), gols:int(g("cg")), assists:int(g("ca")), amarelos:int(g("cy")), vermelhos:int(g("cr")), nota:Math.min(10, Math.max(0, flt(g("cn").replace(",","."))))};
-        if(c.comp && (c.jogos || c.gols || c.assists || c.amarelos || c.vermelhos || c.nota)) cs.push(c); });
+        const c = {comp:g("cc"), jogos:int(g("cj")), gols:int(g("cg")), assists:int(g("ca")), ca:int(g("cy")), cv:int(g("cr")), nota:Math.min(10, Math.max(0, flt(g("cn").replace(",","."))))};
+        if(c.comp && (c.jogos || c.gols || c.assists || c.ca || c.cv || c.nota)) cs.push(c); });
       let tot;
-      if(cs.length){ let nw = 0, ns = 0; tot = {jogos:0, gols:0, assists:0, amarelos:0, vermelhos:0, nota:0};
-        for(const c of cs){ tot.jogos += c.jogos; tot.gols += c.gols; tot.assists += c.assists; tot.amarelos += c.amarelos; tot.vermelhos += c.vermelhos; if(c.nota>0){ const w = Math.max(1, c.jogos); ns += c.nota*w; nw += w; } }
+      if(cs.length){ let nw = 0, ns = 0; tot = {jogos:0, gols:0, assists:0, ca:0, cv:0, nota:0};
+        for(const c of cs){ tot.jogos += c.jogos; tot.gols += c.gols; tot.assists += c.assists; tot.ca += c.ca; tot.cv += c.cv; if(c.nota>0){ const w = Math.max(1, c.jogos); ns += c.nota*w; nw += w; } }
         tot.nota = nw ? Math.round(ns/nw*100)/100 : 0; }
-      else tot = {jogos:int(val("jogos")), gols:int(val("gols")), assists:int(val("assists")), amarelos:int(val("amarelos")), vermelhos:int(val("vermelhos")), nota:Math.min(10, Math.max(0, flt(val("nota").replace(",","."))))};
+      else tot = {jogos:int(val("jogos")), gols:int(val("gols")), assists:int(val("assists")), ca:int(val("ca")), cv:int(val("cv")), nota:Math.min(10, Math.max(0, flt(val("nota").replace(",","."))))};
       const rec = Object.assign({}, p || {}, {nome, posicao:val("posicao"), ...tot, comps:cs});
       const sNew = val("season") || s0;
       if(p){ const arr = L[season]; arr.splice(idx, 1); if(!arr.length) delete L[season]; }
@@ -3317,12 +3320,12 @@ function mateForm(season, idx){
 function mateSheet(season, idx){
   const p = ((S.dados_elenco||{})[season]||[])[idx]; if(!p) return; const club = clubOfSeason(season);
   const nota = flt(p.nota);
-  const kp = [[t("m_games"), int(p.jogos)],[t("m_goals"), int(p.gols)],[t("m_ast"), int(p.assists)],["🟨", int(p.amarelos)],["🟥", int(p.vermelhos)],[t("m_avg"), nota?rating(nota):"–"]];
+  const kp = [[t("m_games"), int(p.jogos)],[t("m_goals"), int(p.gols)],[t("m_ast"), int(p.assists)],["🟨", int(p.ca)],["🟥", int(p.cv)],[t("m_avg"), nota?rating(nota):"–"]];
   const cs = Array.isArray(p.comps) ? p.comps : [];
   openSheet(t("squad"), `<div class="stack">
     <div class="row" style="gap:12px">${faceAvatar(p.nome, club, "lg")}<div class="grow"><div style="font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1.05;text-transform:uppercase">${esc(p.nome)}</div><div class="small muted">${esc(p.posicao||"")} · ${esc(season)}${club?" · "+esc(club):""}</div></div></div>
     <div class="mini-grid" style="grid-template-columns:repeat(3,1fr)">${kp.map(([l,x])=>`<div class="mini"><span class="tiny">${l}</span><span class="num">${x}</span></div>`).join("")}</div>
-    ${cs.length?`<div class="tbl-wrap"><table><thead><tr><th>${t("comp")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${cs.map(c=>`<tr><td><span class="row" style="gap:6px">${logoOf(c.comp)?`<img src="${logoOf(c.comp)}" alt="" width="18" height="18" style="object-fit:contain">`:""}${esc(c.comp)}</span></td><td>${int(c.jogos)}</td><td class="hl">${int(c.gols)}</td><td>${int(c.assists)}</td><td>${int(c.amarelos)}</td><td>${int(c.vermelhos)}</td><td>${flt(c.nota)?rating(c.nota):"–"}</td></tr>`).join("")}</tbody></table></div>`:""}
+    ${cs.length?`<div class="tbl-wrap"><table><thead><tr><th>${t("comp")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${cs.map(c=>`<tr><td><span class="row" style="gap:6px">${logoOf(c.comp)?`<img src="${logoOf(c.comp)}" alt="" width="18" height="18" style="object-fit:contain">`:""}${esc(c.comp)}</span></td><td>${int(c.jogos)}</td><td class="hl">${int(c.gols)}</td><td>${int(c.assists)}</td><td>${int(c.ca)}</td><td>${int(c.cv)}</td><td>${flt(c.nota)?rating(c.nota):"–"}</td></tr>`).join("")}</tbody></table></div>`:""}
     ${SAMPLE?"":`<button class="btn block" data-act="mateEdit" data-s="${esc(season)}" data-i="${idx}">✎ ${t("edit")}</button>
     <div id="mateConfirm"><button class="btn dng block" data-act="mateAskDel" data-s="${esc(season)}" data-i="${idx}">${t("remove")}</button></div>`}
   </div>`);
@@ -3331,7 +3334,7 @@ function vSquad(){
   const ks = Object.keys(S.dados_elenco||{}).filter(k=>(S.dados_elenco[k]||[]).length).sort((a,b)=>seasonSortKey(b)-seasonSortKey(a) || (b>a?1:-1));
   if(!ks.length) return empty(t("no_data"), t("squad_empty"));
   return ks.map(k2 => { const sc = clubOfSeason(k2); const L = (S.dados_elenco[k2]||[]).map((p,i)=>({p,i})).sort((a,b)=>int(b.p.jogos)-int(a.p.jogos) || int(b.p.gols)-int(a.p.gols));
-    return `<div class="season-h"><span>${esc(k2)}</span><span>${L.length}</span></div><div class="tbl-wrap"><table class="sq-tbl"><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${L.map(({p,i})=>`<tr data-act="mate" data-s="${esc(k2)}" data-i="${i}" style="cursor:pointer"><td><span class="row" style="gap:8px">${faceMini(p.nome, sc)}${esc(p.nome)}${Array.isArray(p.comps)&&p.comps.length?` <small class="muted">›</small>`:""}</span></td><td>${esc(p.posicao||"")}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td><td>${int(p.amarelos)||""}</td><td>${int(p.vermelhos)||""}</td><td>${flt(p.nota)?rating(p.nota):""}</td></tr>`).join("")}</tbody></table></div>`; }).join("");
+    return `<div class="season-h"><span>${esc(k2)}</span><span>${L.length}</span></div><div class="tbl-wrap"><table class="sq-tbl"><thead><tr><th>${t("name_col")}</th><th>${t("pos_col")}</th><th>J</th><th>G</th><th>A</th><th>🟨</th><th>🟥</th><th>${t("m_avg_s")}</th></tr></thead><tbody>${L.map(({p,i})=>`<tr data-act="mate" data-s="${esc(k2)}" data-i="${i}" style="cursor:pointer"><td><span class="row" style="gap:8px">${faceMini(p.nome, sc)}${esc(p.nome)}${Array.isArray(p.comps)&&p.comps.length?` <small class="muted">›</small>`:""}</span></td><td>${esc(p.posicao||"")}</td><td>${int(p.jogos)}</td><td class="hl">${int(p.gols)}</td><td>${int(p.assists)}</td><td>${int(p.ca)||""}</td><td>${int(p.cv)||""}</td><td>${flt(p.nota)?rating(p.nota):""}</td></tr>`).join("")}</tbody></table></div>`; }).join("");
 }
 
 /* ================= Player faces (bundled logos/faces.json + logos/p/<id>.webp) =================
