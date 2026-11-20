@@ -1276,6 +1276,8 @@ function normalize(d){
   out.informacoes = Object.assign(emptySave().informacoes, out.informacoes || {});
   // KNVB Beker 2025/26 (AZ 5-1 NEC) was saved as 2025 by the old season picker: it is the 2026 edition
   const kb = out.campeoes_manuais && out.campeoes_manuais.knvbbeker; if(kb && kb["2025"] && /\baz\b/i.test(kb["2025"].c||"") && !kb["2026"]){ kb["2026"] = Object.assign({}, kb["2025"], {s:"2026", sc:"5-1"}); delete kb["2025"]; }
+  // ...and AZ also won the Johan Cruijff Schaal 2026 (4-0 vs PSV)
+  if(kb && kb["2026"] && /\baz\b/i.test(kb["2026"].c||"")){ const M = out.campeoes_manuais; const js = M.johancruijffschaal = M.johancruijffschaal || {}; if(!js["2026"]){ js["2026"] = {c:"AZ Alkmaar", v:"PSV", s:"2026", sc:"4-0"}; } }
   // squad cards use the PC keys (ca/cv); older phone saves used amarelos/vermelhos
   for(const L of Object.values(out.dados_elenco||{})) for(const p of L||[]){ if(p.ca==null) p.ca = p.amarelos||0; if(p.cv==null) p.cv = p.vermelhos||0; delete p.amarelos; delete p.vermelhos;
     for(const c of p.comps||[]){ if(c.ca==null) c.ca = c.amarelos||0; if(c.cv==null) c.cv = c.vermelhos||0; delete c.amarelos; delete c.vermelhos; } }

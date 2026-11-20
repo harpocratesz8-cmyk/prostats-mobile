@@ -10870,6 +10870,10 @@ class App(tk.Tk):
                 _kb = self.campeoes_manuais.get("knvbbeker") if isinstance(self.campeoes_manuais, dict) else None
                 if isinstance(_kb, dict) and isinstance(_kb.get("2025"), dict) and re.search(r"\baz\b", str(_kb["2025"].get("c", "")), re.I) and "2026" not in _kb:
                     _kb["2026"] = dict(_kb.pop("2025"), s="2026", sc="5-1")
+                # ...e o AZ também ganhou a Johan Cruijff Schaal 2026 (4-0 no PSV)
+                if isinstance(_kb, dict) and isinstance(_kb.get("2026"), dict) and re.search(r"\baz\b", str(_kb["2026"].get("c", "")), re.I):
+                    _js = self.campeoes_manuais.setdefault("johancruijffschaal", {})
+                    if isinstance(_js, dict) and "2026" not in _js: _js["2026"] = {"c": "AZ Alkmaar", "v": "PSV", "s": "2026", "sc": "4-0"}
                 # elenco vindo do celular: garante as chaves que as telas do PC usam
                 for _ano, _lst in (self.dados_elenco or {}).items():
                     for _p in _lst or []:

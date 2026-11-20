@@ -465,3 +465,15 @@ DROP |= {("Copa del Rey", "1902"),            # Copa de la Coronación: not reco
 REPLACE.setdefault("Trophée des Champions", {})["1971"] = [("1971", "Olympique de Marseille", ""), ("1971", "Stade Rennais FC", "")]   # shared
 EQUIV += [["AFC UTA Arad", "Flamura roșie Arad"]]
 REPLACE["Campeonato Gaúcho"].pop("1918", None)
+
+# ======================= round 7: European leagues shown as seasons ("2025/26") =======================
+# These lists were written with the year the season ends ("2026" = 2025/26); the user wants leagues as seasons.
+SPLIT_LEAGUES = {"Premier League", "EFL Championship", "Scottish Premiership", "Jupiler Pro League"}
+_apply_r6 = apply
+def apply(out):
+    out = _apply_r6(out)
+    for c in out:
+        if c["n"] in SPLIT_LEAGUES:
+            for r in c["r"]:
+                if "/" not in r[0] and str(r[0]).isdigit(): y = int(r[0]); r[0] = f"{y-1}/{str(y)[-2:]}"
+    return out
