@@ -1274,6 +1274,8 @@ function normalize(d){
   const base = emptySave(); const out = Object.assign(base, d || {});
   for (const k of Object.keys(base)) if (out[k] == null) out[k] = emptySave()[k];
   out.informacoes = Object.assign(emptySave().informacoes, out.informacoes || {});
+  // KNVB Beker 2025/26 (AZ 5-1 NEC) was saved as 2025 by the old season picker: it is the 2026 edition
+  const kb = out.campeoes_manuais && out.campeoes_manuais.knvbbeker; if(kb && kb["2025"] && /\baz\b/i.test(kb["2025"].c||"") && !kb["2026"]){ kb["2026"] = Object.assign({}, kb["2025"], {s:"2026", sc:"5-1"}); delete kb["2025"]; }
   // squad cards use the PC keys (ca/cv); older phone saves used amarelos/vermelhos
   for(const L of Object.values(out.dados_elenco||{})) for(const p of L||[]){ if(p.ca==null) p.ca = p.amarelos||0; if(p.cv==null) p.cv = p.vermelhos||0; delete p.amarelos; delete p.vermelhos;
     for(const c of p.comps||[]){ if(c.ca==null) c.ca = c.amarelos||0; if(c.cv==null) c.cv = c.vermelhos||0; delete c.amarelos; delete c.vermelhos; } }
@@ -3151,7 +3153,7 @@ function histFinals(){
 function manualRows(comp){
   const M = (S && S.campeoes_manuais && S.campeoes_manuais[lkey(comp.n)]) || {};
   return Object.entries(M).filter(([, v]) => v && v.c).map(([y, v]) => { const u = userTeam(v.c);
-    return {s:v.s || compSeasonLbl(comp, +y), y:+y, champ:v.c, ru:v.v||"", ruT:v.v ? userTeam(v.v) : null, sc:"", k:u.k, e:u.e, label:u.label, man:true}; });
+    return {s:v.s || compSeasonLbl(comp, +y), y:+y, champ:v.c, ru:v.v||"", ruT:v.v ? userTeam(v.v) : null, sc:v.sc||"", k:u.k, e:u.e, label:u.label, man:true}; });
 }
 const GROUP_EN = {"Brasil":"Brazil","Inglaterra":"England","Alemanha":"Germany","Espanha":"Spain","Itália":"Italy","França":"France","Arábia Saudita":"Saudi Arabia",
   "Coreia do Sul":"South Korea","Índia":"India","Bélgica":"Belgium","Escócia":"Scotland","Turquia":"Turkey","Romênia":"Romania","Polônia":"Poland","Irlanda":"Ireland",
@@ -3173,7 +3175,16 @@ function histGroups(){
 /* does the edition end in the second half of a European season (May/June)? -> "2025/26" maps to 2026; otherwise to 2025 */
 const EURO_G = new Set(["Inglaterra","Alemanha","Espanha","Portugal","Itália","França","Bélgica","Escócia","Turquia","Romênia","Polônia","Holanda","Áustria","Dinamarca","Suíça","Arábia Saudita","Austrália","Índia"]);
 const compEndYear = comp => compSplit(comp) || ["Copa do Mundo","UEFA Euro"].includes(comp.n) || (EURO_G.has(comp.g) && !/(^| )super(?! ?(lig|league|liga))|community shield|campeones|(^| )champions( |$)|cruijff|durand/.test(lnorm(comp.n)));
-const bulkY = (comp, s) => { const m = /^(\d{4})\s*[\/-]\s*(\d{2,4})$/.exec(String(s||"")); if(m) return compEndYear(comp) ? +m[1]+1 : +m[1]; return parseInt(s,10) || new Date().getFullYear(); };
+const bulkY = (comp, s) => { const str = String(s||""); const m = /(\d{4})\s*[\/-]\s*(\d{2,4})/.exec(str); if(m) return compEndYear(comp) ? +m[1]+1 : +m[1]; const y = /(\d{4})/.exec(str); return y ? +y[1] : new Date().getFullYear(); };
+/* the picker always offers European seasons ("2025/26"): a European cup of 2025/26 is the 2026 edition, a calendar-year league the 2025 one */
+const euroSeason = y => `${y}/${String(y+1).slice(-2)}`;
+function bulkSeasons(){
+  const set = new Set();
+  for(const s of seasonsList()){ const m = /(\d{4})\s*[\/-]\s*(\d{2,4})/.exec(s); if(m) set.add(+m[1]); else { const y = /(\d{4})/.exec(s); if(y){ set.add(+y[1]-1); set.add(+y[1]); } } }
+  const last = S.ultimas_performances.map(j=>parseDMY(j.Data)).filter(Boolean).sort((a,b)=>b-a)[0] || new Date();
+  const cur = last.getMonth()+1 >= 7 ? last.getFullYear() : last.getFullYear()-1; set.add(cur);
+  return {list:[...set].sort((a,b)=>b-a).map(euroSeason), cur:euroSeason(cur)};
+}
 function histBulkList(season, g){
   const {groups} = histGroups(); const used = histUsed();
   const list = g==="*yours" ? [...used] : (groups.get(g) || []);
@@ -3199,15 +3210,15 @@ function histBulkStash(){
 }
 function histBulkSheet(g0){
   if(!Hist.ready) return; UI.hbPending = {};
-  const ss = [...new Set([...seasonsList()])]; if(!ss.length) ss.push(seasonKey(todayDMY(), saveUsesEuro()));
+  const BS = bulkSeasons(); const ss = BS.list;
   const {order} = histGroups(); const used = histUsed();
   const g = g0 != null ? g0 : (used.size ? "*yours" : order[0]);
   const gOpts = [...(used.size?[["*yours", t("hist_yours")]]:[]), ...order.map(x=>[x, groupLbl(x)])];
   const body = `<div class="stack">
     <p class="small muted" style="margin:0">${t("hist_add_s")}</p>
-    <div class="fgrid">${field(t("season"), `<select class="inp" id="hbS">${ss.map(s=>`<option>${esc(s)}</option>`).join("")}</select>`, "")}
+    <div class="fgrid">${field(t("season"), `<select class="inp" id="hbS">${ss.map(s=>`<option ${s===BS.cur?"selected":""}>${esc(s)}</option>`).join("")}</select>`, "")}
       ${field(t("hist_country"), `<select class="inp" id="hbG">${gOpts.map(([v,l])=>`<option value="${esc(v)}" ${v===g?"selected":""}>${esc(l)}</option>`).join("")}</select>`, "")}</div>
-    <div id="hbList" class="stack">${histBulkList(ss[0], g)}</div>
+    <div id="hbList" class="stack">${histBulkList(BS.cur, g)}</div>
     <p class="small muted" style="margin:0">${t("hist_auto_note")}</p>
     <button class="btn pri block" data-act="histBulkSave">${t("save")}</button></div>`;
   openSheet(t("hist_add"), body, root => {

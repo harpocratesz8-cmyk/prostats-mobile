@@ -10866,6 +10866,10 @@ class App(tk.Tk):
                 if "jogos_liga" in data: self.jogos_liga = data["jogos_liga"]
                 if "dados_elenco" in data: self.dados_elenco = data["dados_elenco"]
                 self.campeoes_manuais = data.get("campeoes_manuais", {}) or {}
+                # KNVB Beker 2025/26 (AZ 5-1 NEC) ficou como 2025 no seletor antigo: é a edição 2026
+                _kb = self.campeoes_manuais.get("knvbbeker") if isinstance(self.campeoes_manuais, dict) else None
+                if isinstance(_kb, dict) and isinstance(_kb.get("2025"), dict) and re.search(r"\baz\b", str(_kb["2025"].get("c", "")), re.I) and "2026" not in _kb:
+                    _kb["2026"] = dict(_kb.pop("2025"), s="2026", sc="5-1")
                 # elenco vindo do celular: garante as chaves que as telas do PC usam
                 for _ano, _lst in (self.dados_elenco or {}).items():
                     for _p in _lst or []:
@@ -18435,10 +18439,10 @@ class _PSHist:
         if self.split(comp) or comp["n"] in ("Copa do Mundo", "UEFA Euro"): return True
         return comp["g"] in _PS_EURO_G and not re.search(r"(^| )super(?! ?(lig|league|liga))|community shield|campeones|(^| )champions( |$)|cruijff|durand", _ps_lnorm(comp["n"]))
     def bulk_y(self, comp, s):
-        m = re.match(r"^(\d{4})\s*[\/-]\s*(\d{2,4})$", str(s or "").strip())
+        m = re.search(r"(\d{4})\s*[\/-]\s*(\d{2,4})", str(s or ""))
         if m: return int(m.group(1)) + 1 if self.end_year(comp) else int(m.group(1))
-        try: return int(str(s)[:4])
-        except Exception: return datetime.date.today().year
+        y = re.search(r"(\d{4})", str(s or ""))
+        return int(y.group(1)) if y else datetime.date.today().year
 
     def career_cut(self):
         m = None
@@ -18552,7 +18556,7 @@ class _PSHist:
             if not v or not v.get("c"): continue
             u = self.user_team(v["c"])
             rows.append({"s": v.get("s") or self.season_lbl(comp, int(y)), "y": int(y), "champ": v["c"], "ru": v.get("v", ""),
-                         "ruT": self.user_team(v["v"]) if v.get("v") else None, "sc": "", "k": u["k"], "e": u["e"], "label": u["label"], "man": True})
+                         "ruT": self.user_team(v["v"]) if v.get("v") else None, "sc": v.get("sc", ""), "k": u["k"], "e": u["e"], "label": u["label"], "man": True})
         return rows
 
     def career_rows(self, comp):
@@ -19089,11 +19093,22 @@ def _ps_campeoes_em_massa(self, parent_frame, grupo=None, comp_key=None):
     tk.Label(md, text="Escolha a temporada e o país e preencha os campeões de todas as competições de uma vez. Deixe em branco o que não quiser mudar; apagar um nome remove o campeão que você digitou.",
              font=("Segoe UI", 10), fg=SUB, bg=BG, wraplength=760, justify="left").pack(anchor="w", padx=25, pady=(4, 10))
     top = tk.Frame(md, bg=BG); top.pack(fill="x", padx=25)
-    temporadas = sorted(set(list((getattr(self, "dados_jogador", {}) or {}).keys()) + [self._inferir_temporada(j.get("Data", "")) for j in H.perfs]), key=lambda s: (int(str(s)[:4]) if str(s)[:4].isdigit() else 0, s), reverse=True)
-    if not temporadas: temporadas = [str(datetime.date.today().year)]
+    # sempre temporadas europeias ("2025/26"): copa europeia de 2025/26 = edição 2026; liga de ano civil = 2025
+    anos = set()
+    for s0 in list((getattr(self, "dados_jogador", {}) or {}).keys()) + [self._inferir_temporada(j.get("Data", "")) for j in H.perfs]:
+        m = re.search(r"(\d{4})\s*[\/-]\s*(\d{2,4})", str(s0))
+        if m: anos.add(int(m.group(1)))
+        else:
+            y = re.search(r"(\d{4})", str(s0))
+            if y: anos.update({int(y.group(1)) - 1, int(y.group(1))})
+    datas = [d for d in (_ps_parse_dmy(j.get("Data", "")) for j in H.perfs) if d]
+    ult = max(datas) if datas else datetime.date.today()
+    atual = ult.year if ult.month >= 7 else ult.year - 1; anos.add(atual)
+    temporadas = [f"{a}/{str(a + 1)[-2:]}" for a in sorted(anos, reverse=True)]
+    temporada_atual = f"{atual}/{str(atual + 1)[-2:]}"
     g, order = H.groups(); used = H.used()
     grupos = ([("*", "Suas competições")] if used else []) + [(x, x or "Internacionais") for x in order]
-    v_s = tk.StringVar(value=temporadas[0])
+    v_s = tk.StringVar(value=temporada_atual)
     ini = grupo if grupo is not None else ("*" if used else order[0])
     v_g = tk.StringVar(value=next((l for k, l in grupos if k == ini), grupos[0][1]))
     tk.Label(top, text="TEMPORADA", font=("Segoe UI", 8, "bold"), fg=SUB, bg=BG).grid(row=0, column=0, sticky="w")
